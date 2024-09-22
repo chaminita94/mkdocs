@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="./">
+        <link rel="prev" href="../instalacio_inicial/">
       
       
-        <link rel="next" href="../proves/">
+        <link rel="next" href="../licencia/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -58,10 +58,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="pink">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="red">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -70,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cofiguracio-inicial-virtualbox" class="md-skip">
+        <a href="#configuracio-inicial-de-virtualbox" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +113,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -216,6 +244,24 @@
           
   
   Sprint 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../licencia/" class="md-tabs__link">
+          
+  
+  Licència
 
         </a>
       </li>
@@ -440,249 +486,27 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installacio-del-os-o-sistema-operatiu" class="md-nav__link">
+    <nav class="md-nav" aria-label="Preparació de l'entorn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacio-duna-maquina-virtual" class="md-nav__link">
     <span class="md-ellipsis">
-      Instal·lació del OS o Sistema Operatiu
+      Creació d'una màquina virtual
     </span>
   </a>
   
 </li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Configuració Inicial
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Configuració Inicial
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#preparacio-de-lentorn" class="md-nav__link">
-    <span class="md-ellipsis">
-      Preparació de l'entorn
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installacio-del-os-o-sistema-operatiu" class="md-nav__link">
+  <a href="#installacio-del-sistema-operatiu-os" class="md-nav__link">
     <span class="md-ellipsis">
-      Instal·lació del OS o Sistema Operatiu
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Configuració Inicial
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Configuració Inicial
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#preparacio-de-lentorn" class="md-nav__link">
-    <span class="md-ellipsis">
-      Preparació de l'entorn
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installacio-del-os-o-sistema-operatiu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instal·lació del OS o Sistema Operatiu
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Configuració Inicial
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Configuració Inicial
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#preparacio-de-lentorn" class="md-nav__link">
-    <span class="md-ellipsis">
-      Preparació de l'entorn
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installacio-del-os-o-sistema-operatiu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instal·lació del OS o Sistema Operatiu
+      Instal·lació del Sistema Operatiu (OS)
     </span>
   </a>
   
@@ -730,7 +554,7 @@
             
   
   <span class="md-ellipsis">
-    Proves i Documentació
+    Licència
   </span>
   
 
@@ -739,6 +563,95 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Licència
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licencia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llicència d'us
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tipus-licencia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipus de Llicències
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Proves i Documentació
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Proves i Documentació
           </label>
@@ -808,33 +721,36 @@
                   
 
 
-<h1 id="cofiguracio-inicial-virtualbox">Cofiguració inicial VirtualBox</h1>
+<h1 id="configuracio-inicial-de-virtualbox">Configuració inicial de VirtualBox</h1>
 <h2 id="preparacio-de-lentorn">Preparació de l'entorn</h2>
-<p><strong>Crear una màquina virtual:</strong></p>
-<ul>
-<li>
-<p>Utilitza un programa com VirtualBox per crear una màquina virtual. Això et permetrà provar Ubuntu o un altre sistema operatiu sense afectar el teu sistema principal.</p>
-</li>
-<li>
-<p>Per crear la màquina, obre VirtualBox, ves a "Eines" i després fes clic a "Nou".
-<img alt="Crear" src="../crear.png" /></p>
-</li>
-<li>
-<p>Escollim la ISO, que és molt important. Fes clic al menú desplegable i selecciona la ISO desitjada.
-<img alt="VboX" src="../iso.png" /></p>
-</li>
-<li>
-<p>Escollim la xarxa (ha de ser XARXA NAT) per evitar mals de cap. Si estàs sol a casa, no hi ha cap problema si utilitzes Mode Pont o NAT normal.
-<img alt="VboX" src="../nat.png" /></p>
-</li>
-</ul>
-<p>A continuació, afegim els requisits de la nostra màquina. Si el teu ordinador té més de 16 GB de RAM, amb 4 GB per a la màquina virtual tindràs prou capacitat. </p>
-<ul>
-<li>També és important especificar el nombre de nuclis; en el meu cas, he configurat 2 nuclis. A més, hauràs d'afegir la mida del disc segons les teves necessitats.
-<img alt="VboX" src="../vbox.png" /></li>
-</ul>
-<h2 id="installacio-del-os-o-sistema-operatiu">Instal·lació del OS o Sistema Operatiu</h2>
-<p><img alt="VboX" src="../vbox.png" /></p>
+<h3 id="creacio-duna-maquina-virtual">Creació d'una màquina virtual</h3>
+<p>Comença obrint <strong>VirtualBox</strong> i seleccionant <strong>"Nou"</strong> des del menú d'Eines. Això et permetrà crear una nova màquina virtual per executar Ubuntu o qualsevol altre sistema operatiu.</p>
+<p><img alt="Crear" src="../crear.png" /></p>
+<p>A continuació, selecciona la <strong>ISO del sistema operatiu</strong>. Fes clic al menú desplegable i escull la ISO que vols utilitzar, com ara la d'Ubuntu.</p>
+<p><img alt="ISO" src="../iso.png" /></p>
+<p>És important fer clic en <strong>"Skip unattended installation"</strong>. D'aquesta manera, podrem realitzar la instal·lació manual.</p>
+<p><img alt="Imatge de &quot;Skip unattended installation&quot;" src="../skip.png" /></p>
+<p>Per configurar la connexió a la xarxa, és recomanable utilitzar la <strong>XARXA NAT</strong>, ja que sol evitar complicacions. Si tens una xarxa domèstica segura, també pots optar pel <strong>Mode Pont</strong>.</p>
+<p><img alt="Xarxa NAT" src="../nat.png" /></p>
+<p>Ara és moment d'assignar recursos. Si el teu ordinador té més de 16 GB de RAM, assigna uns <strong>4 GB</strong> a la màquina virtual per garantir un bon rendiment. A més, pots configurar el nombre de <strong>nuclis de CPU</strong> (per exemple, 2 nuclis) i la mida del <strong>disc dur</strong> segons les teves necessitats.</p>
+<p><img alt="Requisits" src="../vbox.png" /></p>
+<h2 id="installacio-del-sistema-operatiu-os">Instal·lació del Sistema Operatiu (OS)</h2>
+<p>Un cop creada la màquina, fes clic a <strong>Inicia</strong> per arrencar el procés d'instal·lació. Quan aparegui la pantalla negra amb les opcions, selecciona <strong>Provar o Instal·lar</strong>.</p>
+<p><img alt="Inici" src="../Start.png" /></p>
+<p>Durant la instal·lació, selecciona la modalitat <strong>Interactive</strong> si vols personalitzar el procés d'instal·lació.</p>
+<p><img alt="Interactiu" src="../interactive.png" /></p>
+<p>També se't donarà l'opció de <strong>connectar la màquina virtual a Internet</strong>. Si vols fer-ho, assegura't que la connexió a la xarxa estigui activada.</p>
+<p><img alt="Xarxa" src="../internet.png" /></p>
+<p>Si ets un usuari avançat, pots optar per la configuració <strong>manual</strong> de les particions del disc. Si prefereixes un procés més senzill, tria la configuració <strong>automàtica</strong>.</p>
+<p><img alt="Configuració" src="../manual.png" /></p>
+<p>Finalment, defineix les <strong>particions del disc</strong>, com ara <strong>swap</strong>, <strong>root</strong> i <strong>home</strong>, segons les teves preferències.</p>
+<p><img alt="Particions" src="../sda.png" /></p>
+<p>En aquesta pantalla, selecciona el sistema de fitxers <strong>ext4</strong> i la partició <strong>root</strong> per instal·lar el sistema operatiu. Després, fes clic a <strong>Next</strong> per continuar la instal·lació dins de la partició root.</p>
+<p><img alt="Particions" src="../sdanext.png" /></p>
+<p>Se't preguntarà si tot està configurat correctament. Revisa la informació i fes clic a <strong>Continuar</strong> per seguir endavant.</p>
+<p><img alt="Confirmació" src="../assure.png" /></p>
+<p>A la següent pantalla, hauràs de crear el teu <strong>usuari</strong>, <strong>contrasenya</strong> i <strong>nom de l'ordinador</strong>. Per seguretat, selecciona l'opció que demana la contrasenya cada cop que iniciïs sessió.</p>
+<p><img alt="Usuari i Contrasenya" src="../account.png" /></p>
 
 
 
@@ -872,9 +788,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      <a href="https://projectes.xtec.cat/exelearning/general/les-llicencies-creative-commons-que-son/" target="_blank" rel="noopener noreferrer"> &copy; 2024 Vitaliy Domin
-  <img src="copyr.png" style="height: 25px;">
-</a>
+      <a href="licencia/" rel="noopener noreferrer"> Copyright &copy; 2024 Vitaliy Domin <img src="crp.png"> </a>
     </div>
   
   
