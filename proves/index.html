@@ -12,8 +12,6 @@
         <link rel="prev" href="../tipus-licencia/">
       
       
-        <link rel="next" href="../documentacio/">
-      
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
@@ -70,11 +68,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#blablabla" class="md-skip">
-          Skip to content
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -597,8 +590,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -610,27 +601,6 @@
 
       </a>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../documentacio/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Documentació del procés
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -658,8 +628,143 @@
                   
 
 
-<h1 id="blablabla">blablabla</h1>
-<p>test test</p>
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;  /* Set the canvas behind the content */
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2);  /* Semi-transparent gray box */
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 50px auto;
+            backdrop-filter: blur(5px);  /* Optional: adds a blur effect to the box */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Canvas for falling stars -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Main content inside a semi-transparent box -->
+    <div class="content">
+        <h1>Woops 404 </h1>
+        <h1>Hello there</h1>
+        <p>General Kenobi</p>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('matrixCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const starCount = 200;
+        const twinklingStarCount = 100;
+        const stars = [];
+        const ripples = [];
+        const twinklingStars = [];
+
+        function createStar(isTwinkling = false) {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.random() * 2 + 1,
+                color: getRandomColor(),
+                speed: Math.random() * 3 + 1,
+                opacity: isTwinkling ? Math.random() : 1,
+                twinkleDirection: isTwinkling ? Math.random() < 0.5 : false
+            };
+        }
+
+        for (let i = 0; i < starCount; i++) stars.push(createStar());
+        for (let i = 0; i < twinklingStarCount; i++) twinklingStars.push(createStar(true));
+
+        function getRandomColor() {
+            return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
+        }
+
+        function createRipple(x, y, color) {
+            return { x, y, radius: 0, maxRadius: Math.random() * 30 + 10, color, opacity: 1 };
+        }
+
+        canvas.addEventListener('click', (event) => {
+            ripples.push(createRipple(event.clientX, event.clientY, getRandomColor()));
+        });
+
+        function drawStars() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            twinklingStars.forEach(star => {
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${hexToRgb(star.color)}, ${star.opacity})`;
+                ctx.fill();
+                star.opacity += star.twinkleDirection ? 0.01 : -0.01;
+                if (star.opacity >= 1 || star.opacity <= 0) star.twinkleDirection = !star.twinkleDirection;
+            });
+
+            stars.forEach(star => {
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fillStyle = star.color;
+                ctx.fill();
+                star.y += star.speed;
+                if (star.y > canvas.height) {
+                    ripples.push(createRipple(star.x, canvas.height, star.color));
+                    star.y = 0;
+                    star.x = Math.random() * canvas.width;
+                }
+            });
+
+            ripples.forEach((ripple, index) => {
+                ctx.beginPath();
+                ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2);
+                ctx.strokeStyle = `rgba(${hexToRgb(ripple.color)}, ${ripple.opacity})`;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+                ripple.radius += 1;
+                ripple.opacity -= 0.02;
+                if (ripple.radius > ripple.maxRadius || ripple.opacity <= 0) ripples.splice(index, 1);
+            });
+        }
+
+        setInterval(drawStars, 50);
+
+        function hexToRgb(hex) {
+            const bigint = parseInt(hex.slice(1), 16);
+            return `${(bigint >> 16) & 255},${(bigint >> 8) & 255},${bigint & 255}`;
+        }
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
 
 
 
@@ -698,6 +803,7 @@
   
     <div class="md-copyright__highlight">
       <a href="licencia/" rel="noopener noreferrer"> Copyright &copy; 2024 Vitaliy Domin <img src="crp.png"> </a>
+
     </div>
   
   
