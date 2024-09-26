@@ -1,0 +1,12 @@
+.custom-footer {
+    position: fixed; /* Fixed position */
+    left: 0; /* Align to the left */
+    bottom: 0; /* Align to the bottom */
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding around the text */
+    background-color: #1c1c1c; /* Background color */
+    color: white; /* Text color */
+    text-align: left; /* Left align the text */
+    z-index: 1000; /* High z-index to stay on top */
+    font-size: 14px; /* Smaller text size */
+}
