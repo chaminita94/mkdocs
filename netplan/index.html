@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../vbox/">
       
       
-        <link rel="next" href="../instalacio_inicial/">
+        <link rel="next" href="../licencia/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Objectius - Virtualització</title>
+        <title>Configuració de Xarxa - Virtualització</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#objectius" class="md-skip">
+        <a href="#per-que-configurar-una-xarxa-estatica-o-canviar-la-ip" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Objectius
+              Configuració de Xarxa
             
           </span>
         </div>
@@ -219,11 +219,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../objectius/" class="md-tabs__link">
         
   
     
@@ -238,10 +236,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../instalacio_inicial/" class="md-tabs__link">
           
   
@@ -329,19 +329,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../objectius/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -350,7 +341,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -359,25 +349,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -388,7 +383,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Sprint 1
@@ -441,10 +436,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../netplan/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Configuració de Xarxa
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -453,6 +466,42 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#per-que-configurar-una-xarxa-estatica-o-canviar-la-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Per què configurar una xarxa estàtica o canviar la IP?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodes-de-configuracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mètodes de configuració
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -569,22 +618,26 @@
                   
 
 
-<h1 id="objectius">Objectius</h1>
+  <h1>Configuració de Xarxa</h1>
+
+<h3 id="per-que-configurar-una-xarxa-estatica-o-canviar-la-ip">Per què configurar una xarxa estàtica o canviar la IP?</h3>
+<p>Pot haver-hi diverses raons per voler configurar una IP estàtica o modificar la configuració de xarxa, com ara millorar la gestió de dispositius o assegurar-se que una màquina sempre utilitza la mateixa adreça IP dins d'una xarxa local.</p>
+<h3 id="metodes-de-configuracio">Mètodes de configuració</h3>
+<p>Hi ha dues maneres de configurar la xarxa. Una és mitjançant la interfície gràfica (GUI):</p>
+<p><img alt="xarxa" src="../xarxa.png" /></p>
+<p>L’altra opció és utilitzar <strong>Netplan</strong>, executant la següent comanda:</p>
+<pre><code>sudo nano /etc/netplan/&quot;arxiu&quot;
+</code></pre>
+<p><img alt="netplan" src="../netplan.png" /></p>
+<p>Aquest fitxer de configuració de Netplan defineix una xarxa amb els següents paràmetres:</p>
 <ul>
-<li>Comprendre i identificar els components funcionals clau del sistema operatiu Ubuntu.</li>
-<li>Realitzar la instal·lació i configuració inicial d’Ubuntu.</li>
-<li>Realitzar la verificació i configuració dels protocols de xarxa.</li>
-<li>Utilitzar màquines virtuals per a la configuració i simulació d'entorns diversos.</li>
-<li>Implementar i gestionar punts de restauració del sistema utilitzant eines com Timeshift.</li>
-<li>Configurar gestors d'arrencada (GRUB) i optimitzar l'ordre d'arrencada del sistema.</li>
-<li>Explorar i gestionar opcions de llicenciament de programari i utilitzar eines de virtualització.</li>
-<li>Instal·lar, configurar, verificar, i desinstal·lar aplicacions.</li>
+<li><strong>version: 2</strong>: Utilitza la segona versió del format de Netplan.</li>
+<li><strong>renderer: NetworkManager</strong>: La gestió de la xarxa es fa a través de NetworkManager.</li>
+<li><strong>enp0s3</strong>: Interfície de xarxa amb una IP estàtica <code>10.0.2.19/24</code>.</li>
+<li><strong>routes</strong>: Es defineix una ruta estàtica amb el gateway <code>10.0.2.1</code>.</li>
+<li><strong>nameservers</strong>: Els servidors DNS són <code>8.8.8.8</code> i <code>1.1.1.1</code>.</li>
 </ul>
-<div class="custom-footer">
-    <a href="licencia/" rel="noopener noreferrer">
-        Copyright &copy; 2024 Vitaliy Domin
-    </a>
-</div>
+<p>L'opció DHCP està desactivada (<code>dhcp4: no</code>), i el fitxer utilitza adreces IP i DNS configurades manualment.</p>
 
 
 
