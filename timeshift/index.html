@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../timeshift/">
+        <link rel="prev" href="../grub/">
       
       
-        <link rel="next" href="../tipus-licencia/">
+        <link rel="next" href="../licencia/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Llicència d'us - Virtualització</title>
+        <title>Creació d'una instantània del sistema - Virtualització</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#llicencia-dus" class="md-skip">
+        <a href="#creacio-duna-instantania-de-seguretat-amb-timeshift" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Llicència d'us
+              Creació d'una instantània del sistema
             
           </span>
         </div>
@@ -236,10 +236,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../instalacio_inicial/" class="md-tabs__link">
           
   
@@ -254,13 +256,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../licencia/" class="md-tabs__link">
           
   
   Licència
@@ -349,25 +349,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -378,7 +383,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Sprint 1
@@ -494,10 +499,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../timeshift/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Creació d'una instantània del sistema
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -506,6 +531,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-de-timeshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació de Timeshift
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacio-de-fitxers-per-a-la-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació de fitxers per a la prova
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracio-de-timeshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració de Timeshift
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prova-de-restauracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prova de restauració
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verificacio-de-la-restauracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verificació de la restauració
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -522,30 +612,25 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -556,7 +641,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Licència
@@ -567,19 +652,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../licencia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,7 +664,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -637,14 +712,58 @@
                   
 
 
-<h1 id="llicencia-dus">Llicència d'us</h1>
-<p><strong>Reconeixement – CompartirIgual (by-sa) o CC by-sa</strong>: Es permet l’ús comercial de l’obra i de les possibles obres derivades, la distribució de les quals s’ha de fer amb una llicència igual a la que regula l’obra original.</p>
-<p><img alt="VboX" src="../crp.png" /></p>
-<div class="custom-footer">
-    <a href="licencia/" rel="noopener noreferrer">
-        Copyright &copy; 2024 Vitaliy Domin
-    </a>
-</div>
+<h1 id="creacio-duna-instantania-de-seguretat-amb-timeshift">Creació d'una instantània de seguretat amb Timeshift</h1>
+<p>En aquest apartat utilitzarem <strong>Timeshift</strong> per crear una instantània del sistema. Això ens permetrà restaurar fitxers o configuracions en cas d'esborrar alguna cosa accidentalment. A Windows, existeix una funcionalitat similar anomenada <em>Restore Point</em> (punt de restauració), però a Linux no és tan automàtic. Amb Timeshift, aconseguirem una protecció equivalent.</p>
+<h2 id="installacio-de-timeshift">Instal·lació de Timeshift</h2>
+<p>Per instal·lar Timeshift, executa la següent comanda:</p>
+<pre><code>sudo apt install timeshift
+</code></pre>
+<blockquote>
+<p><strong>Nota:</strong> No es recomana utilitzar el mode "superusuari" amb <code>sudo su</code> si no saps exactament què fas. És millor utilitzar sempre <code>sudo</code> abans de cada comanda per evitar esborrar fitxers importants de manera accidental.</p>
+</blockquote>
+<p><img alt="Instal·lació de Timeshift" src="../apinst.png" /></p>
+<h2 id="creacio-de-fitxers-per-a-la-prova">Creació de fitxers per a la prova</h2>
+<p>Crearem dos fitxers de prova per simular l'escenari en què es podrien perdre dades. Utilitzarem les comandes següents per crear un directori i un fitxer:</p>
+<pre><code>mkdir hello 
+</code></pre>
+<pre><code>touch adios.txt
+</code></pre>
+<p><img alt="Creació de fitxers de prova" src="../mkdirh.png" /></p>
+<h2 id="configuracio-de-timeshift">Configuració de Timeshift</h2>
+<p>Obrim Timeshift i fem clic a <strong>Next</strong> per iniciar el procés de configuració.</p>
+<p><img alt="Primera pantalla de Timeshift" src="../backup1.png" /></p>
+<p><strong>Selecció de la unitat</strong></p>
+<p>Seleccionem la unitat de disc adequada per a la nostra instantània. En aquest exemple, seleccionem <strong>SDA2</strong>. Assegura't de triar la unitat correcta segons la teva configuració del sistema.</p>
+<p><img alt="Selecció de la unitat" src="../backup2.png" /></p>
+<p><strong>Programació de les instantànies</strong></p>
+<p>És molt important configurar quan es realitzaran les instantànies automàtiques. Es recomana establir-les per a que es facin en iniciar el sistema (<em>on boot</em>) per minimitzar l'impacte en el rendiment mentre treballes.</p>
+<p><img alt="Configuració de la freqüència de les instantànies" src="../backup4.png" /></p>
+<p><strong>Inclusió i exclusió de directoris</strong></p>
+<p>Seleccionem els directoris dels quals volem fer la còpia de seguretat. Normalment, voldràs incloure el directori <code>/home</code> (en aquest cas, <strong>/home/alumne</strong>) i excloure directoris com <code>/root</code>, ja que és poc probable que vulguis restaurar fitxers del sistema.</p>
+<p><img alt="Selecció de directoris" src="../backup5.png" /></p>
+<p><strong>Creació de l'instantània</strong></p>
+<p>Després de configurar-ho tot, fem clic a <strong>Create</strong> per iniciar el procés de creació de l'instantània. Ara caldrà esperar mentre es realitza la còpia de seguretat.</p>
+<p><img alt="Creació de la instantània" src="../bk6.png" /></p>
+<p>Un cop finalitzat, ja tindrem una còpia de seguretat o instantània creada.</p>
+<p><img alt="Instantània creada" src="../bk7.png" /></p>
+<h2 id="prova-de-restauracio">Prova de restauració</h2>
+<p>Ara simularem la pèrdua de dades esborrant els fitxers que hem creat anteriorment:</p>
+<pre><code>rm -rf hello 
+</code></pre>
+<pre><code>rm adios
+</code></pre>
+<p><img alt="Esborrat dels fitxers de prova" src="../rmadios.png" /></p>
+<p><strong>Restauració de l'instantània</strong></p>
+<p>Obrim Timeshift de nou, fem clic a <strong>Restore</strong>, i després seguim els passos amb <strong>Next</strong>.</p>
+<p><img alt="Opció de restauració" src="../restore.png" /></p>
+<p><strong>Confirmació</strong></p>
+<p>Confirmem les accions que es duran a terme per restaurar el sistema a l'estat anterior. Pot ser que se'ns demani reiniciar el sistema.</p>
+<p><img alt="Confirmació de la restauració" src="../rest2.png" /></p>
+<p>Si el sistema requereix un reinici, deixem que completi el procés automàticament sense intervenir.</p>
+<p><img alt="Procés de restauració en marxa" src="../rest3.png" /></p>
+<h2 id="verificacio-de-la-restauracio">Verificació de la restauració</h2>
+<p>Un cop reiniciat l'ordinador, utilitzem la comanda <code>ls</code> per comprovar si els fitxers esborrats s'han restaurat correctament.</p>
+<p><img alt="Verificació amb 'ls'" src="../restored.png" /></p>
 
 
 

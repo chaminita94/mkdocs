@@ -45,6 +45,23 @@
         .button:hover {
             background-color: gray;
         }
+        .game-board {
+            margin-top: 20px;
+            color: lime;
+            font-size: 16px;
+            text-align: left;
+            font-family: monospace; /* Ensures text spacing is uniform */
+        }
+        pre {
+            border: 2px solid lime;
+            padding: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: black;
+            color: lime;
+            font-size: 16px;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
@@ -58,9 +75,17 @@
         <h2>Hello there</h2>
         <p>General Kenobi</p>
         <button class="button" onclick="goBack()">Torna enrere</button> <!-- Go Back Button -->
+
+        <!-- Snake Game -->
+        <div class="game-board">
+            <h3>Com que t'has perdut, et convidem a jugar al Snake!</h3>
+            <pre id="game"></pre>
+            <p>Utilitza les tecles de fletxa per moure't.</p>
+        </div>        
     </div>
 
     <script>
+        // Star background code remains unchanged
         const canvas = document.getElementById('matrixCanvas');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
@@ -152,6 +177,95 @@
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         });
+
+        /* Snake Game Logic */
+        const game = document.getElementById("game");
+
+        const boardSize = 20;
+        const board = [];
+        const snake = [{ x: 10, y: 10 }];
+        let food = { x: Math.floor(Math.random() * boardSize), y: Math.floor(Math.random() * boardSize) };
+        let direction = { x: 0, y: 0 };
+        let gameStarted = false; // To prevent game over before movement
+
+        // Initialize game board
+        for (let i = 0; i < boardSize; i++) {
+            board.push(new Array(boardSize).fill(' '));
+        }
+
+        function updateBoard() {
+            // Clear the board
+            for (let i = 0; i < boardSize; i++) {
+                board[i].fill(' ');
+            }
+
+            // Place food
+            board[food.y][food.x] = 'F';
+
+            // Place snake
+            snake.forEach(segment => board[segment.y][segment.x] = 'S');
+
+            // Render the board
+            game.textContent = board.map(row => row.join(' ')).join('\n');
+        }
+
+        function moveSnake() {
+            if (!gameStarted) return; // Prevent movement before the game starts
+
+            const head = { x: snake[0].x + direction.x, y: snake[0].y + direction.y };
+
+            // Check for game over conditions
+            if (head.x < 0 || head.x >= boardSize || head.y < 0 || head.y >= boardSize ||
+                snake.some(segment => segment.x === head.x && segment.y === head.y)) {
+                alert("Game Over!");
+                resetGame();
+                return;
+            }
+
+            // Move snake
+            snake.unshift(head);
+
+            // Check if snake eats food
+            if (head.x === food.x && head.y === food.y) {
+                food = { x: Math.floor(Math.random() * boardSize), y: Math.floor(Math.random() * boardSize) };
+            } else {
+                snake.pop(); // Remove tail if not eating
+            }
+
+            updateBoard();
+        }
+
+        function resetGame() {
+            snake.length = 1;
+            snake[0] = { x: 10, y: 10 };
+            direction = { x: 0, y: 0 };
+            gameStarted = false;
+            food = { x: Math.floor(Math.random() * boardSize), y: Math.floor(Math.random() * boardSize) };
+            updateBoard();
+        }
+
+        window.addEventListener('keydown', (event) => {
+            gameStarted = true; // Start the game on first keypress
+            switch (event.key) {
+                case "ArrowUp":
+                    if (direction.y === 0) direction = { x: 0, y: -1 };
+                    break;
+                case "ArrowDown":
+                    if (direction.y === 0) direction = { x: 0, y: 1 };
+                    break;
+                case "ArrowLeft":
+                    if (direction.x === 0) direction = { x: -1, y: 0 };
+                    break;
+                case "ArrowRight":
+                    if (direction.x === 0) direction = { x: 1, y: 0 };
+                    break;
+            }
+        });
+
+        setInterval(moveSnake, 200);
+
+        // Start the game
+        resetGame();
     </script>
 </body>
 </html>
