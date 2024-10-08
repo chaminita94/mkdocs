@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../grub/">
+        <link rel="prev" href="../timeshift/">
       
       
-        <link rel="next" href="../comandes/">
+        <link rel="next" href="../licencia/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Creació d'una instantània del sistema - Virtualització</title>
+        <title>Comandes bàssiques - Virtualització</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creacio-duna-instantania-de-seguretat-amb-timeshift" class="md-skip">
+        <a href="#comandes-per-a-la-gestio-de-paquets-en-sistemes-debianubuntu" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Creació d'una instantània del sistema
+              Comandes bàssiques
             
           </span>
         </div>
@@ -499,6 +499,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../timeshift/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d'una instantània del sistema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -515,7 +536,7 @@
           
   
   <span class="md-ellipsis">
-    Creació d'una instantània del sistema
+    Comandes bàssiques
   </span>
   
 
@@ -526,7 +547,7 @@
         
   
   <span class="md-ellipsis">
-    Creació d'una instantània del sistema
+    Comandes bàssiques
   </span>
   
 
@@ -548,45 +569,87 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installacio-de-timeshift" class="md-nav__link">
+  <a href="#apt-get-o-apt" class="md-nav__link">
     <span class="md-ellipsis">
-      Instal·lació de Timeshift
+      apt-get o apt
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacio-de-fitxers-per-a-la-prova" class="md-nav__link">
+  <a href="#aptitude" class="md-nav__link">
     <span class="md-ellipsis">
-      Creació de fitxers per a la prova
+      aptitude
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracio-de-timeshift" class="md-nav__link">
+  <a href="#dpkg" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuració de Timeshift
+      dpkg
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prova-de-restauracio" class="md-nav__link">
+  <a href="#repositoris" class="md-nav__link">
     <span class="md-ellipsis">
-      Prova de restauració
+      Repositoris
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Repositoris">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#com-afegir-repositoris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com afegir repositoris
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilar-a-traves-de-codi-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compilar a través de codi font
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#verificacio-de-la-restauracio" class="md-nav__link">
+  <a href="#comandes-per-a-descomprimir-arxius" class="md-nav__link">
     <span class="md-ellipsis">
-      Verificació de la restauració
+      Comandes per a descomprimir arxius
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrar-a-la-carpeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrar a la carpeta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilar-el-codi-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compilar el codi font
     </span>
   </a>
   
@@ -596,27 +659,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../comandes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Comandes bàssiques
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -733,58 +775,218 @@
                   
 
 
-<h1 id="creacio-duna-instantania-de-seguretat-amb-timeshift">Creació d'una instantània de seguretat amb Timeshift</h1>
-<p>En aquest apartat utilitzarem <strong>Timeshift</strong> per crear una instantània del sistema. Això ens permetrà restaurar fitxers o configuracions en cas d'esborrar alguna cosa accidentalment. A Windows, existeix una funcionalitat similar anomenada <em>Restore Point</em> (punt de restauració), però a Linux no és tan automàtic. Amb Timeshift, aconseguirem una protecció equivalent.</p>
-<h2 id="installacio-de-timeshift">Instal·lació de Timeshift</h2>
-<p>Per instal·lar Timeshift, executa la següent comanda:</p>
-<pre><code>sudo apt install timeshift
+<h1 id="comandes-per-a-la-gestio-de-paquets-en-sistemes-debianubuntu">Comandes per a la gestió de paquets en sistemes Debian/Ubuntu</h1>
+<h2 id="apt-get-o-apt">apt-get o apt</h2>
+<p><code>apt</code> és un front-end per a <code>dpkg</code> amb millores respecte a <code>apt-get</code>, facilitant la gestió de paquets i el manteniment del sistema.</p>
+<ul>
+<li>
+<p><code>apt update</code><br />
+  Actualitza la llista de tots els paquets mirant el fitxer <code>/etc/apt/sources.list</code>.</p>
+</li>
+<li>
+<p><code>apt upgrade</code><br />
+  Actualitza el sistema instal·lant noves versions de paquets existents, però <strong>no instal·la nous paquets</strong>.</p>
+</li>
+<li>
+<p><code>apt dist-upgrade</code><br />
+  Igual que l'anterior, però també instal·la nous paquets si cal.</p>
+</li>
+<li>
+<p><code>apt build-dep paquet</code><br />
+  Instal·la les dependències necessàries per construir un paquet, però <strong>no instal·la el paquet</strong> en si mateix.</p>
+</li>
+<li>
+<p><code>apt install paquet</code><br />
+  Instal·la un paquet específic.</p>
+</li>
+<li>
+<p><code>apt remove paquet</code><br />
+  Elimina un paquet instal·lat, però manté els fitxers de configuració.</p>
+</li>
+<li>
+<p><code>apt purge paquet</code><br />
+  Elimina un paquet juntament amb els seus fitxers de configuració.</p>
+</li>
+<li>
+<p><code>apt autoremove</code><br />
+  Esborra els paquets que ja no són necessaris ni utilitzats pel sistema.</p>
+</li>
+<li>
+<p><code>apt clean</code><br />
+  Esborra els paquets descarregats que es troben en la memòria cau (<code>cache</code>).</p>
+</li>
+<li>
+<p><code>apt-cache depends paquet</code><br />
+  Mostra les dependències d'un paquet determinat.</p>
+</li>
+<li>
+<p><code>apt-rdepends paquet</code><br />
+  Mostra les dependències de les dependències d'un paquet (en forma recursiva).</p>
+</li>
+<li>
+<p><code>apt -f install</code><br />
+  Corregeix instal·lacions a mitges i repara paquets trencats.</p>
+</li>
+<li>
+<p><code>apt-cache policy paquet</code><br />
+  Mostra les versions disponibles d'un paquet i el seu estat, incloent-hi informació sobre el "pinning".</p>
+</li>
+<li>
+<p>Fitxers de configuració:<br />
+  Es pot configurar la política de "pinning" a través del fitxer <code>/etc/apt/preferences.d/</code>.</p>
+</li>
+</ul>
+<h2 id="aptitude">aptitude</h2>
+<p><code>aptitude</code> és una altra eina per gestionar paquets que inclou una interfície gràfica i és més sofisticada per gestionar dependències.</p>
+<ul>
+<li>
+<p><code>aptitude remove paquet</code><br />
+  Elimina un paquet instal·lat, igual que <code>apt remove</code>.</p>
+</li>
+<li>
+<p><code>aptitude purge paquet</code><br />
+  Elimina un paquet i els seus fitxers de configuració, igual que <code>apt purge</code>.</p>
+</li>
+<li>
+<p><code>aptitude install paquet</code><br />
+  Instal·la un paquet específic.</p>
+</li>
+<li>
+<p><code>aptitude show paquet</code><br />
+  Mostra informació detallada sobre un paquet, i si no està instal·lat, ho indica.</p>
+</li>
+</ul>
+<h2 id="dpkg">dpkg</h2>
+<p><code>dpkg</code> és l'eina bàsica per a la gestió de paquets en sistemes Debian, però és més baixa a nivell que <code>apt</code> o <code>aptitude</code>.</p>
+<ul>
+<li>
+<p><code>dpkg -r paquet</code><br />
+  Elimina un paquet instal·lat, però conserva els fitxers de configuració.</p>
+</li>
+<li>
+<p><code>dpkg -P paquet</code><br />
+  Elimina un paquet i també els seus fitxers de configuració.</p>
+</li>
+<li>
+<p><code>dpkg -i arxiu.deb</code><br />
+  Instal·la un paquet des d'un fitxer <code>.deb</code> local.</p>
+</li>
+<li>
+<p><code>dpkg -s paquet</code><br />
+  Mostra informació sobre un paquet instal·lat, incloent-hi la seva prioritat (e.g., <code>required</code>, <code>important</code>, <code>standard</code>, etc.).</p>
+</li>
+<li>
+<p><code>dpkg-reconfigure</code><br />
+  Reconfigura un paquet ja instal·lat.</p>
+</li>
+<li>
+<p><code>dpkg --get-selections | grep paquet</code><br />
+  Mostra l'estat d'un paquet; no el mostra si no està instal·lat.</p>
+</li>
+</ul>
+<h2 id="repositoris">Repositoris</h2>
+<p>Els repositoris són col·leccions de paquets on el sistema obté el programari. Aquests es configuren en el fitxer <code>/etc/apt/sources.list</code>.</p>
+<ul>
+<li>
+<p><strong>main</strong><br />
+  Programari suportat oficialment per la distribució.</p>
+</li>
+<li>
+<p><strong>restricted</strong><br />
+  Programari suportat però amb llicències no completament lliures.</p>
+</li>
+<li>
+<p><strong>universe</strong><br />
+  Programari suportat per la comunitat.</p>
+</li>
+<li>
+<p><strong>multiverse</strong><br />
+  Programari no lliure, però disponible en els repositoris.</p>
+</li>
+</ul>
+<h3 id="com-afegir-repositoris">Com afegir repositoris</h3>
+<ol>
+<li>Edita el fitxer <code>/etc/apt/sources.list</code> i afegeix una línia amb el nou repositori.</li>
+<li>Actualitza la llista de paquets amb:  </li>
+</ol>
+<pre><code>apt-get update
 </code></pre>
-<blockquote>
-<p><strong>Nota:</strong> No es recomana utilitzar el mode "superusuari" amb <code>sudo su</code> si no saps exactament què fas. És millor utilitzar sempre <code>sudo</code> abans de cada comanda per evitar esborrar fitxers importants de manera accidental.</p>
-</blockquote>
-<p><img alt="Instal·lació de Timeshift" src="../apinst.png" /></p>
-<h2 id="creacio-de-fitxers-per-a-la-prova">Creació de fitxers per a la prova</h2>
-<p>Crearem dos fitxers de prova per simular l'escenari en què es podrien perdre dades. Utilitzarem les comandes següents per crear un directori i un fitxer:</p>
-<pre><code>mkdir hello 
-</code></pre>
-<pre><code>touch adios.txt
-</code></pre>
-<p><img alt="Creació de fitxers de prova" src="../mkdirh.png" /></p>
-<h2 id="configuracio-de-timeshift">Configuració de Timeshift</h2>
-<p>Obrim Timeshift i fem clic a <strong>Next</strong> per iniciar el procés de configuració.</p>
-<p><img alt="Primera pantalla de Timeshift" src="../backup1.png" /></p>
-<p><strong>Selecció de la unitat</strong></p>
-<p>Seleccionem la unitat de disc adequada per a la nostra instantània. En aquest exemple, seleccionem <strong>SDA2</strong>. Assegura't de triar la unitat correcta segons la teva configuració del sistema.</p>
-<p><img alt="Selecció de la unitat" src="../backup2.png" /></p>
-<p><strong>Programació de les instantànies</strong></p>
-<p>És molt important configurar quan es realitzaran les instantànies automàtiques. Es recomana establir-les per a que es facin en iniciar el sistema (<em>on boot</em>) per minimitzar l'impacte en el rendiment mentre treballes.</p>
-<p><img alt="Configuració de la freqüència de les instantànies" src="../backup4.png" /></p>
-<p><strong>Inclusió i exclusió de directoris</strong></p>
-<p>Seleccionem els directoris dels quals volem fer la còpia de seguretat. Normalment, voldràs incloure el directori <code>/home</code> (en aquest cas, <strong>/home/alumne</strong>) i excloure directoris com <code>/root</code>, ja que és poc probable que vulguis restaurar fitxers del sistema.</p>
-<p><img alt="Selecció de directoris" src="../backup5.png" /></p>
-<p><strong>Creació de l'instantània</strong></p>
-<p>Després de configurar-ho tot, fem clic a <strong>Create</strong> per iniciar el procés de creació de l'instantània. Ara caldrà esperar mentre es realitza la còpia de seguretat.</p>
-<p><img alt="Creació de la instantània" src="../bk6.png" /></p>
-<p>Un cop finalitzat, ja tindrem una còpia de seguretat o instantània creada.</p>
-<p><img alt="Instantània creada" src="../bk7.png" /></p>
-<h2 id="prova-de-restauracio">Prova de restauració</h2>
-<p>Ara simularem la pèrdua de dades esborrant els fitxers que hem creat anteriorment:</p>
-<pre><code>rm -rf hello 
-</code></pre>
-<pre><code>rm adios
-</code></pre>
-<p><img alt="Esborrat dels fitxers de prova" src="../rmadios.png" /></p>
-<p><strong>Restauració de l'instantània</strong></p>
-<p>Obrim Timeshift de nou, fem clic a <strong>Restore</strong>, i després seguim els passos amb <strong>Next</strong>.</p>
-<p><img alt="Opció de restauració" src="../restore.png" /></p>
-<p><strong>Confirmació</strong></p>
-<p>Confirmem les accions que es duran a terme per restaurar el sistema a l'estat anterior. Pot ser que se'ns demani reiniciar el sistema.</p>
-<p><img alt="Confirmació de la restauració" src="../rest2.png" /></p>
-<p>Si el sistema requereix un reinici, deixem que completi el procés automàticament sense intervenir.</p>
-<p><img alt="Procés de restauració en marxa" src="../rest3.png" /></p>
-<h2 id="verificacio-de-la-restauracio">Verificació de la restauració</h2>
-<p>Un cop reiniciat l'ordinador, utilitzem la comanda <code>ls</code> per comprovar si els fitxers esborrats s'han restaurat correctament.</p>
-<p><img alt="Verificació amb 'ls'" src="../restored.png" /></p>
+<h2 id="compilar-a-traves-de-codi-font">Compilar a través de codi font</h2>
+<p>Abans de compilar un programa des del codi font, cal tenir un compilador instal·lat al sistema. Una opció comuna és el paquet <code>build-essential</code>, que es pot instal·lar amb la següent comanda:</p>
+<ul>
+<li><code>apt-get install build-essential</code><br />
+  Instal·la el paquet <code>build-essential</code>, que conté eines necessàries per compilar programari.</li>
+</ul>
+<h2 id="comandes-per-a-descomprimir-arxius">Comandes per a descomprimir arxius</h2>
+<ul>
+<li>
+<p><strong>Arxiu <code>.tar</code></strong><br />
+<code>tar xvf archivo.tar</code><br />
+  Descomprimeix un arxiu amb extensió <code>.tar</code>. <code>x</code> indica que volem extreure, <code>v</code> mostra els noms dels arxius extrets, i <code>f</code> especifica el fitxer.</p>
+</li>
+<li>
+<p><strong>Arxiu <code>.gz</code></strong><br />
+<code>gunzip archivo.gz</code><br />
+  O bé <code>gzip -d archivo.gz</code><br />
+  Descomprimeix un arxiu <code>.gz</code>. <code>gunzip</code> és la manera específica de fer-ho, mentre que <code>gzip -d</code> és una forma general per descomprimir.</p>
+</li>
+<li>
+<p><strong>Arxiu <code>.tgz</code> o <code>.tar.gz</code></strong><br />
+<code>tar xvzf archivo.tar.gz</code><br />
+  Descomprimeix arxius amb format <code>.tar.gz</code> o <code>.tgz</code>. <code>z</code> indica que el fitxer està comprimit amb gzip.</p>
+</li>
+<li>
+<p><strong>Arxiu <code>.bz2</code></strong><br />
+<code>bunzip2 archivo.bz2</code><br />
+  O bé <code>bzip2 -d archivo.bz2</code><br />
+  Descomprimeix arxius <code>.bz2</code>. <code>bunzip2</code> és un mètode més directe, mentre que <code>bzip2 -d</code> és una forma general.</p>
+</li>
+<li>
+<p><strong>Arxiu <code>.tar.bz2</code></strong><br />
+<code>tar xvjf archivo.tar.bz2</code><br />
+  Descomprimeix arxius amb extensió <code>.tar.bz2</code>. <code>j</code> indica que s'utilitza el mètode de compressió bzip2.</p>
+</li>
+<li>
+<p><strong>Arxiu <code>.zip</code></strong><br />
+<code>unzip archivo.zip</code><br />
+  Descomprimeix fitxers en format <code>.zip</code>.</p>
+</li>
+<li>
+<p><strong>Arxiu <code>.rar</code></strong><br />
+<code>rar -x archivo.rar</code><br />
+  Descomprimeix arxius <code>.rar</code>. <code>-x</code> indica que volem extreure els fitxers.</p>
+</li>
+</ul>
+<h2 id="entrar-a-la-carpeta">Entrar a la carpeta</h2>
+<p>Un cop descomprimits els fitxers, és necessari accedir a la carpeta creada. Això es pot fer amb:</p>
+<ul>
+<li><code>cd nom_de_la_carpeta</code><br />
+  Canvia a la carpeta descomprimida.</li>
+</ul>
+<h2 id="compilar-el-codi-font">Compilar el codi font</h2>
+<p>Un cop dins de la carpeta, es poden executar les següents comandes per compilar el programa:</p>
+<ul>
+<li>
+<p><strong>Configuració del programa</strong><br />
+<code>./configure</code><br />
+  Prepara el sistema per a la compilació del programa, verificant requisits i generant fitxers de configuració.</p>
+</li>
+<li>
+<p><strong>Compilar el programa</strong><br />
+<code>make</code><br />
+  Inicia el procés de compilació del codi font, generant executables o binaris.</p>
+</li>
+<li>
+<p><strong>Instal·lar el programa</strong><br />
+<code>make install</code><br />
+  Instal·la el programa al sistema, copiant els fitxers necessaris als directoris apropiats.</p>
+</li>
+<li>
+<p><strong>Desinstal·lar el programa</strong><br />
+<code>make uninstall</code><br />
+  Desinstal·la el programa, eliminant els fitxers instal·lats anteriorment.</p>
+</li>
+</ul>
 
 
 
