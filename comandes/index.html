@@ -611,57 +611,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Com afegir repositoris">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#afegir-el-repositori-de-google-a-apt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Afegir el repositori de Google a APT
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compilar-a-traves-de-codi-font" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compilar a través de codi font
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compilar-el-codi-font" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compilar el codi font
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comandes-per-a-descomprimir-arxiusa" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comandes per a descomprimir arxiusa
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#entrar-a-la-carpeta" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entrar a la Carpeta
-    </span>
-  </a>
-  
 </li>
       
     </ul>
@@ -932,12 +881,31 @@
 <p>Per instal·lar Google Chrome, utilitza la comanda següent:</p>
 <pre><code>sudo apt install google-chrome-stable
 </code></pre>
-<h3 id="afegir-el-repositori-de-google-a-apt">Afegir el repositori de Google a APT</h3>
-<p>Aquest document explica com afegir el repositori de Google al teu sistema basat en Debian o Ubuntu. Això et permetrà instal·lar aplicacions de Google com Google Chrome.</p>
-<p><strong>Afegir la clau GPG de Google</strong>
-Afegeix la clau pública de Google per verificar els paquets amb la següent comanda:</p>
+<h1 id="installacio-de-paquets-de-google">Instal·lació de paquets de Google</h1>
+<h2 id="afegir-la-clau-gpg-de-google">Afegir la clau GPG de Google</h2>
+<p>Per verificar els paquets descarregats de Google, és necessari afegir la clau pública. Això es pot fer amb:</p>
+<p><strong>Afegir la clau pública:</strong>  </p>
 <pre><code>wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 </code></pre>
+<h2 id="afegir-el-repositori-de-google">Afegir el repositori de Google</h2>
+<p>Abans d'instal·lar Google Chrome, necessitaràs afegir el repositori de Google a les fonts d'APT. Això es pot fer amb:</p>
+<p><strong>Afegir el repositori:</strong>  </p>
+<pre><code>echo &quot;deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main&quot; | sudo tee /etc/apt/sources.list.d/google-chrome.list
+</code></pre>
+<h2 id="actualitzar-la-llista-de-paquets">Actualitzar la llista de paquets</h2>
+<p>Un cop afegit el repositori, és necessari actualitzar la llista de paquets. Això es pot fer amb:</p>
+<p><strong>Actualitzar la llista:</strong>  </p>
+<pre><code>sudo apt update
+</code></pre>
+<h2 id="installar-google-chrome">Instal·lar Google Chrome</h2>
+<p>Ara pots instal·lar Google Chrome amb la següent comanda:</p>
+<p><strong>Instal·lar Google Chrome:</strong>  </p>
+<pre><code>sudo apt install google-chrome-stable
+</code></pre>
+<h2 id="comprovar-la-installacio">Comprovar la instal·lació</h2>
+<p>Després de la instal·lació, pots iniciar Google Chrome cercant-lo al menú d'aplicacions o executant la següent comanda en el terminal:</p>
+<p><strong>Iniciar Google Chrome:</strong><br />
+<code>google-chrome</code></p>
 <h2 id="compilar-a-traves-de-codi-font">Compilar a través de codi font</h2>
 <p>Abans de compilar un programa des del codi font, cal tenir un compilador instal·lat al sistema. Una opció comuna és el paquet <code>build-essential</code>, que es pot instal·lar amb la següent comanda:</p>
 <ul>
