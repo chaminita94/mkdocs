@@ -200,10 +200,10 @@
             }
 
             // Place food
-            board[food.y][food.x] = 'F';
+            board[food.y][food.x] = 'x';
 
             // Place snake
-            snake.forEach(segment => board[segment.y][segment.x] = 'S');
+            snake.forEach(segment => board[segment.y][segment.x] = '·');
 
             // Render the board
             game.textContent = board.map(row => row.join(' ')).join('\n');

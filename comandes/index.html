@@ -602,13 +602,22 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Repositoris">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#com-afegir-repositoris" class="md-nav__link">
     <span class="md-ellipsis">
       Com afegir repositoris
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Com afegir repositoris">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#afegir-el-repositori-de-google-a-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afegir el repositori de Google a APT
     </span>
   </a>
   
@@ -629,9 +638,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comandes-per-a-descomprimir-arxius" class="md-nav__link">
+  <a href="#compilar-el-codi-font" class="md-nav__link">
     <span class="md-ellipsis">
-      Comandes per a descomprimir arxius
+      Compilar el codi font
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandes-per-a-descomprimir-arxiusa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandes per a descomprimir arxiusa
     </span>
   </a>
   
@@ -640,16 +658,7 @@
         <li class="md-nav__item">
   <a href="#entrar-a-la-carpeta" class="md-nav__link">
     <span class="md-ellipsis">
-      Entrar a la carpeta
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compilar-el-codi-font" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compilar el codi font
+      Entrar a la Carpeta
     </span>
   </a>
   
@@ -789,7 +798,7 @@
 </li>
 <li>
 <p><code>apt dist-upgrade</code><br />
-  Igual que l'anterior, però també instal·la nous paquets si cal.</p>
+  Igual que l'anterior, però també instal·la nous paquets si cal, i pot eliminar paquets si és necessari per resoldre dependències.</p>
 </li>
 <li>
 <p><code>apt build-dep paquet</code><br />
@@ -904,12 +913,30 @@
   Programari no lliure, però disponible en els repositoris.</p>
 </li>
 </ul>
-<h3 id="com-afegir-repositoris">Com afegir repositoris</h3>
-<ol>
-<li>Edita el fitxer <code>/etc/apt/sources.list</code> i afegeix una línia amb el nou repositori.</li>
-<li>Actualitza la llista de paquets amb:  </li>
-</ol>
-<pre><code>apt-get update
+<h2 id="com-afegir-repositoris">Com afegir repositoris</h2>
+<p>Aquest document explica com afegir nous repositoris al sistema APT en sistemes basats en Debian o Ubuntu.</p>
+<p><strong>Editar el fitxer <code>sources.list</code></strong></p>
+<p>El fitxer <code>/etc/apt/sources.list</code> és on es defineixen els repositoris des d'on APT obté els paquets. Per afegir un nou repositori:</p>
+<p>Obre el fitxer amb un editor de text, amb privilegis d'administrador:</p>
+<pre><code>sudo nano /etc/apt/sources.list
+</code></pre>
+<p><strong>També pots crear un nou fitxer:</strong></p>
+<pre><code>sudo nano /etc/apt/sources.list.d/google.list.
+</code></pre>
+<p>Afegeix aquesta línia per afegir el repositori de Google Chrome:</p>
+<pre><code>deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+</code></pre>
+<p>Actualitza la base de dades de paquets per incloure el repositori afegit:</p>
+<pre><code>sudo apt update
+</code></pre>
+<p>Per instal·lar Google Chrome, utilitza la comanda següent:</p>
+<pre><code>sudo apt install google-chrome-stable
+</code></pre>
+<h3 id="afegir-el-repositori-de-google-a-apt">Afegir el repositori de Google a APT</h3>
+<p>Aquest document explica com afegir el repositori de Google al teu sistema basat en Debian o Ubuntu. Això et permetrà instal·lar aplicacions de Google com Google Chrome.</p>
+<p><strong>Afegir la clau GPG de Google</strong>
+Afegeix la clau pública de Google per verificar els paquets amb la següent comanda:</p>
+<pre><code>wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 </code></pre>
 <h2 id="compilar-a-traves-de-codi-font">Compilar a través de codi font</h2>
 <p>Abans de compilar un programa des del codi font, cal tenir un compilador instal·lat al sistema. Una opció comuna és el paquet <code>build-essential</code>, que es pot instal·lar amb la següent comanda:</p>
@@ -917,7 +944,31 @@
 <li><code>apt-get install build-essential</code><br />
   Instal·la el paquet <code>build-essential</code>, que conté eines necessàries per compilar programari.</li>
 </ul>
-<h2 id="comandes-per-a-descomprimir-arxius">Comandes per a descomprimir arxius</h2>
+<h2 id="compilar-el-codi-font">Compilar el codi font</h2>
+<p>Un cop dins de la carpeta, es poden executar les següents comandes per compilar el programa:</p>
+<ul>
+<li>
+<p><strong>Configuració del programa</strong><br />
+<code>./configure</code><br />
+  Prepara el sistema per a la compilació del programa, verificant requisits i generant fitxers de configuració.</p>
+</li>
+<li>
+<p><strong>Compilar el programa</strong><br />
+<code>make</code><br />
+  Inicia el procés de compilació del codi font, generant executables o binaris.</p>
+</li>
+<li>
+<p><strong>Instal·lar el programa</strong><br />
+<code>make install</code><br />
+  Instal·la el programa al sistema, copiant els fitxers necessaris als directoris apropiats.</p>
+</li>
+<li>
+<p><strong>Desinstal·lar el programa</strong><br />
+<code>make uninstall</code><br />
+  Desinstal·la el programa, eliminant els fitxers instal·lats anteriorment.</p>
+</li>
+</ul>
+<h2 id="comandes-per-a-descomprimir-arxiusa">Comandes per a descomprimir arxiusa</h2>
 <ul>
 <li>
 <p><strong>Arxiu <code>.tar</code></strong><br />
@@ -957,36 +1008,20 @@
   Descomprimeix arxius <code>.rar</code>. <code>-x</code> indica que volem extreure els fitxers.</p>
 </li>
 </ul>
-<h2 id="entrar-a-la-carpeta">Entrar a la carpeta</h2>
+<h2 id="entrar-a-la-carpeta">Entrar a la Carpeta</h2>
 <p>Un cop descomprimits els fitxers, és necessari accedir a la carpeta creada. Això es pot fer amb:</p>
-<ul>
-<li><code>cd nom_de_la_carpeta</code><br />
-  Canvia a la carpeta descomprimida.</li>
-</ul>
-<h2 id="compilar-el-codi-font">Compilar el codi font</h2>
-<p>Un cop dins de la carpeta, es poden executar les següents comandes per compilar el programa:</p>
-<ul>
-<li>
-<p><strong>Configuració del programa</strong><br />
-<code>./configure</code><br />
-  Prepara el sistema per a la compilació del programa, verificant requisits i generant fitxers de configuració.</p>
-</li>
-<li>
-<p><strong>Compilar el programa</strong><br />
-<code>make</code><br />
-  Inicia el procés de compilació del codi font, generant executables o binaris.</p>
-</li>
-<li>
-<p><strong>Instal·lar el programa</strong><br />
-<code>make install</code><br />
-  Instal·la el programa al sistema, copiant els fitxers necessaris als directoris apropiats.</p>
-</li>
-<li>
-<p><strong>Desinstal·lar el programa</strong><br />
-<code>make uninstall</code><br />
-  Desinstal·la el programa, eliminant els fitxers instal·lats anteriorment.</p>
-</li>
-</ul>
+<p><strong>Accedir a la carpeta:</strong> <code>cd nom_de_la_carpeta</code><br />
+Exemple: <code>cd projecte</code></p>
+<p><strong>Sortir de la carpeta:</strong> <code>cd ..</code><br />
+Torna al directori pare.<br />
+Exemple: Si estàs a <code>projecte</code>, <code>cd ..</code> et portarà al directori anterior.</p>
+<p><strong>Tornar al directori anterior:</strong> <code>cd --</code><br />
+Exemple: Si has canviat de <code>~/documents</code> a <code>~/documents/projecte</code>, <code>cd --</code> et portarà de nou a <code>~/documents</code>.</p>
+<p><strong>Notes:</strong>
+- <code>cd</code> és sensible a majúscules i minúscules.
+- Utilitza <code>cd ..</code> per navegar cap enrere en l'estructura de carpetes.
+- <code>cd --</code> és útil per alternar entre dues carpetes sense recordar la ruta completa.</p>
+<p>Les comandes <code>cd nom_de_la_carpeta</code>, <code>cd ..</code> i <code>cd --</code> són essencials per navegar pel sistema de fitxers i accedir a les carpetes descompresses.</p>
 
 
 
