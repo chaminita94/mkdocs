@@ -575,6 +575,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="apt-get o apt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comandes-basiques-dapt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandes Bàsiques d'apt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -608,6 +623,60 @@
   <a href="#com-afegir-repositoris" class="md-nav__link">
     <span class="md-ellipsis">
       Com afegir repositoris
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afegir-la-clau-gpg-de-google" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afegir la clau GPG de Google
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afegir-el-repositori-de-google" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afegir el repositori de Google
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilar-a-traves-de-codi-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compilar a través de codi font
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilar-el-codi-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compilar el codi font
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandes-per-a-descomprimir-arxiusa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandes per a descomprimir arxiusa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrar-a-la-carpeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrar a la Carpeta
     </span>
   </a>
   
@@ -736,34 +805,37 @@
 <h1 id="comandes-per-a-la-gestio-de-paquets-en-sistemes-debianubuntu">Comandes per a la gestió de paquets en sistemes Debian/Ubuntu</h1>
 <h2 id="apt-get-o-apt">apt-get o apt</h2>
 <p><code>apt</code> és un front-end per a <code>dpkg</code> amb millores respecte a <code>apt-get</code>, facilitant la gestió de paquets i el manteniment del sistema.</p>
+<h3 id="comandes-basiques-dapt">Comandes Bàsiques d'<code>apt</code></h3>
 <ul>
 <li>
-<p><code>apt update</code><br />
-  Actualitza la llista de tots els paquets mirant el fitxer <code>/etc/apt/sources.list</code>.</p>
+<p><strong><code>apt update</code></strong><br />
+  Actualitza la llista de tots els paquets mirant el fitxer <code>/etc/apt/sources.list</code>.<br />
+  Exemple: Després d'executar <code>sudo apt update</code>, hauries de veure un missatge que indica que la llista de paquets s'ha actualitzat correctament, amb informació sobre paquets que s'han actualitzat.</p>
 </li>
 <li>
-<p><code>apt upgrade</code><br />
-  Actualitza el sistema instal·lant noves versions de paquets existents, però <strong>no instal·la nous paquets</strong>.</p>
+<p><strong><code>apt upgrade</code></strong><br />
+  Actualitza el sistema instal·lant noves versions de paquets existents, però <strong>no instal·la nous paquets</strong>.<br />
+  Exemple: Si executeu <code>sudo apt upgrade</code>, es mostrarà una llista de paquets que seran actualitzats, amb la quantitat d'espai que ocuparan.</p>
 </li>
 <li>
-<p><code>apt dist-upgrade</code><br />
-  Igual que l'anterior, però també instal·la nous paquets si cal, i pot eliminar paquets si és necessari per resoldre dependències.</p>
+<p><strong><code>apt dist-upgrade</code></strong><br />
+  Igual que l'anterior, però també instal·la nous paquets si cal, i pot eliminar paquets si és necessari per resoldre dependències.<br />
+  Exemple: <code>sudo apt dist-upgrade</code> és útil quan s'actualitzen les versions del nucli o altres components importants del sistema.</p>
 </li>
 <li>
-<p><code>apt build-dep paquet</code><br />
-  Instal·la les dependències necessàries per construir un paquet, però <strong>no instal·la el paquet</strong> en si mateix.</p>
+<p><strong><code>apt install paquet</code></strong><br />
+  Instal·la un paquet específic.<br />
+  Exemple: <code>sudo apt install vim</code> instal·larà l'editor de text Vim.</p>
 </li>
 <li>
-<p><code>apt install paquet</code><br />
-  Instal·la un paquet específic.</p>
+<p><strong><code>apt remove paquet</code></strong><br />
+  Elimina un paquet instal·lat, però manté els fitxers de configuració.<br />
+  Exemple: <code>sudo apt remove vim</code> eliminarà Vim, però els fitxers de configuració es mantindran.</p>
 </li>
 <li>
-<p><code>apt remove paquet</code><br />
-  Elimina un paquet instal·lat, però manté els fitxers de configuració.</p>
-</li>
-<li>
-<p><code>apt purge paquet</code><br />
-  Elimina un paquet juntament amb els seus fitxers de configuració.</p>
+<p><strong><code>apt purge paquet</code></strong><br />
+  Elimina un paquet juntament amb els seus fitxers de configuració.<br />
+  Exemple: <code>sudo apt purge vim</code> eliminarà Vim i tots els fitxers associats.</p>
 </li>
 <li>
 <p><code>apt autoremove</code><br />
@@ -881,7 +953,6 @@
 <p>Per instal·lar Google Chrome, utilitza la comanda següent:</p>
 <pre><code>sudo apt install google-chrome-stable
 </code></pre>
-<h1 id="installacio-de-paquets-de-google">Instal·lació de paquets de Google</h1>
 <h2 id="afegir-la-clau-gpg-de-google">Afegir la clau GPG de Google</h2>
 <p>Per verificar els paquets descarregats de Google, és necessari afegir la clau pública. Això es pot fer amb:</p>
 <p><strong>Afegir la clau pública:</strong>  </p>
@@ -892,26 +963,23 @@
 <p><strong>Afegir el repositori:</strong>  </p>
 <pre><code>echo &quot;deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main&quot; | sudo tee /etc/apt/sources.list.d/google-chrome.list
 </code></pre>
-<h2 id="actualitzar-la-llista-de-paquets">Actualitzar la llista de paquets</h2>
+<p><strong>Actualitzar la llista de paquets</strong></p>
 <p>Un cop afegit el repositori, és necessari actualitzar la llista de paquets. Això es pot fer amb:</p>
 <p><strong>Actualitzar la llista:</strong>  </p>
 <pre><code>sudo apt update
 </code></pre>
-<h2 id="installar-google-chrome">Instal·lar Google Chrome</h2>
+<p><strong>Instal·lar Google Chrome</strong></p>
 <p>Ara pots instal·lar Google Chrome amb la següent comanda:</p>
 <p><strong>Instal·lar Google Chrome:</strong>  </p>
 <pre><code>sudo apt install google-chrome-stable
 </code></pre>
-<h2 id="comprovar-la-installacio">Comprovar la instal·lació</h2>
+<p><strong>Comprovar la instal·lació</strong></p>
 <p>Després de la instal·lació, pots iniciar Google Chrome cercant-lo al menú d'aplicacions o executant la següent comanda en el terminal:</p>
-<p><strong>Iniciar Google Chrome:</strong><br />
-<code>google-chrome</code></p>
 <h2 id="compilar-a-traves-de-codi-font">Compilar a través de codi font</h2>
 <p>Abans de compilar un programa des del codi font, cal tenir un compilador instal·lat al sistema. Una opció comuna és el paquet <code>build-essential</code>, que es pot instal·lar amb la següent comanda:</p>
-<ul>
-<li><code>apt-get install build-essential</code><br />
-  Instal·la el paquet <code>build-essential</code>, que conté eines necessàries per compilar programari.</li>
-</ul>
+<pre><code>apt-get install build-essential
+</code></pre>
+<p>Instal·la el paquet <code>build-essential</code>, que conté eines necessàries per compilar programari.</p>
 <h2 id="compilar-el-codi-font">Compilar el codi font</h2>
 <p>Un cop dins de la carpeta, es poden executar les següents comandes per compilar el programa:</p>
 <ul>
