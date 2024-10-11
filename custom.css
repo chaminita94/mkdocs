@@ -9,3 +9,21 @@
     z-index: 1000; /* High z-index to stay on top */
     font-size: 14px; /* Smaller text size */
 }
+
+
+/* Style the code blocks */
+pre {
+    background-color: #2d3e50; /* Dark background for code blocks */
+    color: #ecf0f1; /* Light text for code blocks */
+    padding: 7px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #34495e; /* Optional border */
+    font-family: 'Courier New', monospace; /* Monospace font */
+    line-height: 1.5; /* Increase line height */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+pre:hover {
+    background-color: #34495e; /* Change background on hover */
+    
+}
