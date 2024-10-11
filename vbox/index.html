@@ -728,6 +728,32 @@
 <p>Si ets un usuari avançat, pots optar per la configuració <strong>manual</strong> de les particions del disc. Si prefereixes un procés més senzill, tria la configuració <strong>automàtica</strong>.</p>
 <p><img alt="Configuració" src="../manual.png" /></p>
 <p>Finalment, defineix les <strong>particions del disc</strong>, com ara <strong>swap</strong>, <strong>root</strong> i <strong>home</strong>, segons les teves preferències.</p>
+<ol>
+<li>
+<p>Partició <strong>Root</strong> (<code>/</code>)
+La partició <strong>root</strong> (representada per <code>/</code>) és el cor del sistema Linux. Aquí s'hi instal·len tots els fitxers i directoris necessaris per al funcionament del sistema operatiu. Això inclou el nucli de Linux, biblioteques, aplicacions, i altres components essencials. Aquesta partició ha de tenir una mida adequada per garantir que tingui prou espai per a totes les aplicacions i actualitzacions del sistema.</p>
+</li>
+<li>
+<p><strong>Sistema de fitxers recomanat</strong>: <code>ext4</code></p>
+</li>
+<li>
+<p><strong>Mida recomanada</strong>: Almenys 20 GB (depèn del tipus d'ús)</p>
+</li>
+<li>
+<p>Partició <strong>Home</strong> (<code>/home</code>)
+La partició <strong>home</strong> (<code>/home</code>) és on es desen els fitxers i configuracions personals de cada usuari del sistema. Cadascun dels usuaris tindrà un directori dins de <code>/home</code>, i mantenir-lo separat de la partició root permet actualitzar o reinstal·lar el sistema operatiu sense perdre les dades personals.</p>
+</li>
+<li>
+<p><strong>Sistema de fitxers recomanat</strong>: <code>ext4</code></p>
+</li>
+<li>
+<p><strong>Mida recomanada</strong>: Depèn de les teves necessitats d'emmagatzematge. Pot ocupar gran part de l'espai disponible si tens molts fitxers personals.</p>
+</li>
+<li>
+<p>Partició <strong>Swap</strong>
+La partició <strong>swap</strong> s'utilitza com a memòria virtual. Quan el sistema es queda sense memòria RAM disponible, comença a utilitzar l'espai de la partició swap per gestionar processos inactius. Tot i que l'ús de swap pot fer que el sistema sigui més lent que amb memòria RAM real, és útil per evitar que el sistema es quedi sense recursos.</p>
+</li>
+</ol>
 <p><img alt="Particions" src="../sda.png" /></p>
 <p>En aquesta pantalla, selecciona el sistema de fitxers <strong>ext4</strong> i la partició <strong>root</strong> per instal·lar el sistema operatiu. Després, fes clic a <strong>Next</strong> per continuar la instal·lació dins de la partició root.</p>
 <p><img alt="Particions" src="../sdanext.png" /></p>
