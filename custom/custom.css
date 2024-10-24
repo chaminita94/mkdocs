@@ -8,6 +8,7 @@
     text-align: left; /* Left align the text */
     z-index: 1000; /* High z-index to stay on top */
     font-size: 14px; /* Smaller text size */
+    color: white;
 }
 
 
