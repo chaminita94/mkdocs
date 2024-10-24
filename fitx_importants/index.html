@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../gestio_usuaris/">
+        <link rel="prev" href="../comandes/">
       
       
-        <link rel="next" href="../copies_segur/">
+        <link rel="next" href="../gestproces/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Sistemes de Fitxers i Particions - Virtualització</title>
+        <title>Fitxers Importants - Virtualització</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#introduccio-als-fitxers-de-configuracio" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sistemes de Fitxers i Particions
+              Fitxers Importants
             
           </span>
         </div>
@@ -255,7 +260,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../fitx_importants/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
   Sprint 2
@@ -601,10 +606,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../fitx_importants/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Fitxers Importants
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -613,6 +636,84 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccio-als-fitxers-de-configuracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducció als fitxers de configuració
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal-nativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal nativa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terminal nativa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#larxiu-etcpasswd" class="md-nav__link">
+    <span class="md-ellipsis">
+      L'arxiu /etc/passwd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#larxiu-etcgroup" class="md-nav__link">
+    <span class="md-ellipsis">
+      L'arxiu /etc/group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#larxiu-etcshadow" class="md-nav__link">
+    <span class="md-ellipsis">
+      L'arxiu /etc/shadow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#larxiu-etcgshadow" class="md-nav__link">
+    <span class="md-ellipsis">
+      L'arxiu /etc/gshadow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -664,17 +765,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../sistemes_fitxers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -683,7 +777,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -842,9 +935,97 @@
                   
 
 
-  <h1>Sistemes de Fitxers i Particions</h1>
+  <h1>Fitxers Importants</h1>
 
-
+<h2 id="introduccio-als-fitxers-de-configuracio">Introducció als fitxers de configuració</h2>
+<p>Els fitxers que explicarem a continuació es poden visualitzar mitjançant la comanda <code>cat /etc/passwd</code>. A més, es poden editar, però no es recomana fer-ho d'aquesta manera.</p>
+<pre><code>sudo nano /etc/passwd
+</code></pre>
+<h2 id="terminal-nativa">Terminal nativa</h2>
+<p>El primer pas explica com accedir a la terminal nativa (TTY) utilitzant la combinació de tecles <code>Control + Alt + F3</code>. Això és útil en situacions on l'entorn gràfic no respon o necessites treballar des d'una consola directa.</p>
+<p><img alt="Terminal nativa" src="../custom/tty.png" /></p>
+<p>Per tornar enrere pots fer-ho amb <code>Control + Alt + F1</code>.</p>
+<h3 id="larxiu-etcpasswd">L'arxiu <code>/etc/passwd</code></h3>
+<p>Aquest fitxer conté la informació bàsica sobre tots els usuaris del sistema, incloent-hi els noms d'usuari i els seus identificadors. Editar aquest fitxer pot ser necessari per gestionar usuaris o solucionar problemes de configuració.</p>
+<p><img alt="Arxiu passwd" src="../custom/passwd.png" /></p>
+<p><strong>Desglossament de <code>/etc/passwd</code></strong></p>
+<ul>
+<li><strong><code>alumnat</code></strong>: Nom d'usuari, amb el qual l'usuari inicia sessió.</li>
+<li><strong><code>x</code></strong>: Indica que la contrasenya encriptada es troba a <code>/etc/shadow</code>.</li>
+<li><strong><code>1000</code></strong>: Identificador d'usuari (UID), únic per a cada usuari normal.</li>
+<li><strong><code>1000</code></strong>: Identificador de grup (GID), que indica el grup principal de l'usuari.</li>
+<li><strong><code>Vitaliy</code></strong>: Nom complet o informació addicional sobre l'usuari.</li>
+<li><strong><code>/home/alumnat</code></strong>: Directori home de l'usuari, on s'emmagatzemen fitxers personals.</li>
+<li><strong><code>/bin/bash</code></strong>: Shell predeterminat que s'utilitza quan l'usuari inicia sessió.</li>
+</ul>
+<p>Aquesta línia conté informació essencial sobre l'usuari <code>alumnat</code> i el seu entorn al sistema Linux.</p>
+<h3 id="larxiu-etcgroup">L'arxiu <code>/etc/group</code></h3>
+<p>Aquest arxiu gestiona els grups d'usuaris al sistema. És útil per gestionar permisos i recursos compartits entre diversos usuaris.</p>
+<p><img alt="Arxiu group" src="../custom/group.png" /></p>
+<p><strong>Desglossament de <code>/etc/group</code></strong></p>
+<ul>
+<li><strong><code>alumnat</code></strong>: Nom del grup. En aquest cas, indica el grup associat a l'usuari <code>alumnat</code>.</li>
+<li><strong><code>x</code></strong>: Indica que les contrasenyes de grup no es mostren o no són utilitzades, ja que normalment s'emmagatzemen en un altre fitxer.</li>
+<li><strong><code>1000</code></strong>: Identificador del grup (GID), que és únic per a cada grup. En aquest cas, <code>1000</code> és el GID del grup <code>alumnat</code>.</li>
+</ul>
+<p>Aquesta línia conté informació bàsica sobre el grup <code>alumnat</code>, que pot incloure altres usuaris i determinar permisos d'accés.</p>
+<h3 id="larxiu-etcshadow">L'arxiu <code>/etc/shadow</code></h3>
+<p>Aquí és on es guarden les contrasenyes encriptades dels usuaris. El símbol <code>!</code> indica que la contrasenya està bloquejada, mentre que <code>$</code> significa que la contrasenya està encriptada amb un algoritme fort com SHA-512. És crucial no manipular malament aquest fitxer per evitar problemes d'accés.</p>
+<p><img alt="Arxiu shadow" src="../custom/shadow.png" /></p>
+<p><strong>Desglossament de <code>/etc/shadow</code></strong></p>
+<ul>
+<li>
+<p><strong>Nom d'usuari</strong>: <code>alumnat</code><br />
+  Nom del compte d'usuari al sistema.</p>
+</li>
+<li>
+<p><strong>Hash de contrasenya</strong>:<br />
+<code>$y$j9T$jKK1.vU6gMnulFm9HjYTY/$D1QlW2QSkS7ZLm.p4wYUP9Dq0li8720JcFN8QvrC.ID</code><br />
+  És el valor generat a partir de la contrasenya de l'usuari, utilitzant un algorisme de hashing.</p>
+</li>
+<li>
+<p><strong>ID d'usuari</strong>: <code>19992</code><br />
+  Identificador únic de l'usuari dins del sistema.</p>
+</li>
+<li>
+<p><strong>ID de grup</strong>: <code>0</code><br />
+  Indica que l'usuari pertany al grup <code>root</code>, que té permisos d'administrador.</p>
+</li>
+<li>
+<p><strong>Expiració de contrasenya</strong>: <code>99999</code><br />
+  Indica que la contrasenya no té una data d'expiració definida.</p>
+</li>
+<li>
+<p><strong>Advertència</strong>: <code>7</code><br />
+  Significa que s'advertirà a l'usuari 7 dies abans de que la contrasenya expiri (tot i que no s'aplica en aquest cas).</p>
+</li>
+<li>
+<p><strong>Altres camps</strong>:<br />
+  Els camps finals són buits, que podrien contenir informació addicional com l'últim canvi de contrasenya.</p>
+</li>
+</ul>
+<h3 id="larxiu-etcgshadow">L'arxiu <code>/etc/gshadow</code></h3>
+<p>L'arxiu <code>gshadow</code> conté informació sobre contrasenyes específiques de grups. És menys comú d'editar però important quan cal gestionar l'accés a grups amb permisos específics.</p>
+<p><img alt="Arxiu gshadow" src="../custom/gshadow.png" /></p>
+<p><strong>Desglossament de <code>/etc/gshadow</code></strong></p>
+<ul>
+<li>
+<p><strong>Nom del grup</strong>: <code>alumnat</code><br />
+  Representa un grup d'usuaris dins del sistema, potencialment destinat a estudiants o usuaris relacionats amb el món acadèmic.</p>
+</li>
+<li>
+<p><strong>Contrasenya</strong>: <code>!</code><br />
+  El símbol <code>!</code> indica que no hi ha contrasenya associada amb aquest grup, per tant, no es requereix autenticació per accedir a les seves funcionalitats.</p>
+</li>
+<li>
+<p><strong>Membres del grup</strong>: (buit)<br />
+  No hi ha membres assignats al grup "alumnat", cosa que significa que actualment no s'ha creat cap connexió amb usuaris.</p>
+</li>
+<li>
+<p><strong>Administradors del grup</strong>: (buit)<br />
+  No s'han especificat administradors per gestionar aquest grup, indicant que no hi ha un control assignat sobre la seva administració.</p>
+</li>
+</ul>
 
 
 

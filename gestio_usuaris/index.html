@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#afegir-un-nou-usuari" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -255,7 +260,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../gestproces/" class="md-tabs__link">
+        <a href="../fitx_importants/" class="md-tabs__link">
           
   
   Sprint 2
@@ -604,6 +609,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../fitx_importants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fitxers Importants
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../gestproces/" class="md-nav__link">
         
   
@@ -632,6 +658,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Gestió d'Usuari
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -641,6 +678,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#afegir-un-nou-usuari" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afegir un nou usuari
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eliminar-un-usuari-sense-eliminar-la-seva-carpeta-personal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminar un usuari sense eliminar la seva carpeta personal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eliminar-un-usuari-i-la-seva-carpeta-personal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminar un usuari i la seva carpeta personal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloquejar-un-usuari" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bloquejar un usuari
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desbloquejar-un-usuari" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desbloquejar un usuari
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afegir-un-usuari-sense-crear-carpeta-personal-o-contrasenya" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afegir un usuari sense crear carpeta personal o contrasenya
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -823,7 +931,39 @@
 
   <h1>Gestió d'Usuari</h1>
 
-<p>e</p>
+<p>A continuació, es detallen diverses comandes per gestionar usuaris en un sistema Linux. En aquest exemple, utilitzarem els noms d'usuari "david" i "miquel".</p>
+<h3 id="afegir-un-nou-usuari">Afegir un nou usuari</h3>
+<p>Per afegir un nou usuari amb el nom "david", utilitzem la següent comanda:</p>
+<pre><code>adduser &quot;david&quot;
+</code></pre>
+<h3 id="eliminar-un-usuari-sense-eliminar-la-seva-carpeta-personal">Eliminar un usuari sense eliminar la seva carpeta personal</h3>
+<p>Si volem eliminar un usuari anomenat "david" però mantenir la seva carpeta personal, utilitzem:</p>
+<pre><code>deluser &quot;david&quot;
+</code></pre>
+<blockquote>
+<p><strong>Nota</strong>: La carpeta <code>/home/david</code> no es perd.</p>
+</blockquote>
+<h3 id="eliminar-un-usuari-i-la-seva-carpeta-personal">Eliminar un usuari i la seva carpeta personal</h3>
+<p>Per eliminar un usuari, incloent la seva carpeta personal i tots els seus fitxers, utilitzem:</p>
+<pre><code>rm -rf /home/miquel
+</code></pre>
+<pre><code>userdel -r &quot;miquel&quot;
+</code></pre>
+<blockquote>
+<p><strong>Nota</strong>: La comanda <code>userdel -r</code> borra l'usuari <code>miquel</code> juntament amb el seu directori home.</p>
+</blockquote>
+<h3 id="bloquejar-un-usuari">Bloquejar un usuari</h3>
+<p>Per bloquejar l'accés d'un usuari anomenat "david", utilitzem:</p>
+<pre><code>usermod -L &quot;david&quot;
+</code></pre>
+<h3 id="desbloquejar-un-usuari">Desbloquejar un usuari</h3>
+<p>Si necessitem desbloquejar l'usuari "david", la comanda és:</p>
+<pre><code>usermod -U &quot;david&quot;
+</code></pre>
+<h3 id="afegir-un-usuari-sense-crear-carpeta-personal-o-contrasenya">Afegir un usuari sense crear carpeta personal o contrasenya</h3>
+<p>Per afegir un nou usuari "miquel" sense crear la seva carpeta personal ni establir una contrasenya, utilitzem:</p>
+<pre><code>useradd &quot;miquel&quot;
+</code></pre>
 
 
 
