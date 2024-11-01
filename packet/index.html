@@ -972,6 +972,8 @@ Pin-Priority: 500
 <h2 id="afegir-un-ppa-per-a-smplayer">Afegir un PPA per a SMPlayer</h2>
 <p>Per instal·lar paquets addicionals que no estan inclosos en els repositoris oficials d’Ubuntu, es poden utilitzar els PPAs (Personal Package Archives). Aquests repositoris són gestionats per desenvolupadors externs i proporcionen versions actualitzades o alternatives de certs programes.</p>
 <p>En aquest cas, s'ha afegit el PPA <code>ppa:rvm/smplayer</code>, que conté paquets per a SMPlayer. Per completar la instal·lació, primer s’ha d'actualitzar la llista de paquets disponibles amb els paquets nous d'aquest PPA, i després instal·lar SMPlayer i altres paquets opcionals relacionats, com ara <code>smtube</code>, <code>smplayer-themes</code>, i <code>smplayer-skins</code>.</p>
+<pre><code>sudo add-apt-repository ppa:rvm/smplayer
+</code></pre>
 <p><img alt="PPA output" src="../repo.png" /></p>
 <p><strong>Què fa cada pas?</strong></p>
 <ul>
@@ -982,8 +984,15 @@ Pin-Priority: 500
 <p><strong>Avantatges de fer servir un PPA</strong></p>
 <p>Els PPAs són útils per obtenir versions més recents o paquets especialitzats que poden no estar disponibles en els repositoris oficials d'Ubuntu. Tanmateix, és important tenir en compte que els PPAs no estan oficialment suportats per Ubuntu, i per tant poden comportar certs riscos de compatibilitat o estabilitat.</p>
 <p><strong>Instal·lació de SMPlayer</strong></p>
-<p>Finalment, per instal·lar SMPlayer es pot executar la instal·lació amb la prioritat adequada:</p>
-<p><img alt="SMPlayer Installation" src="../fotoplayer.png" /></p>
+<p>Per assegurar-nos que la instal·lació de SMPlayer es realitza amb la prioritat configurada, primer hem d'actualitzar la llista de paquets per garantir que el sistema reconeix els canvis als repositoris.</p>
+<p>Actualitza la llista de paquets disponibles executant:</p>
+<pre><code>sudo apt update
+</code></pre>
+<p>Un cop actualitzada la llista, instal·la SMPlayer amb la següent comanda:</p>
+<pre><code>sudo apt install smplayer
+</code></pre>
+<p>Aquest procés garanteix que la versió de SMPlayer s’instal·li d’acord amb les preferències configurades, incloent-hi qualsevol prioritat que hàgim definit en la configuració de fixació de paquets.</p>
+<p><img alt="Captura de la instal·lació de SMPlayer" src="../fotoplayer.png" /></p>
 
 
 
