@@ -26,6 +26,8 @@ pre {
 
 pre:hover {
     background-color: #34495e; /* Change background on hover */
-    
 }
 
+.md-content {
+    text-align: justify;
+}

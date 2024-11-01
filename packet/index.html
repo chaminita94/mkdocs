@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../packet/">
+        <link rel="prev" href="../comandes/">
       
       
-        <link rel="next" href="../gestproces/">
+        <link rel="next" href="../fitx_importants/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Fitxers Importants - Virtualització</title>
+        <title>Fixació de Paquets - Virtualització</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccio-als-fitxers-de-configuracio" class="md-skip">
+        <a href="#fixacio-de-paquets-amb-apt-a-ubuntu" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fitxers Importants
+              Fixació de Paquets
             
           </span>
         </div>
@@ -236,10 +236,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../instalacio_inicial/" class="md-tabs__link">
           
   
@@ -254,13 +256,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../fitx_importants/" class="md-tabs__link">
           
   
   Sprint 2
@@ -367,25 +367,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -396,7 +401,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Sprint 1
@@ -554,10 +559,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../packet/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Fixació de Paquets
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -566,6 +591,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccio-a-la-fixacio-de-paquets-amb-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducció a la Fixació de Paquets amb APT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprovar-la-politica-de-paquets-amb-apt-cache-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprovar la Política de Paquets amb apt-cache policy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#com-configurar-la-fixacio-de-paquets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com configurar la fixació de paquets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afegir-un-ppa-per-a-smplayer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afegir un PPA per a SMPlayer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -582,30 +663,25 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -616,7 +692,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Sprint 2
@@ -627,28 +703,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Fitxers Importants
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../fitx_importants/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -657,84 +715,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduccio-als-fitxers-de-configuracio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introducció als fitxers de configuració
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#terminal-nativa" class="md-nav__link">
-    <span class="md-ellipsis">
-      Terminal nativa
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Terminal nativa">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#larxiu-etcpasswd" class="md-nav__link">
-    <span class="md-ellipsis">
-      L'arxiu /etc/passwd
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#larxiu-etcgroup" class="md-nav__link">
-    <span class="md-ellipsis">
-      L'arxiu /etc/group
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#larxiu-etcshadow" class="md-nav__link">
-    <span class="md-ellipsis">
-      L'arxiu /etc/shadow
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#larxiu-etcgshadow" class="md-nav__link">
-    <span class="md-ellipsis">
-      L'arxiu /etc/gshadow
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -956,97 +936,54 @@
                   
 
 
-  <h1>Fitxers Importants</h1>
-
-<h2 id="introduccio-als-fitxers-de-configuracio">Introducció als fitxers de configuració</h2>
-<p>Els fitxers que explicarem a continuació es poden visualitzar mitjançant la comanda <code>cat /etc/passwd</code>. A més, es poden editar, però no es recomana fer-ho d'aquesta manera.</p>
-<pre><code>sudo nano /etc/passwd
+<h1 id="fixacio-de-paquets-amb-apt-a-ubuntu">Fixació de Paquets amb APT a Ubuntu</h1>
+<h2 id="introduccio-a-la-fixacio-de-paquets-amb-apt">Introducció a la Fixació de Paquets amb APT</h2>
+<p>La fixació de paquets (o <em>APT pinning</em>) és una funcionalitat d'APT, el sistema de gestió de paquets en distribucions basades en Debian com Ubuntu, que permet definir quina versió d'un paquet específic s'ha d'instal·lar, independentment de les actualitzacions disponibles en altres repositoris o versions del sistema operatiu. 
+Aquesta tècnica és útil quan volem assegurar-nos que un programa específic utilitzi una versió concreta.</p>
+<p><strong>Quan és útil la fixació de paquets?</strong>
+- <strong>Versions d’aplicacions estables</strong>: Quan es necessita una versió específica d'una aplicació que només es troba en una altra versió o repositori, com versions de proves o versions inestables.</p>
+<h2 id="comprovar-la-politica-de-paquets-amb-apt-cache-policy">Comprovar la Política de Paquets amb <code>apt-cache policy</code></h2>
+<p>L'eina <code>apt-cache policy</code> permet veure la política de versions d'un paquet específic, incloent-hi la versió instal·lada, la versió disponible per instal·lar i el repositori d'on prové el paquet.</p>
+<p><strong>Exemple: Comprovació de la versió de <code>smplayer</code></strong></p>
+<p>En aquest exemple, s'ha utilitzat la comanda <code>apt-cache policy smplayer</code> per consultar les versions disponibles del paquet <code>smplayer</code>:</p>
+<pre><code>sudo apt-cache policy smplayer
 </code></pre>
-<h2 id="terminal-nativa">Terminal nativa</h2>
-<p>El primer pas explica com accedir a la terminal nativa (TTY) utilitzant la combinació de tecles <code>Control + Alt + F3</code>. Això és útil en situacions on l'entorn gràfic no respon o necessites treballar des d'una consola directa.</p>
-<p><img alt="Terminal nativa" src="../custom/tty.png" /></p>
-<p>Per tornar enrere pots fer-ho amb <code>Control + Alt + F1</code>.</p>
-<h3 id="larxiu-etcpasswd">L'arxiu <code>/etc/passwd</code></h3>
-<p>Aquest fitxer conté la informació bàsica sobre tots els usuaris del sistema, incloent-hi els noms d'usuari i els seus identificadors. Editar aquest fitxer pot ser necessari per gestionar usuaris o solucionar problemes de configuració.</p>
-<p><img alt="Arxiu passwd" src="../custom/passwd.png" /></p>
-<p><strong>Desglossament de <code>/etc/passwd</code></strong></p>
+<p><img alt="apt-cache policy output" src="../policy.png" /></p>
+<p>L'output ens mostra:</p>
 <ul>
-<li><strong><code>alumnat</code></strong>: Nom d'usuari, amb el qual l'usuari inicia sessió.</li>
-<li><strong><code>x</code></strong>: Indica que la contrasenya encriptada es troba a <code>/etc/shadow</code>.</li>
-<li><strong><code>1000</code></strong>: Identificador d'usuari (UID), únic per a cada usuari normal.</li>
-<li><strong><code>1000</code></strong>: Identificador de grup (GID), que indica el grup principal de l'usuari.</li>
-<li><strong><code>Vitaliy</code></strong>: Nom complet o informació addicional sobre l'usuari.</li>
-<li><strong><code>/home/alumnat</code></strong>: Directori home de l'usuari, on s'emmagatzemen fitxers personals.</li>
-<li><strong><code>/bin/bash</code></strong>: Shell predeterminat que s'utilitza quan l'usuari inicia sessió.</li>
+<li><strong>Installed</strong>: <code>(none)</code> — No hi ha cap versió instal·lada de <code>smplayer</code> actualment.</li>
+<li><strong>Candidate</strong>: <code>23.12.0+ds0-1build2</code> — Aquesta és la versió que es proposa instal·lar si executem <code>sudo apt install smplayer</code>.</li>
+<li><strong>Version table</strong>: La versió <code>23.12.0+ds0-1build2</code> prové del repositori <code>http://es.archive.ubuntu.com/ubuntu</code>, en el component <code>noble/universe</code> per arquitectura <code>amd64</code>, amb una prioritat de <code>500</code>.</li>
 </ul>
-<p>Aquesta línia conté informació essencial sobre l'usuari <code>alumnat</code> i el seu entorn al sistema Linux.</p>
-<h3 id="larxiu-etcgroup">L'arxiu <code>/etc/group</code></h3>
-<p>Aquest arxiu gestiona els grups d'usuaris al sistema. És útil per gestionar permisos i recursos compartits entre diversos usuaris.</p>
-<p><img alt="Arxiu group" src="../custom/group.png" /></p>
-<p><strong>Desglossament de <code>/etc/group</code></strong></p>
+<p><strong>Ús en la Fixació de Paquets</strong></p>
+<p>La comanda <code>apt-cache policy</code> és útil en la configuració de fixació de paquets, ja que permet veure d’on prové cada versió i la seva prioritat actual. Això facilita l’elecció d'una versió específica del paquet en les configuracions de fixació.</p>
+<h2 id="com-configurar-la-fixacio-de-paquets">Com configurar la fixació de paquets</h2>
+<p>Per configurar la fixació, primer hem d'editar o crear un arxiu dins de <code>/etc/apt/preferences.d/</code> que defineixi les regles de prioritat. Aquesta configuració pot controlar la versió i repositori preferit per un o més paquets.</p>
+<p><strong>Exemple de configuració</strong></p>
+<p>A continuació, es mostra un exemple de fixació per instal·lar un paquet anomenat <code>smplayer</code> amb una prioritat específica. Això assegura que es triï una versió específica o que provingui d’un repositori concret.</p>
+<pre><code>Package: smplayer
+Pin: Version 24*
+Pin-Priority: 400
+</code></pre>
+<pre><code>Package: smplayer
+Pin: Version 23*
+Pin-Priority: 500
+</code></pre>
+<h2 id="afegir-un-ppa-per-a-smplayer">Afegir un PPA per a SMPlayer</h2>
+<p>Per instal·lar paquets addicionals que no estan inclosos en els repositoris oficials d’Ubuntu, es poden utilitzar els PPAs (Personal Package Archives). Aquests repositoris són gestionats per desenvolupadors externs i proporcionen versions actualitzades o alternatives de certs programes.</p>
+<p>En aquest cas, s'ha afegit el PPA <code>ppa:rvm/smplayer</code>, que conté paquets per a SMPlayer. Per completar la instal·lació, primer s’ha d'actualitzar la llista de paquets disponibles amb els paquets nous d'aquest PPA, i després instal·lar SMPlayer i altres paquets opcionals relacionats, com ara <code>smtube</code>, <code>smplayer-themes</code>, i <code>smplayer-skins</code>.</p>
+<p><img alt="PPA output" src="../repo.png" /></p>
+<p><strong>Què fa cada pas?</strong></p>
 <ul>
-<li><strong><code>alumnat</code></strong>: Nom del grup. En aquest cas, indica el grup associat a l'usuari <code>alumnat</code>.</li>
-<li><strong><code>x</code></strong>: Indica que les contrasenyes de grup no es mostren o no són utilitzades, ja que normalment s'emmagatzemen en un altre fitxer.</li>
-<li><strong><code>1000</code></strong>: Identificador del grup (GID), que és únic per a cada grup. En aquest cas, <code>1000</code> és el GID del grup <code>alumnat</code>.</li>
+<li><strong>Afegir el PPA</strong>: Afegeix un nou repositori al sistema que conté les versions específiques del programari, en aquest cas, SMPlayer.</li>
+<li><strong>Actualitzar la llista de paquets</strong>: Permet que el sistema reconegui els nous paquets disponibles des del PPA afegit.</li>
+<li><strong>Instal·lar SMPlayer i paquets relacionats</strong>: Després d’actualitzar, es pot instal·lar SMPlayer i, opcionalment, altres paquets com temes i skins relacionats.</li>
 </ul>
-<p>Aquesta línia conté informació bàsica sobre el grup <code>alumnat</code>, que pot incloure altres usuaris i determinar permisos d'accés.</p>
-<h3 id="larxiu-etcshadow">L'arxiu <code>/etc/shadow</code></h3>
-<p>Aquí és on es guarden les contrasenyes encriptades dels usuaris. El símbol <code>!</code> indica que la contrasenya està bloquejada, mentre que <code>$</code> significa que la contrasenya està encriptada amb un algoritme fort com SHA-512. És crucial no manipular malament aquest fitxer per evitar problemes d'accés.</p>
-<p><img alt="Arxiu shadow" src="../custom/shadow.png" /></p>
-<p><strong>Desglossament de <code>/etc/shadow</code></strong></p>
-<ul>
-<li>
-<p><strong>Nom d'usuari</strong>: <code>alumnat</code><br />
-  Nom del compte d'usuari al sistema.</p>
-</li>
-<li>
-<p><strong>Hash de contrasenya</strong>:<br />
-<code>$y$j9T$jKK1.vU6gMnulFm9HjYTY/$D1QlW2QSkS7ZLm.p4wYUP9Dq0li8720JcFN8QvrC.ID</code><br />
-  És el valor generat a partir de la contrasenya de l'usuari, utilitzant un algorisme de hashing.</p>
-</li>
-<li>
-<p><strong>ID d'usuari</strong>: <code>19992</code><br />
-  Identificador únic de l'usuari dins del sistema.</p>
-</li>
-<li>
-<p><strong>ID de grup</strong>: <code>0</code><br />
-  Indica que l'usuari pertany al grup <code>root</code>, que té permisos d'administrador.</p>
-</li>
-<li>
-<p><strong>Expiració de contrasenya</strong>: <code>99999</code><br />
-  Indica que la contrasenya no té una data d'expiració definida.</p>
-</li>
-<li>
-<p><strong>Advertència</strong>: <code>7</code><br />
-  Significa que s'advertirà a l'usuari 7 dies abans de que la contrasenya expiri (tot i que no s'aplica en aquest cas).</p>
-</li>
-<li>
-<p><strong>Altres camps</strong>:<br />
-  Els camps finals són buits, que podrien contenir informació addicional com l'últim canvi de contrasenya.</p>
-</li>
-</ul>
-<h3 id="larxiu-etcgshadow">L'arxiu <code>/etc/gshadow</code></h3>
-<p>L'arxiu <code>gshadow</code> conté informació sobre contrasenyes específiques de grups. És menys comú d'editar però important quan cal gestionar l'accés a grups amb permisos específics.</p>
-<p><img alt="Arxiu gshadow" src="../custom/gshadow.png" /></p>
-<p><strong>Desglossament de <code>/etc/gshadow</code></strong></p>
-<ul>
-<li>
-<p><strong>Nom del grup</strong>: <code>alumnat</code><br />
-  Representa un grup d'usuaris dins del sistema, potencialment destinat a estudiants o usuaris relacionats amb el món acadèmic.</p>
-</li>
-<li>
-<p><strong>Contrasenya</strong>: <code>!</code><br />
-  El símbol <code>!</code> indica que no hi ha contrasenya associada amb aquest grup, per tant, no es requereix autenticació per accedir a les seves funcionalitats.</p>
-</li>
-<li>
-<p><strong>Membres del grup</strong>: (buit)<br />
-  No hi ha membres assignats al grup "alumnat", cosa que significa que actualment no s'ha creat cap connexió amb usuaris.</p>
-</li>
-<li>
-<p><strong>Administradors del grup</strong>: (buit)<br />
-  No s'han especificat administradors per gestionar aquest grup, indicant que no hi ha un control assignat sobre la seva administració.</p>
-</li>
-</ul>
+<p><strong>Avantatges de fer servir un PPA</strong></p>
+<p>Els PPAs són útils per obtenir versions més recents o paquets especialitzats que poden no estar disponibles en els repositoris oficials d'Ubuntu. Tanmateix, és important tenir en compte que els PPAs no estan oficialment suportats per Ubuntu, i per tant poden comportar certs riscos de compatibilitat o estabilitat.</p>
+<p><strong>Instal·lació de SMPlayer</strong></p>
+<p>Finalment, per instal·lar SMPlayer es pot executar la instal·lació amb la prioritat adequada:</p>
+<p><img alt="SMPlayer Installation" src="../fotoplayer.png" /></p>
 
 
 
