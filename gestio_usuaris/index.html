@@ -732,6 +732,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comprovacio-de-la-carpeta-personal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprovació de la Carpeta Personal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#eliminar-un-usuari-i-la-seva-carpeta-personal" class="md-nav__link">
     <span class="md-ellipsis">
       Eliminar un usuari i la seva carpeta personal
@@ -759,9 +768,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#afegir-un-usuari-sense-crear-carpeta-personal-o-contrasenya" class="md-nav__link">
+  <a href="#creacio-dun-usuari-sense-carpeta-personal" class="md-nav__link">
     <span class="md-ellipsis">
-      Afegir un usuari sense crear carpeta personal o contrasenya
+      Creació d'un Usuari Sense Carpeta Personal
     </span>
   </a>
   
@@ -955,36 +964,83 @@
 <p>A continuació, es detallen diverses comandes per gestionar usuaris en un sistema Linux. En aquest exemple, utilitzarem els noms d'usuari "david" i "miquel".</p>
 <h3 id="afegir-un-nou-usuari">Afegir un nou usuari</h3>
 <p>Per afegir un nou usuari amb el nom "david", utilitzem la següent comanda:</p>
-<pre><code>adduser &quot;david&quot;
+<pre><code>sudo adduser david
 </code></pre>
+<p><img alt="alt text" src="../adduser.png" /></p>
+<p><strong>Comprovació d'Usuari</strong></p>
+<p>Ens demanarà la contrasenya i més informació sobre "David", com el nom complet i el telèfon, entre d'altres.</p>
+<p><strong>Inici de Sessió</strong></p>
+<p>Comprovem que l'usuari pot iniciar sessió correctament. Podem observar que "David" està creat i ens demana la contrasenya per accedir-hi.</p>
+<p><img alt="Pantalla d'Inici de Sessió" src="../davidlogin.png" /></p>
+<p><strong>Confirmació d'Usuari</strong></p>
+<p>La comanda <code>whoami</code> ens confirma que l'usuari és "David" i que la seva carpeta d'usuari (<code>home</code>) està creada correctament.</p>
+<p><img alt="Resultat de whoami" src="../whoami.png" /></p>
 <h3 id="eliminar-un-usuari-sense-eliminar-la-seva-carpeta-personal">Eliminar un usuari sense eliminar la seva carpeta personal</h3>
-<p>Si volem eliminar un usuari anomenat "david" però mantenir la seva carpeta personal, utilitzem:</p>
-<pre><code>deluser &quot;david&quot;
+<p>Si volem eliminar un usuari anomenat "David" però mantenir la seva carpeta personal, podem utilitzar la comanda següent:</p>
+<pre><code>sudo deluser david
 </code></pre>
 <blockquote>
 <p><strong>Nota</strong>: La carpeta <code>/home/david</code> no es perd.</p>
 </blockquote>
+<p><img alt="Comanda deluser" src="../custom/deluser.png" /></p>
+<h3 id="comprovacio-de-la-carpeta-personal">Comprovació de la Carpeta Personal</h3>
+<p>Comprovem si és veritat que la carpeta no s'ha esborrat per a l'usuari "David". Com es pot observar a la imatge, la carpeta existeix amb tots els documents. Això pot ser útil si un usuari abandona l'empresa però després torna, ja que seguirà tenint accés a la seva informació.</p>
+<p><img alt="Carpeta d'Usuari David" src="../davidhome.png" /></p>
 <h3 id="eliminar-un-usuari-i-la-seva-carpeta-personal">Eliminar un usuari i la seva carpeta personal</h3>
 <p>Per eliminar un usuari, incloent la seva carpeta personal i tots els seus fitxers, utilitzem:</p>
-<pre><code>rm -rf /home/miquel
+<pre><code>sudo rm -rf /home/david
 </code></pre>
-<pre><code>userdel -r &quot;miquel&quot;
+<pre><code>sudo userdel -r miquel
 </code></pre>
 <blockquote>
 <p><strong>Nota</strong>: La comanda <code>userdel -r</code> borra l'usuari <code>miquel</code> juntament amb el seu directori home.</p>
 </blockquote>
+<p><img alt="alt text" src="../miqueldel.png" /></p>
+<p><img alt="alt text" src="../custom/deldavid.png" /></p>
 <h3 id="bloquejar-un-usuari">Bloquejar un usuari</h3>
 <p>Per bloquejar l'accés d'un usuari anomenat "david", utilitzem:</p>
-<pre><code>usermod -L &quot;david&quot;
+<pre><code>sudo usermod -L david
 </code></pre>
+<p>Si la segona columna conté un ! al principi <strong>(ex. david:!:$y$j9T$eqz.gXACdgxhb6wt3h370...)</strong>, significa que l'usuari "david" està bloquejat.</p>
+<p><img alt="alt text" src="../userblock.png" /></p>
 <h3 id="desbloquejar-un-usuari">Desbloquejar un usuari</h3>
 <p>Si necessitem desbloquejar l'usuari "david", la comanda és:</p>
-<pre><code>usermod -U &quot;david&quot;
+<pre><code>sudo usermod -U david
 </code></pre>
-<h3 id="afegir-un-usuari-sense-crear-carpeta-personal-o-contrasenya">Afegir un usuari sense crear carpeta personal o contrasenya</h3>
-<p>Per afegir un nou usuari "miquel" sense crear la seva carpeta personal ni establir una contrasenya, utilitzem:</p>
-<pre><code>useradd &quot;miquel&quot;
+<p>Com es pot observar la segona columna no conté el signe d'exclamació.</p>
+<p><img alt="alt text" src="../unlock.png" /></p>
+<h2 id="creacio-dun-usuari-sense-carpeta-personal">Creació d'un Usuari Sense Carpeta Personal</h2>
+<p>Quan es crea un usuari a Linux, és possible que no es generi automàticament la seva carpeta personal. Això passa si s'utilitza la comanda <code>useradd</code> sense opcions addicionals.</p>
+<p><strong>Exemple de Creació</strong></p>
+<p>Si es crea un usuari com "miquel" amb la comanda <code>useradd "miquel"</code>, no es crearà la seva carpeta <code>/home/miquel</code>.</p>
+<pre><code>sudo useradd miquel
 </code></pre>
+<p><img alt="alt text" src="../useradd.png" /></p>
+<p><strong>Motiu</strong></p>
+<ul>
+<li><strong>Sense carpeta home</strong>: La comanda <code>useradd</code> no crea un directori personal per a l'usuari per defecte. Per fer-ho, s'ha d'utilitzar l'opció <code>-m</code>.</li>
+</ul>
+<p><strong>Creació Manual de la Carpeta Personal</strong></p>
+<p>Si l'usuari ja existeix i no té carpeta personal, es pot crear manualment. Després, cal canviar el propietari de la carpeta perquè sigui de l'usuari.</p>
+<pre><code>sudo mkdir /home/miquel
+</code></pre>
+<p><img alt="alt text" src="../mkdirman.png" /></p>
+<p>Fem que "miquel" sigui el propietari d'aquesta carpeta amb <code>chown</code></p>
+<pre><code>sudo chown miquel:miquel miquel
+</code></pre>
+<p><img alt="alt text" src="../miquelfolder.png" /></p>
+<p>També es pot utilitzar la comanda <code>useradd -m</code>, que crea automàticament la carpeta <code>/home/</code> per al nou usuari. </p>
+<blockquote>
+<p><strong>Nota</strong>: cal tenir en compte que <code>useradd -m</code> no crea una contrasenya per a l'usuari; això s'ha de fer amb <code>sudo passwd miquel</code>.</p>
+</blockquote>
+<p><img alt="alt text" src="../usradd.png" /></p>
+<p><strong>Esborrem el usuari que hem creat</strong></p>
+<p>Una comanda interessant és <code>!history</code>, que mostra totes les comandes que has executat recentment. Si vols tornar a executar una comanda de la llista, pots escriure <code>!n</code>, on <code>n</code> és el número de la comanda en la llista. Això permet executar la comanda sense haver de tornar a escriure-la.</p>
+<p><img alt="alt text" src="../custom/history.png" /></p>
+<p>Executem la comanda.</p>
+<p><img alt="alt text" src="../histdelete.png" /></p>
+<p><strong>En resum</strong></p>
+<p>Per crear un usuari amb una carpeta personal automàticament, s'ha d'utilitzar <code>adduser</code> o <code>useradd -m</code>. Si no s'ha fet, es pot crear la carpeta manualment i ajustar els permisos corresponents.</p>
 
 
 
