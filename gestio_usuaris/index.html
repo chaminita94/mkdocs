@@ -226,7 +226,7 @@
   
     
   
-  Objectius
+  Per què triar Linux?
 
       </a>
     </li>
@@ -354,7 +354,7 @@
         
   
   <span class="md-ellipsis">
-    Objectius
+    Per què triar Linux?
   </span>
   
 
@@ -776,6 +776,114 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#comandes-addicionals-de-gestio-dusuaris-i-grups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandes Addicionals de Gestió d'Usuaris i Grups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandes Addicionals de Gestió d'Usuaris i Grups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assignacio-de-propietat-i-grup-dusuaris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assignació de Propietat i Grup d'Usuaris
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assignació de Propietat i Grup d'Usuaris">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#com-configurar-el-propietari-i-el-grup-dun-directori-o-fitxer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com configurar el propietari i el grup d'un directori o fitxer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canviar-la-contrasenya-dun-usuari" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canviar la Contrasenya d'un Usuari
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignar-una-shell-per-defecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assignar una Shell per Defecte
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestio-de-grups-per-a-un-usuari" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestió de Grups per a un Usuari
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestió de Grups per a un Usuari">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#afegir-un-usuari-a-un-grup-existent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afegir un usuari a un grup existent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignar-administracio-de-grup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assignar Administració de Grup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canviar-el-grup-principal-dun-usuari" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canviar el Grup Principal d'un Usuari
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-el-nom-dun-grup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificar el Nom d'un Grup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1038,8 +1146,145 @@
 <p><img alt="alt text" src="../custom/history.png" /></p>
 <p>Executem la comanda.</p>
 <p><img alt="alt text" src="../histdelete.png" /></p>
-<p><strong>En resum</strong></p>
-<p>Per crear un usuari amb una carpeta personal automàticament, s'ha d'utilitzar <code>adduser</code> o <code>useradd -m</code>. Si no s'ha fet, es pot crear la carpeta manualment i ajustar els permisos corresponents.</p>
+<!-- new from here -->
+
+<h2 id="comandes-addicionals-de-gestio-dusuaris-i-grups">Comandes Addicionals de Gestió d'Usuaris i Grups</h2>
+<h3 id="assignacio-de-propietat-i-grup-dusuaris">Assignació de Propietat i Grup d'Usuaris</h3>
+<p>En un sistema Linux, que un usuari sigui el propietari d’un fitxer és <strong>important</strong> perquè el propietari té control sobre els permisos i pot decidir qui pot <strong><em>llegir, escriure o executar</em></strong> aquest fitxer. Això és essencial per a la seguretat, ja que garanteix que només els usuaris autoritzats puguin modificar o accedir a informació sensible.</p>
+<h4 id="com-configurar-el-propietari-i-el-grup-dun-directori-o-fitxer">Com configurar el propietari i el grup d'un directori o fitxer</h4>
+<p><strong><code>chown</code></strong>: Aquesta comanda permet assignar un usuari i un grup com a propietaris d'un fitxer o directori. Això és útil per establir qui té control sobre els permisos d'aquests fitxers o directoris.</p>
+<p>Exemple:</p>
+<ul>
+<li>Crearem un fitxer de demostració i li assignarem el propietari <code>miquel</code> i el grup <code>miquel</code>.</li>
+</ul>
+<p><img alt="Creació i assignació de propietari" src="../touchls.png" /></p>
+<p>Amb la comanda següent, assignem l'usuari i el grup <code>miquel</code> com a propietaris del fitxer <code>miquel</code>:</p>
+<pre><code>sudo chown miquel:miquel miqueltxt.txt
+</code></pre>
+<p><img alt="alt text" src="../chownmiguel.png" /></p>
+<p>Aquest canvi assegura que l'usuari miquel pugui gestionar els permisos del fitxer.</p>
+<p>Opció addicional: <code>chown -R miquel:miquel miquel</code> per canviar també els permisos de tots els subdirectoris i fitxers.</p>
+<p>Exemple:</p>
+<ul>
+<li>Crearem una carpeta anomenada miquel i dins d'aquesta crearem diversos fitxers. Es pot observar que el propietari és <strong>root</strong>, ja que els hem creat com a usuari <strong>root</strong>. Per canviar aquests permisos, executarem la comanda següent.</li>
+</ul>
+<p><img alt="alt text" src="../ch-r.png" /></p>
+<pre><code>sudo chown -R miquel:miquel miquel
+</code></pre>
+<p><img alt="alt text" src="../custom/miquelmiquel.png" /></p>
+<p><strong><code>chgrp</code></strong>: Canvia només el grup propietari:</p>
+<p><code>sudo chgrp Telegram miqueltxt.txt</code> — canvia el grup a <code>Telegram</code> sense alterar el propietari <strong>miquel</strong>.</p>
+<pre><code>sudo chgrp telegram miqueltxt.txt
+</code></pre>
+<p><img alt="alt text" src="../telegram.png" /></p>
+<h4 id="canviar-la-contrasenya-dun-usuari">Canviar la Contrasenya d'un Usuari</h4>
+<p><strong><code>passwd</code></strong>: Estableix o canvia la contrasenya d'un usuari.
+Per exemple, <code>passwd miquel</code> per definir la contrasenya de <code>miquel</code>.</p>
+<pre><code>sudo passwd miquel
+</code></pre>
+<p><img alt="alt text" src="../psmiquel.png" /></p>
+<p>Opció addicional: <code>passwd -e miquel</code> per forçar que <code>miquel</code> canviï la seva contrasenya al següent inici de sessió.</p>
+<pre><code>sudo passwd -e miquel
+</code></pre>
+<p><img alt="alt text" src="../passmiquel.png" /></p>
+<p>En Inciar la sessió ens demana el canvi de contrasenya.</p>
+<p><img alt="alt text" src="../passchange.png" /></p>
+<h4 id="assignar-una-shell-per-defecte">Assignar una Shell per Defecte</h4>
+<p><strong>Què és una Shell?</strong></p>
+<p>En un sistema Linux, una <strong>shell</strong> és una interfície que permet als usuaris interactuar amb el sistema operatiu a través de línies de comanda. Actua com un "intèrpret" de comandes, processant i executant ordres que l'usuari escriu, com la creació de fitxers, el seu desplaçament o l'execució de programes.</p>
+<p>Quan un usuari inicia sessió al sistema, la shell és l'entorn on treballa i des d'on pot executar les seves ordres. Les shells més comunes inclouen <strong>sh</strong>.</p>
+<p><strong>Diferència entre <code>/bin/bash</code> i <code>/bin/sh</code></strong></p>
+<p><strong><code>/bin/bash</code></strong>:
+- <strong>Bash</strong> (Bourne Again SHell) és una shell avançada, basada en la shell oriMiquell de Unix, <strong>sh</strong>.
+- Ofereix característiques addicionals com històric de comandes, completat de comandes, manipulació d'arxius millorada, entre altres.</p>
+<blockquote>
+<p><strong><em>És la shell per defecte en moltes distribucions de Linux.</em></strong></p>
+</blockquote>
+<p><strong><code>/bin/sh</code></strong>:
+- <strong>Sh</strong> (Bourne Shell) és la shell oriMiquell de Unix, més simple i amb menys funcionalitats que Bash.
+- Sovint és un enllaç a una shell més lleugera com <strong>Dash</strong> en sistemes amb requisits mínims.
+- S'utilitza per garantir compatibilitat bàsica amb scripts.</p>
+<p><strong>Exemple en <code>/etc/passwd</code></strong></p>
+<blockquote>
+<ul>
+<li>
+<p><code>david:x:1001:1001:,,,:/home/david:/bin/bash</code></p>
+</li>
+<li>
+<p><code>miquel:x:1002:1002::/home/miquel:/bin/sh</code></p>
+</li>
+</ul>
+</blockquote>
+<p><img alt="alt text" src="../shell.png" /></p>
+<p><strong><code>chsh -s</code></strong>: 
+Aquest comandament permet establir la shell per defecte d'un usuari. <strong>Si ets l'usuari que vols modificar</strong>, pots utilitzar-lo sense necessitat de permisos d'administrador.</p>
+<pre><code>chsh -s /bin/bash miquel
+</code></pre>
+<p><img alt="alt text" src="../shbaash.png" /></p>
+<p>També es podria executar amb <strong><code>sudo chsh -s /bin/bash miquel</code></strong> per canviar la shell d'un altre usuari si tens permisos d'administrador.</p>
+<pre><code>sudo chsh -s /bin/bash miquel
+</code></pre>
+<p><img alt="alt text" src="../miquelshell.png" /></p>
+<p><strong>Alternativa amb permisos d'administrador</strong>:</p>
+<p>Una alternativa per canviar la shell d'un altre usuari, com <code>miquel</code> o <code>david</code>, necessitaràs permisos d'administrador. En aquest cas, pots utilitzar el següent comandament:</p>
+<pre><code>sudo usermod --shell /bin/bash miquel
+</code></pre>
+<p><img alt="alt text" src="../binsh.png" /></p>
+<p><strong>Avís sobre el canvi de shell d'un usuari</strong></p>
+<p>Canviar la shell d'un usuari pot tenir algunes implicacions:</p>
+<ul>
+<li>
+<p><strong>Canvi en el comportament</strong>: El canvi a <strong>bash</strong> ofereix més funcionalitats, però si l'usuari estava acostumat a una shell més senzilla com <strong>sh</strong>, pot notar canvis en el seu comportament.</p>
+</li>
+<li>
+<p><strong>Compatibilitat de scripts</strong>: Alguns scripts creats per <strong>sh</strong> podrien necessitar ajustos per funcionar amb <strong>bash</strong>, tot i que <strong>bash</strong> és compatible amb <strong>sh</strong> en general.</p>
+</li>
+<li>
+<p><strong>Reiniciar sessió</strong>: L'usuari haurà de tancar la sessió i iniciar-la novament perquè el canvi de shell tingui efecte.</p>
+</li>
+</ul>
+<h3 id="gestio-de-grups-per-a-un-usuari">Gestió de Grups per a un Usuari</h3>
+<h4 id="afegir-un-usuari-a-un-grup-existent">Afegir un usuari a un grup existent</h4>
+<p><strong><code>gpasswd -a</code></strong>: Afegeix l'usuari a un grup secundari:</p>
+<ul>
+<li>Exemple: <code>gpasswd -a miquel Telegram</code> — afegeix <code>miquel</code> al grup <code>Telegram</code>.</li>
+</ul>
+<p><img alt="alt text" src="../grouptele.png" /></p>
+<blockquote>
+<p>Es pot observar que el grup principal que miquel no ha canviat si no que s'ha afegit a un altre grup.</p>
+</blockquote>
+<p>Alternativa: <code>usermod -a -G Telegram miquel</code> per aconseguir el mateix resultat.</p>
+<h4 id="assignar-administracio-de-grup">Assignar Administració de Grup</h4>
+<p><strong><code>gpasswd -A</code></strong>: Designa un usuari com a administrador del grup:</p>
+<ul>
+<li><code>gpasswd -A miquel Telegram</code> — designa <code>miquel</code> com administradora del grup <code>Telegram</code>.</li>
+</ul>
+<p><img alt="alt text" src="../getent.png" /></p>
+<h4 id="canviar-el-grup-principal-dun-usuari">Canviar el Grup Principal d'un Usuari</h4>
+<p><strong><code>usermod -g</code></strong>: Defineix el grup principal d'un usuari:</p>
+<ul>
+<li>Exemple: <code>usermod -g Asix miquel</code> — defineix <code>Asix</code> com el grup principal per a <code>miquel</code>.</li>
+</ul>
+<p><img alt="alt text" src="../asixGrup.png" /></p>
+<p>Aquesta sortida confirma que:</p>
+<ul>
+<li>
+<p>Grup primari: El grup primari de miquel és Asix (gid=1004).</p>
+</li>
+<li>
+<p>Grups secundaris: miquel també és membre del grup Telegram (gid=1003).</p>
+</li>
+</ul>
+<h4 id="modificar-el-nom-dun-grup">Modificar el Nom d'un Grup</h4>
+<p><strong><code>groupmod -n</code></strong>: Canvia el nom d'un grup existent:</p>
+<ul>
+<li><code>groupmod -n SMX Telegram</code> — canvia el nom de <code>Telegram</code> a <code>SMX</code>.</li>
+</ul>
+<p><img alt="alt text" src="../SMX.png" /></p>
+<blockquote>
+<p><strong>Espero que aquesta breu introducció sobre la gestió d'usuaris i grups hagi estat útil.</strong></p>
+</blockquote>
+<p><img alt="alt text" src="../DealWithIt.png" /></p>
 
 
 
