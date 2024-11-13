@@ -777,6 +777,78 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configuracio-per-defecte-dusuaris-en-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració per defecte d'usuaris en Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuració per defecte d'usuaris en Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-del-fitxer-etcdefaultuseradd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració del fitxer /etc/default/useradd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-del-directori-etcskel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració del directori /etc/skel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuració del directori /etc/skel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestio-dels-fitxers-per-defecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestió dels fitxers per defecte
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacio-dusuaris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació d'usuaris
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creació d'usuaris">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metode-amb-parametres-especifics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mètode amb paràmetres específics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#comandes-addicionals-de-gestio-dusuaris-i-grups" class="md-nav__link">
     <span class="md-ellipsis">
       Comandes Addicionals de Gestió d'Usuaris i Grups
@@ -1067,8 +1139,6 @@
                   
 
 
-  <h1>Gestió d'Usuari</h1>
-
 <p>A continuació, es detallen diverses comandes per gestionar usuaris en un sistema Linux. En aquest exemple, utilitzarem els noms d'usuari "david" i "miquel".</p>
 <h3 id="afegir-un-nou-usuari">Afegir un nou usuari</h3>
 <p>Per afegir un nou usuari amb el nom "david", utilitzem la següent comanda:</p>
@@ -1120,6 +1190,7 @@
 <p>Quan es crea un usuari a Linux, és possible que no es generi automàticament la seva carpeta personal. Això passa si s'utilitza la comanda <code>useradd</code> sense opcions addicionals.</p>
 <p><strong>Exemple de Creació</strong></p>
 <p>Si es crea un usuari com "miquel" amb la comanda <code>useradd "miquel"</code>, no es crearà la seva carpeta <code>/home/miquel</code>.</p>
+<p>Per més informació, pots consultar aquest <a href="https://nebul4ck.wordpress.com/2015/06/10/crear-y-eliminar-cuentas-de-usuarios-linux/">enllaç</a>.</p>
 <pre><code>sudo useradd miquel
 </code></pre>
 <p><img alt="alt text" src="../useradd.png" /></p>
@@ -1147,8 +1218,159 @@
 <p>Executem la comanda.</p>
 <p><img alt="alt text" src="../histdelete.png" /></p>
 <!-- new from here -->
+<h1 id="configuracio-per-defecte-dusuaris-en-linux">Configuració per defecte d'usuaris en Linux</h1>
+<p>Aquest document descriu els passos necessaris per configurar els paràmetres per defecte dels nous usuaris en un sistema Linux, incloent la configuració de contrasenyes i altres paràmetres generals.</p>
+<h3 id="configuracio-del-fitxer-etcdefaultuseradd">Configuració del fitxer <code>/etc/default/useradd</code></h3>
+<p>El fitxer <code>/etc/default/useradd</code> permet definir els valors per defecte per als nous usuaris, com ara la ubicació del directori home i l'intèrpret de comandes predeterminat.</p>
+<pre><code>sudo nano /etc/default/useradd
+</code></pre>
+<p><strong>Passos de configuració</strong></p>
+<ol>
+<li>Edita el fitxer <code>/etc/default/useradd</code></li>
+<li>Modifica o afegeix les següents línies:</li>
+</ol>
+<pre><code>HOME=/home
+SHELL=/bin/sh
+INACTIVE=-1
+EXPIRE=
+SKEL=/etc/skel
+CREATE_MAIL_SPOOL=yes
+</code></pre>
+<p><img alt="alt text" src="../homesh1.png" /></p>
+<p>Aquestes opcions addicionals estableixen:</p>
+<ul>
+<li>
+<p><em>INACTIVE=-1: El compte no es desactivarà mai per manca d'activitat.</em></p>
+</li>
+<li>
+<p>EXPIRE=: No hi ha data d'expiració del compte.</p>
+</li>
+<li>
+<p>SKEL=/etc/skel: S'utilitzarà el directori /etc/skel per copiar els fitxers per defecte al directori home del nou usuari.</p>
+</li>
+<li>
+<p>CREATE_MAIL_SPOOL=yes: Es crearà un buzó de correu per al nou usuari.</p>
+</li>
+<li>
+<p>HOME=/home: Estableix el directori home predeterminat per als nous usuaris a /home.</p>
+</li>
+<li>
+<p>SHELL=/bin/sh Especifica que el shell predeterminat per als nous usuaris serà /bin/sh (el shell Bourne).</p>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>Aquesta configuració assegura que els nous usuaris tinguin el seu directori home a <code>/home/[nomusuari]</code> i utilitzin <code>/bin/sh</code> com a shell per defecte.</li>
+</ul>
+</blockquote>
+<p><strong>Política de contrasenyes a <code>/etc/login.defs</code></strong></p>
+<p>El fitxer <code>/etc/login.defs</code> defineix les polítiques de seguretat relacionades amb les contrasenyes.</p>
+<p><strong>Configuració de seguretat</strong></p>
+<p>1: Edita el fitxer <code>/etc/login.defs</code></p>
+<pre><code>sudo nano /etc/login.defs
+</code></pre>
+<p>2: Configura els següents paràmetres:</p>
+<pre><code>PASS_MIN_LEN 5
+PASS_MAX_DAYS 90
+PASS_WARN_AGE 7
+PASS_MIN_DAYS 0
+</code></pre>
+<p><img alt="alt text" src="../mindays.png" /></p>
+<ul>
+<li>
+<p><code>PASS_MIN_LEN</code>: Longitud mínima de la contrasenya (5 caràcters)</p>
+</li>
+<li>
+<p><code>PASS_MAX_DAYS</code>: Dies màxims abans que caduqui la contrasenya (90 dies)</p>
+</li>
+<li>
+<p><code>PASS_WARN_AGE</code>: Dies d'avís abans de la caducitat (7 dies)</p>
+</li>
+<li>
+<p><code>PASS_MIN_DAYS</code>: Mínim de dies que un usuari ha de esperar abans de poder canviar la seva contrasenya (0 dies).</p>
+</li>
+</ul>
+<h2 id="configuracio-del-directori-etcskel">Configuració del directori <code>/etc/skel</code></h2>
+<p>El directori <code>/etc/skel</code> conté els fitxers i directoris que es copiaran automàticament al directori home dels nous usuaris.</p>
+<h3 id="gestio-dels-fitxers-per-defecte">Gestió dels fitxers per defecte</h3>
+<ol>
+<li>Examina el contingut actual:</li>
+</ol>
+<pre><code>ls -la /etc/skel
+</code></pre>
+<ol>
+<li>Personalitza els fitxers segons necessitis:<ul>
+<li><code>.bashrc</code></li>
+<li><code>.profile</code></li>
+<li><code>.bash_logout</code></li>
+</ul>
+</li>
+</ol>
+<p><img alt="alt text" src="../skel.png" /></p>
+<p><strong>Vegem breument què fa cada un d'ells:</strong></p>
+<p><strong><code>.bash_logout</code></strong>:</p>
+<ul>
+<li>
+<p>Aquest fitxer s'executa quan l'usuari tanca la sessió de la seva shell Bash.</p>
+</li>
+<li>
+<p>Normalment conté comandaments per netejar l'entorn o realitzar altres tasques de finalització de sessió.</p>
+</li>
+</ul>
+<p><strong><code>.bashrc</code></strong>:</p>
+<ul>
+<li>
+<p>Aquest és un dels fitxers de configuració més importants per a l'usuari.</p>
+</li>
+<li>
+<p>S'executa cada vegada que l'usuari inicia una nova sessió de shell Bash.</p>
+</li>
+<li>
+<p>Conté definicions de variables d'entorn, aliases, funcions i altres configuracions personalitzades per a l'usuari.</p>
+</li>
+</ul>
+<p>Podem editar-ho i afegir algun "alias" més.</p>
+<pre><code>sudo nano /etc/skel/.bashrc
+</code></pre>
+<p><img alt="alt text" src="../detall.png" /></p>
+<p>Comprovació.</p>
+<p><img alt="alt text" src="../llalias.png" /></p>
+<p><strong><code>.profile</code></strong>:</p>
+<ul>
+<li>
+<p>Aquest fitxer també s'executa quan l'usuari inicia una nova sessió.</p>
+</li>
+<li>
+<p>S'utilitza per establir variables d'entorn i configuracions que s'han d'aplicar a totes les sessions de l'usuari, independentment del shell utilitzat (Bash, Zsh, etc.).</p>
+</li>
+</ul>
+<p>Aquests fitxers proporcionen una configuració bàsica i predeterminada per als nous usuaris del sistema. Els administradors poden personalitzar-los per adaptar-los a les necessitats de l'organització o dels usuaris.</p>
+<blockquote>
+<ul>
+<li><strong><em>Consell:</em></strong>
+    Qualsevol fitxer que afegeixis a <code>/etc/skel</code> es copiarà automàticament al directori home dels nous usuaris.</li>
+</ul>
+</blockquote>
+<h2 id="creacio-dusuaris">Creació d'usuaris</h2>
+<h3 id="metode-amb-parametres-especifics">Mètode amb paràmetres específics</h3>
+<pre><code>sudo useradd Leia
+</code></pre>
+<p><img alt="alt text" src="../Leia.png" /></p>
+<p><strong>Comprovació de l'usuari</strong></p>
+<pre><code>grep Leia /etc/passwd
+</code></pre>
+<p>Es pot observar que s'ha creat correctament i també se li ha creat la seva carpeta dins del /home/</p>
+<p><img alt="alt text" src="../leiahome.png" /></p>
+<p>Entrem amb el usuari i comprovem.</p>
+<p><img alt="alt text" src="../wholeia.png" /></p>
+<blockquote>
+<ul>
+<li><strong>Important</strong>: Després de crear un nou usuari, verifica sempre que pots iniciar sessió correctament abans de tancar la sessió d'administrador.</li>
+</ul>
+</blockquote>
+<!-- new from here -->
 
-<h2 id="comandes-addicionals-de-gestio-dusuaris-i-grups">Comandes Addicionals de Gestió d'Usuaris i Grups</h2>
+<h1 id="comandes-addicionals-de-gestio-dusuaris-i-grups">Comandes Addicionals de Gestió d'Usuaris i Grups</h1>
 <h3 id="assignacio-de-propietat-i-grup-dusuaris">Assignació de Propietat i Grup d'Usuaris</h3>
 <p>En un sistema Linux, que un usuari sigui el propietari d’un fitxer és <strong>important</strong> perquè el propietari té control sobre els permisos i pot decidir qui pot <strong><em>llegir, escriure o executar</em></strong> aquest fitxer. Això és essencial per a la seguretat, ja que garanteix que només els usuaris autoritzats puguin modificar o accedir a informació sensible.</p>
 <h4 id="com-configurar-el-propietari-i-el-grup-dun-directori-o-fitxer">Com configurar el propietari i el grup d'un directori o fitxer</h4>

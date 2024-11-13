@@ -31,3 +31,36 @@ pre:hover {
 .md-content {
     text-align: justify;
 }
+
+/* Global image styling */
+img {
+    width: 550px;  
+    height: 300px; 
+    object-fit: cover; /* Ensures the aspect ratio is maintained and the image fills the area */
+    transition: transform 0.3s ease, border 0.3s ease; /* Smooth transition for transform and border */
+    border: 3px solid transparent; /* Default border (transparent) */
+    border-radius: 3px; /* Optional: rounded corners for the image */
+}
+
+/* Hover effect for all images except those in the footer */
+img:hover {
+    transform: scale(1.2); /* Enlarges the image by 1.2x on hover */
+    border: 5px solid #3498db; /* Adds a blue border on hover */
+    box-shadow: 0px 0px 15px rgba(52, 152, 219, 0.7); /* Adds a glowing shadow effect */
+}
+
+/* Override styles for the footer image */
+img.footer-img {
+    width: auto;  /* Use the natural size of the footer image */
+    height: auto; /* Ensure natural height */
+    object-fit: unset; /* Remove object-fit (no resizing or cropping) */
+    transition: none; /* Disable any transitions on hover */
+    border: none; /* Remove border for the footer image */
+}
+
+/* Optional: Add custom footer image styling */
+img.footer-img {
+    margin-left: 5px; /* Optional: keeps the same left margin */
+    vertical-align: middle; /* Optional: ensures it stays vertically aligned with text */
+}
+
