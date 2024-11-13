@@ -4,14 +4,20 @@
     bottom: 0; /* Align to the bottom */
     width: 100%; /* Full width */
     padding: 2px; /* Padding around the text */
-    background-color: #1c1c1c; /* Background color */
+    background: linear-gradient(45deg, #3d0606, #3498db, #030303); /* Gradient background */
     text-align: left; /* Left align the text */
     z-index: 1000; /* High z-index to stay on top */
     font-size: 14px; /* Smaller text size */
     color: white;
+    animation: gradientAnimation 10s ease infinite;
+
 }
 
-
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 /* Style the code blocks */
 pre {
     background-color: #2d3e50; /* Dark background for code blocks */
@@ -35,7 +41,7 @@ pre:hover {
 /* Global image styling */
 img {
     width: 550px;  
-    height: 300px; 
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensures the aspect ratio is maintained and the image fills the area */
     transition: transform 0.3s ease, border 0.3s ease; /* Smooth transition for transform and border */
     border: 3px solid transparent; /* Default border (transparent) */
@@ -62,5 +68,36 @@ img.footer-img {
 img.footer-img {
     margin-left: 5px; /* Optional: keeps the same left margin */
     vertical-align: middle; /* Optional: ensures it stays vertically aligned with text */
+}
+
+
+
+/* Base transition for general elements */
+* {
+    transition: background-color 0.9s ease, color 0s ease; /* Faster color change for text */
+}
+
+/* Enllaços amb subratllat animat */
+a {
+    position: relative;
+    text-decoration: none;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #3498db;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
