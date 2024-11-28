@@ -71,12 +71,6 @@ img.footer-img {
 }
 
 
-
-/* Base transition for general elements */
-* {
-    transition: background-color 0.9s ease, color 0s ease; /* Faster color change for text */
-}
-
 /* Enllaços amb subratllat animat */
 a {
     position: relative;
@@ -100,4 +94,3 @@ a:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-

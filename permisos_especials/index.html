@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../objectius/">
+        <link rel="prev" href="../gestio_usuaris/">
       
       
-        <link rel="next" href="../vbox/">
+        <link rel="next" href="../aplicar/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Instalació Inicial Usuari Avançat - Virtualització</title>
+        <title>Permisos Especials i ACL - Virtualització</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installacio-dubuntu" class="md-skip">
+        <a href="#permisos-normals-uog" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Instalació Inicial Usuari Avançat
+              Permisos Especials i ACL
             
           </span>
         </div>
@@ -236,13 +236,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../instalacio_inicial/" class="md-tabs__link">
           
   
   Sprint 1
@@ -256,10 +254,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../fitx_importants/" class="md-tabs__link">
           
   
@@ -367,30 +367,25 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -401,7 +396,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Sprint 1
@@ -412,30 +407,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Instalació Inicial Usuari Avançat
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../instalacio_inicial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -444,125 +419,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#preparacio-de-lentorn" class="md-nav__link">
-    <span class="md-ellipsis">
-      Preparació de l'entorn
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Preparació de l'entorn">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#crear-una-maquina-virtual" class="md-nav__link">
-    <span class="md-ellipsis">
-      Crear una màquina virtual
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#descarregar-la-imatge-iso" class="md-nav__link">
-    <span class="md-ellipsis">
-      Descarregar la imatge ISO
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inici-de-la-installacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inici de la instal·lació
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Inici de la instal·lació">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configurar-la-maquina-virtual" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar la màquina virtual
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#arrencar-la-maquina-virtual" class="md-nav__link">
-    <span class="md-ellipsis">
-      Arrencar la màquina virtual
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#seguir-linstallador" class="md-nav__link">
-    <span class="md-ellipsis">
-      Seguir l'instal·lador
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#finalitzar-la-installacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Finalitzar la instal·lació
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Finalitzar la instal·lació">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#actualitzacions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Actualitzacions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -726,25 +582,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -755,7 +616,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Sprint 2
@@ -829,10 +690,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../permisos_especials/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Permisos Especials i ACL
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -841,6 +720,111 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#permisos-normals-uog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permisos Normals UOG
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Permisos Normals UOG">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modes-de-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modes de permisos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#umask" class="md-nav__link">
+    <span class="md-ellipsis">
+      UMASK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#com-funciona-la-umask" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com funciona la umask?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-calcul-per-a-fitxers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de càlcul per a fitxers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-calcul-per-a-directoris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de càlcul per a directoris
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacio-visual-del-proces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicació Visual del Procés
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permisos-especials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permisos Especials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acls-access-control-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      ACLs (Access Control Lists)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1041,30 +1025,269 @@
                   
 
 
-<h1 id="installacio-dubuntu">Instal·lació d'Ubuntu</h1>
-<p><strong>Guia per a usuaris avançats</strong></p>
-<h2 id="preparacio-de-lentorn">Preparació de l'entorn</h2>
-<h3 id="crear-una-maquina-virtual">Crear una màquina virtual</h3>
-<p>Utilitza VirtualBox, VMware o un altre programari de virtualització per crear una màquina virtual. Ajusta els recursos (CPU, RAM, disc dur) segons les necessitats d'Ubuntu i les teves preferències.</p>
-<h3 id="descarregar-la-imatge-iso">Descarregar la imatge ISO</h3>
-<p>Obté la imatge ISO de la versió més recent d'Ubuntu des del <a href="https://ubuntu.com/download">lloc web oficial</a>.</p>
-<h2 id="inici-de-la-installacio">Inici de la instal·lació</h2>
-<h3 id="configurar-la-maquina-virtual">Configurar la màquina virtual</h3>
-<p>Configura el sistema d'arrencada per iniciar des de la imatge ISO d'Ubuntu. Assegura't que la virtualització estigui habilitada al BIOS si és necessari.</p>
-<h3 id="arrencar-la-maquina-virtual">Arrencar la màquina virtual</h3>
-<p>Inicia la màquina virtual i selecciona l'opció per instal·lar Ubuntu.</p>
-<h3 id="seguir-linstallador">Seguir l'instal·lador</h3>
-<ul>
-<li><strong>Idioma:</strong> Escull el català o l'idioma que prefereixis.</li>
-<li><strong>Teclat:</strong> Configura el teclat segons la disposició que utilitzis.</li>
-<li><strong>Partició:</strong> Utilitza el gestor de particions avançat si vols configurar manualment les particions. Decideix entre partició d'extensió, LVM o ZFS, segons les teves preferències.</li>
-<li><strong>Usuari:</strong> Crea un compte d'usuari amb permisos adequats. Opta per una contrasenya segura i considera habilitar el xifratge de la carpeta d'inici si és necessari.</li>
-</ul>
-<h2 id="finalitzar-la-installacio">Finalitzar la instal·lació</h2>
-<h3 id="actualitzacions">Actualitzacions</h3>
-<p>Després de la instal·lació, obre un terminal i executa:</p>
-<pre><code>sudo apt update &amp;&amp; sudo apt upgrade
-</code></pre>
+  <h1>Permisos Especials i ACL</h1>
+
+<h2 id="permisos-normals-uog">Permisos Normals UOG</h2>
+<p>Els permisos "normals" en Linux es gestionen amb les comandes <code>chown</code>, <code>chgrp</code> i <code>chmod</code>. Aquesta taula mostra les comandes principals i el que fan</p>
+<table>
+<thead>
+<tr>
+<th>Comanda</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>chown [-R]</strong></td>
+<td>Canvia el propietari d’un fitxer o carpeta.</td>
+</tr>
+<tr>
+<td><strong>chgrp [-R]</strong></td>
+<td>Canvia el grup propietari d’un fitxer o carpeta.</td>
+</tr>
+<tr>
+<td><strong>chmod [-R]</strong></td>
+<td>Modifica els permisos d’un fitxer o carpeta.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modes-de-permisos">Modes de permisos</h3>
+<p>Cada fitxer o carpeta pot tenir permisos assignats per l'usuari (u), el grup (g) i altres (o). Aquesta taula defineix els valors dels permisos</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Permisos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>---</td>
+</tr>
+<tr>
+<td>1</td>
+<td>--x</td>
+</tr>
+<tr>
+<td>2</td>
+<td>-w-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>-wx</td>
+</tr>
+<tr>
+<td>4</td>
+<td>r--</td>
+</tr>
+<tr>
+<td>5</td>
+<td>r-x</td>
+</tr>
+<tr>
+<td>6</td>
+<td>rw-</td>
+</tr>
+<tr>
+<td>7</td>
+<td>rwx</td>
+</tr>
+</tbody>
+</table>
+<h3 id="umask">UMASK</h3>
+<p>La <code>umask</code> és un valor que defineix els permisos predeterminats dels fitxers i directoris nous. Aquesta taula mostra com s'apliquen aquests valors:</p>
+<table>
+<thead>
+<tr>
+<th>Configuració</th>
+<th>Directori</th>
+<th>Fitxers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Original</td>
+<td>777</td>
+<td>666</td>
+</tr>
+<tr>
+<td>Umask</td>
+<td>022</td>
+<td>022</td>
+</tr>
+<tr>
+<td>Resultat</td>
+<td>755</td>
+<td>644</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Explicació:</strong><br />
+Sense cap canvi en la configuració predeterminada de la <code>umask</code>, tots els fitxers creats per l'usuari root obtindran permisos <strong>644</strong> (666 - 022), i tots els directoris obtindran permisos <strong>755</strong> (777 - 022).</p>
+<hr />
+<h3 id="com-funciona-la-umask"><strong>Com funciona la <code>umask</code>?</strong></h3>
+<p>La <code>umask</code> no funciona per resta aritmètica, sinó <em>bit a bit</em>, apagant (desactivant) els permisos corresponents. Cada bit del valor predeterminat interacciona amb el bit equivalent de la <code>umask</code>. </p>
+<hr />
+<h3 id="exemple-de-calcul-per-a-fitxers">Exemple de càlcul per a fitxers</h3>
+<p>Per calcular els permisos per a fitxers, seguim aquests passos:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Pas</strong></th>
+<th><strong>Permisos</strong></th>
+<th><strong>Binari</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Predeterminats</strong></td>
+<td><code>666</code></td>
+<td><code>110 110 110</code></td>
+</tr>
+<tr>
+<td><strong>Umask</strong></td>
+<td><code>022</code></td>
+<td><code>000 010 010</code></td>
+</tr>
+<tr>
+<td><strong>NOR de l'Umask</strong></td>
+<td>Negació</td>
+<td><code>111 101 101</code></td>
+</tr>
+<tr>
+<td><strong>Resultat (AND)</strong></td>
+<td>Càlcul final</td>
+<td><code>110 100 100</code></td>
+</tr>
+</tbody>
+</table>
+<p>Els permisos resultants són <strong>644</strong>:
+- <strong>Propietari:</strong> pot llegir i escriure.
+- <strong>Grup i altres:</strong> només poden llegir.</p>
+<hr />
+<h3 id="exemple-de-calcul-per-a-directoris">Exemple de càlcul per a directoris</h3>
+<p>Per calcular els permisos per a directoris, seguim aquests passos:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Pas</strong></th>
+<th><strong>Permisos</strong></th>
+<th><strong>Binari</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Predeterminats</strong></td>
+<td><code>777</code></td>
+<td><code>111 111 111</code></td>
+</tr>
+<tr>
+<td><strong>Umask</strong></td>
+<td><code>022</code></td>
+<td><code>000 010 010</code></td>
+</tr>
+<tr>
+<td><strong>NOR de l'Umask</strong></td>
+<td>Negació</td>
+<td><code>111 101 101</code></td>
+</tr>
+<tr>
+<td><strong>Resultat (AND)</strong></td>
+<td>Càlcul final</td>
+<td><code>111 101 101</code></td>
+</tr>
+</tbody>
+</table>
+<p>Els permisos resultants són <strong>755</strong>:
+- <strong>Propietari:</strong> pot llegir, escriure i executar.
+- <strong>Grup i altres:</strong> només poden llegir i executar.</p>
+<hr />
+<h3 id="explicacio-visual-del-proces">Explicació Visual del Procés</h3>
+<ol>
+<li><strong>NOR (Negació):</strong> S'inverteixen els bits de l'Umask.<br />
+   Exemple: <code>~000 010 010</code> → <code>111 101 101</code>.</li>
+<li><strong>AND (Intersecció):</strong> Es combinen els permisos predeterminats amb el resultat de la NOR.<br />
+   Exemple: <code>110 110 110</code> AND <code>111 101 101</code> → <code>110 100 100</code>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>Tipus</strong></th>
+<th><strong>Original</strong></th>
+<th><strong>Umask</strong></th>
+<th><strong>Resultat</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fitxers</strong></td>
+<td><code>666</code> (110 110 110)</td>
+<td><code>022</code> (000 010 010)</td>
+<td><code>644</code> (110 100 100)</td>
+</tr>
+<tr>
+<td><strong>Directoris</strong></td>
+<td><code>777</code> (111 111 111)</td>
+<td><code>022</code> (000 010 010)</td>
+<td><code>755</code> (111 101 101)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="permisos-especials">Permisos Especials</h3>
+<p>Els permisos especials com <code>sticky</code>, <code>suid</code> i <code>sgid</code> permeten funcionalitats addicionals en fitxers o carpetes. La taula següent explica cadascun d'ells:</p>
+<table>
+<thead>
+<tr>
+<th>Permís</th>
+<th>Comanda</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sticky</td>
+<td>chmod 1 <strong>+t</strong></td>
+<td>Bloqueja la modificació d’arxius per altres usuaris.</td>
+</tr>
+<tr>
+<td>suid</td>
+<td>chmod 4 <strong>u+s</strong></td>
+<td>Executa amb privilegis del propietari.</td>
+</tr>
+<tr>
+<td>sgid</td>
+<td>chmod 2 <strong>g+s</strong></td>
+<td>Executa amb privilegis del grup.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="acls-access-control-lists">ACLs (Access Control Lists)</h3>
+<p>Les ACLs permeten definir permisos més granulars que els permisos "normals". Aquestes comandes permeten gestionar-les:</p>
+<table>
+<thead>
+<tr>
+<th>Comanda</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>getfacl</strong></td>
+<td>Mostra les ACLs del fitxer/carpeta.</td>
+</tr>
+<tr>
+<td><strong>setfacl -m</strong></td>
+<td>Defineix permisos ACL.</td>
+</tr>
+<tr>
+<td><strong>setfacl -b</strong></td>
+<td>Esborra les ACLs del fitxer/carpeta.</td>
+</tr>
+</tbody>
+</table>
 
 
 
