@@ -780,7 +780,44 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Esborrat de fitxers i directoris">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herencia-de-grup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herència de Grup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Herència de Grup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#com-funciona-chmod-2770" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com funciona chmod 2770?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beneficis-de-chmod-2770" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beneficis de chmod 2770
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#situacions-recomanades-per-utilitzar-aquesta-configuracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Situacions recomanades per utilitzar aquesta configuració
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Situacions recomanades per utilitzar aquesta configuració">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -820,17 +857,139 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#comprovacio-de-les-acl" class="md-nav__link">
     <span class="md-ellipsis">
       Comprovació de les ACL
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificacio-de-permisos-acl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verificació de permisos ACL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sticky-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sticky Bit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sticky Bit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-el-sticky-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què és el Sticky Bit?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#com-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com funciona?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-practic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple pràctic
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-es-umask" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què és umask?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Què és umask?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#com-funciona_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com funciona?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valors-predeterminats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valors predeterminats:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#per-que-es-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      Per què és important?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Per què és important?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canviar-umask-temporalment-i-crear-un-fitxer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canviar Umask temporalment i crear un fitxer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignacio-duna-umask-diferent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assignació d'una umask diferent
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1022,8 +1181,6 @@
                   
 
 
-  <h1>Aplicarció de Permisos Especial i ACL</h1>
-
 <h2 id="demostracio-de-permisos-amb-chown-chgrp-i-chmod">Demostració de Permisos amb <code>chown</code>, <code>chgrp</code> i <code>chmod</code></h2>
 <p>Per aquesta demostració, hem creat quatre usuaris per exemplificar com aplicar els permisos amb les comandes <code>chown</code>, <code>chgrp</code> i <code>chmod</code>.</p>
 <p><img alt="Usuaris creats per a la demostració" src="../users.png" /></p>
@@ -1069,31 +1226,75 @@ sudo usermod -aG group1 user2
 <p>Entrem amb l'usuari <strong>user2</strong> i intentem esborrar els directoris i fitxers.</p>
 <p><img alt="Esborrat de fitxers" src="../esborar.png" /></p>
 <p>Com es pot observar, els fitxers han estat esborrats. Aixó no és desitjable, ja que els fitxers eren propietat d'altres usuaris i haurien d'estar protegits.</p>
-<p><img alt="alt text" src="../gr1d.png" /></p>
 <blockquote>
-<p>2: Activa el bit SGID (herència de grup).</p>
-<p>770: Permet al propietari i grup llegir, escriure i executar. Altres no tenen cap accés.</p>
+<p>NOTA! La restricció dels fitxers la explicarem mes endavant.</p>
 </blockquote>
-<p><strong>Per què configurem <code>chmod 2770</code>?</strong></p>
+<h1 id="herencia-de-grup">Herència de Grup</h1>
+<p>El <strong>bit SGID (Set Group ID)</strong> és una característica del sistema de permisos en Linux que assegura que els fitxers i directoris creats dins d’un directori <strong>hereten el grup propietari del directori pare</strong> en lloc del grup predeterminat de l’usuari que els crea.</p>
+<p><img alt="Herència de grup activada" src="../gr1d.png" /></p>
+<hr />
+<h2 id="com-funciona-chmod-2770">Com funciona <code>chmod 2770</code>?</h2>
+<p><strong>Bit SGID (2):</strong></p>
 <ul>
 <li>
-<p><strong>Bit SGID (2):</strong><br />
-  Activa l'herència de grup. Això significa que qualsevol fitxer o directori creat dins del directori heretarà automàticament el grup propietari del directori pare, en lloc del grup predeterminat de l'usuari que el crea. Això és útil per garantir que tots els fitxers i directoris dins del directori comparteixin el mateix grup, facilitant la col·laboració entre els membres del grup.</p>
+<p>Activa l'<strong>herència de grup</strong>, garantint que:</p>
 </li>
 <li>
-<p><strong>Permisos 770:</strong>  </p>
+<p>Els fitxers i directoris creats dins d’un directori amb SGID activat <strong>heretin automàticament el grup propietari</strong> del directori pare.</p>
 </li>
-<li><strong>7 (Propietari):</strong> Permet al propietari llegir, escriure i executar.  </li>
-<li><strong>7 (Grup):</strong> Permet als membres del grup llegir, escriure i executar.  </li>
-<li><strong>0 (Altres):</strong> No dona cap permís als altres usuaris.<br />
-  Això assegura que només el propietari i els membres del grup tinguin accés al directori, evitant que altres usuaris accedeixin o modifiquin els fitxers.</li>
+<li>
+<p>Això assegura que tots els fitxers i directoris dins del directori comparteixin el mateix grup, facilitant el treball col·laboratiu.</p>
+</li>
 </ul>
 <hr />
-<p><strong>Beneficis de <code>chmod 2770</code></strong>
-1. <strong>Seguretat:</strong> Només els usuaris autoritzats poden accedir als fitxers del directori.
-2. <strong>Col·laboració:</strong> L'herència de grup assegura que els fitxers creats dins del directori pertanyin al mateix grup, facilitant el treball col·laboratiu.
-3. <strong>Control:</strong> Els permisos restringeixen l'accés als altres usuaris, protegint els fitxers sensibles.</p>
-<p>Aquesta configuració és essencial en entorns on diversos usuaris treballen junts en un mateix directori, però amb diferents nivells d'accés i responsabilitat.</p>
+<p><strong>Permisos 770:</strong></p>
+<p>Configura els permisos del directori amb el següent significat:</p>
+<ul>
+<li>
+<p><strong>7 (Propietari):</strong> Permet llegir, escriure i executar.</p>
+</li>
+<li>
+<p><strong>7 (Grup):</strong> Permet als membres del grup llegir, escriure i executar.</p>
+</li>
+<li>
+<p><strong>0 (Altres):</strong> No dona cap permís als usuaris que no són ni el propietari ni membres del grup.</p>
+</li>
+</ul>
+<p>Amb aquests permisos:</p>
+<ul>
+<li>
+<p>Només el propietari i els membres del grup poden accedir al directori o modificar el seu contingut.</p>
+</li>
+<li>
+<p>Altres usuaris queden completament exclosos.</p>
+</li>
+</ul>
+<hr />
+<h2 id="beneficis-de-chmod-2770">Beneficis de <code>chmod 2770</code></h2>
+<p><strong>Seguretat:</strong></p>
+<ul>
+<li>
+<p>Es limita l’accés al directori exclusivament al propietari i als membres del grup.</p>
+</li>
+<li>
+<p>Els usuaris no autoritzats no poden veure, modificar ni esborrar el contingut del directori.</p>
+</li>
+</ul>
+<p><strong>Col·laboració:</strong></p>
+<ul>
+<li>L’herència de grup assegura que els fitxers i directoris creats dins del directori comparteixin el mateix grup, facilitant la col·laboració entre els membres.</li>
+</ul>
+<p><strong>Control:</strong></p>
+<ul>
+<li>Garanteix que només el propietari i els membres del grup tinguin permisos per gestionar els fitxers, mantenint una estructura de permisos clara i coherent.</li>
+</ul>
+<hr />
+<h2 id="situacions-recomanades-per-utilitzar-aquesta-configuracio">Situacions recomanades per utilitzar aquesta configuració</h2>
+<p>La configuració amb <strong>chmod 2770</strong> és especialment útil en entorns on:
+- Diversos usuaris treballen conjuntament en un projecte.
+- Els fitxers i directoris han de ser accessibles només per als membres del grup.
+- És important mantenir la seguretat i coherència dels permisos en un entorn compartit.</p>
+<p>Amb aquesta configuració, es pot assegurar un control adequat dels fitxers i una col·laboració eficaç en projectes d’equip.</p>
 <h3 id="acl">ACL</h3>
 <p><strong>Una ACL (Access Control List)</strong> és una llista que defineix permisos específics per a usuaris o grups sobre un fitxer o directori en sistemes operatius com Linux. A diferència dels permisos tradicionals de Linux (propietari, grup i altres), les ACL permeten una configuració més granular, com donar permisos diferents a usuaris o grups específics.</p>
 <p><img alt="Exemple d'ACL" src="../acl.png" /></p>
@@ -1190,12 +1391,119 @@ sudo usermod -aG group1 user2
 </tbody>
 </table>
 <hr />
-<h3 id="comprovacio-de-les-acl"><strong>Comprovació de les ACL</strong></h3>
+<h4 id="comprovacio-de-les-acl"><strong>Comprovació de les ACL</strong></h4>
 <p>Per verificar si s'ha aplicat correctament la configuració de la ACL, utilitzem la següent comanda:</p>
 <pre><code>getfacl carpeta1/
 </code></pre>
-<p>La sortida hauria de mostrar els permisos configurats:</p>
-<p><img alt="alt text" src="../aclshow.png" /></p>
+<h4 id="verificacio-de-permisos-acl">Verificació de permisos ACL</h4>
+<p>La sortida hauria de mostrar els permisos configurats actualment per al directori:</p>
+<p><img alt="Permisos ACL configurats" src="../aclshow.png" /></p>
+<hr />
+<p><strong>Pas 1: Crear un fitxer o directori amb <code>user1</code></strong></p>
+<p>Entrem amb l'usuari <strong>user1</strong> i creem un directori o un fitxer dins de <code>carpeta1</code>.</p>
+<p><img alt="Creació per user1" src="../usr1.png" /></p>
+<hr />
+<p><strong>Pas 2: Intentem accedir amb <code>user2</code></strong></p>
+<p>Ara entrem amb l'usuari <strong>user2</strong> i intentem accedir a <strong>carpeta1</strong> o llegir els fitxers.</p>
+<ul>
+<li><strong>Resultat:</strong> No podem accedir al directori ni llegir els fitxers. Només podem veure que existeix la carpeta, però no tenim informació sobre els permisos ni el seu contingut.</li>
+</ul>
+<p><img alt="Accés denegat per user2" src="../cantread.png" /></p>
+<hr />
+<p><strong>Pas 3: Afegim permisos per a <code>user2</code> amb ACL</strong></p>
+<p>Per permetre que <code>user2</code> pugui accedir a la carpeta, llegir i modificar fitxers, afegim permisos <strong>rwx</strong> (lectura, escriptura i execució) dins de l'ACL.</p>
+<p><img alt="Permisos rwx per user2" src="../rwxuser2.png" /></p>
+<pre><code>sudo setfacl -d -m u:user2:rwx carpeta1
+</code></pre>
+<pre><code>sudo setfacl -m u:user2:rwx carpeta1
+</code></pre>
+<blockquote>
+<p>NOTA: <strong>Compte!</strong> Amb aquesta configuració, el <strong>user2</strong> pot llegir, escriure i també esborrar els fitxers dins de <code>carpeta1</code>. Per evitar que el <strong>user2</strong> pugui esborrar els fitxers d'altres usuaris, cal activar el <strong>Sticky Bit</strong>, com veurem a continuació.</p>
+</blockquote>
+<hr />
+<h2 id="sticky-bit">Sticky Bit</h2>
+<h3 id="que-es-el-sticky-bit">Què és el Sticky Bit?</h3>
+<p>El <strong>Sticky Bit</strong> és una característica que s'utilitza en sistemes Linux per protegir els fitxers en directoris compartits. Quan s'activa, només el <strong>propietari del fitxer</strong> o un <strong>administrador</strong> pot esborrar-lo, encara que altres usuaris tinguin permisos d'escriptura al directori.</p>
+<h3 id="com-funciona">Com funciona?</h3>
+<p>En un directori compartit, com ara <code>/carpeta1</code>:
+- Els usuaris poden crear i editar fitxers lliurement.
+- Amb el <strong>Sticky Bit</strong>, un usuari no pot esborrar els fitxers d'altres usuaris, però sí els seus propis.</p>
+<p>Per evitar que <code>user2</code> o qualsevol altre usuari pugui esborrar fitxers que no són seus, afegim el <strong>Sticky Bit</strong> al directori. Això assegura que només el propietari del fitxer o un administrador pot esborrar-lo.</p>
+<p><img alt="Sticky Bit activat" src="../sticky.png" /></p>
+<hr />
+<h3 id="exemple-practic">Exemple pràctic</h3>
+<p>Entrem amb el <strong>user1</strong>, creem un directori i un fitxer. Posteriorment, entrem amb el <strong>user2</strong> i intentem esborrar els fitxers de l'usuari <strong>user1</strong>, però no es poden esborrar per falta de permisos. Tot i això, podem crear fitxers propis dins del directori.</p>
+<p><img alt="Intent d'esborrat i creació per user2" src="../lasttext.png" /></p>
+<p><strong>Conclusió</strong></p>
+<p>Amb aquesta configuració:
+- <strong>user1</strong> pot crear fitxers i directoris, i només ell pot esborrar els seus fitxers.
+- <strong>user2</strong> pot accedir, llegir i escriure fitxers dins de <code>/carpeta1</code>, però no pot esborrar els fitxers d'altres usuaris.</p>
+<hr />
+<h2 id="que-es-umask">Què és <code>umask</code>?</h2>
+<p><strong>Umask</strong> és una configuració en sistemes Linux que controla els permisos que tindran els fitxers i directoris nous quan es creïn. En altres paraules, determina qui podrà accedir o modificar aquests fitxers o directoris per defecte.</p>
+<h3 id="com-funciona_1">Com funciona?</h3>
+<ul>
+<li>Quan es crea un fitxer o directori nou, el sistema li assigna uns <strong>permisos predeterminats</strong>.</li>
+<li><code>Umask</code> resta alguns permisos d'aquests valors predeterminats per garantir la seguretat i el control d'accés.</li>
+</ul>
+<h3 id="valors-predeterminats">Valors predeterminats:</h3>
+<ul>
+<li><strong>Fitxers:</strong> Els permisos inicials són <code>666</code> (lectura i escriptura per a tothom, però sense execució).</li>
+<li><strong>Directoris:</strong> Els permisos inicials són <code>777</code> (lectura, escriptura i execució per a tothom).</li>
+</ul>
+<h3 id="per-que-es-important">Per què és important?</h3>
+<p><code>Umask</code> ajuda a controlar la <strong>seguretat i la col·laboració</strong> en un sistema:
+- <strong>Seguretat:</strong> Evita que altres usuaris tinguin accés complet als teus fitxers per defecte.
+- <strong>Col·laboració:</strong> Permet ajustar els permisos perquè els membres del teu grup puguin treballar amb els teus fitxers si cal.</p>
+<hr />
+<h4 id="canviar-umask-temporalment-i-crear-un-fitxer">Canviar <code>Umask</code> temporalment i crear un fitxer</h4>
+<p>Primeramen comprova el valor actual de la <code>Umask</code>:</p>
+<p><strong>Comprovació de la <code>umask</code> actual:</strong>  </p>
+<p><img alt="alt text" src="../umasuser2.png" /></p>
+<blockquote>
+<p>L'usuari <strong>user2</strong> té configurada la <code>umask</code> com <code>0002</code>, permetent que els fitxers nous siguin accessibles pel grup.</p>
+<p><strong>Creació d'un fitxer:</strong>  </p>
+<p><strong>user2</strong> crea un fitxer anomenat <code>umask.txt</code>.</p>
+</blockquote>
+<p><strong>Permisos del fitxer:</strong>  </p>
+<p>En fer <code>ls -l</code>, els permisos són <code>-rw-rw----</code>, indicant que:</p>
+<ul>
+<li>
+<p>El propietari i el grup poden llegir i escriure.</p>
+</li>
+<li>
+<p>Altres no tenen cap accés.</p>
+</li>
+</ul>
+<h4 id="assignacio-duna-umask-diferent">Assignació d'una <code>umask</code> diferent</h4>
+<p>Assignem una <code>umask</code> més restrictiva i creem un fitxer anomenat <code>hello</code>.</p>
+<pre><code>umask 0077
+</code></pre>
+<p><img alt="alt text" src="../touchumask.png" /></p>
+<p><strong>Comprovació dels permisos:</strong>  </p>
+<p>En fer <code>ls -l</code>, els permisos són <code>-rw-------</code>, indicant que:</p>
+<ul>
+<li>
+<p>Només el propietari pot llegir i escriure.</p>
+</li>
+<li>
+<p>El grup i altres no tenen cap accés.</p>
+</li>
+</ul>
+<p><strong>Explicació:</strong></p>
+<p>Amb la <code>umask</code> configurada com <code>0077</code>:</p>
+<ul>
+<li>
+<p>Els fitxers són completament privats.</p>
+</li>
+<li>
+<p>Aquesta configuració és útil per garantir la seguretat en fitxers sensibles.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>NOTA!</strong> La configuració de la <code>umask</code> no s'aplicarà si el directori on es creen els fitxers té permisos configurats amb ACLs. En aquest cas, els permisos dels fitxers i directoris nous heretaran les configuracions de l'ACL, independentment del valor de la <code>umask</code>.</p>
+</blockquote>
+<p><img alt="alt text" src="../heretat.png" /></p>
 
 
 

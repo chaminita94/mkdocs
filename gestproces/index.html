@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#guia-sobre-processos-en-linux" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -652,6 +657,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Gestió de Processos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -662,6 +680,280 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-proces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què és un procés?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comanda-top" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comanda top
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comanda top">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametres-utils" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paràmetres útils:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#htop" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTOP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTOP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristiques-principals-dhtop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Característiques principals d'htop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencies-i-millores-respecte-a-top" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diferències i millores respecte a top
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#per-que-htop-es-millor-per-a-molts-usuaris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Per què htop és millor per a molts usuaris?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comanda-pstree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comanda pstree
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comanda pstree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametres-importants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paràmetres importants:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comanda-ps-aux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comanda ps aux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comanda ps aux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sortida-de-ps-aux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sortida de ps aux
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resum-dels-senyals-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resum dels senyals comuns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resum dels senyals comuns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#taula-de-senyals-i-accions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taula de senyals i accions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fer-stop-dun-proces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fer "stop" d'un procés
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fer "stop" d'un procés">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestio-de-processos-amb-kill" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestió de processos amb kill
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestio-de-processos-ctrlc-i-ctrlz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestió de processos: Ctrl+C i Ctrl+Z
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestió de processos: Ctrl+C i Ctrl+Z">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ctrlc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ctrl+C:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctrlz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ctrl+Z:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demostracio-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demostració pràctica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestio-del-proces-despres-de-ctrlz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestió del procés després de Ctrl+Z
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-practic-de-gestio-de-processos-ctrlc-i-ctrlz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple pràctic de gestió de processos: Ctrl+C i Ctrl+Z
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemple pràctic de gestió de processos: Ctrl+C i Ctrl+Z">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#com-gestionar-el-proces-aturat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com gestionar el procés aturat
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comanda-fg-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comanda fg %&lt;N&gt;
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -905,9 +1197,401 @@
                   
 
 
-  <h1>Gestió de Processos</h1>
-
-<p>Processos</p>
+<h1 id="guia-sobre-processos-en-linux">Guia sobre Processos en Linux</h1>
+<h2 id="que-es-un-proces"><strong>Què és un procés?</strong></h2>
+<p>Un <strong>procés</strong> és un programa en execució que inclou:</p>
+<ul>
+<li>
+<p>El codi del programa.</p>
+</li>
+<li>
+<p>Els recursos assignats (memòria, fitxers oberts, etc.).</p>
+</li>
+<li>
+<p>La seva execució en un o més fils (threads).</p>
+</li>
+</ul>
+<p>Els processos en Linux poden ser:</p>
+<ul>
+<li>
+<p><strong>Processos en primer pla (foreground):</strong> S'executen interactuant amb l'usuari a la terminal.</p>
+</li>
+<li>
+<p><strong>Processos en segon pla (background):</strong> Funcionen sense interferir directament amb l'usuari.</p>
+</li>
+</ul>
+<hr />
+<h2 id="comanda-top"><strong>Comanda <code>top</code></strong></h2>
+<p><img alt="alt text" src="../top.png" /></p>
+<p>La comanda <code>top</code> mostra en temps real una llista dels processos actius del sistema. Proporciona informació com:</p>
+<ul>
+<li>
+<p><strong>PID:</strong> Identificador únic del procés.</p>
+</li>
+<li>
+<p><strong>USER:</strong> Usuari que ha iniciat el procés.</p>
+</li>
+<li>
+<p><strong>%CPU:</strong> Percentatge d'ús del processador.</p>
+</li>
+<li>
+<p><strong>%MEM:</strong> Percentatge d'ús de la memòria RAM.</p>
+</li>
+<li>
+<p><strong>COMMAND:</strong> Nom de la comanda o programa.</p>
+</li>
+</ul>
+<h3 id="parametres-utils">Paràmetres útils:</h3>
+<ul>
+<li><strong>q:</strong> Sortir de la vista de <code>top</code>.</li>
+<li><strong>k:</strong> Permet matar un procés especificant el seu PID.</li>
+</ul>
+<p>Exemple: Anem a matar el procés del Firefox, apretem la K i escrivim el PID del procés.</p>
+<p><img alt="docs/custom/killfire.png" src="../killfire.png" /></p>
+<h3 id="htop"><strong>HTOP</strong></h3>
+<p><strong><code>htop</code></strong> és una eina interactiva per monitoritzar processos i recursos del sistema en temps real. Ofereix una interfície gràfica basada en text que resulta més intuïtiva i fàcil d'usar en comparació amb <code>top</code>. Tot i que no està instal·lada per defecte en la majoria de sistemes Linux, es pot instal·lar fàcilment.</p>
+<hr />
+<h4 id="caracteristiques-principals-dhtop"><strong>Característiques principals d'<code>htop</code></strong></h4>
+<ul>
+<li><strong>Interfície intuïtiva:</strong></li>
+<li>Mostra els processos en un format visual clar i organitzat.</li>
+<li>
+<p>Utilitza colors per indicar l'ús de recursos com CPU, memòria i swap.</p>
+</li>
+<li>
+<p><strong>Controls interactius:</strong></p>
+</li>
+<li>Permet navegar per la llista de processos amb les tecles de fletxa.</li>
+<li>
+<p>Pots matar, pausar o reprendre processos amb tecles directes sense necessitat de recordar els PID.</p>
+</li>
+<li>
+<p><strong>Visualització dels recursos del sistema:</strong></p>
+</li>
+<li>Representa gràficament l'ús de la CPU, memòria RAM i swap.</li>
+<li>
+<p>Mostra informació clara sobre els cores individuals de la CPU.</p>
+</li>
+<li>
+<p><strong>Filtratge i ordenació fàcil:</strong></p>
+</li>
+<li>Pots ordenar els processos per ús de CPU, memòria, temps d'execució o altres criteris amb tecles simples.</li>
+<li>Permet buscar processos pel seu nom.</li>
+</ul>
+<hr />
+<h4 id="diferencies-i-millores-respecte-a-top"><strong>Diferències i millores respecte a <code>top</code></strong></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Característica</strong></th>
+<th><strong><code>htop</code></strong></th>
+<th><strong><code>top</code></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Interfície gràfica</strong></td>
+<td>Colorida, clara i interactiva.</td>
+<td>Simple i basada en text.</td>
+</tr>
+<tr>
+<td><strong>Navegació</strong></td>
+<td>Tecles de fletxa per moure't per la llista.</td>
+<td>No permet navegació interactiva.</td>
+</tr>
+<tr>
+<td><strong>Gestió de processos</strong></td>
+<td>Es poden matar, pausar o reprendre directament.</td>
+<td>Cal introduir el PID manualment.</td>
+</tr>
+<tr>
+<td><strong>Visualització dels recursos</strong></td>
+<td>Gràfics de CPU, memòria i swap per nucli.</td>
+<td>Informació textual menys visual.</td>
+</tr>
+<tr>
+<td><strong>Ordenació i filtres</strong></td>
+<td>Opcions d'ordenació intuïtives i cerca fàcil.</td>
+<td>Ordenació manual i menys accessible.</td>
+</tr>
+<tr>
+<td><strong>Configuració</strong></td>
+<td>Altament configurable des del menú.</td>
+<td>Configuració limitada.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="per-que-htop-es-millor-per-a-molts-usuaris"><strong>Per què <code>htop</code> és millor per a molts usuaris?</strong></h4>
+<ol>
+<li><strong>Facilitat d'ús:</strong> L'interfície intuïtiva fa que sigui més còmode treballar amb processos, especialment per a usuaris menys experimentats.</li>
+<li><strong>Eficiència visual:</strong> Els gràfics i els colors ajuden a interpretar ràpidament l'ús de recursos.</li>
+<li><strong>Gestió interactiva:</strong> Navegar i gestionar processos és molt més ràpid i senzill.</li>
+</ol>
+<p>Si tens preferència per eines intuïtives, <strong><code>htop</code></strong> és una excel·lent alternativa a <strong><code>top</code></strong>.</p>
+<pre><code>sudo apt install htop
+</code></pre>
+<p><img alt="alt text" src="../htop.png" /></p>
+<hr />
+<h2 id="comanda-pstree">Comanda <code>pstree</code></h2>
+<p><code>pstree</code> mostra els processos en forma d'arbre jeràrquic, visualitzant com els processos estan relacionats (pare-fill).</p>
+<p><img alt="alt text" src="../pstree.png" /></p>
+<h3 id="parametres-importants">Paràmetres importants:</h3>
+<ul>
+<li><strong><code>-p</code>:</strong> Mostra els PIDs dels processos.</li>
+<li><strong><code>-u</code>:</strong> Mostra els noms dels usuaris que han iniciat els processos.</li>
+<li><strong><code>-a</code>:</strong> Mostra arguments complets de les comandes associades als processos.</li>
+</ul>
+<hr />
+<h2 id="comanda-ps-aux">Comanda <code>ps aux</code></h2>
+<p>La comanda <code>ps aux</code> mostra informació sobre tots els processos actius del sistema, incloent-hi aquells que no estan associats amb un terminal.</p>
+<p><img alt="Sortida de la comanda ps aux" src="../psaux.png" /></p>
+<h3 id="sortida-de-ps-aux">Sortida de <code>ps aux</code></h3>
+<p>La sortida de <code>ps aux</code> mostra informació clau sobre els processos en execució:</p>
+<ul>
+<li><strong>USER:</strong> Usuari que ha iniciat el procés.</li>
+<li><strong>PID:</strong> Identificador únic del procés.</li>
+<li><strong>%CPU i %MEM:</strong> Percentatge de CPU i memòria RAM utilitzats pel procés.</li>
+<li><strong>VSZ:</strong> Memòria virtual total utilitzada pel procés.</li>
+<li><strong>RSS:</strong> Memòria física resident utilitzada pel procés.</li>
+<li><strong>TTY:</strong> Terminal associat al procés (mostra <code>?</code> si no n'hi ha cap).</li>
+<li><strong>STAT:</strong> Estat del procés:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Símbol</strong></th>
+<th><strong>Significat</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>R</strong></td>
+<td>Executant-se (Running).</td>
+</tr>
+<tr>
+<td><strong>S</strong></td>
+<td>Inactiu (esperant dades).</td>
+</tr>
+<tr>
+<td><strong>T</strong></td>
+<td>Pausat (Stopped).</td>
+</tr>
+<tr>
+<td><strong>Z</strong></td>
+<td>Procés zombi (Zombie).</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>Inactiu (Idle), sense consumir recursos.</td>
+</tr>
+<tr>
+<td><strong>&lt;</strong></td>
+<td>Alta prioritat de CPU (High-priority).</td>
+</tr>
+<tr>
+<td><strong>s</strong></td>
+<td>Líder de sessió (session leader).</td>
+</tr>
+<tr>
+<td><strong>l</strong></td>
+<td>Multithread (utilitza diversos fils).</td>
+</tr>
+<tr>
+<td><strong>+</strong></td>
+<td>Associat al terminal en primer pla.</td>
+</tr>
+</tbody>
+</table>
+<p>Aquestes columnes ajuden a monitoritzar i gestionar els processos del sistema.</p>
+<hr />
+<h2 id="resum-dels-senyals-comuns"><strong>Resum dels senyals comuns</strong></h2>
+<p>Els senyals en Linux permeten interactuar amb processos per gestionar-los de diferents maneres, com ara tancar-los, pausar-los o reprendre'ls. A continuació, es presenta un resum dels senyals més comuns i els seus números associats.</p>
+<h3 id="taula-de-senyals-i-accions">Taula de senyals i accions</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Senyal</strong></th>
+<th><strong>Número</strong></th>
+<th><strong>Acció</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SIGTERM</strong></td>
+<td><code>15</code></td>
+<td>Sol·licita que el procés s'acabi de manera ordenada.</td>
+</tr>
+<tr>
+<td><strong>SIGKILL</strong></td>
+<td><code>9</code></td>
+<td>Força la terminació immediata del procés.</td>
+</tr>
+<tr>
+<td><strong>SIGSTOP</strong></td>
+<td><code>19</code></td>
+<td>Pausa el procés sense matar-lo.</td>
+</tr>
+<tr>
+<td><strong>SIGCONT</strong></td>
+<td><code>18</code></td>
+<td>Reprèn un procés pausat.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p><strong>Important!</strong></p>
+<p>Els números associats als senyals són estàndards en sistemes Linux, però poden variar lleugerament segons l'arquitectura o sistema operatiu.</p>
+</blockquote>
+<h2 id="fer-stop-dun-proces"><strong>Fer "stop" d'un procés</strong></h2>
+<p>En aquest exemple, fem que el procés de <strong>Firefox</strong> entri en un estat "dormint" (pausat), on deixarà d'executar-se temporalment i no respondrà.</p>
+<p><strong>Identificar el procés</strong></p>
+<p>Primerament, hem d'identificar el <strong>PID</strong> (Process ID) del procés de Firefox utilitzant una de les comandes següents:</p>
+<pre><code>kill -SIGSTOP &lt;PID&gt;
+</code></pre>
+<p><img alt="alt text" src="../dormirfirefox.png" /></p>
+<p><strong>Resultat:</strong></p>
+<blockquote>
+<p>El procés entra en estat Stopped (pausat).</p>
+<p>Firefox deixarà de respondred.</p>
+</blockquote>
+<p>Per tornar a aixecar el procés que hem pausat, utilitzem la següent comanda:</p>
+<pre><code>kill -SIGCONT &lt;PID&gt;
+</code></pre>
+<p><img alt="alt text" src="../Restore.png" /></p>
+<p><strong>Pausat (Tl):</strong> El procés principal de Firefox estava pausat abans de la comanda kill <code>-SIGCONT 5976.</code></p>
+<p><strong>Reprenent (Sl)</strong>: Després de <code>kill -SIGCONT</code>, el procés principal de Firefox torna a estar en estat dormint (Sl), preparat per continuar el seu treball habitual.</p>
+<hr />
+<h3 id="gestio-de-processos-amb-kill"><strong>Gestió de processos amb <code>kill</code></strong></h3>
+<p>El comandament <code>kill</code> permet enviar senyals als processos per realitzar accions com finalitzar-los de manera ordenada, forçar la seva terminació o gestionar el seu estat (pausar-los o reprendre'ls).</p>
+<p><strong>pkill (Finalitzar pel nom)</strong></p>
+<p>Permet acabar processos especificant el nom del procés en lloc del PID. És útil quan no es coneix el PID exacte.</p>
+<p><strong>killall (Finalitzar tots els processos amb un nom)</strong></p>
+<p>Tanca tots els processos que comparteixen un mateix nom, facilitant la gestió de processos múltiples.</p>
+<p><strong>SIGKILL (Forçar terminació)</strong></p>
+<p>Envia la senyal <strong>SIGKILL</strong> per acabar immediatament un procés. Aquesta acció no permet al procés netejar recursos abans de finalitzar. És útil per a processos que no responen o estan bloquejats.</p>
+<blockquote>
+<p><strong>Consideracions</strong></p>
+<ul>
+<li>
+<p>Sempre és recomanable començar amb <strong><code>SIGTERM (15)</code></strong> per permetre un tancament ordenat, i només utilitzar <strong><code>SIGKILL (9)</code></strong> si el procés no respon.</p>
+</li>
+<li>
+<p>Les senyals com <strong><code>pkill</code></strong> o <strong><code>killall</code></strong> són molt útils si no coneixes el PID del procés o si tens moltes pestanyes obertes.</p>
+</li>
+</ul>
+</blockquote>
+<p><img alt="alt text" src="../dontsigkill.png" /></p>
+<hr />
+<h2 id="gestio-de-processos-ctrlc-i-ctrlz"><strong>Gestió de processos: <code>Ctrl+C</code> i <code>Ctrl+Z</code></strong></h2>
+<h3 id="ctrlc"><strong>Ctrl+C:</strong></h3>
+<ul>
+<li>Finalitza immediatament el procés que s'està executant en primer pla.</li>
+<li>És útil per aturar un programa que ja no necessites o que no respon.</li>
+</ul>
+<h3 id="ctrlz"><strong>Ctrl+Z:</strong></h3>
+<ul>
+<li>Pausa el procés que s'està executant en primer pla i l'envia al segon pla.</li>
+<li>El procés queda en estat "Stopped" i es pot reprendre més tard.</li>
+</ul>
+<hr />
+<h3 id="demostracio-practica"><strong>Demostració pràctica</strong></h3>
+<ol>
+<li><strong>Executar un procés llarg en primer pla:</strong></li>
+<li>
+<p>Per exemple, un procés que espera 100 segons.</p>
+</li>
+<li>
+<p><strong><code>Ctrl+C</code>:</strong></p>
+</li>
+<li>Durant l'execució del procés, prem <strong><code>Ctrl+C</code></strong>.</li>
+<li>
+<p>Resultat: El procés es finalitza immediatament.</p>
+</li>
+<li>
+<p><strong><code>Ctrl+Z</code>:</strong></p>
+</li>
+<li>Executa de nou el procés i prem <strong><code>Ctrl+Z</code></strong>.</li>
+<li>Resultat: El procés es pausa i queda en segon pla, en estat "Stopped".</li>
+</ol>
+<hr />
+<h3 id="gestio-del-proces-despres-de-ctrlz"><strong>Gestió del procés després de <code>Ctrl+Z</code></strong></h3>
+<ul>
+<li>Pots verificar que el procés està pausat amb la comanda <code>jobs</code>.</li>
+<li>Per reprendre'l:</li>
+<li><strong>En primer pla:</strong> Utilitza la comanda <code>fg</code>.</li>
+<li><strong>En segon pla:</strong> Utilitza la comanda <code>bg</code>.</li>
+</ul>
+<p>Aquesta funcionalitat permet gestionar processos interactius amb més flexibilitat.</p>
+<p>Exemple: Executem sleep 1000 en un terminal tty.</p>
+<p><img alt="alt text" src="../sleep1000.png" /></p>
+<p>Comprovem que el procés s'està executant i es pot observar que té l'estat <strong>S+</strong>.</p>
+<p><img alt="alt text" src="../sleep.png" /></p>
+<h3 id="exemple-practic-de-gestio-de-processos-ctrlc-i-ctrlz"><strong>Exemple pràctic de gestió de processos: <code>Ctrl+C</code> i <code>Ctrl+Z</code></strong></h3>
+<p><img alt="alt text" src="../ctrz.png" /></p>
+<p><strong><code>sleep 1000</code></strong></p>
+<ul>
+<li>
+<p>S'executa un procés que espera durant 1000 segons.</p>
+</li>
+<li>
+<p>El procés està en <strong>primer pla</strong> i bloqueja el terminal fins que finalitzi o s'interrompi.</p>
+</li>
+</ul>
+<hr />
+<p><strong><code>Ctrl+C</code></strong></p>
+<ul>
+<li>
+<p>Prement <strong><code>Ctrl+C</code></strong>, s'envia el senyal <strong>SIGINT</strong> (interrupt) al procés.</p>
+</li>
+<li>
+<p>Resultat:</p>
+</li>
+<li>
+<p>El procés es finalitza immediatament.</p>
+</li>
+<li>
+<p>El terminal torna al prompt, llest per acceptar noves comandes.</p>
+</li>
+</ul>
+<hr />
+<p><strong><code>sleep 1000</code></strong> (de nou)</p>
+<ul>
+<li>El mateix procés es torna a executar en primer pla.</li>
+</ul>
+<hr />
+<p><strong><code>Ctrl+Z</code></strong></p>
+<ul>
+<li>
+<p>Prement <strong><code>Ctrl+Z</code></strong>, s'envia el senyal <strong>SIGTSTP</strong> (stop) al procés.</p>
+</li>
+<li>
+<p>Resultat:</p>
+</li>
+<li>
+<p>El procés es <strong>pausa</strong> i es col·loca en segon pla amb l'estat "Aturat".</p>
+</li>
+<li>
+<p>El terminal mostra un missatge:</p>
+</li>
+</ul>
+<hr />
+<h4 id="com-gestionar-el-proces-aturat">Com gestionar el procés aturat</h4>
+<ul>
+<li><strong>Verificar l'estat del procés:</strong></li>
+<li>Utilitza <code>jobs</code> per veure els treballs en segon pla.</li>
+<li><strong>Reprendre el procés:</strong></li>
+<li>En <strong>primer pla:</strong> Usa <code>fg %1</code>.</li>
+<li>En <strong>segon pla:</strong> Usa <code>bg %1</code>.</li>
+<li><strong>Finalitzar el procés:</strong></li>
+<li>Usa <code>kill</code> amb el PID o número de treball.</li>
+</ul>
+<p><img alt="alt text" src="../jobsa.png" /></p>
+<hr />
+<h2 id="comanda-fg-n">Comanda <code>fg %&lt;N&gt;</code></h2>
+<p>Restaura un procés en segon pla al primer pla. El número del treball (<code>&lt;N&gt;</code>) es pot obtenir amb <code>jobs</code>.</p>
+<p><strong>Exemple:</strong></p>
 
 
 
