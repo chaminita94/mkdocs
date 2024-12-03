@@ -651,11 +651,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../gestproces/" class="md-nav__link">
+      <a href="../gestio_usuaris/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Gestió de Processos
+    Gestió d'Usuari
   </span>
   
 
@@ -672,11 +672,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../gestio_usuaris/" class="md-nav__link">
+      <a href="../gestproces/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Gestió d'Usuari
+    Gestió de Processos
   </span>
   
 
@@ -985,6 +985,111 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-sgid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què és SGID?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Què és SGID?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcionament-amb-fitxers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionament amb fitxers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funcionament amb fitxers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-de-sgid-en-un-fitxer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració de SGID en un fitxer:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionament-amb-directoris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionament amb directoris
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funcionament amb directoris">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-de-sgid-en-un-directori" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració de SGID en un directori:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-es-suid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què és SUID?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Què és SUID?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-dus-de-suid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple d'ús de SUID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passos-a-seguir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passos a seguir
+    </span>
+  </a>
   
 </li>
         
@@ -1504,6 +1609,83 @@ sudo usermod -aG group1 user2
 <p><strong>NOTA!</strong> La configuració de la <code>umask</code> no s'aplicarà si el directori on es creen els fitxers té permisos configurats amb ACLs. En aquest cas, els permisos dels fitxers i directoris nous heretaran les configuracions de l'ACL, independentment del valor de la <code>umask</code>.</p>
 </blockquote>
 <p><img alt="alt text" src="../heretat.png" /></p>
+<h1 id="que-es-sgid">Què és SGID?</h1>
+<p><strong>SGID</strong> (Set Group ID) és un permís especial en sistemes Unix/Linux que permet que un fitxer o directori hereti el grup propietari de l'arxiu o carpeta en lloc del grup de l'usuari que el va crear.</p>
+<hr />
+<h2 id="funcionament-amb-fitxers">Funcionament amb fitxers</h2>
+<p>Quan un programa amb <strong>SGID</strong> s'executa, funciona amb els permisos del grup propietari del fitxer. Això és útil per assegurar que els processos heretin permisos del grup correcte.</p>
+<h3 id="configuracio-de-sgid-en-un-fitxer">Configuració de SGID en un fitxer:</h3>
+<p>chmod g+s fitxer</p>
+<hr />
+<h2 id="funcionament-amb-directoris">Funcionament amb directoris</h2>
+<p>Quan <strong>SGID</strong> està activat en un directori, qualsevol fitxer creat dins d'aquest heretarà el grup propietari del directori en lloc del grup de l'usuari que el va crear. Això facilita la col·laboració en grups.</p>
+<h3 id="configuracio-de-sgid-en-un-directori">Configuració de SGID en un directori:</h3>
+<p>chmod g+s directori</p>
+<hr />
+<h3 id="notes">Notes</h3>
+<ul>
+<li>L'ús de <strong>SGID</strong> en directoris és especialment útil per a projectes col·laboratius, on diversos usuaris necessiten compartir fitxers dins d'un mateix grup.</li>
+<li>
+<p>Per eliminar el permís SGID d'un fitxer o directori:</p>
+</li>
+<li>
+<p>chmod g-s fitxer_o_directori</p>
+</li>
+</ul>
+<h2 id="que-es-suid">Què és SUID?</h2>
+<p><strong>SUID</strong> (Set User ID) és un permís especial en sistemes Unix/Linux que permet que un programa s'executi amb els privilegis del propietari del fitxer, en lloc de l'usuari que l'executa. Això és útil per a certs programes que necessiten permisos elevats per funcionar correctament, com ara aquells que accedeixen a recursos restringits del sistema.</p>
+<h3 id="exemple-dus-de-suid">Exemple d'ús de SUID</h3>
+<p>En aquest exemple, veurem com configurar <strong>SUID</strong> per a un programa escrit en C, permetent a un usuari sense privilegis accedir al directori <code>/root</code>.</p>
+<hr />
+<h3 id="passos-a-seguir">Passos a seguir</h3>
+<p><strong>Posar-se com a <code>root</code></strong></p>
+<p>Primer, assegura't d'executar tots els passos següents com a usuari <code>root</code>:</p>
+<pre><code>sudo su
+</code></pre>
+<hr />
+<p><strong>Crear l'arxiu <code>script.c</code></strong></p>
+<p>Crea un fitxer anomenat <code>script.c</code> i afegeix el següent codi:</p>
+<pre><code>#include &lt;stdio.h&gt;  
+#include &lt;dirent.h&gt;  
+
+int main() {  
+    struct dirent *entry;  
+    DIR *dp = opendir(&quot;/root&quot;);  
+    if (dp == NULL) {  
+        perror(&quot;No s'ha pogut obrir /root&quot;);  
+        return 1;  
+    }  
+    printf(&quot;Contingut de /root:\n&quot;);  
+    while ((entry = readdir(dp))) {  
+        printf(&quot;%s\n&quot;, entry-&gt;d_name);  
+    }  
+    closedir(dp);  
+    return 0;  
+}
+</code></pre>
+<p>Aquest codi intenta obrir el directori <code>/root</code> i llistar el seu contingut.</p>
+<hr />
+<p><strong>Compilar el codi</strong></p>
+<p>Compila el codi per generar un executable:</p>
+<pre><code>sudo gcc script.c -o script
+</code></pre>
+<hr />
+<p><strong>Assignar permisos d'execució i SUID</strong></p>
+<p>Ara, dona permisos d'execució al programa i configura <strong>SUID</strong>:</p>
+<pre><code>sudo chmod +x script  
+sudo chmod u+s script  
+</code></pre>
+<p><img alt="alt text" src="../script2.png" /></p>
+<p>Amb aquests permisos, qualsevol usuari que executi aquest programa tindrà temporalment els privilegis de <code>root</code> per accedir al directori <code>/root</code>.</p>
+<hr />
+<p><strong>Provar amb un usuari sense privilegis</strong></p>
+<p>Connecta't amb un usuari que no formi part del grup de sudoers, per exemple, un usuari anomenat <code>user1</code>:</p>
+<p>su prova</p>
+<p><strong>Executa l'script:</strong></p>
+<pre><code>./script
+</code></pre>
+<p><img alt="alt text" src="../Scriptns.png" /></p>
+<p>Si s'ha configurat correctament, l'usuari <code>user1</code> podrà veure el contingut del directori <code>/root</code>:</p>
 
 
 
