@@ -1350,15 +1350,27 @@ PASS_MIN_DAYS 0
 </ol>
 <p><img alt="alt text" src="../skel.png" /></p>
 <p><strong>Vegem breument què fa cada un d'ells:</strong></p>
-<p><strong><code>.bash_logout</code></strong>:</p>
+<p><strong><code>.bash_logout</code></strong></p>
+<p>Aquest fitxer s'executa automàticament quan l'usuari finalitza una sessió interactiva. És útil per:</p>
 <ul>
 <li>
-<p>Aquest fitxer s'executa quan l'usuari tanca la sessió de la seva shell Bash.</p>
+<p>Netejar recursos o processos temporals.</p>
 </li>
 <li>
-<p>Normalment conté comandaments per netejar l'entorn o realitzar altres tasques de finalització de sessió.</p>
+<p>Mostar missatges de finalització de sessió.</p>
+</li>
+<li>
+<p>Executar scripts de manteniment personalitzats.</p>
 </li>
 </ul>
+<p><strong>Exemple de personalització del fitxer <code>.bash_logout</code></strong></p>
+<p>Afegir una línia per netejar l'historial de comandes o mostrar un missatge d'adeu:</p>
+<p><strong>Esborra l'historial de comandes en tancar sessió</strong></p>
+<pre><code>history -c  
+</code></pre>
+<p><strong>Mostra un missatge d'adeu</strong></p>
+<pre><code>echo &quot;Adeu! Ens veiem aviat. 🍌&quot; 
+</code></pre>
 <p><strong><code>.bashrc</code></strong>:</p>
 <ul>
 <li>
@@ -1371,26 +1383,61 @@ PASS_MIN_DAYS 0
 <p>Conté definicions de variables d'entorn, aliases, funcions i altres configuracions personalitzades per a l'usuari.</p>
 </li>
 </ul>
-<p>Podem editar-ho i afegir algun "alias" més.</p>
+<p><strong>Podem editar-ho i afegir algun "alias" més.</strong></p>
 <pre><code>sudo nano /etc/skel/.bashrc
 </code></pre>
 <p><img alt="alt text" src="../detall.png" /></p>
 <p>Comprovació.</p>
 <p><img alt="alt text" src="../llalias.png" /></p>
-<p><strong><code>.profile</code></strong>:</p>
+<p><strong><code>.profile</code></strong></p>
+<p>Aquest fitxer s'executa durant l'inici de sessió. És útil per configurar variables d'entorn i altres ajustaments globals per a l'usuari. Exemples d'ús inclouen:</p>
 <ul>
 <li>
-<p>Aquest fitxer també s'executa quan l'usuari inicia una nova sessió.</p>
+<p>Configuració de variables d'entorn, com ara <code>PATH</code>.</p>
 </li>
 <li>
-<p>S'utilitza per establir variables d'entorn i configuracions que s'han d'aplicar a totes les sessions de l'usuari, independentment del shell utilitzat (Bash, Zsh, etc.).</p>
+<p>Personalització del prompt o altres configuracions de shell.</p>
+</li>
+<li>
+<p>Execució d'altres fitxers de configuració, com <code>.bashrc</code>, si està disponible.</p>
 </li>
 </ul>
-<p>Aquests fitxers proporcionen una configuració bàsica i predeterminada per als nous usuaris del sistema. Els administradors poden personalitzar-los per adaptar-los a les necessitats de l'organització o dels usuaris.</p>
+<p><strong>Exemple de personalització del fitxer <code>.profile</code></strong></p>
+<p><strong>Afegir un directori personalitzat al PATH</strong></p>
+<p>Permet als usuaris tenir un directori dedicat als seus scripts i assegurar-se que aquests es poden executar des de qualsevol lloc sense especificar rutes completes.</p>
+<pre><code>if [ -d &quot;$HOME/scripts&quot; ]; then
+    PATH=&quot;$HOME/scripts:$PATH&quot;
+fi
+</code></pre>
+<p><img alt="alt text" src="../scriptex.png" /></p>
+<p>Posterior ment crearem el directori, el script i també donem permisos d'execusió.</p>
+<pre><code>mkdir ~/scripts
+</code></pre>
+<pre><code>nano ~/scripts/hello.sh
+</code></pre>
+<p><img alt="alt text" src="../echo.png" /></p>
+<pre><code>sudo chmod +x ~/scripts/hello.sh
+</code></pre>
+<pre><code>source ~/.profile
+</code></pre>
+<p>Executem el script únicament escriu hello.sh</p>
+<p><img alt="alt text" src="../comprohello.png" /></p>
 <blockquote>
+<p>Nota</p>
 <ul>
-<li><strong><em>Consell:</em></strong>
-    Qualsevol fitxer que afegeixis a <code>/etc/skel</code> es copiarà automàticament al directori home dels nous usuaris.</li>
+<li>
+<p>Aquesta configuració detecta automàticament si el directori scripts existeix al directori home de l'usuari.</p>
+</li>
+<li>
+<p>Si el directori no existeix, la configuració no afecta el PATH, assegurant que no es generen errors.</p>
+</li>
+<li>
+<p>És ideal per sistemes on els usuaris necessiten executar scripts personalitzats amb freqüència.</p>
+</li>
+<li>
+<p><strong><em>Consell:</em></strong>
+    Qualsevol fitxer que afegeixis a <code>/etc/skel</code> es copiarà automàticament al directori home dels nous usuaris.</p>
+</li>
 </ul>
 </blockquote>
 <h2 id="creacio-dusuaris">Creació d'usuaris</h2>
