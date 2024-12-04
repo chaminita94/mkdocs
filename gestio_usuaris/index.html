@@ -1364,13 +1364,29 @@ PASS_MIN_DAYS 0
 </li>
 </ul>
 <p><strong>Exemple de personalització del fitxer <code>.bash_logout</code></strong></p>
-<p>Afegir una línia per netejar l'historial de comandes o mostrar un missatge d'adeu:</p>
-<p><strong>Esborra l'historial de comandes en tancar sessió</strong></p>
+<p>Afegir una línia per netejar l'historial de comandes i mostrar un missatge d'adeu:</p>
+<p>Comprovem el historial amb la comanda <code>!history</code></p>
+<p><img alt="alt text" src="../histor.png" /></p>
+<p><strong>Per esborrar l'historial de comandes en tancar sessió</strong></p>
+<p>Afegim aquestes linies dins del axiu de <code>.bash_logout</code>.</p>
+<pre><code>sudo nano /etc/skel/.bash_logout
+</code></pre>
+<p><img alt="alt text" src="../skelhisto.png" /></p>
 <pre><code>history -c  
 </code></pre>
+<blockquote>
+<p>La comanda <code>history -c</code> només esborra l'historial de la sessió actual i no afecta l'arxiu persistent (<code>~/.bash_history</code>).</p>
+</blockquote>
 <p><strong>Mostra un missatge d'adeu</strong></p>
 <pre><code>echo &quot;Adeu! Ens veiem aviat. 🍌&quot; 
 </code></pre>
+<p>Crearem un nou usuari i comprovarem l'historial d'aquest usuari.</p>
+<p><img alt="Historial inicial" src="../historya.png" /></p>
+<p>Ens desconnectarem de l'usuari "history" i observarem que ens ha dit "Adeu! Ens veiem aviat. 🍌". També s'hauria d'haver esborrat l'historial.</p>
+<p><img alt="Esborrat de l'historial" src="../deletehis.png" /></p>
+<blockquote>
+<p>Es podria eliminar l'historial complet esborrant l'arxiu amb <code>rm -f ~/.bash_history</code> o "sobreescrivint-lo" amb <code>&gt; ~/.bash_history</code>.</p>
+</blockquote>
 <p><strong><code>.bashrc</code></strong>:</p>
 <ul>
 <li>
