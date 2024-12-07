@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function googleTranslateElementInit() {
+  console.log("Initializing Google Translate...");
   new google.translate.TranslateElement(
       {
           pageLanguage: 'ca',
