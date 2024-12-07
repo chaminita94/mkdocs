@@ -94,3 +94,47 @@ a:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
+/* Hide the Google Translate banner */
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+/* Style the Google Translate widget */
+.goog-te-gadget-simple {
+    position: top;
+    top: 10px;
+    left: 10px;
+    max-width: 150px;
+    padding: 2px 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the text and image inside the widget */
+.goog-te-gadget-simple span,
+.goog-te-gadget-simple img {
+    max-height: 18px;
+    vertical-align: middle;
+}
+
+/* Hover effect */
+.goog-te-gadget-simple:hover {
+    background-color: #e0e0e0;
+    border-color: #aaa;
+}
+
+/* Remove unnecessary margins or spacing */
+.goog-te-gadget-simple span {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+

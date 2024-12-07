@@ -1,16 +1,28 @@
-var consent = __md_get("__consent")
+var consent = __md_get("__consent");
 if (consent && consent.custom) {
   /* The user accepted custom cookies */
 }
 
 /* Wait for page to load */
 document.addEventListener("DOMContentLoaded", function() {
-  var buttons = document.querySelectorAll(".md-consent__controls button")
+  // Load Google Translate API
+  var translateScript = document.createElement("script");
+  translateScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  document.head.appendChild(translateScript);
+
+  // Add Google Translate widget container
+  var translateDiv = document.createElement("div");
+  translateDiv.id = "google_translate_element";
+  translateDiv.classList.add("translate-widget");
+  document.body.insertBefore(translateDiv, document.body.firstChild);
+
+  // Consent configuration
+  var buttons = document.querySelectorAll(".md-consent__controls button");
   buttons.forEach(function(button) {
     if (button.dataset.mdconsentAction === "manage") {
       button.addEventListener("click", function() {
         /* Open custom dialog */
-        var dialog = document.createElement("dialog")
+        var dialog = document.createElement("dialog");
         dialog.innerHTML = `
           <h2>Configuració de galetes</h2>
           <form method="dialog">
@@ -26,22 +38,32 @@ document.addEventListener("DOMContentLoaded", function() {
             <br><br>
             <button type="submit">Desar configuració</button>
           </form>
-        `
-        document.body.appendChild(dialog)
-        dialog.showModal()
+        `;
+        document.body.appendChild(dialog);
+        dialog.showModal();
 
         dialog.querySelector("form").addEventListener("submit", function(e) {
-          e.preventDefault()
-          var formData = new FormData(e.target)
-          var newConsent = {}
+          e.preventDefault();
+          var formData = new FormData(e.target);
+          var newConsent = {};
           for (var [key, value] of formData.entries()) {
-            newConsent[key] = true
+            newConsent[key] = true;
           }
-          __md_set("__consent", newConsent)
-          location.reload()
-        })
-      })
+          __md_set("__consent", newConsent);
+          location.reload();
+        });
+      });
     }
-  })
-})
+  });
+});
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+      {
+          pageLanguage: 'ca',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      },
+      'google_translate_element'
+  );
+}
 
