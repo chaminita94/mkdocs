@@ -57,14 +57,16 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
+
 function googleTranslateElementInit() {
   console.log("Initializing Google Translate...");
   new google.translate.TranslateElement(
       {
           pageLanguage: 'ca',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false, 
       },
       'google_translate_element'
   );
 }
-
