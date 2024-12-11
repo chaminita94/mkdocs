@@ -1,0 +1,742 @@
+<!-- Vitaliy Domin - Dec 2024 - Falling Words Typing Game -->
+<!-- This is a simple typing game where you have to type the words before they cross the danger line. -->
+<!-- The game is built using HTML, CSS, and JavaScript. -->
+<!-- The game has a start screen, game over screen, and a main game screen. -->
+<!-- The game tracks the player's HP, WPM, and Accuracy. -->
+<!-- The game has a dictionary of words that it uses to spawn words, that you can customize. -->
+<!-- The game also has special words that can be spawned with a certain frequency. -->
+<!-- The game has a special effect for clearing special words. -->
+<!-- The game has a special effect for incorrect words. -->
+<!-- The game has a special effect for correct words. -->
+<!-- The game has a special effect for the game over screen. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Falling Words Typing Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        .pause-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 2em;
+            z-index: 999;
+            /* Make sure it’s on top of everything */
+        }
+
+        .game-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .danger-line {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: red;
+        }
+
+        .ui-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 2px solid red;
+        }
+
+        .stat-display {
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+
+        #input-field {
+            font-size: 1.2em;
+            padding: 5px;
+            width: 200px;
+            margin: 0 10px;
+        }
+
+        .hp-bar-container {
+            position: relative;
+            width: 150px;
+            height: 20px;
+            background: #333;
+            border: 1px solid #555;
+            margin-left: 20px;
+        }
+
+        .hp-bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background: green;
+            transition: width 0.2s ease, background 0.2s ease;
+        }
+
+        .word {
+            position: absolute;
+            font-size: 2em;
+            white-space: nowrap;
+        }
+
+        .game-over-screen,
+        .start-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .game-over-screen h1 {
+            font-size: 3em;
+            color: red;
+            margin-bottom: 20px;
+        }
+
+        .game-over-screen .final-stats {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .game-over-screen .restart {
+            font-size: 1.5em;
+            background: #222;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid #444;
+        }
+
+        .start-screen h1 {
+            font-size: 3em;
+            color: #0f0;
+            margin-bottom: 20px;
+        }
+
+        .damage-popup {
+            position: absolute;
+            font-size: 2em;
+            color: red;
+            opacity: 1;
+            animation: damageFade 1s forwards;
+        }
+
+        @keyframes damageFade {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+        }
+
+        .correct-flash {
+            position: absolute;
+            font-size: 2em;
+            color: green;
+            opacity: 1;
+            animation: correctFade 0.5s forwards;
+        }
+
+        @keyframes correctFade {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .thanos-snap {
+            animation: dust 1s forwards;
+            /* 1 second animation, then hold final state */
+        }
+
+        @keyframes dust {
+            0% {
+                opacity: 1;
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translate(50px, -50px) rotate(20deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="game-container" id="game-container">
+        <div class="start-screen" id="start-screen">
+            <h1>Click to Start</h1>
+            <p>Type the words before they cross the line!<br>Correct words remove them, incorrect words cost HP, missed
+                words also cost HP.</p>
+        </div>
+        <div class="game-over-screen" id="game-over-screen" style="display:none;">
+            <h1>GAME OVER</h1>
+            <div class="final-stats" id="final-stats"></div>
+            <div class="restart" onclick="restartGame()">Click to Restart</div>
+        </div>
+        <!-- Add the pause screen here -->
+        <div class="pause-screen" id="pause-screen" style="display:none;">
+            <h1>PAUSED</h1>
+            <p>Press ESC to resume</p>
+        </div>
+    
+        <div class="danger-line" id="danger-line"></div>
+        <div class="ui-bar">
+            <div class="stat-display">Level: <span id="level-display">1</span></div>
+            <div class="stat-display">WPM: <span id="wpm-display">0</span></div>
+            <div class="stat-display">Accuracy: <span id="accuracy-display">100%</span></div>
+            <input type="text" id="input-field" placeholder="Type word & Enter">
+            <div class="hp-bar-container">
+                <div class="hp-bar" id="hp-bar" style="width:100%;"></div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        // Falling Words Typing Game
+        // You can use your own dictionary or use the one provided below. just ensure that the special words are included in it.
+        const DICTIONARY = [
+            // Animals
+            "cat", "dog", "tiger", "lion", "elephant", "giraffe", "zebra", "monkey", "wolf", "bear",
+            "deer", "fox", "rabbit", "horse", "cow", "sheep", "goat", "pig", "chicken", "eagle",
+            "penguin", "dolphin", "shark", "whale", "snake", "lizard", "crocodile", "rhinoceros", "gorilla", "panther",
+            // Nature and Landscape
+            "mountain", "river", "forest", "ocean", "lake", "desert", "beach", "valley", "island", "canyon",
+            "waterfall", "volcano", "glacier", "meadow", "jungle", "prairie", "hill", "cave", "peak", "stream",
+            "cloud", "sky", "planet", "galaxy", "meteor", "asteroid", "comet", "sunset", "sunrise", "rainbow",
+            // Food and Drink
+            "apple", "banana", "orange", "pizza", "burger", "salad", "bread", "cheese", "soup", "cake",
+            "chocolate", "coffee", "tea", "rice", "pasta", "chicken", "fish", "beef", "egg", "potato",
+            "sushi", "hamburger", "broccoli", "strawberry", "grape", "cucumber", "carrot", "spinach", "avocado", "tomato",
+            // Technology
+            "computer", "phone", "laptop", "tablet", "robot", "internet", "software", "network", "server", "digital",
+            "keyboard", "mouse", "screen", "printer", "camera", "headphones", "bluetooth", "wireless", "battery", "processor",
+            "algorithm", "database", "firewall", "encryption", "hardware", "smartphone", "quantum", "blockchain", "cybersecurity", "artificial",
+            // Science and Research
+            "physics", "chemistry", "biology", "astronomy", "geology", "neuroscience", "genetics", "climate", "molecule", "atom",
+            "electron", "gravity", "DNA", "evolution", "ecosystem", "pandemic", "vaccine", "radiation", "microscope", "telescope",
+            // Arts and Culture
+            "painting", "sculpture", "music", "dance", "theater", "cinema", "poetry", "novel", "symphony", "orchestra",
+            "renaissance", "impressionism", "jazz", "opera", "ballet", "guitar", "violin", "drama", "comedy", "tragedy",
+            // Emotions and Psychology
+            "happiness", "sadness", "anger", "love", "fear", "joy", "hope", "peace", "calm", "excitement",
+            "depression", "anxiety", "empathy", "motivation", "confidence", "passion", "courage", "patience", "gratitude", "resilience",
+            // Geography and Places
+            "continent", "country", "city", "capital", "border", "mountain", "river", "ocean", "island", "desert",
+            "Europe", "America", "Africa", "Asia", "Australia", "Paris", "London", "Tokyo", "NewYork", "Beijing",
+            // History and Historical Figures
+            "revolution", "war", "peace", "empire", "democracy", "freedom", "independence", "civilization", "philosophy", "culture",
+            "Napoleon", "Einstein", "Shakespeare", "Lincoln", "Gandhi", "Darwin", "Mozart", "Picasso", "Newton", "Beethoven",
+            // Sports and Recreation
+            "football", "basketball", "tennis", "soccer", "baseball", "hockey", "swimming", "running", "cycling", "golf",
+            "olympics", "championship", "tournament", "athlete", "coach", "team", "victory", "competition", "training", "performance",
+            // Professions and Careers
+            "doctor", "engineer", "teacher", "lawyer", "scientist", "artist", "musician", "chef", "pilot", "journalist",
+            "researcher", "architect", "programmer", "designer", "entrepreneur", "photographer", "astronaut", "veterinarian", "psychologist", "detective",
+            // Abstract Concepts
+            "time", "space", "universe", "dream", "memory", "knowledge", "truth", "freedom", "justice", "wisdom",
+            "creativity", "imagination", "potential", "destiny", "purpose", "meaning", "harmony", "balance", "progress", "change",
+            // Miscellaneous
+            "adventure", "journey", "magic", "mystery", "challenge", "discovery", "friendship", "leadership", "innovation", "resilience",
+            "rhythm", "pattern", "symbol", "legend", "story", "dream", "possibility", "horizon", "wonder", "miracle",
+            // Additional Random Words
+            "whisper", "echo", "silence", "thunder", "lightning", "breeze", "spark", "flame", "crystal", "shadow",
+            "puzzle", "riddle", "wisdom", "courage", "harmony", "serenity", "essence", "pioneer", "frontier", "horizon",
+            // Add special words to the dictionary:
+            "Sesquipedalian", "Weltanschauung", "Gobbledygook"
+            // ... rest of the words
+        ];
+
+        // Configuration
+        const START_WORD_COUNT = 5;
+        const BASE_FALL_SPEED = 10;
+        const SPEED_INCREASE_FACTOR = 1.05;
+        const WORDS_PER_LEVEL = 5;
+        const HP_LOSS_MISSED = 10;
+        const HP_LOSS_INCORRECT = 5;
+
+        // Special word frequency and multiple special words
+        const SPECIAL_WORD_FREQUENCY = 30;
+        const SPECIAL_WORDS = ["Sesquipedalian", "Weltanschauung", "Gobbledygook"];  // Add more special words here, they should also be in the dictionary
+
+        let words = [];
+        let hp = 100;
+        let correctWords = 0;
+        let missedWords = 0;
+        let startTime = null;
+        let gameRunning = false;
+        let level = 1;
+        let fallSpeed = BASE_FALL_SPEED;
+        let animationFrameId = null;
+        let currentDictionary = [...DICTIONARY];
+        let gameStartTime = null;
+
+        // Accuracy tracking
+        let charsTyped = 0;
+        let charsCorrect = 0;
+
+        const gameContainer = document.getElementById('game-container');
+        const startScreen = document.getElementById('start-screen');
+        const gameOverScreen = document.getElementById('game-over-screen');
+        const finalStats = document.getElementById('final-stats');
+        const hpBar = document.getElementById('hp-bar');
+        const wpmDisplay = document.getElementById('wpm-display');
+        const inputField = document.getElementById('input-field');
+        const dangerLine = document.getElementById('danger-line');
+        const levelDisplay = document.getElementById('level-display');
+        const accuracyDisplay = document.getElementById('accuracy-display');
+
+        const containerHeight = window.innerHeight;
+        const dangerLineY = Math.floor(containerHeight * 0.80); // 85% from the top ( change this to move the danger line)
+        dangerLine.style.top = dangerLineY + "px";
+
+
+        function spawnInitialWords() {
+            words = [];
+            for (let i = 0; i < START_WORD_COUNT; i++) {
+                spawnWord();
+            }
+        }
+
+        function spawnWord() {
+            const word = getRandomWord();
+            const { x, el } = trySpawnWordElement(word, isSpecialWord(word));
+
+            const y = -50;
+            const speed = fallSpeed;
+
+            words.push({ word, x, y, speed, el: el, isSpecial: isSpecialWord(word) });
+        }
+
+        function isSpecialWord(word) {
+            return SPECIAL_WORDS.includes(word);
+        }
+
+        function trySpawnWordElement(word) {
+            const wordEl = document.createElement('div');
+            wordEl.className = 'word';
+            wordEl.textContent = word;
+            wordEl.style.top = "-9999px";
+            wordEl.style.left = "-9999px";
+            gameContainer.appendChild(wordEl);
+
+            const wordWidth = wordEl.offsetWidth;
+            const attempts = 10;
+            let foundSpot = false;
+            let xPos = 0;
+
+            for (let i = 0; i < attempts; i++) {
+                const randX = Math.random() * (window.innerWidth - wordWidth);
+                if (!checkOverlap(randX, wordWidth)) {
+                    xPos = randX;
+                    foundSpot = true;
+                    break;
+                }
+            }
+
+            if (!foundSpot) {
+                xPos = Math.random() * (window.innerWidth - wordWidth);
+            }
+            wordEl.style.left = xPos + "px";
+            wordEl.style.top = "-50px";
+
+            return { x: xPos, el: wordEl };
+        }
+
+        function checkOverlap(newX, newWidth) {
+            const threshold = 50;
+            for (let w of words) {
+                const existingX = w.x;
+                const existingEl = w.el;
+                const existingWidth = existingEl.offsetWidth;
+                if (Math.abs(existingX - newX) < (existingWidth + newWidth - threshold)) {
+                    if (!(newX + newWidth < existingX - threshold || newX - threshold > existingX + existingWidth)) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        function getRandomWord() {
+            // Check if we need to spawn a special word next
+            if (correctWords > 0 && correctWords % SPECIAL_WORD_FREQUENCY === 0) {
+                const special = SPECIAL_WORDS[Math.floor(Math.random() * SPECIAL_WORDS.length)];
+                // If we are managing from dictionary as well:
+                const idx = currentDictionary.indexOf(special);
+                if (idx !== -1) {
+                    currentDictionary.splice(idx, 1);
+                }
+                return special;
+            }
+
+            if (currentDictionary.length === 0) {
+                currentDictionary = [...DICTIONARY];
+                shuffleArray(currentDictionary);
+            }
+
+            const idx = Math.floor(Math.random() * currentDictionary.length);
+            const chosen = currentDictionary[idx];
+            currentDictionary.splice(idx, 1);
+            return chosen;
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function startGame() {
+            startScreen.style.display = 'none';
+            gameOverScreen.style.display = 'none';
+            hp = 100;
+            correctWords = 0;
+            missedWords = 0;
+            level = 1;
+            fallSpeed = BASE_FALL_SPEED;
+            inputField.value = "";
+            charsTyped = 0;
+            charsCorrect = 0;
+            updateHPBar();
+            levelDisplay.textContent = level;
+            updateAccuracyDisplay();
+            startTime = Date.now();
+            gameRunning = true;
+            animate();
+        }
+
+        function animate() {
+            const now = Date.now();
+            const deltaTime = (now - startTime) / 1000;
+            updateWordsPosition(deltaTime);
+            updateWPM();
+            if (gameRunning) {
+                animationFrameId = requestAnimationFrame(animate);
+            }
+        }
+
+        function updateWordsPosition(deltaTime) {
+            for (let i = words.length - 1; i >= 0; i--) {
+                const w = words[i];
+                w.y += w.speed * (1 / 60);
+                w.el.style.top = w.y + "px";
+
+                if (w.y > dangerLineY) {
+                    // Missed the word
+                    removeWord(i);
+                    takeDamage(HP_LOSS_MISSED, w.x, w.y);
+                    missedWords++;
+                }
+            }
+
+            if (words.length < 5 && gameRunning) {
+                spawnWord();
+            }
+
+            if (hp <= 0) {
+                endGame();
+            }
+
+            startTime = Date.now();
+        }
+
+        function removeWord(index) {
+            const w = words[index];
+            if (w && w.el && w.el.parentNode) {
+                gameContainer.removeChild(w.el);
+            }
+            words.splice(index, 1);
+        }
+
+        function takeDamage(amount, x, y) {
+            hp -= amount;
+            if (hp < 0) hp = 0;
+            updateHPBar();
+            showDamagePopup("-" + amount + "% HP", x, y);
+        }
+
+        function showDamagePopup(text, x, y) {
+            const popup = document.createElement('div');
+            popup.className = 'damage-popup';
+            popup.textContent = text;
+            popup.style.left = x + "px";
+            popup.style.top = (y - 50) + "px";
+            gameContainer.appendChild(popup);
+
+            setTimeout(() => {
+                if (popup.parentNode) {
+                    gameContainer.removeChild(popup);
+                }
+            }, 1000);
+        }
+
+        function updateHPBar() {
+            hpBar.style.width = hp + "%";
+            let color = "green";
+            if (hp < 50) color = "yellow";
+            if (hp < 20) color = "red";
+            hpBar.style.background = color;
+        }
+
+        function updateWPM() {
+            const elapsed = (Date.now() - gameStartTime) / 1000;
+            const wpm = (correctWords / (elapsed / 60)) || 0;
+            wpmDisplay.textContent = Math.round(wpm);
+        }
+
+        function updateAccuracyDisplay() {
+            let accuracy = 100;
+            if (charsTyped > 0) {
+                accuracy = (charsCorrect / charsTyped) * 100;
+            }
+            accuracyDisplay.textContent = accuracy.toFixed(0) + "%";
+        }
+
+        inputField.addEventListener('keydown', (e) => {
+            if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) {
+                // Typed a character
+                charsTyped++;
+                updateAccuracyDisplay();
+            }
+
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                submitWord();
+            }
+        });
+
+        function submitWord() {
+            const typed = inputField.value.trim();
+            if (typed === "") return;
+
+            let matchedIndex = -1;
+            for (let i = 0; i < words.length; i++) {
+                if (words[i].word.toLowerCase() === typed.toLowerCase()) {
+                    matchedIndex = i;
+                    break;
+                }
+            }
+
+            if (matchedIndex >= 0) {
+                const w = words[matchedIndex];
+                // Count correct characters
+                let correctInWord = 0;
+                const target = w.word;
+                for (let i = 0; i < typed.length; i++) {
+                    if (typed[i].toLowerCase() === target[i].toLowerCase()) {
+                        correctInWord++;
+                    }
+                }
+                charsCorrect += correctInWord;
+                updateAccuracyDisplay();
+
+                showCorrectFlash(w.x, w.y);
+                removeWord(matchedIndex);
+                correctWords++;
+                inputField.value = "";
+
+                if (w.isSpecial) {
+                    // Instead of immediately clearing words, first apply the animation:
+                    thanosSnapAllWords();
+
+                    // Wait for the animation to finish before actually removing them
+                    setTimeout(() => {
+                        clearAllWords();
+                        hp = Math.min(100, hp + 20);
+                        updateHPBar();
+                    }, 1000); // match the animation duration (1s)
+                }
+
+
+                if (correctWords % WORDS_PER_LEVEL === 0) {
+                    levelUp();
+                }
+            } else {
+                inputField.value = "";
+                takeDamage(HP_LOSS_INCORRECT, window.innerWidth / 2, dangerLineY);
+            }
+        }
+
+        function clearAllWords() {
+            for (let i = words.length - 1; i >= 0; i--) {
+                removeWord(i);
+            }
+            words = [];
+        }
+
+        function showCorrectFlash(x, y) {
+            const flash = document.createElement('div');
+            flash.className = 'correct-flash';
+            flash.textContent = "✓";
+            flash.style.left = x + "px";
+            flash.style.top = y + "px";
+            gameContainer.appendChild(flash);
+            setTimeout(() => {
+                if (flash.parentNode) {
+                    gameContainer.removeChild(flash);
+                }
+            }, 500);
+        }
+
+        function levelUp() {
+            level++;
+            levelDisplay.textContent = level;
+            fallSpeed *= SPEED_INCREASE_FACTOR;
+            for (const w of words) {
+                w.speed = fallSpeed;
+            }
+        }
+        function thanosSnapAllWords() {
+            for (let i = 0; i < words.length; i++) {
+                const w = words[i];
+                w.el.classList.add('thanos-snap');
+            }
+        }
+
+
+        function endGame() {
+            gameRunning = false;
+            cancelAnimationFrame(animationFrameId);
+            for (let w of words) {
+                if (w.el.parentNode) {
+                    gameContainer.removeChild(w.el);
+                }
+            }
+            words = [];
+            const elapsed = (Date.now() - gameStartTime) / 1000;
+            const wpm = (correctWords / (elapsed / 60)) || 0;
+            const accuracy = (charsTyped > 0) ? (charsCorrect / charsTyped) * 100 : 100;
+            finalStats.innerHTML = `
+        Words Typed Correctly: ${correctWords}<br>
+        Words Missed: ${missedWords}<br>
+        WPM: ${Math.round(wpm)}<br>
+        Accuracy: ${accuracy.toFixed(0)}%
+    `;
+            gameOverScreen.style.display = 'flex';
+        }
+        let paused = false;
+        const pauseScreen = document.getElementById('pause-screen');
+
+        // Listen for Escape key to toggle pause
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                togglePause();
+            }
+        });
+
+        function togglePause() {
+            if (!gameRunning) return; // Only allow pausing if game is running
+            paused = !paused;
+            if (paused) {
+                pauseGame();
+            } else {
+                resumeGame();
+            }
+        }
+
+        function pauseGame() {
+            pauseScreen.style.display = 'flex';
+        }
+
+        function resumeGame() {
+            pauseScreen.style.display = 'none';
+            // Update startTime so that we don't have a time jump when resuming
+            startTime = Date.now();
+            animate();
+        }
+
+        // Modify animate function:
+        function animate() {
+            if (!gameRunning) return;
+            if (paused) {
+                // If paused, do not request next frame
+                return;
+            }
+            const now = Date.now();
+            const deltaTime = (now - startTime) / 1000;
+            updateWordsPosition(deltaTime);
+            updateWPM();
+            animationFrameId = requestAnimationFrame(animate);
+            startTime = now;
+        }
+
+
+        function restartGame() {
+            gameOverScreen.style.display = 'none';
+            startScreen.style.display = 'flex';
+            hp = 100;
+            updateHPBar();
+            inputField.value = "";
+            wpmDisplay.textContent = "0";
+            charsTyped = 0;
+            charsCorrect = 0;
+            accuracyDisplay.textContent = "100%";
+            cancelAnimationFrame(animationFrameId);
+            words = [];
+            currentDictionary = [...DICTIONARY];
+            shuffleArray(currentDictionary);
+            spawnInitialWords();
+        }
+
+        startScreen.addEventListener('click', () => {
+            if (!gameRunning) {
+                shuffleArray(currentDictionary);
+                spawnInitialWords();
+                gameStartTime = Date.now();
+                startGame();
+            }
+        });
+
+        restartGame();
+    </script>
+</body>
+</html>
