@@ -887,6 +887,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#verificacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verificació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#muntatge-temporal-de-la-carpeta-a-la-particio" class="md-nav__link">
     <span class="md-ellipsis">
       Muntatge temporal de la carpeta a la partició
@@ -924,13 +933,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#installacio-de-samba" class="md-nav__link">
+  <a href="#samba" class="md-nav__link">
     <span class="md-ellipsis">
-      Instal·lació de Samba
+      Samba
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Instal·lació de Samba">
+    <nav class="md-nav" aria-label="Samba">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -960,6 +969,24 @@
   <a href="#compartir-un-directori-amb-samba" class="md-nav__link">
     <span class="md-ellipsis">
       Compartir un directori amb Samba
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compartir-un-directori-formatat-amb-ntfs-mitjancant-samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compartir un directori formatat amb NTFS mitjançant Samba
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-samba-per-compartir-el-directori" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurar Samba per compartir el directori
     </span>
   </a>
   
@@ -1171,6 +1198,35 @@
 <li>L'opció <strong><code>-b 2048</code></strong> especifica la mida del bloc que assignem manualment.</li>
 </ul>
 <p><img alt="Format ext4" src="../ext4.png" /></p>
+<!-- Button for Extra Options -->
+<p><button class="popup-button" onclick="showPopup('popup-ext4', 'overlay-ext4')">Opcions extres per mkfs.ext4</button></p>
+<!-- Overlay and Popup for Extra Options -->
+<div class="overlay" id="overlay-ext4" onclick="hidePopup('popup-ext4', 'overlay-ext4')"></div>
+<div class="popup" id="popup-ext4">
+  <span class="close-btn" onclick="hidePopup('popup-ext4', 'overlay-ext4')">×</span>
+  <h3>Opcions extres per a <code>mkfs.ext4</code></h3>
+  <p>La comanda:</p>
+  <p><code>mkfs.ext4 /dev/sdb1</code></p>
+  <p>pot incloure les opcions següents:</p>
+  <h4>Opcions comunes:</h4>
+  <ul>
+    <li><strong><code>-L &lt;etiqueta&gt;</code></strong>: Assigna una etiqueta a la partició (per exemple, "EXT4_PARTITION").</li>
+    <pre><code>mkfs.ext4 -L EXT4_PARTITION /dev/sdb1</code></pre>
+
+    <li><strong><code>-m &lt;percentatge&gt;</code></strong>: Estableix l'espai reservat per a l'usuari root (per defecte és el 5%). Utilitza un percentatge més petit per estalviar espai en particions grans.</li>
+    <pre><code>mkfs.ext4 -m 1 /dev/sdb1</code></pre>
+
+    <li><strong><code>-b &lt;mida-del-bloc&gt;</code></strong>: Especifica la mida del bloc (per exemple, 1024, 2048 o 4096 bytes).</li>
+    <pre><code>mkfs.ext4 -b 4096 /dev/sdb1</code></pre>
+
+    <li><strong><code>-E &lt;característiques&gt;</code></strong>: Afegeix opcions extres, com activar la inicialització lenta (lazy initialization) o commits ràpids.</li>
+    <pre><code>mkfs.ext4 -E lazy_itable_init=1 /dev/sdb1</code></pre>
+
+    <li><strong><code>-T &lt;ús&gt;</code></strong>: Optimitza per a casos d'ús específics (per exemple, small, largefile, largefile4).</li>
+    <pre><code>mkfs.ext4 -T largefile /dev/sdb1</code></pre>
+  </ul>
+</div>
+
 <h4 id="comprovacio-de-la-mida-del-bloc">Comprovació de la mida del bloc</h4>
 <p>Fem la comprovació de la mida del bloc que hem assignat a la partició. Per fer-ho, utilitzem la següent comanda: </p>
 <pre><code>sudo tune2fs -l /dev/sdb1 | grep Block
@@ -1197,6 +1253,50 @@
 <p>Així, la mida aproximada de la partició és <strong>974 MB</strong>.</p>
 <hr />
 <h3 id="formateig-de-particions-ntfs"><strong>Formateig de particions NTFS</strong></h3>
+<p>Hem creat una segona partició, <strong>/dev/sdb2</strong>, de 1GB al mateix disc. Aquesta partició es destinarà al format <strong>NTFS</strong>.</p>
+<p><img alt="Creació de partició" src="../custom/NTFS.png" /></p>
+<p>Un cop creades les particions, les hem formatat segons els sistemes de fitxers desitjats:</p>
+<ul>
+<li><strong>/dev/sdb1</strong>: Formatada amb <strong>ext4</strong>, un sistema de fitxers ideal per a sistemes Linux.</li>
+<li><strong>/dev/sdb2</strong>: Formatada amb <strong>NTFS</strong>, un sistema de fitxers compatible amb Windows.</li>
+</ul>
+<p>Hem aprofitat per formatar <strong>/dev/sdb1</strong> amb <strong>ext4</strong> durant el mateix procés.</p>
+<p><img alt="Formatació de particions" src="../custom/ntfsext.png" /></p>
+<!-- Button for NTFS Extra Options -->
+<p><button class="popup-button" onclick="showPopup('popup-ntfs', 'overlay-ntfs')">Opcions extres per mkfs.ntfs</button></p>
+<!-- Overlay and Popup for NTFS Extra Options -->
+<div class="overlay" id="overlay-ntfs" onclick="hidePopup('popup-ntfs', 'overlay-ntfs')"></div>
+<div class="popup" id="popup-ntfs">
+  <span class="close-btn" onclick="hidePopup('popup-ntfs', 'overlay-ntfs')">×</span>
+  <h3>Opcions extres per a <code>mkfs.ntfs</code></h3>
+  <p>La comanda:</p>
+  <p><code>mkfs.ntfs /dev/sdb2</code></p>
+  <p>pot incloure les opcions següents:</p>
+  <h4>Opcions comunes:</h4>
+  <ul>
+    <li><strong><code>-L &lt;etiqueta&gt;</code></strong>: Assigna una etiqueta a la partició (per exemple, "NTFS_PARTITION").</li>
+    <pre><code>mkfs.ntfs -L NTFS_PARTITION /dev/sdb2</code></pre>
+
+    <li><strong><code>-c &lt;mida-del-clúster&gt;</code></strong>: Especifica la mida del clúster (per exemple, 512, 1024, 2048, 4096 bytes, etc.).</li>
+    <pre><code>mkfs.ntfs -c 4096 /dev/sdb2</code></pre>
+
+    <li><strong><code>--fast</code></strong>: Realitza un format ràpid (equivalent a l'opció <code>-Q</code>).</li>
+    <pre><code>mkfs.ntfs --fast /dev/sdb2</code></pre>
+
+    <li><strong><code>--force</code></strong>: Obliga el format encara que la partició estigui muntada o en ús.</li>
+    <pre><code>mkfs.ntfs --force /dev/sdb2</code></pre>
+
+    <li><strong><code>-f</code></strong>: Activa el mode ràpid, formatant la partició sense comprovar si hi ha blocs dolents.</li>
+    <pre><code>mkfs.ntfs -f /dev/sdb2</code></pre>
+  </ul>
+</div>
+
+<hr />
+<h3 id="verificacio">Verificació</h3>
+<p>Un cop formatades, podem verificar el tipus de sistema de fitxers i el muntatge de les particions utilitzant:</p>
+<pre><code>lsblk -f
+</code></pre>
+<p><img alt="alt text" src="../custom/lalala.png" /></p>
 <h3 id="muntatge-temporal-de-la-carpeta-a-la-particio"><strong>Muntatge temporal de la carpeta a la partició</strong></h3>
 <p>Després, crearem una carpeta i un arxiu dins d'aquesta carpeta.</p>
 <p><img alt="alt text" src="../carpetaparticio.png" /></p>
@@ -1418,14 +1518,8 @@ Apareixerà una finestra per configurar la compartició de la carpeta. Habilitem
 <p>Si ens dirigim a la màquina des d'on hem compartit el fitxer, podem comprovar si s'ha creat la nova carpeta.</p>
 <p>En efecte, la carpeta s'ha creat amb el nom del propietari <strong>"nobody:nogroup"</strong>, tal com hem configurat prèviament.</p>
 <p><img alt="alt text" src="../carpeta.png" /></p>
-<h4 id="installacio-de-samba">Instal·lació de Samba</h4>
+<h4 id="samba">Samba</h4>
 <h5 id="que-es-samba"><strong>¿Què és Samba?</strong></h5>
-<blockquote>
-<p>No confondre amb <strong>Samba do Brasil</strong></p>
-</blockquote>
-<p><a>
-  <img src="https://i.ibb.co/ySD3GWw/Gifs-animados-de-carnaval.gif" alt="Samba do Brasil" style="width: 120px !important; height: auto !important;">
-</a></p>
 <p><strong>Samba</strong> és una implementació de programari lliure del protocol SMB/CIFS (Server Message Block/Common Internet File System) que permet la compartició de fitxers, carpetes i impressores entre ordinadors que utilitzen diferents sistemes operatius, com Linux, Windows i macOS. </p>
 <p>Samba s’utilitza principalment en entorns mixtos, on cal que màquines amb Linux puguin interactuar amb sistemes Windows per compartir recursos de xarxa. És una eina clau per integrar sistemes operatius i facilitar la col·laboració en xarxes locals.</p>
 <p><strong>Funcions principals de Samba:</strong></p>
@@ -1577,6 +1671,38 @@ Tornem al servidor i comprovem que el fitxer o carpeta que hem creat està corre
 <p><img alt="Comprovació del fitxer creat" src="../custom/diegocrea.png" /></p>
 <p><strong>Verificació del propietari</strong>:<br />
 En efecte, el fitxer creat té com a propietari l'usuari <strong>Diego</strong>, tal com s'ha configurat en el fitxer <code>smb.conf</code>.</p>
+<hr />
+<h4 id="compartir-un-directori-formatat-amb-ntfs-mitjancant-samba">Compartir un directori formatat amb NTFS mitjançant Samba</h4>
+<p>També és possible compartir un directori formatat amb <strong>NTFS</strong> utilitzant <strong>Samba</strong>. A continuació, es detallen els passos principals:</p>
+<hr />
+<p><strong>Crear i muntar el directori</strong></p>
+<p>S'ha creat un directori anomenat <strong>Windows</strong> al camí <strong>/var/Windows</strong>. A continuació, s'ha configurat l'arxiu <strong>/etc/fstab</strong> per tal de muntar automàticament la partició <strong>/dev/sdb2</strong> al directori <strong>/var/Windows</strong> durant l'arrencada del sistema.</p>
+<p>En l'arxiu <strong>fstab</strong>, s'ha afegit la configuració adequada per a la partició NTFS, assegurant que aquesta es muntarà correctament sempre que el sistema s'iniciï.</p>
+<p><img alt="Configuració de fstab" src="../custom/fswindows.png" /></p>
+<hr />
+<h4 id="configurar-samba-per-compartir-el-directori">Configurar Samba per compartir el directori</h4>
+<p>Per compartir el directori <strong>Windows</strong> mitjançant <strong>Samba</strong>, s'ha editat l'arxiu <strong>/etc/samba/smb.conf</strong> per afegir una configuració específica. Aquesta configuració permet que el directori sigui visible a la xarxa, navegable i amb permisos adequats per als usuaris.</p>
+<p>Els paràmetres inclouen opcions com la visibilitat de la carpeta a la xarxa, els permisos d'escriptura i l'accés per a convidats.</p>
+<p><img alt="Configuració de Samba" src="../custom/smb.png" /></p>
+<p>Un cop realitzada aquesta configuració, s'han reiniciat els serveis de Samba perquè els canvis s'apliquin correctament.</p>
+<hr />
+<p><strong>Resum del procés</strong></p>
+<ul>
+<li>S'ha creat la partició <strong>/dev/sdb2</strong>.</li>
+<li>La partició s'ha formatat amb el sistema de fitxers <strong>NTFS</strong>.</li>
+<li>S'ha muntat la carpeta <strong>/var/Windows</strong> a la partició <strong>/dev/sdb2</strong>.</li>
+<li>S'ha configurat Samba per compartir aquesta carpeta, permetent l'accés des d'altres dispositius de la xarxa.</li>
+</ul>
+<p><img alt="Compartició de Windows amb Samba" src="../custom/WindowsSh.png" /></p>
+<p>Amb aquests passos, el directori <strong>Windows</strong> és accessible a la xarxa mitjançant Samba, amb permisos adequats per als usuaris.</p>
+<p>Un cop configurat Samba i compartit el directori <strong>Windows</strong>, comprovem que és possible crear arxius des d'un ordinador Windows.</p>
+<hr />
+<p><strong>Creació d'arxius des de Windows</strong></p>
+<p>Des de l'ordinador Windows, accedim al recurs compartit i creem un fitxer per comprovar que tenim permisos d'escriptura adequats.</p>
+<p><img alt="Creació d'arxius a Windows" src="../custom/WindwosH.png" /></p>
+<p><strong>Verificació des de Linux</strong></p>
+<p>Tornem a la màquina Linux i comprovem que el fitxer creat des de Windows apareix correctament al directori <strong>/var/Windows</strong>.</p>
+<p><img alt="Verificació del fitxer a Linux" src="../custom/linxuw.png" /></p>
 <hr />
 
 
