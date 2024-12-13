@@ -1245,7 +1245,7 @@
 <!-- Button for the second popup -->
 <p><button class="popup-button" onclick="showPopup('popup2', 'overlay2')">Opcions extres per FSTAB (Fes clic)</button></p>
 <!-- Overlay and popup for the first button -->
-<div class="overlay" id="overlay1"></div>
+<div class="overlay" id="overlay1" onclick="hidePopup('popup1', 'overlay1')"></div>
 <div class="popup" id="popup1">
   <span class="close-btn" onclick="hidePopup('popup1', 'overlay1')">×</span>
   <h3>Explicació de la línia en el rectangle vermell</h3>
@@ -1271,7 +1271,7 @@
 </div>
 
 <!-- Overlay and popup for the second button -->
-<div class="overlay" id="overlay2"></div>
+<div class="overlay" id="overlay2" onclick="hidePopup('popup2', 'overlay2')"></div>
 <div class="popup" id="popup2">
   <span class="close-btn" onclick="hidePopup('popup2', 'overlay2')">×</span>
   <h3>Opcions extres que es poden afegir al FSTAB</h3>
