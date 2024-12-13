@@ -854,13 +854,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#formateig-de-particions" class="md-nav__link">
+  <a href="#formateig-de-particions-ext4" class="md-nav__link">
     <span class="md-ellipsis">
-      Formateig de particions
+      Formateig de particions EXT4
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Formateig de particions EXT4">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#comprovacio-de-la-mida-del-bloc" class="md-nav__link">
@@ -869,13 +870,96 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Comprovació de la mida del bloc">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formateig-de-particions-ntfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formateig de particions NTFS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muntatge-temporal-de-la-carpeta-a-la-particio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Muntatge temporal de la carpeta a la partició
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muntatge-permanent-de-la-carpeta-a-la-particio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Muntatge Permanent de la carpeta a la partició
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparticio-de-fitxers-en-xarxa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compartició de Fitxers en Xarxa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compartició de Fitxers en Xarxa">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#conversio-a-mb" class="md-nav__link">
+  <a href="#nautilus-share" class="md-nav__link">
     <span class="md-ellipsis">
-      Conversió a MB
+      Nautilus-Share
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installacio-de-samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació de Samba
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instal·lació de Samba">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Què és Samba?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalacio-i-configuracio-del-samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalació i Configuració del Samba.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compartir-un-directori-amb-samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compartir un directori amb Samba
     </span>
   </a>
   
@@ -1078,7 +1162,7 @@
 <p>Un cop creada la partició, comprovem si s'ha creat correctament.</p>
 <p><img alt="Comprovació de partició" src="../comprovadisk.png" /></p>
 <hr />
-<h3 id="formateig-de-particions"><strong>Formateig de particions</strong></h3>
+<h3 id="formateig-de-particions-ext4"><strong>Formateig de particions EXT4</strong></h3>
 <p>Amb la partició creada, procedirem a formatar-la en format <strong>ext4</strong>.</p>
 <p>Utilitzarem la següent comanda:</p>
 <pre><code>sudo mkfs.ext4 -b 2048 /dev/sdb1
@@ -1087,7 +1171,7 @@
 <li>L'opció <strong><code>-b 2048</code></strong> especifica la mida del bloc que assignem manualment.</li>
 </ul>
 <p><img alt="Format ext4" src="../ext4.png" /></p>
-<h3 id="comprovacio-de-la-mida-del-bloc">Comprovació de la mida del bloc</h3>
+<h4 id="comprovacio-de-la-mida-del-bloc">Comprovació de la mida del bloc</h4>
 <p>Fem la comprovació de la mida del bloc que hem assignat a la partició. Per fer-ho, utilitzem la següent comanda: </p>
 <pre><code>sudo tune2fs -l /dev/sdb1 | grep Block
 </code></pre>
@@ -1098,7 +1182,7 @@
 <li><strong>Block size</strong>: Mostra la mida del bloc assignada, que és <strong>2048 bytes</strong> (2 KB).</li>
 <li><strong>Blocks per group</strong>: Indica el nombre de blocs per grup, que és <strong>16384</strong>.</li>
 </ul>
-<h4 id="conversio-a-mb">Conversió a MB</h4>
+<p><strong>Conversió a MB</strong></p>
 <p>La mida total del sistema de fitxers es pot calcular així:</p>
 <ol>
 <li>
@@ -1111,6 +1195,389 @@
 </li>
 </ol>
 <p>Així, la mida aproximada de la partició és <strong>974 MB</strong>.</p>
+<hr />
+<h3 id="formateig-de-particions-ntfs"><strong>Formateig de particions NTFS</strong></h3>
+<h3 id="muntatge-temporal-de-la-carpeta-a-la-particio"><strong>Muntatge temporal de la carpeta a la partició</strong></h3>
+<p>Després, crearem una carpeta i un arxiu dins d'aquesta carpeta.</p>
+<p><img alt="alt text" src="../carpetaparticio.png" /></p>
+<p>Executem la comanda següent:</p>
+<pre><code>sudo mount -t ext4 /dev/sdb1 /var/partition1/
+</code></pre>
+<p>Aquesta acció muntarà la carpeta dins de <code>/dev/sdb1</code>. </p>
+<p>Per a l'usuari no és visible, però d'aquesta manera ens assegurem que les dades no es perdin si succeeix algun problema amb el disc principal.</p>
+<p><img alt="alt text" src="../mount.png" /></p>
+<p><strong>Exemple:</strong> Els arxius es guarden a la partició que hem muntat, però els arxius que prèviament hem creat a <code>/partition1/</code> no s'han esborrat. En realitat, aquests arxius queden "ocults", ja que la carpeta <code>/partition1/</code> està muntada sobre la partició <strong><code>/dev/sdb1</code></strong>. Quan desmuntem la partició, els arxius locals tornen a ser visibles.</p>
+<p><img alt="alt text" src="../explicaciomuntatge.png" /></p>
+<p><strong>Explicació de la captura</strong></p>
+<ol>
+<li>
+<p><strong><code>ls partition1/</code></strong>: Llistem el contingut del directori <code>partition1/</code>. Inicialment només apareix el directori <strong><code>lost+found</code></strong>, que es crea automàticament en particions formatades amb ext4.</p>
+</li>
+<li>
+<p><strong><code>touch partition1/bye</code></strong>: Creem un fitxer buit anomenat <strong><code>bye</code></strong> dins de la carpeta muntada <code>partition1/</code>.</p>
+</li>
+<li>
+<p><strong><code>umount /dev/sdb1</code></strong>: Desmuntem la partició <strong><code>/dev/sdb1</code></strong>, fent que el contingut de la partició deixi d'estar accessible.</p>
+</li>
+<li>
+<p><strong><code>ls partition1/</code></strong>: Tornem a llistar el contingut de la carpeta. Ara no apareix el fitxer <strong><code>bye</code></strong>, ja que aquest estava dins de la partició muntada i aquesta ja no està accessible.</p>
+</li>
+<li>
+<p><strong><code>ls partition1/</code> després de desmuntar</strong>: Aquí es mostren només els fitxers que pertanyen al directori local, fora del sistema de fitxers muntat. Quan es desmunta, el contingut de la partició queda separat del directori. Això demostra com el muntatge i desmuntatge funcionen per accedir al contingut de particions.</p>
+</li>
+</ol>
+<blockquote>
+<p>Nota: Tornem a muntar la carpeta amb la comanda anterior.</p>
+</blockquote>
+<p>Comprovem que la partició existeix utilitzant la comanda <code>df -T</code>.</p>
+<p><img alt="alt text" src="../DFT.png" /></p>
+<p>S'observa que la partició està present. Després, reiniciem la màquina per assegurar-nos que tot funciona correctament.</p>
+<p>En fer la comprovació després del reinici, observem que la partició ja no està muntada. Això es deu al fet que la carpeta estava muntada de forma <strong>temporal</strong> i no de manera <strong>permanent</strong>.</p>
+<p><img alt="alt text" src="../borrada.png" /></p>
+<h3 id="muntatge-permanent-de-la-carpeta-a-la-particio"><strong>Muntatge Permanent de la carpeta a la partició</strong></h3>
+<p>Per fer que el muntatge sigui permanent, cal editar el fitxer <strong><code>/etc/fstab</code></strong> afegint els paràmetres necessaris.</p>
+<p><img alt="alt text" src="../fstab.png" /></p>
+<blockquote>
+<p><strong>IMPORTANT!</strong> Tingues molta cura amb les modificacions en aquest fitxer, ja que un error pot fer que el sistema no arranqui. Si això succeeix, hauràs d'utilitzar un <strong>Live Boot</strong> per reparar el fitxer <strong>FSTAB</strong>.</p>
+</blockquote>
+<!-- Button for the first popup -->
+<p><button class="popup-button" onclick="showPopup('popup1', 'overlay1')">Explicació del FSTAB (Fes clic)</button></p>
+<!-- Button for the second popup -->
+<p><button class="popup-button" onclick="showPopup('popup2', 'overlay2')">Opcions extres per FSTAB (Fes clic)</button></p>
+<!-- Overlay and popup for the first button -->
+<div class="overlay" id="overlay1"></div>
+<div class="popup" id="popup1">
+  <span class="close-btn" onclick="hidePopup('popup1', 'overlay1')">×</span>
+  <h3>Explicació de la línia en el rectangle vermell</h3>
+  <p><strong><code>/dev/sdb1 /var/particio1 ext4 defaults 0 0</code></strong></p>
+  <ul>
+    <li><strong><code>/dev/sdb1</code></strong>: Indica la partició que volem muntar (en aquest cas, <strong>sdb1</strong>).</li>
+    <li><strong><code>/var/particio1</code></strong>: El punt de muntatge, és a dir, el directori on es muntarà la partició.</li>
+    <li><strong><code>ext4</code></strong>: El sistema de fitxers utilitzat per la partició.</li>
+    <li><strong><code>defaults</code></strong>: Opcions de muntatge predeterminades, que inclouen:
+      <ul>
+        <li>Lectura i escriptura (rw).</li>
+        <li>Muntar amb permisos de l'usuari.</li>
+        <li>Sincronització per defecte.</li>
+      </ul>
+    </li>
+    <li><strong><code>0 0</code></strong>: 
+      <ul>
+        <li>El primer número (<strong>0</strong>) indica si es fa un "dump" de la partició per còpies de seguretat (0 = no fer-ho).</li>
+        <li>El segon número (<strong>0</strong>) indica si es comprova la partició durant l'inici del sistema (0 = no comprovar).</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- Overlay and popup for the second button -->
+<div class="overlay" id="overlay2"></div>
+<div class="popup" id="popup2">
+  <span class="close-btn" onclick="hidePopup('popup2', 'overlay2')">×</span>
+  <h3>Opcions extres que es poden afegir al FSTAB</h3>
+  <ol>
+    <li><strong><code>noatime</code></strong>: Desactiva l'actualització de l'hora d'accés als fitxers. Millora el rendiment, especialment en discos SSD.</li>
+    <li><strong><code>nodiratime</code></strong>: Similar a <code>noatime</code>, però només per directoris.</li>
+    <li><strong><code>errors=remount-ro</code></strong>: En cas d'error, la partició es remunta en mode només lectura per evitar danys.</li>
+    <li><strong><code>sync</code></strong>: Escriu immediatament els canvis al disc, en lloc de mantenir-los en memòria cau.</li>
+    <li><strong><code>user</code></strong>: Permet que qualsevol usuari pugui muntar i desmuntar la partició.</li>
+    <li><strong><code>uid=1000,gid=1000</code></strong>: Assigna un identificador d'usuari i grup específic per als fitxers i directoris de la partició.</li>
+    <li><strong><code>acl</code></strong>: Activa les llistes de control d'accés per gestionar permisos avançats.</li>
+    <li><strong><code>noexec</code></strong>: Evita l'execució de fitxers binaris a la partició.</li>
+    <li><strong><code>nosuid</code></strong>: Desactiva els permisos especials <code>setuid</code> i <code>setgid</code> a la partició.</li>
+    <li><strong><code>ro</code></strong>: Muntar la partició en mode només lectura.</li>
+  </ol>
+  <p>Aquestes opcions es poden combinar segons les necessitats, per exemple:</p>
+  <p><code>/dev/sdb1 /var/particio1 ext4 defaults,noatime,nosuid 0 0</code></p>
+</div>
+
+<script>
+  function showPopup(popupId, overlayId) {
+    document.getElementById(popupId).style.display = 'block';
+    document.getElementById(overlayId).style.display = 'block';
+  }
+
+  function hidePopup(popupId, overlayId) {
+    document.getElementById(popupId).style.display = 'none';
+    document.getElementById(overlayId).style.display = 'none';
+  }
+</script>
+
+<style>
+  .popup-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .popup-button:hover {
+    background-color: #0056b3;
+  }
+
+   .popup {
+   display: none;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: #2c2c2c; /* Dark Gray */
+   border: 1px solid #444444; /* Border */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Subtle shadow */
+   padding: 20px;
+   z-index: 1000;
+   width: 80%;
+   max-width: 900px;
+   overflow-y: auto;
+   max-height: 80%;
+   color: #ffffff; /* Text color */
+   }
+   .popup .close-btn {
+   float: right;
+   cursor: pointer;
+   font-size: 18px;
+   color: #888888; /* Button color */
+   }
+   .popup .close-btn:hover {
+   color: #ffffff; /* Hover color */
+   }
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+</style>
+
+<hr />
+<p>Després de reiniciar el sistema, utilitzem la comanda <code>df -T</code> per verificar l'estat de la partició. </p>
+<p>Podem observar que la partició es munta automàticament en iniciar la sessió gràcies a la configuració del fitxer <strong><code>/etc/fstab</code></strong>.</p>
+<p><img alt="alt text" src="../df-t.png" /></p>
+<h3 id="comparticio-de-fitxers-en-xarxa"><strong>Compartició de Fitxers en Xarxa</strong></h3>
+<p>Hi ha diverses maneres de compartir fitxers en xarxa, però en aquest exemple utilitzarem <strong>Nautilus-share</strong> i <strong>Samba</strong>.</p>
+<p><strong>Què significa compartir arxius en xarxa?</strong></p>
+<p>Compartir arxius en xarxa permet que diferents dispositius connectats a la mateixa xarxa accedeixin a fitxers o carpetes des d'un ordinador central. Això facilita l'intercanvi de dades sense necessitat de copiar fitxers manualment amb dispositius externs, com USB o discs durs. És una solució molt útil en entorns domèstics o d'oficina per col·laborar, gestionar recursos i estalviar temps.</p>
+<p>Amb aquest procés, es poden configurar permisos perquè només usuaris específics tinguin accés, garantint la seguretat i el control sobre els fitxers.</p>
+<h4 id="nautilus-share">Nautilus-Share</h4>
+<p>Hem creat una carpeta anomenada <strong>partition1</strong> dins del directori <strong>/var/</strong>, i ara la compartirem a través de la xarxa utilitzant <strong>Nautilus</strong>.</p>
+<p><img alt="Compartició amb Nautilus" src="../nautilus1.png" /></p>
+<p>Primer de tot, cal instal·lar <strong>Nautilus-share</strong> amb la següent comanda:</p>
+<pre><code>sudo apt install nautilus-share
+</code></pre>
+<p>Un cop creada la carpeta <strong>partition1</strong>, és necessari ajustar els permisos i el propietari per facilitar l'accés a altres usuaris.</p>
+<ol>
+<li>
+<p><strong>Permisos 777</strong>:<br />
+   Els permisos <strong>777</strong> atorguen màxima flexibilitat, ja que permeten a qualsevol usuari llegir, escriure i executar els fitxers dins de la carpeta. Aquesta configuració és útil quan es vol garantir accés total, però s'ha d'usar amb precaució, especialment en entorns on la seguretat és prioritària.</p>
+</li>
+<li>
+<p><strong>Propietari nobody:nogroup</strong>:<br />
+   Assignar <strong>nobody:nogroup</strong> com a propietari de la carpeta fa que no estigui associada a cap usuari o grup específic. Això significa que qualsevol persona que accedeixi a la xarxa podrà interactuar amb els fitxers dins de la carpeta.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Nota:</strong> Aquesta configuració és adequada per a entorns on la seguretat no és una preocupació principal. En sistemes més restringits, és recomanable ajustar els permisos i propietaris segons les necessitats específiques de seguretat.</p>
+</blockquote>
+<p><img alt="alt text" src="../modown.png" /></p>
+<p><strong>Obrir Nautilus amb permisos d'administrador</strong>:<br />
+Obrim un terminal i escrivim <code>sudo nautilus</code>. Esperem que s'obri l'explorador de fitxers.</p>
+<p><strong>Localitzar la carpeta</strong>:<br />
+Ens dirigim al directori <strong>/var/</strong> i localitzem la carpeta <strong>partition1</strong> que hem creat prèviament.</p>
+<p><img alt="alt text" src="../nautilus2.png" /></p>
+<p><strong>Opció de compartir</strong>:<br />
+Fem clic dret a la carpeta <strong>que volem compartir</strong> i seleccionem l'opció <strong>Sharing Options</strong>.</p>
+<p><img alt="alt text" src="../comp.png" /></p>
+<p><strong>Configuració de la compartició</strong>:<br />
+Apareixerà una finestra per configurar la compartició de la carpeta. Habilitem les opcions que desitgem (com "Compartir aquesta carpeta") i fem clic a <strong>Modify Share</strong>.</p>
+<p><img alt="alt text" src="../opcions.png" /></p>
+<p><strong>Accés des d'un altre dispositiu</strong>:  </p>
+<ul>
+<li>
+<p>Verifiquem la IP de la nostra màquina amb la comanda <code>ip -a</code>.</p>
+</li>
+<li>
+<p>Ens dirigim a un altre ordinador de la mateixa xarxa i escrivim a la barra de cerca del gestor de fitxers: <code>smb://la-ip-de-la-maquina/</code>. </p>
+</li>
+<li>
+<p>Per exemple, en aquest cas: <code>smb://192.168.1.18/</code>.</p>
+</li>
+</ul>
+<p><img alt="alt text" src="../worksnautilus.png" /></p>
+<p>En fer doble clic a la carpeta <strong>partition1</strong>, se'ns demanaran credencials d'accés. Si disposem de credencials, les podem utilitzar, però com que hem configurat l'accés com a <strong>"Guest"</strong>, podem seleccionar l'opció <strong>Anonymous</strong>.</p>
+<p><img alt="alt text" src="../anon.png" /></p>
+<p>Un cop connectats, ja podem crear, visualitzar i esborrar arxius i carpetes dins de <strong>partition1</strong>.</p>
+<p><img alt="alt text" src="../done.png" /></p>
+<p>Si ens dirigim a la màquina des d'on hem compartit el fitxer, podem comprovar si s'ha creat la nova carpeta.</p>
+<p>En efecte, la carpeta s'ha creat amb el nom del propietari <strong>"nobody:nogroup"</strong>, tal com hem configurat prèviament.</p>
+<p><img alt="alt text" src="../carpeta.png" /></p>
+<h4 id="installacio-de-samba">Instal·lació de Samba</h4>
+<h5 id="que-es-samba"><strong>¿Què és Samba?</strong></h5>
+<blockquote>
+<p>No confondre amb <strong>Samba do Brasil</strong></p>
+</blockquote>
+<p><a>
+  <img src="https://i.ibb.co/ySD3GWw/Gifs-animados-de-carnaval.gif" alt="Samba do Brasil" style="width: 120px !important; height: auto !important;">
+</a></p>
+<p><strong>Samba</strong> és una implementació de programari lliure del protocol SMB/CIFS (Server Message Block/Common Internet File System) que permet la compartició de fitxers, carpetes i impressores entre ordinadors que utilitzen diferents sistemes operatius, com Linux, Windows i macOS. </p>
+<p>Samba s’utilitza principalment en entorns mixtos, on cal que màquines amb Linux puguin interactuar amb sistemes Windows per compartir recursos de xarxa. És una eina clau per integrar sistemes operatius i facilitar la col·laboració en xarxes locals.</p>
+<p><strong>Funcions principals de Samba:</strong></p>
+<ul>
+<li><strong>Compartir fitxers i carpetes</strong>: Permet que ordinadors d'una xarxa accedeixin a recursos compartits, com carpetes o unitats de disc.</li>
+<li><strong>Compartir impressores</strong>: Facilita l'accés a impressores configurades en altres dispositius.</li>
+<li>
+<p><strong>Autenticació i permisos</strong>: Proporciona eines per gestionar usuaris, grups i permisos d'accés.</p>
+</li>
+<li>
+<p><strong>Integració amb Windows</strong>: Samba pot actuar com un controlador de domini per a entorns Windows, gestionant autenticacions i serveis.</p>
+</li>
+</ul>
+<p><strong>Avantatges de Samba:</strong></p>
+<ul>
+<li><strong>Multiplataforma</strong>: Funciona en xarxes amb diversos sistemes operatius.</li>
+<li><strong>Flexibilitat</strong>: Configurable per adaptar-se a diferents necessitats (compartició pública, accés restringit, etc.).</li>
+<li><strong>Gratuït i de codi obert</strong>: Està disponible sense cost i amb suport d’una comunitat activa.</li>
+</ul>
+<p><strong>Exemple d'ús:</strong></p>
+<p>Un servidor Linux amb Samba pot permetre que usuaris de Windows accedeixin a fitxers i carpetes com si es trobessin en un servidor Windows, sense necessitat de canviar el sistema operatiu o les eines utilitzades.</p>
+<p><strong>Nota sobre Kerberos:</strong></p>
+<blockquote>
+<p>En configuracions simples, Samba no requereix l'ús de Kerberos per compartir fitxers entre Linux i Windows. No obstant això, en entorns empresarials o quan es necessita integració amb Active Directory, Kerberos es fa necessari per gestionar l'autenticació segura. Això permet un accés centralitzat i segur als recursos compartits en xarxes complexes.</p>
+</blockquote>
+<hr />
+<h5 id="instalacio-i-configuracio-del-samba">Instalació i Configuració del <strong>Samba</strong>.</h5>
+<p>Executem la comanda <code>sudo apt install samba</code>.</p>
+<pre><code>sudo apt install samba
+</code></pre>
+<p><img alt="Instal·lació de Samba" src="../custom/sambainstall.png" /></p>
+<p>Posteriorment configurem el arxiu del smb.conf i afegir les linies que tenim a continuació.</p>
+<pre><code>sudo nano /etc/samba/smb.conf
+</code></pre>
+<p><img alt="alt text" src="../custom/smbconf.png" /></p>
+<!-- Button for the Samba configuration popup -->
+<p><button class="popup-button" onclick="showPopup('sambaConfigPopup', 'sambaOverlay')">Explicació de la configuració de Samba (Fes clic)</button></p>
+<!-- Overlay and popup for the Samba configuration -->
+<div class="overlay" id="sambaOverlay" onclick="hidePopup('sambaConfigPopup', 'sambaOverlay')"></div>
+<div class="popup" id="sambaConfigPopup">
+  <span class="close-btn" onclick="hidePopup('sambaConfigPopup', 'sambaOverlay')">×</span>
+  <h3>Explicació de la configuració en vermell al fitxer <code>smb.conf</code></h3>
+  <p>Aquesta configuració, dins del fitxer <code>/etc/samba/smb.conf</code>, defineix una carpeta compartida i els permisos associats per a la seva compartició a través de Samba. Analitzem les línies destacades en vermell:</p>
+  <ul>
+    <li><strong><code>path = /var/particio1</code></strong>: Especifica el camí complet al directori que es vol compartir. En aquest cas, la carpeta és <code>/var/particio1</code>.</li>
+    <li><strong><code>guest ok = yes</code></strong>: Permet que usuaris no autenticats (convidats) accedeixin a aquesta carpeta. Això és útil si es vol oferir un accés senzill, però s'ha d'utilitzar amb precaució en xarxes públiques.</li>
+    <li><strong><code>directory mask = 0755</code></strong>: Estableix els permisos per als directoris dins de la carpeta compartida.  
+      <ul>
+        <li><code>0755</code> permet:</li>
+        <ul>
+          <li>Lectura, escriptura i execució per al propietari.</li>
+          <li>Només lectura i execució per a altres usuaris i grups.</li>
+        </ul>
+      </ul>
+    </li>
+    <li><strong><code>create mask = 0644</code></strong>: Defineix els permisos per als fitxers que es creïn dins de la carpeta compartida.  
+      <ul>
+        <li><code>0644</code> permet:</li>
+        <ul>
+          <li>Lectura i escriptura per al propietari.</li>
+          <li>Només lectura per a altres usuaris i grups.</li>
+        </ul>
+      </ul>
+    </li>
+    <li><strong><code>browseable = yes</code></strong>: Permet que la carpeta aparegui com a visible (explorable) per als clients de xarxa. Si es posa a <code>no</code>, la carpeta encara es pot accedir, però no es mostrarà en navegadors de xarxa.</li>
+    <li><strong><code>read list = diego</code></strong>: Defineix que l'usuari <code>diego</code> té permisos només de lectura a la carpeta compartida. Aquest usuari pot veure i obrir fitxers, però no editar-los ni crear-ne de nous.</li>
+    <li><strong><code>write list = diego</code></strong>: Afegeix l'usuari <code>diego</code> a la llista d'usuaris amb permisos d'escriptura. Aquest paràmetre li permet crear, modificar i eliminar fitxers dins de la carpeta compartida.</li>
+  </ul>
+  <p><strong>Resum:</strong> Aquesta configuració comparteix la carpeta <code>/var/particio1</code> amb els següents paràmetres:</p>
+  <ul>
+    <li><strong>Accés de convidats:</strong> Permès (qualsevol pot accedir).</li>
+    <li><strong>Permisos per defecte:</strong>
+      <ul>
+        <li>Directoris: Lectura, escriptura i execució per al propietari.</li>
+        <li>Fitxers: Lectura i escriptura per al propietari.</li>
+      </ul>
+    </li>
+    <li><strong>Usuari específic (<code>diego</code>):</strong> Té permisos tant de lectura com d'escriptura.</li>
+  </ul>
+  <p><strong>Nota:</strong> Aquesta configuració s'ha d'ajustar segons les necessitats específiques de seguretat i privadesa de la xarxa.</p>
+</div>
+
+<h4 id="compartir-un-directori-amb-samba">Compartir un directori amb Samba</h4>
+<p>Primer, crearem el directori <strong>/var/partition1/</strong> i configurarem els permisos i el propietari per garantir que sigui accessible a tots els usuaris.</p>
+<ol>
+<li>
+<p><strong>Creació de la carpeta</strong>:<br />
+   El directori <strong>partition1/</strong> es crearà dins del directori <strong>/var/</strong>.</p>
+</li>
+<li>
+<p><strong>Permisos 777</strong>:<br />
+   Assignarem permisos <strong>777</strong> al directori per permetre que qualsevol usuari pugui llegir, escriure i executar fitxers dins d'aquest.  </p>
+</li>
+<li><strong>Lectura (r)</strong>: Permet veure el contingut dels fitxers.</li>
+<li><strong>Escriptura (w)</strong>: Permet modificar o crear fitxers.</li>
+<li>
+<p><strong>Execució (x)</strong>: Permet accedir a directoris i executar fitxers.</p>
+</li>
+<li>
+<p><strong>Propietari nobody:nogroup</strong>:<br />
+   Canviarem el propietari del directori a <strong>nobody:nogroup</strong> perquè no estigui associat a cap usuari o grup específic. Això garanteix que qualsevol persona pugui accedir als recursos compartits sense restriccions.</p>
+</li>
+</ol>
+<p><img alt="alt text" src="../custom/chmod77.png" /></p>
+<p>Per aquest exemple, crearem un usuari anomenat <strong>diego</strong>.</p>
+<blockquote>
+<p><strong>Nota:</strong> Si necessites més informació sobre com es creen usuaris, visita l'apartat de creació d'usuaris a la següent ruta:<br />
+<a href="https://chaminita94.github.io/mkdocs/gestio_usuaris/#afegir-un-nou-usuari" target="_blank" rel="noopener noreferrer">Gestió d'usuaris: Afegir un nou usuari</a></p>
+</blockquote>
+<p><strong>Afegir l'usuari a Samba amb <code>smbpasswd</code></strong></p>
+<p>La comanda <strong><code>smbpasswd -a diego</code></strong> s'utilitza per afegir l'usuari <strong><code>diego</code></strong> al sistema de gestió d'usuaris de Samba. Aquesta comanda permet que l'usuari pugui accedir als recursos compartits configurats a través de Samba.</p>
+<p><img alt="Assignar contrasenya SMB" src="../smbpass.png" /></p>
+<p><strong>Pas a pas del procés</strong>:</p>
+<p><strong>Assignació d'una contrasenya SMB</strong>:</p>
+<ul>
+<li>Es demana a l'administrador que introdueixi i confirmi una contrasenya per a l'usuari <strong><code>diego</code></strong>.</li>
+<li>Aquesta contrasenya serà utilitzada específicament per autenticar-se als recursos compartits de Samba.</li>
+</ul>
+<p><strong>Afegir l'usuari a la base de dades de Samba</strong>:</p>
+<ul>
+<li>L'usuari <strong><code>diego</code></strong> es registra a la base de dades d'usuaris de Samba.</li>
+<li>Això permet que tingui accés a les carpetes compartides segons els permisos configurats al fitxer <code>smb.conf</code>.</li>
+</ul>
+<blockquote>
+<p><strong>Nota:</strong> Aquest procés no afecta els permisos ni les contrasenyes del sistema Linux de l'usuari, ja que la base de dades d'usuaris de Samba és independent.</p>
+</blockquote>
+<p><strong>Reiniciar el servei de Samba</strong>:<br />
+Després de configurar el fitxer <code>smb.conf</code>, cal reiniciar els serveis de Samba perquè els canvis es facin efectius.  </p>
+<ul>
+<li><strong><code>systemctl restart smbd</code></strong>: Reinicia el servei que gestiona la compartició de fitxers i autenticació d’usuaris.  </li>
+<li><strong><code>systemctl restart nmbd</code></strong>: Reinicia el servei que gestiona el servei de noms i la descoberta de recursos en la xarxa.</li>
+</ul>
+<p><img alt="Reinici del servei" src="../custom/restar.png" /></p>
+<p><strong>Connexió des d'un altre ordinador</strong>:<br />
+En un altre dispositiu de la mateixa xarxa, obrim el gestor de fitxers i introduïm l'adreça IP del servidor Samba al camp de cerca, seguint aquest format:<br />
+<code>smb://&lt;IP_del_ordinador&gt;</code></p>
+<blockquote>
+<p><strong>Consell:</strong> Si no saps quina és la IP del servidor, pots consultar-la executant la comanda <strong>ip -a</strong> al servidor Samba.</p>
+</blockquote>
+<p><img alt="Connexió al recurs compartit" src="../custom/smbshare.png" /></p>
+<p><strong>Introduir les credencials</strong>:<br />
+Quan es demanin credencials, introduïm el nom d'usuari i la contrasenya que hem configurat prèviament per Samba. En aquest exemple, introduïm les credencials de l'usuari <strong>Diego</strong>.</p>
+<p><img alt="Introduir credencials" src="../custom/diegoshare.png" /></p>
+<p><strong>Provar la connexió</strong>:<br />
+Un cop connectats, intentem crear un fitxer o carpeta dins del recurs compartit per assegurar-nos que tenim els permisos necessaris.</p>
+<p><img alt="Creació de fitxer" src="../custom/diegoshared.png" /></p>
+<p><strong>Comprovació al servidor</strong>:<br />
+Tornem al servidor i comprovem que el fitxer o carpeta que hem creat està correctament desat al directori <strong>/var/particio1/</strong>.</p>
+<p><img alt="Comprovació del fitxer creat" src="../custom/diegocrea.png" /></p>
+<p><strong>Verificació del propietari</strong>:<br />
+En efecte, el fitxer creat té com a propietari l'usuari <strong>Diego</strong>, tal com s'ha configurat en el fitxer <code>smb.conf</code>.</p>
+<hr />
 
 
 
