@@ -1,7 +1,3 @@
-var consent = __md_get("__consent");
-if (consent && consent.custom) {
-  /* The user accepted custom cookies */
-}
 
 /* Wait for page to load */
 document.addEventListener("DOMContentLoaded", function() {
@@ -57,8 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
-
 function googleTranslateElementInit() {
   console.log("Initializing Google Translate...");
   new google.translate.TranslateElement(
@@ -70,3 +64,4 @@ function googleTranslateElementInit() {
       'google_translate_element'
   );
 }
+

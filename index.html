@@ -1020,12 +1020,99 @@
 <p><a>
   <img src="linux-computer.gif" alt="Linux Penguin" style="width: 180px !important; height: auto !important;">
 </a></p>
-<div class="custom-footer">
+<div class="custom-footer" style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: #007bff; color: white;">
+  <div style="flex: 1;">
     <a href="licencia/" rel="noopener noreferrer" style="text-decoration: none; color: white;">
-        Made by Vitaliy | © 2024 | Licensed under <a href="licencia/" style="color: #007bff;"></a>
+      Made by Vitaliy | © 2024 | Licensed under <a href="licencia/" style="color: #ffffff;">License</a>
     </a>
-    <img src="crp.png" alt="Copyright Image" class="footer-img" style="margin-left: 5px; vertical-align: middle;">
+    <div id="user-info" style="margin-top: 5px; font-size: 14px;"></div>
+  </div>
+  <button id="about-me-button" style="background-color: #ffffff; color: #007bff; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-size: 14px; align-self: flex-end;">
+    About Me
+  </button>
 </div>
+
+<!-- Modal Window -->
+<div id="about-me-modal" style="
+  display: none; 
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background: linear-gradient(to bottom right, #4e54c8, #8f94fb, #1f1f1f); 
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+  z-index: 1000; 
+  padding: 20px; 
+  border-radius: 10px; 
+  max-width: 700px; 
+  width: 90%; 
+  color: white; 
+  font-family: Arial, sans-serif;">
+  <h3>Sobre Mi</h3>
+  <p>Hola, soc en Vitaliy. He creat aquest Mkdocs perquè tothom el pugui utilitzar, independentment de l'idioma que parleu.</p>
+  <p>Tot i que la traducció instantània no és perfecta, és millor que res.</p>
+  <p>Què més puc dir sobre mi? Actualment estic estudiant IT. M'encanta aprendre pel meu compte més que qualsevol altra cosa, i de vegades puc passar hores i hores intentant arreglar alguna cosa. Si alguna cosa funciona a la primera, no em satisfà; m'agrada trencar-me el cap intentant solucionar-ho!</p>
+  <p>També m'agrada crear programes, fer pàgines web, configurar servidors i començar projectes interessants. Últimament, m’està agradant molt el món de la IA i el cloud computing.</p>
+<p>No soc un programador, però em sé buscar la vida, que és la meva millor qualitat.</p>
+  <button id="close-modal" style="background-color: #007bff; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-size: 14px;">
+    X
+  </button>
+</div>
+<div id="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
+
+<script>
+  window.addEventListener('load', function () {
+    fetch('http://ip-api.com/json')
+      .then(response => response.json())
+      .then(data => {
+        const ip = data.query || 'Unknown IP';
+        const city = data.city || 'Unknown City';
+        const country = data.country || 'Unknown Country';
+        const isp = data.isp || 'Unknown ISP';
+        const timezone = data.timezone || 'Unknown Timezone';
+        const now = new Date();
+        const timezoneOffset = now.getTimezoneOffset() / -60;
+        const gmt = timezoneOffset >= 0 ? `GMT+${timezoneOffset}` : `GMT${timezoneOffset}`;
+
+        // Format the local time
+        const localTime = new Date().toLocaleString('en-US', {
+          timeZone: timezone,
+          timeStyle: 'medium',
+          dateStyle: 'full',
+        });
+
+        // Update the user info div
+        const userInfo = document.getElementById('user-info');
+        userInfo.innerHTML = `
+          <strong>Your IP:</strong> ${ip}<br>
+          <strong>Local Time:</strong> ${localTime} (${gmt})<br>
+          <strong>Location:</strong> ${city}, ${country}<br>
+          <strong>ISP:</strong> ${isp}
+        `;
+      })
+      .catch(error => {
+        console.error('Error fetching IP/location data:', error);
+        const userInfo = document.getElementById('user-info');
+        userInfo.innerHTML = 'Failed to load your IP and ISP information.';
+      });
+  });
+
+  document.getElementById('about-me-button').addEventListener('click', function() {
+    document.getElementById('about-me-modal').style.display = 'block';
+    document.getElementById('modal-overlay').style.display = 'block';
+  });
+
+  document.getElementById('close-modal').addEventListener('click', function() {
+    document.getElementById('about-me-modal').style.display = 'none';
+    document.getElementById('modal-overlay').style.display = 'none';
+  });
+
+  document.getElementById('modal-overlay').addEventListener('click', function() {
+    document.getElementById('about-me-modal').style.display = 'none';
+    document.getElementById('modal-overlay').style.display = 'none';
+  });
+</script>
 
 
 
@@ -1063,72 +1150,6 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    
-      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
-        <div class="md-consent__overlay"></div>
-        <aside class="md-consent__inner">
-          <form class="md-consent__form md-grid md-typeset" name="consent">
-            
-
-
-
-
-
-<h4>Consentiment de galetes</h4>
-<p>Utilitzem galetes per reconèixer les vostres visites repetides i preferències,  així com per mesurar l'eficàcia de la nostra documentació i determinar si els  usuaris troben el que busquen. Amb el vostre consentiment, ens ajudeu a  millorar la nostra documentació.</p>
-<input class="md-toggle" type="checkbox" id="__settings" >
-<div class="md-consent__settings">
-  <ul class="task-list">
-    
-      
-      
-        
-        
-          
-        
-      
-      <li class="task-list-item">
-        <label class="task-list-control">
-          <input type="checkbox" name="analytics" checked>
-          <span class="task-list-indicator"></span>
-          Google Analytics
-        </label>
-      </li>
-    
-      
-      
-        
-        
-      
-      <li class="task-list-item">
-        <label class="task-list-control">
-          <input type="checkbox" name="custom" >
-          <span class="task-list-indicator"></span>
-          Galetes personalitzades
-        </label>
-      </li>
-    
-  </ul>
-</div>
-<div class="md-consent__controls">
-  
-    
-      <button class="md-button md-button--primary">Accept</button>
-    
-    
-    
-  
-    
-    
-    
-      <label class="md-button" for="__settings">Manage settings</label>
-    
-  
-</div>
-          </form>
-        </aside>
-      </div>
-      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
     
     <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy", "content.code.download", "footer.hide", "palette.toggle"], "search": "assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
