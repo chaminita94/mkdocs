@@ -1063,32 +1063,22 @@
 
 <script>
   window.addEventListener('load', function () {
-    fetch('http://ip-api.com/json')
+    fetch('https://ipwhois.app/json/')
       .then(response => response.json())
       .then(data => {
-        const ip = data.query || 'Unknown IP';
+        const ip = data.ip || 'Unknown IP';
         const city = data.city || 'Unknown City';
         const country = data.country || 'Unknown Country';
         const isp = data.isp || 'Unknown ISP';
-        const timezone = data.timezone || 'Unknown Timezone';
-        const now = new Date();
-        const timezoneOffset = now.getTimezoneOffset() / -60;
-        const gmt = timezoneOffset >= 0 ? `GMT+${timezoneOffset}` : `GMT${timezoneOffset}`;
-
-        // Format the local time
-        const localTime = new Date().toLocaleString('en-US', {
-          timeZone: timezone,
-          timeStyle: 'medium',
-          dateStyle: 'full',
-        });
+        const now = new Date().toLocaleString();
 
         // Update the user info div
         const userInfo = document.getElementById('user-info');
         userInfo.innerHTML = `
           <strong>Your IP:</strong> ${ip}<br>
-          <strong>Local Time:</strong> ${localTime} (${gmt})<br>
           <strong>Location:</strong> ${city}, ${country}<br>
-          <strong>ISP:</strong> ${isp}
+          <strong>ISP:</strong> ${isp}<br>
+          <strong>Time:</strong> ${now}
         `;
       })
       .catch(error => {
@@ -1097,6 +1087,7 @@
         userInfo.innerHTML = 'Failed to load your IP and ISP information.';
       });
   });
+
 
   document.getElementById('about-me-button').addEventListener('click', function() {
     document.getElementById('about-me-modal').style.display = 'block';
