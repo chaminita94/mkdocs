@@ -1020,6 +1020,8 @@
 <p><a>
   <img src="linux-computer.gif" alt="Linux Penguin" style="width: 180px !important; height: auto !important;">
 </a></p>
+<div style="height: 150px;"></div>
+
 <div class="custom-footer" style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: #007bff; color: white;">
   <div style="flex: 1;">
     <a href="licencia/" rel="noopener noreferrer" style="text-decoration: none; color: white;">
@@ -1076,9 +1078,10 @@
         const userInfo = document.getElementById('user-info');
         userInfo.innerHTML = `
           <strong>Location:</strong> ${city}, ${country}<br>
-          <strong>ISP:</strong> ${isp}<br>
-          <strong>Your IP:</strong> ${ip}<br>
-          <strong>Time:</strong> ${now}
+          <strong>Time:</strong> ${now}<br>
+          <strong>ISP:</strong> ${isp}
+          And <strong> Your IP:</strong> ${ip}<br>
+
         `;
       })
       .catch(error => {
