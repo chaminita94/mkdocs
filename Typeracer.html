@@ -225,7 +225,7 @@
             <h1>PAUSED</h1>
             <p>Press ESC to resume</p>
         </div>
-    
+
         <div class="danger-line" id="danger-line"></div>
         <div class="ui-bar">
             <div class="stat-display">Level: <span id="level-display">1</span></div>
@@ -237,7 +237,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <script>
         // Falling Words Typing Game
@@ -684,16 +684,16 @@
         }
 
         function pauseGame() {
-        pauseScreen.style.display = 'flex';
-        inputField.disabled = true; // Disable typing during pause
+            pauseScreen.style.display = 'flex';
+            inputField.disabled = true; // Disable typing during pause
         }
 
         function resumeGame() {
-        pauseScreen.style.display = 'none';
-        inputField.disabled = false; // Re-enable typing after resuming
-        // Update startTime so that we don't have a time jump when resuming
-        startTime = Date.now();
-        animate();
+            pauseScreen.style.display = 'none';
+            inputField.disabled = false; // Re-enable typing after resuming
+            // Update startTime so that we don't have a time jump when resuming
+            startTime = Date.now();
+            animate();
         }
 
 
@@ -742,4 +742,5 @@
         restartGame();
     </script>
 </body>
+
 </html>
