@@ -738,6 +738,23 @@
                 startGame();
             }
         });
+        // Disable paste events
+        inputField.addEventListener('paste', (e) => {
+            e.preventDefault();
+        });
+
+        // Disable right-click context menu on the input field
+        inputField.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+
+        // Disable Ctrl+V or Cmd+V keyboard shortcuts for paste
+        inputField.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && (e.key.toLowerCase() === 'v')) {
+                e.preventDefault();
+            }
+        });
+
 
         restartGame();
     </script>
