@@ -1520,14 +1520,25 @@ CHARSET = UTF-8
 <p><img alt="alt text" src="../custom/automailuser.png" /></p>
 <h2 id="aplicar-quotes-a-grups"><strong>Aplicar Quotes a Grups</strong></h2>
 <p>Una altra manera molt utilitzada per aplicar quotes és fer-ho a nivell de grups. En aquest cas, podem assignar una quota a un grup i afegir-hi els usuaris. Així, els usuaris dins d'aquest grup heretaran la quota del grup.</p>
-<p><strong>Atenció!</strong> Aquesta configuració només funcionarà si els usuaris no tenen una quota assignada de manera individual. Si l'usuari té una quota pròpia, aquesta prevaldrà sobre la quota del grup, com podem observar a la següent captura.</p>
+<p>Afegim l'usuari Vitaliy al grup de <code>classe</code> i apliquem la quota.</p>
+<pre><code>setquota -g classe 5120 10240 0 0 /mnt/dades
+</code></pre>
+<p><img alt="alt text" src="../custom/classeg.png" /></p>
+<ul>
+<li><strong>Atenció!</strong> Aquesta configuració només funcionarà si els usuaris no tenen una quota assignada de manera individual. Si l'usuari té una quota pròpia, aquesta prevaldrà sobre la quota del grup, com podem observar a la següent captura.</li>
+</ul>
 <p><img alt="alt text" src="../custom/Comprovaciogrup.png" /></p>
 <p>En aquesta captura, podem veure que l'usuari <strong>vitaliy</strong> està dins del grup <strong>classe</strong>, però quan utilitzem la comanda <code>repquota -g /mnt/dades</code> per verificar les quotes del grup, la quota aplicada a l'usuari <strong>vitaliy</strong> continua sent la seva quota individual, no la del grup.</p>
 <p>Quan verifiquem la quota de l'usuari amb la comanda <code>repquota -u /mnt/dades</code>, veiem que la quota de <strong>vitaliy</strong> preval sobre la quota del grup, ja que la quota personal de l'usuari és visible en lloc de la quota del grup. Això confirma que, quan un usuari té una quota assignada directament, aquesta preval sobre les quotes assignades al grup.</p>
 <hr />
 <p><strong>Creació de l'usuari "Mireia" i el grup "Classe"</strong></p>
-<p>En aquest apartat, crearem un nou usuari anomenat <strong>Mireia</strong> i un grup anomenat <strong>Classe</strong>. Posteriorment, afegirem <strong>Mireia</strong> al grup <strong>Classe</strong> i assignarem la carpeta a aquest grup.</p>
-<p><img alt="alt text" src="../custom/gquota.png" /></p>
+<p>En aquest apartat, crearem un nou usuari anomenat <strong>Mireia</strong>. Posteriorment, afegirem <strong>Mireia</strong> al grup <strong>Classe</strong> i assignarem la carpeta <code>/mnt/dades</code> a aquest grup.</p>
+<p><img alt="alt text" src="../custom/mirgroupquopta.png" /></p>
+<p>No és estrictament necessari que el grup propietari de <code>/mnt/dades</code> sigui "Classe", però és recomanable per assegurar que els membres del grup tinguin els permisos adequats per accedir i escriure a la carpeta.</p>
+<p>Per assignar el grup propietari, utilitzarem la comanda següent:</p>
+<pre><code class="language-bash">chown :classe /mnt/dades
+</code></pre>
+<hr />
 <h3 id="creacio-de-fitxers-i-intent-de-sobrepassar-el-limit-de-quota"><strong>Creació de fitxers i intent de sobrepassar el límit de quota</strong></h3>
 <p>Després de crear l'usuari i assignar-li el grup, crearem alguns fitxers per intentar sobrepassar el límit de quota del grup <strong>Classe</strong>.</p>
 <p><img alt="alt text" src="../custom/excedirq.png" /></p>
