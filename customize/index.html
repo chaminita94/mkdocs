@@ -1,0 +1,1974 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../tipus-licencia/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Customize your MKDOCS - Virtualització</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#welcome-to-customizing-your-mkdocs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Virtualització" class="md-header__button md-logo" aria-label="Virtualització" data-md-component="logo">
+      
+  <img src="../linux-ethandud.gif" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Virtualització
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Customize your MKDOCS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../objectius/" class="md-tabs__link">
+        
+  
+    
+  
+  Per què triar Linux?
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Typeracer.html" class="md-tabs__link">
+        
+  
+    
+  
+  Typeracer
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../instalacio_inicial/" class="md-tabs__link">
+          
+  
+  Sprint 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../fitx_importants/" class="md-tabs__link">
+          
+  
+  Sprint 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../licencia/" class="md-tabs__link">
+          
+  
+  Licència
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Customize your MKDOCS
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Virtualització" class="md-nav__button md-logo" aria-label="Virtualització" data-md-component="logo">
+      
+  <img src="../linux-ethandud.gif" alt="logo">
+
+    </a>
+    Virtualització
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../objectius/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Per què triar Linux?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Typeracer.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Typeracer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacio_inicial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instalació Inicial Usuari Avançat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuració Inicial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netplan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuració de Xarxa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bootloaders/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestors D'arrancada
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reparació d'inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timeshift/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d'una instantània del sistema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comandes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comandes bàssiques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fixació de Paquets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fitx_importants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fitxers Importants
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestio_usuaris/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió d'Usuaris
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestproces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió de Processos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../permisos_especials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Permisos Especials i ACL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aplicar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicarció de Permisos Especial i ACL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sistemes_fitxers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sistemes de Fitxers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../particions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió de Particions i Compartició de Recursos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../copies_segur/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Còpies de Seguretat i Automatitzacions de Tasques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quotes_disc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quotes per a Usuaris i Grups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Licència
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Licència
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licencia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llicència d'us
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tipus-licencia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipus de Llicències
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Customize your MKDOCS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Customize your MKDOCS
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#customization-for-your-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customization for Your MkDocs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customization for Your MkDocs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yaml-configuration-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      YAML Configuration Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-button-code-showcase-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Button Code Showcase Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Button Code Showcase Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-button-and-its-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Button and Its Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-cssjs-for-the-whole-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom CSS/JS For the Whole SITE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom CSS/JS For the Whole SITE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css-showcase-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Showcase Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript-showcase-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript Showcase Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="welcome-to-customizing-your-mkdocs">Welcome to Customizing Your MkDocs</h1>
+<p>Feel free to copy, adapt, and make use of my code and discoveries to enhance your MkDocs project.</p>
+<h2 id="customization-for-your-mkdocs">Customization for Your MkDocs</h2>
+<p>Below is an example of a button that opens a modal popup displaying my YAML configuration code and instructions.<br />
+This approach keeps the page organized while providing detailed code samples. Users can click the button to view the code and learn where and how to implement it.</p>
+<h3 id="yaml-configuration-example">YAML Configuration Example</h3>
+<p>This YAML configuration defines the layout, theme, and features of your MkDocs site.</p>
+<p><strong>Where to Implement:</strong><br />
+Place the following YAML configuration into your <code>mkdocs.yml</code> file, located in the root of your project, to achieve the same customizations.</p>
+<!-- Button that opens the modal -->
+<p><button class="popup-button" onclick="showPopup('popupYaml', 'overlayYaml')">Showcase YAML Code</button></p>
+<!-- Overlay and Modal for YAML -->
+<div class="overlay" id="overlayYaml" onclick="hidePopup('popupYaml', 'overlayYaml')"></div>
+<div class="popup" id="popupYaml">
+  <span class="close-btn" onclick="hidePopup('popupYaml', 'overlayYaml')">×</span>
+  <h3>YAML Configuration</h3>
+  <p>Copy the following code into your <code>mkdocs.yml</code> file:</p>
+  <pre><code>
+site_name: Virtualització
+theme:
+  logo: linux-ethandud.gif
+  name: material
+  custom_dir: docs/custom
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+    - content.code.download
+    - footer.hide
+    - palette.toggle
+
+  palette: 
+    - scheme: default
+      primary: light blue
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+nav:
+  - Welcome: 'index.md'
+  - Per què triar Linux?: 'objectius.md'
+  - Typeracer: 'Typeracer.html'
+  - Sprint 1:
+      - "Instalació Inicial Usuari Avançat": 'instalacio_inicial.md'
+      - "Configuració Inicial": 'vbox.md'
+      - "Configuració de Xarxa": 'netplan.md'
+      - "Gestors D'arrancada": 'bootloaders.md'
+      - "Reparació d'inici": 'grub.md'
+      - "Creació d'una instantània del sistema": 'timeshift.md'
+      - "Comandes bàssiques": 'comandes.md'
+      - "Fixació de Paquets": 'packet.md'
+
+  - Sprint 2:
+    - "Fitxers Importants": 'fitx_importants.md'
+    - "Gestió d'Usuaris": 'gestio_usuaris.md'
+    - "Gestió de Processos": 'gestproces.md'
+    - "Permisos Especials i ACL": 'permisos_especials.md'
+    - "Aplicarció de Permisos Especial i ACL": 'aplicar.md'
+    - "Sistemes de Fitxers": 'sistemes_fitxers.md'
+    - "Gestió de Particions i Compartició de Recursos": 'particions.md'
+    - "Còpies de Seguretat i Automatitzacions de Tasques": 'copies_segur.md'
+    - "Quotes per a Usuaris i Grups": 'quotes_disc.md'
+
+  - Licència: 
+    - "Llicència d'us": 'licencia.md'
+    - "Tipus de Llicències": 'tipus-licencia.md'
+
+  - Customize your MKDOCS: 'customize.md'
+
+extra:
+  social:
+    - icon: fontawesome/brands/google
+      link: https://insebre.cat/
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/pages/IES-de-lEbre/112464068780017/
+  generator: false
+
+extra_javascript:
+  - consent.js
+  - https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit
+
+static_templates:
+  - 404.html
+
+extra_css:
+  - custom.css
+  </code></pre>
+</div>
+
+<hr />
+<p><strong>Additional Tips</strong></p>
+<ul>
+<li>The button is defined with standard HTML inside a Markdown file. MkDocs Material allows this by default.</li>
+<li>You can duplicate the button and modal sections for different code snippets. Just ensure you use unique IDs for each pair of modal and overlay.</li>
+<li>Adjust colors, fonts, and layout as needed in the CSS below.</li>
+</ul>
+<hr />
+<!-- Inline CSS and JS for demonstration -->
+<style>
+.popup-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.popup-button:hover {
+  background-color: #0056b3;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2c2c2c;
+  border: 1px solid #444444;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  padding: 20px;
+  z-index: 1000;
+  width: 80%;
+  max-width: 900px;
+  max-height: 80%;
+  overflow-y: auto;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.popup .close-btn {
+  float: right;
+  cursor: pointer;
+  font-size: 18px;
+  color: #bbb;
+  margin-left: 10px;
+}
+
+.popup .close-btn:hover {
+  color: #fff;
+}
+
+pre code {
+  background: #1e1e1e;
+  color: #cfcfcf;
+  padding: 10px;
+  display: block;
+  overflow-x: auto;
+  white-space: pre;
+  font-family: Consolas, monospace;
+}
+</style>
+
+<script>
+function showPopup(popupId, overlayId) {
+  document.getElementById(popupId).style.display = 'block';
+  document.getElementById(overlayId).style.display = 'block';
+}
+
+function hidePopup(popupId, overlayId) {
+  document.getElementById(popupId).style.display = 'none';
+  document.getElementById(overlayId).style.display = 'none';
+}
+</script>
+
+<h2 id="custom-button-code-showcase-example">Custom Button Code Showcase Example</h2>
+<p>In this section, we’re demonstrating a meta-example: a <strong>button that reveals its own source code</strong> including the HTML, CSS, and JS needed to create it. Clicking the button below will open a popup showing exactly how to create a button-triggered modal popup within a Markdown page.</p>
+<h3 id="the-button-and-its-code">The Button and Its Code</h3>
+<p>Click the button below to view the full source code (HTML, CSS, and JS).</p>
+<!-- The button to open the modal -->
+<p><button class="popup-button" onclick="showPopup('popupButtonCode', 'overlayButtonCode')">Show Button Source Code</button></p>
+<!-- Overlay and Modal -->
+<div class="overlay" id="overlayButtonCode" onclick="hidePopup('popupButtonCode', 'overlayButtonCode')"></div>
+<div class="popup" id="popupButtonCode">
+  <span class="close-btn" onclick="hidePopup('popupButtonCode', 'overlayButtonCode')">×</span>
+  <h3>Source Code for the Button, Modal, CSS, and JS</h3>
+  <p>The code below shows how to place a button in Markdown that, when clicked, displays this popup modal. You can copy and modify it to suit your needs.</p>
+
+  <pre><code>
+&lt;!-- The button to open the modal --&gt;
+&lt;button class="popup-button" onclick="showPopup('popupButtonCode', 'overlayButtonCode')"&gt;Show Button Source Code&lt;/button&gt;
+
+&lt;!-- Overlay and Modal --&gt;
+&lt;div class="overlay" id="overlayButtonCode" onclick="hidePopup('popupButtonCode', 'overlayButtonCode')"&gt;&lt;/div&gt;
+&lt;div class="popup" id="popupButtonCode"&gt;
+  &lt;span class="close-btn" onclick="hidePopup('popupButtonCode', 'overlayButtonCode')"&gt;×&lt;/span&gt;
+  &lt;h3&gt;Source Code for the Button, Modal, CSS, and JS&lt;/h3&gt;
+  &lt;p&gt;The code below shows how to place a button in Markdown that, when clicked, displays this popup modal. You can copy and modify it to suit your needs.&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code&gt;
+  &lt;!-- The button to open the modal --&gt;
+  &lt;button class="popup-button" onclick="showPopup('popupButtonCode', 'overlayButtonCode')"&gt;Show Button Source Code&lt;/button&gt;
+
+  &lt;!-- Overlay and Modal --&gt;
+  &lt;div class="overlay" id="overlayButtonCode" onclick="hidePopup('popupButtonCode', 'overlayButtonCode')"&gt;&lt;/div&gt;
+  &lt;div class="popup" id="popupButtonCode"&gt;
+    &lt;span class="close-btn" onclick="hidePopup('popupButtonCode', 'overlayButtonCode')"&gt;×&lt;/span&gt;
+    &lt;h3&gt;Source Code for the Button, Modal, CSS, and JS&lt;/h3&gt;
+    &lt;p&gt;...Explanation text here...&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;style&gt;
+    .popup-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+
+    .popup-button:hover {
+      background-color: #0056b3;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #2c2c2c;
+      border: 1px solid #444444;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      padding: 20px;
+      z-index: 1000;
+      width: 80%;
+      max-width: 900px;
+      max-height: 80%;
+      overflow-y: auto;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    .popup .close-btn {
+      float: right;
+      cursor: pointer;
+      font-size: 18px;
+      color: #bbb;
+      margin-left: 10px;
+    }
+
+    .popup .close-btn:hover {
+      color: #fff;
+    }
+
+    pre code {
+      background: #1e1e1e;
+      color: #cfcfcf;
+      padding: 10px;
+      display: block;
+      overflow-x: auto;
+      white-space: pre;
+      font-family: Consolas, monospace;
+    }
+  &lt;/style&gt;
+
+  &lt;script&gt;
+    function showPopup(popupId, overlayId) {
+      document.getElementById(popupId).style.display = 'block';
+      document.getElementById(overlayId).style.display = 'block';
+    }
+
+    function hidePopup(popupId, overlayId) {
+      document.getElementById(popupId).style.display = 'none';
+      document.getElementById(overlayId).style.display = 'none';
+    }
+  &lt;/script&gt;
+  &lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+  </code></pre>
+</div>
+
+<hr />
+<!-- Inline CSS and JS (for the actual page functionality) -->
+<style>
+.popup-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.popup-button:hover {
+  background-color: #0056b3;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2c2c2c;
+  border: 1px solid #444444;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  padding: 20px;
+  z-index: 1000;
+  width: 80%;
+  max-width: 900px;
+  max-height: 80%;
+  overflow-y: auto;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.popup .close-btn {
+  float: right;
+  cursor: pointer;
+  font-size: 18px;
+  color: #bbb;
+  margin-left: 10px;
+}
+.popup .close-btn:hover {
+  color: #fff;
+}
+
+pre code {
+  background: #1e1e1e;
+  color: #cfcfcf;
+  padding: 10px;
+  display: block;
+  overflow-x: auto;
+  white-space: pre;
+  font-family: Consolas, monospace;
+}
+</style>
+
+<script>
+function showPopup(popupId, overlayId) {
+  document.getElementById(popupId).style.display = 'block';
+  document.getElementById(overlayId).style.display = 'block';
+}
+
+function hidePopup(popupId, overlayId) {
+  document.getElementById(popupId).style.display = 'none';
+  document.getElementById(overlayId).style.display = 'none';
+}
+</script>
+
+<hr />
+<h2 id="custom-cssjs-for-the-whole-site">Custom CSS/JS For the Whole SITE</h2>
+<p>You can also introduce site-wide customizations by adding your own <code>custom.js</code> and <code>custom.css</code> files. These files can be referenced directly in your <code>mkdocs.yml</code> configuration, allowing you to apply global JavaScript and CSS changes across your entire MkDocs site.</p>
+<p><strong>Note:</strong> Since MkDocs often uses styles from the Material or Bootstrap frameworks, you might occasionally need to use <code>!important</code> in your CSS rules to ensure your custom styles override the default theme.</p>
+<p><strong>Example <code>mkdocs.yml</code> Configuration:</strong></p>
+<p><img alt="Configuration Example" src="../custom/cstmyml.png" /></p>
+<p>Your <code>custom.js</code> file can contain features such as Google Translate integration or other enhancements (not shown in the image):</p>
+<p><img alt="JavaScript Example" src="../custom/customjs.png" /></p>
+<p>Your <code>custom.css</code> file includes CSS rules that apply to the entire site, ensuring a consistent and unified look:</p>
+<p><img alt="CSS Example" src="../custom/csscustmo.png" /></p>
+<h3 id="css-showcase-example">CSS Showcase Example</h3>
+<p>Click the button below to view the custom CSS code snippet in a modal popup.</p>
+<!-- The button to open the modal -->
+<p><button class="popup-button" onclick="showPopup('popupCss', 'overlayCss')">Show CSS Code</button></p>
+<!-- Overlay and Modal -->
+<div class="overlay" id="overlayCss" onclick="hidePopup('popupCss', 'overlayCss')"></div>
+<div class="popup" id="popupCss">
+  <span class="close-btn" onclick="hidePopup('popupCss', 'overlayCss')">×</span>
+  <h3>Custom CSS Code</h3>
+  <p>Below is the CSS code snippet. You can copy and modify it as needed.</p>
+
+  <pre><code>
+  .custom-footer {
+    position: fixed;
+    /* Fixed position */
+    left: 0;
+    /* Align to the left */
+    bottom: 0;
+    /* Align to the bottom */
+    width: 100%;
+    /* Full width */
+    padding: 2px;
+    /* Padding around the text */
+    background: linear-gradient(45deg, #3d0606, #3498db, #030303);
+    /* Gradient background */
+    text-align: left;
+    /* Left align the text */
+    z-index: 1000;
+    /* High z-index to stay on top */
+    font-size: 14px;
+    /* Smaller text size */
+    color: white;
+    animation: gradientAnimation 10s ease infinite;
+
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Style the code blocks */
+pre {
+    background-color: #2d3e50;
+    /* Dark background for code blocks */
+    color: #ecf0f1;
+    /* Light text for code blocks */
+    padding: 7px;
+    /* Padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    border: 1px solid #34495e;
+    /* Optional border */
+    font-family: 'Courier New', monospace;
+    /* Monospace font */
+    line-height: 1.5;
+    /* Increase line height */
+    transition: background-color 0.3s;
+    /* Smooth transition */
+}
+
+pre:hover {
+    background-color: #34495e;
+    /* Change background on hover */
+}
+
+.md-content {
+    text-align: justify;
+}
+
+/* Global image styling */
+img {
+    width: 650px;
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Ensures the aspect ratio is maintained and the image fills the area */
+    transition: transform 0.3s ease, border 0.3s ease;
+    /* Smooth transition for transform and border */
+    border: 3px solid transparent;
+    /* Default border (transparent) */
+    border-radius: 3px;
+    /* Optional: rounded corners for the image */
+}
+
+/* Hover effect for all images except specific exceptions */
+img:hover {
+    transform: scale(1.3);
+    /* Enlarges the image by 1.3x on hover */
+    border: 5px solid #3498db;
+    /* Adds a blue border on hover */
+    box-shadow: 0px 0px 15px rgba(52, 152, 219, 0.7);
+    /* Adds a glowing shadow effect */
+}
+
+/* Override styles for the footer image */
+img.footer-img {
+    width: auto;
+    /* Use the natural size of the footer image */
+    height: auto;
+    /* Ensure natural height */
+    object-fit: unset;
+    /* Remove object-fit (no resizing or cropping) */
+    transition: none;
+    /* Disable any transitions on hover */
+    border: none;
+    /* Remove border for the footer image */
+}
+
+/* Optional: Add custom footer image styling */
+img.footer-img {
+    margin-left: 5px;
+    /* Optional: keeps the same left margin */
+    vertical-align: middle;
+    /* Optional: ensures it stays vertically aligned with text */
+}
+
+
+/* Enllaços amb subratllat animat */
+a {
+    position: relative;
+    text-decoration: none;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #3498db;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Ensure the inner content does not overflow */
+.goog-te-gadget-simple {
+    width: 50% !important;
+    /* Fit the parent container */
+    max-width: 300px;
+    /* Set a maximum width */
+    height: auto !important;
+    /* Adjust height dynamically */
+    overflow: hidden;
+    /* Prevent content overflow */
+    text-align: center;
+    /* Center align text inside */
+    border-radius: 5px;
+    /* Optional: rounded corners */
+    padding: 5px;
+    /* Optional: internal padding */
+}
+
+/* Reduce the size of the language selection text and images */
+.goog-te-gadget-simple span,
+.goog-te-gadget-simple img {
+    max-height: 18px !important;
+    /* Reduce the height */
+    vertical-align: middle !important;
+    /* Align properly */
+}
+
+body {
+    top: 0 !important;
+}
+
+#goog-gt-tt {
+    display: none !important;
+
+}
+
+body>.skiptranslate>iframe.skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+}
+  </code></pre>
+</div>
+
+<hr />
+<!-- Inline CSS and JS (for demonstration purposes) -->
+<style>
+.popup-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.popup-button:hover {
+  background-color: #0056b3;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2c2c2c;
+  border: 1px solid #444444;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  padding: 20px;
+  z-index: 1000;
+  width: 80%;
+  max-width: 900px;
+  max-height: 80%;
+  overflow-y: auto;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.popup .close-btn {
+  float: right;
+  cursor: pointer;
+  font-size: 18px;
+  color: #bbb;
+  margin-left: 10px;
+}
+
+.popup .close-btn:hover {
+  color: #fff;
+}
+
+pre code {
+  background: #1e1e1e;
+  color: #cfcfcf;
+  padding: 10px;
+  display: block;
+  overflow-x: auto;
+  white-space: pre;
+  font-family: Consolas, monospace;
+}
+</style>
+
+<script>
+function showPopup(popupId, overlayId) {
+  document.getElementById(popupId).style.display = 'block';
+  document.getElementById(overlayId).style.display = 'block';
+}
+
+function hidePopup(popupId, overlayId) {
+  document.getElementById(popupId).style.display = 'none';
+  document.getElementById(overlayId).style.display = 'none';
+}
+</script>
+
+<h3 id="javascript-showcase-example">JavaScript Showcase Example</h3>
+<p>This example demonstrates a JavaScript script that retrieves and displays IP and location information using the <code>ipwhois.app</code> API. It also includes functionality to show a modal window with additional information when a button is clicked.</p>
+<p>Click the button below to view the full JavaScript code and an explanation of what it does.</p>
+<p><img alt="alt text" src="../custom/stalk.png" /></p>
+<blockquote>
+<p><strong>NOTE:</strong> You need to call this JavaScript somewhere in your code. In this example, it is called inside a footer using a <code>&lt;div&gt;</code> element.</p>
+</blockquote>
+<!-- Button to open the modal -->
+<p><button class="popup-button" onclick="showPopup('popupJsCode', 'overlayJsCode')">Showcase JavaScript Code</button></p>
+<!-- Overlay and Modal -->
+<div class="overlay" id="overlayJsCode" onclick="hidePopup('popupJsCode', 'overlayJsCode')"></div>
+<div class="popup" id="popupJsCode">
+  <span class="close-btn" onclick="hidePopup('popupJsCode', 'overlayJsCode')">×</span>
+  <h3>JavaScript Code Showcase</h3>
+  <p>This script fetches the user's IP address, location, ISP, and local time from an external API and dynamically updates the page with this information. It also manages the visibility of a modal window triggered by the "About Me" button.</p>
+
+  <pre><code>
+  &lt;script&gt;
+    window.addEventListener('load', function () {
+      fetch('https://ipwhois.app/json/')
+        .then(response =&gt; response.json())
+        .then(data =&gt; {
+          const ip = data.ip || 'Unknown IP';
+          const city = data.city || 'Unknown City';
+          const country = data.country || 'Unknown Country';
+          const isp = data.isp || 'Unknown ISP';
+          const now = new Date().toLocaleString();
+
+          // Update the user info div
+          const userInfo = document.getElementById('user-info');
+          userInfo.innerHTML = `
+            &lt;strong&gt;Location:&lt;/strong&gt; ${city}, ${country}&lt;br&gt;
+            &lt;strong&gt;Time:&lt;/strong&gt; ${now}&lt;br&gt;
+            &lt;strong&gt;ISP:&lt;/strong&gt; ${isp}&lt;br&gt;
+            And &lt;strong&gt;Your IP:&lt;/strong&gt; ${ip}&lt;br&gt;
+          `;
+        })
+        .catch(error =&gt; {
+          console.error('Error fetching IP/location data:', error);
+          const userInfo = document.getElementById('user-info');
+          userInfo.innerHTML = 'Failed to load your IP and ISP information.';
+        });
+    });
+
+    document.getElementById('about-me-button').addEventListener('click', function() {
+      document.getElementById('about-me-modal').style.display = 'block';
+      document.getElementById('modal-overlay').style.display = 'block';
+    });
+
+    document.getElementById('close-modal').addEventListener('click', function() {
+      document.getElementById('about-me-modal').style.display = 'none';
+      document.getElementById('modal-overlay').style.display = 'none';
+    });
+
+    document.getElementById('modal-overlay').addEventListener('click', function() {
+      document.getElementById('about-me-modal').style.display = 'none';
+      document.getElementById('modal-overlay').style.display = 'none';
+    });
+  &lt;/script&gt;
+  </code></pre>
+</div>
+
+<hr />
+<!-- Inline CSS and JS (for demonstration purposes) -->
+<style>
+.popup-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.popup-button:hover {
+  background-color: #0056b3;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2c2c2c;
+  border: 1px solid #444444;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  padding: 20px;
+  z-index: 1000;
+  width: 80%;
+  max-width: 900px;
+  max-height: 80%;
+  overflow-y: auto;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.popup .close-btn {
+  float: right;
+  cursor: pointer;
+  font-size: 18px;
+  color: #bbb;
+  margin-left: 10px;
+}
+
+.popup .close-btn:hover {
+  color: #fff;
+}
+
+pre code {
+  background: #1e1e1e;
+  color: #cfcfcf;
+  padding: 10px;
+  display: block;
+  overflow-x: auto;
+  white-space: pre;
+  font-family: Consolas, monospace;
+}
+</style>
+
+<script>
+function showPopup(popupId, overlayId) {
+  document.getElementById(popupId).style.display = 'block';
+  document.getElementById(overlayId).style.display = 'block';
+}
+
+function hidePopup(popupId, overlayId) {
+  document.getElementById(popupId).style.display = 'none';
+  document.getElementById(overlayId).style.display = 'none';
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy", "content.code.download", "footer.hide", "palette.toggle"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="../consent.js"></script>
+      
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
+    
+  </body>
+</html>
