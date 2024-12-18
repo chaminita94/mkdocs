@@ -20,7 +20,7 @@
     
     
       
-        <title>Quotes de Disc - Virtualització</title>
+        <title>Quotes per a Usuaris i Grups - Virtualització</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#que-son-les-quotes-de-disc" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Quotes de Disc
+              Quotes per a Usuaris i Grups
             
           </span>
         </div>
@@ -792,7 +797,7 @@
         
   
   <span class="md-ellipsis">
-    Particions
+    Gestió de Particions i Compartició de Recursos
   </span>
   
 
@@ -837,15 +842,163 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quotes per a Usuaris i Grups
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Quotes de Disc
+    Quotes per a Usuaris i Grups
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-son-les-quotes-de-disc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què són les QUOTES de disc?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Què són les QUOTES de disc?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aplicar-quotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicar quotes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aplicar quotes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activar-quotes-en-un-directori" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activar Quotes en un Directori
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicar-quotes-a-un-usuari" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicar quotes a un usuari
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aplicar quotes a un usuari">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-de-warnquota-amb-notificacions-per-correu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració de warnquota amb notificacions per correu
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicar-quotes-a-grups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicar Quotes a Grups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aplicar Quotes a Grups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacio-de-fitxers-i-intent-de-sobrepassar-el-limit-de-quota" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació de fitxers i intent de sobrepassar el límit de quota
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprovacio-de-lestat-de-la-quota-de-grup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprovació de l'estat de la quota de grup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comprovació de l'estat de la quota de grup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email-automatic-de-superar-quota-de-grup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Email Automàtic de Superar Quota de Grup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -963,9 +1116,562 @@
                   
 
 
-  <h1>Quotes de Disc</h1>
+  <h1>Quotes per a Usuaris i Grups</h1>
 
-<p>3123</p>
+<h2 id="que-son-les-quotes-de-disc"><strong>Què són les QUOTES de disc?</strong></h2>
+<p>Les quotes de disc són una eina essencial per limitar i gestionar l'espai d'emmagatzematge utilitzat per usuaris i grups en un sistema Linux. Aquestes permeten prevenir l'ús excessiu d'espai de disc, assegurant que cap usuari o grup monopolitzi els recursos del sistema.</p>
+<p>En aquest apartat aprendrem:</p>
+<ul>
+<li>
+<p>Què són les quotes de disc i per què són útils.</p>
+</li>
+<li>
+<p>Com assignar quotes a usuaris individuals.</p>
+</li>
+<li>
+<p>Com configurar quotes per a grups.</p>
+</li>
+<li>
+<p>Com monitoritzar les quotes i configurar notificacions automàtiques.</p>
+</li>
+</ul>
+<h3 id="aplicar-quotes">Aplicar quotes</h3>
+<p>Primerament, instal·lem <code>quota</code> utilitzant la següent comanda:</p>
+<pre><code>apt install quota
+</code></pre>
+<p>Hem creat una partició <code>/dev/sdb1</code> i posteriorment hem muntat la carpeta <code>/mnt/dades</code> editant el fitxer <code>fstab</code>.</p>
+<blockquote>
+<p><strong>Atenció!</strong> Molt de compte amb el fitxer <code>fstab</code>. Si introdueixes alguna configuració incorrecta, el sistema pot no arrencar i hauràs de reparar-lo manualment.</p>
+</blockquote>
+<p><img alt="alt text" src="../custom/fstabquota.png" /></p>
+<p>Afegim les opcions <code>defaults,usrquota,grpquota</code>. Això habilitarà les quotes tant per a grups com per a usuaris.</p>
+<p>Després de configurar-ho, reiniciem el sistema perquè el muntatge s'apliqui correctament.</p>
+<hr />
+<h4 id="activar-quotes-en-un-directori">Activar Quotes en un Directori</h4>
+<p>Un cop el sistema estigui en marxa, comprovem si els fitxers de quota existeixen executant:</p>
+<ul>
+<li><code>quotacheck -cug /mnt/dades</code>  </li>
+<li><code>quotaon /mnt/dades</code>  </li>
+</ul>
+<p>Aquests passos verificaran i activaran les quotes.</p>
+<p><img alt="alt text" src="../custom/qtcheck.png" /></p>
+<blockquote>
+<p><strong>Nota!</strong> Si no veus els fitxers <code>aquota.group</code> i <code>aquota.user</code>, pots forçar-ne la creació amb:
+<code>quotacheck -cugm /mnt/dades</code><br />
+i posteriorment activar-los amb <code>quotaon /mnt/dades</code>.</p>
+</blockquote>
+<hr />
+<h4 id="aplicar-quotes-a-un-usuari"><strong>Aplicar quotes a un usuari</strong></h4>
+<p>Per assignar quotes als usuaris, existeixen dues maneres. Una d'elles és utilitzant <strong><code>edquota -u + nom</code></strong>, que permet editar manualment les quotes assignades a un usuari.</p>
+<pre><code>edquota -u &quot;exemple&quot;
+</code></pre>
+<p><img alt="alt text" src="../custom/edq.png" /></p>
+<ul>
+<li><strong>Blando o Soft</strong>: Indica el límit tou, que l'usuari pot excedir durant el període de gràcia.  </li>
+<li><strong>Duro o Hard</strong>: Representa el límit màxim que no es pot excedir.</li>
+</ul>
+<p>Configura aquests valors segons les necessitats de cada usuari.</p>
+<p><strong>Una altra manera d'assignar quotes és amb la següent comanda:</strong></p>
+<pre><code>setquota -u vitaliy 1024 2048 0 0 /mnt/dades
+</code></pre>
+<p>Aquesta comanda fa el mateix que l'edició manual amb <strong><code>edquota</code></strong>, però no cal entrar dins del fitxer ni modificar-lo manualment.</p>
+<h5 id="exemple"><strong>Exemple</strong></h5>
+<p>En aquesta secció, expliquem com assignar quotes als usuaris amb exemples pràctics.</p>
+<p><img alt="alt text" src="../custom/carpetes.png" /></p>
+<blockquote>
+<p><strong>Nota: Si l'usuari no pot escriure executa <code>chmod 777 /mnt/dades</code>.</strong></p>
+</blockquote>
+<!-- Botó per mostrar el popup -->
+<p><button class="popup-button" onclick="showPopup('popup1', 'overlay1')">Explicació de la Captura</button></p>
+<!-- Overlay i Popup -->
+<div class="overlay" id="overlay1" onclick="hidePopup('popup1', 'overlay1')"></div>
+<div class="popup" id="popup1">
+  <span class="close-btn" onclick="hidePopup('popup1', 'overlay1')">×</span>
+  <h3>Explicació Pas a Pas de la Captura</h3>
+
+  <p>A la captura de pantalla es mostren els passos següents per aplicar quotes a un usuari:</p>
+
+  <ol>
+    <li>
+      <strong><code>setquota -u vitaliy 1024 2048 0 0 /mnt/dades</code></strong>  
+      <p>Aquesta comanda assigna una quota a l'usuari <code>vitaliy</code>:</p>
+      <ul>
+        <li><strong>1024</strong>: Límit tou (soft limit) de 1 MB.</li>
+        <li><strong>2048</strong>: Límit dur (hard limit) de 2 MB.</li>
+        <li><strong>0 0</strong>: No s'assigna cap límit per als inodes.</li>
+      </ul>
+    </li>
+    <li>
+      <strong><code>repquota -a</code></strong>  
+      <p>Comprova les quotes del sistema. Al principi només apareix l'usuari <code>root</code> amb un ús mínim d'espai.</p>
+    </li>
+    <li>
+      <strong>Inici de sessió com a usuari <code>vitaliy</code></strong>  
+      <p>L'usuari <code>vitaliy</code> crea un directori i un fitxer per consumir espai:</p>
+      <ul>
+        <li><code>mkdir hello</code>: Crea un directori anomenat "hello".</li>
+        <li><code>touch hello</code>: Crea un fitxer buit.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Comprovació de quotes després de l'activitat</strong>  
+      <p>Es torna a executar <code>repquota -a</code> per verificar l'ús actualitzat de l'usuari:</p>
+      <ul>
+        <li>L'usuari <code>vitaliy</code> apareix ara amb:</li>
+        <ul>
+          <li><strong>Usat</strong>: L'espai utilitzat (4 blocs).</li>
+          <li><strong>Blando</strong>: Límit tou (1024 blocs).</li>
+          <li><strong>Duro</strong>: Límit dur (2048 blocs).</li>
+        </ul>
+      </ul>
+    </li>
+  </ol>
+
+  <p>Aquests passos confirmen que les quotes estan funcionant correctament per a l'usuari <code>vitaliy</code>.</p>
+</div>
+
+<script>
+  function showPopup(popupId, overlayId) {
+    document.getElementById(popupId).style.display = 'block';
+    document.getElementById(overlayId).style.display = 'block';
+  }
+
+  function hidePopup(popupId, overlayId) {
+    document.getElementById(popupId).style.display = 'none';
+    document.getElementById(overlayId).style.display = 'none';
+  }
+</script>
+
+<style>
+  .popup-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .popup-button:hover {
+    background-color: #0056b3;
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2c2c2c;
+    border: 1px solid #444444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    z-index: 1000;
+    width: 80%;
+    max-width: 900px;
+    overflow-y: auto;
+    max-height: 80%;
+    color: #ffffff;
+  }
+
+  .popup .close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888888;
+  }
+
+  .popup .close-btn:hover {
+    color: #ffffff;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+</style>
+
+<hr />
+<p><strong>Intentem sobrepassar el límit per veure què pot passar</strong></p>
+<p><img alt="alt text" src="../custom/limit.png" /></p>
+<p>La comanda <code>dd</code> s'utilitza per copiar i convertir fitxers de manera controlada. En aquest cas, s'utilitza per crear fitxers de prova amb dades generades aleatòriament a partir de <code>/dev/zero</code>.</p>
+<p><strong>Comanda:</strong></p>
+<p><code>dd if=/dev/zero of=test bs=1K count=800</code></p>
+<ul>
+<li><strong><code>if=/dev/zero</code></strong>: Especifica el fitxer d'entrada, en aquest cas <code>/dev/zero</code>, que és un dispositiu especial que genera zeros contínuament.</li>
+<li><strong><code>of=test</code></strong>: El fitxer de sortida, en aquest cas es crea un fitxer anomenat <code>test</code>.</li>
+<li><strong><code>bs=1K</code></strong>: La mida del bloc de dades que es copiaran és de 1KB.</li>
+<li><strong><code>count=800</code></strong>: Es copien 800 blocs de 1KB, resultant en un fitxer de 800KB.</li>
+</ul>
+<p>L'execució de la comanda crea un fitxer <code>test</code> de 819200 bytes (800KB) i mostra la velocitat de còpia (en aquest cas, <strong>585 MB/s</strong> en la primera execució i <strong>713 MB/s</strong> en la segona).</p>
+<hr />
+<p><strong>Comprovació de la quota d'usuari</strong></p>
+<p>A la captura es mostra la comanda <code>quota -u vitaliy</code> per comprovar l'estat de la quota d'un usuari específic, en aquest cas, l'usuari <strong>vitaliy</strong>.</p>
+<p><img alt="alt text" src="../custom/vitq.png" /></p>
+<p><strong>Comanda:</strong></p>
+<p><code>quota -u vitaliy</code></p>
+<p>Aquesta comanda mostra la informació de les quotes de disc per a l'usuari <code>vitaliy</code>.</p>
+<p><strong>Explicació de la sortida:</strong></p>
+<ul>
+<li><strong><code>/dev/sdb1</code></strong>: La partició on s'aplica la quota (en aquest cas, <code>/dev/sdb1</code>).</li>
+<li><strong><code>1604*</code></strong>: L'espai actual utilitzat per l'usuari en blocs (1604 blocs). El símbol <code>*</code> indica que s'ha superat el límit tou.</li>
+<li><strong><code>1024</code></strong>: Límit tou (soft limit) assignat, en blocs (1024 blocs o 1 MB).</li>
+<li><strong><code>2048</code></strong>: Límit dur (hard limit) assignat, en blocs (2048 blocs o 2 MB).</li>
+<li><strong><code>7 días</code></strong>: El període de gràcia de 7 dies per superar el límit tou.</li>
+<li><strong><code>3</code></strong>: El nombre de fitxers utilitzats.</li>
+</ul>
+<hr />
+<p><strong>Superar el Límit de Quota</strong></p>
+<p><img alt="alt text" src="../custom/limitsuperat.png" /></p>
+<p>A la captura es mostra el que passa quan l'usuari <strong>vitaliy</strong> supera el límit de quota assignat:</p>
+<ol>
+<li>
+<p><strong>Comanda <code>dd</code> per crear fitxers</strong>:<br />
+   L'usuari intenta crear fitxers amb la comanda <code>dd</code>, però es genera un error perquè s'ha superat la quota de disc. Els missatges d'error són els següents:</p>
+</li>
+<li>
+<p><em>"dd: error al escribir en 'test2': Se ha excedido la cuota de disco"</em></p>
+</li>
+<li><em>"dd: error al escribir en 'test3': Se ha excedido la cuota de disco"</em></li>
+</ol>
+<p>Això indica que quan l'usuari intenta escriure més dades en els fitxers, el sistema bloqueja l'operació perquè s'ha arribat al límit de quota.</p>
+<ol>
+<li>
+<p><strong>Comprovació de la quota amb <code>quota</code></strong>:<br />
+   Quan l'usuari comprova l'estat de la seva quota amb la comanda <code>quota -u vitaliy</code>, es pot veure que ha superat el límit de quota assignat:</p>
+</li>
+<li>
+<p><strong><code>/dev/sdb1  2048*  1024  2048  6 días</code></strong></p>
+<ul>
+<li><em><code>2048*</code></em>: L'usuari ha utilitzat 2048 blocs, que és el límit dur (hard limit).</li>
+<li><em><code>1024</code></em>: Límit tou (soft limit) de 1 MB.</li>
+<li><em><code>2048</code></em>: Límit dur (hard limit) de 2 MB.</li>
+<li><em><code>6 días</code></em>: El període de gràcia de 6 dies, durant el qual l'usuari pot seguir utilitzant l'espai fins que redueixi l'ús d'espai.</li>
+</ul>
+</li>
+<li>
+<p><strong>Comportament al superar el límit</strong>:<br />
+   Quan un usuari supera el límit dur (hard limit), el sistema impedeix que pugui escriure més dades al disc fins que redueixi l'ús d'espai per sota del límit dur. Això és el que es veu en la captura: el sistema bloqueja l'escriptura després d'excedir la quota.</p>
+</li>
+</ol>
+<h3 id="configuracio-de-warnquota-amb-notificacions-per-correu">Configuració de <code>warnquota</code> amb notificacions per correu</h3>
+<p>Com a administradors, és important saber quan un usuari supera el límit de quota, ja que sovint els usuaris no són conscients d'aquests límits. Una manera senzilla de gestionar-ho és configurar l'enviament de correus electrònics per avisar els usuaris quan hagin superat la seva quota.</p>
+<p>No entrarem en detall, però si estàs interessat en fer-ho, fes clic al botó de baix.</p>
+<!-- Botó per mostrar la configuració de warnquota -->
+<p><button class="popup-button" onclick="showPopup('popupWarnquota', 'overlayWarnquota')">Configuració de Warning (Fes clic per veure més)</button></p>
+<!-- Overlay i Popup per mostrar la configuració de warnquota -->
+<div class="overlay" id="overlayWarnquota" onclick="hidePopup('popupWarnquota', 'overlayWarnquota')"></div>
+<div class="popup" id="popupWarnquota">
+  <span class="close-btn" onclick="hidePopup('popupWarnquota', 'overlayWarnquota')">×</span>
+  <h3>Configuració de `warnquota`</h3>
+  <p>Aquesta guia detalla els passos seguits per configurar `warnquota` perquè enviï correus electrònics quan els usuaris superen les seves quotes, i s'executi automàticament cada dia.</p>
+
+  <ol>
+    <li><strong>Instal·lació de les eines necessàries</strong>
+      <ul>
+        <li>Instal·lar els paquets requerits:
+          <ul>
+            <li><code>quota</code>: Per gestionar les quotes.</li>
+            <li><code>mailutils</code>: Per enviar correus electrònics.</li>
+            <li><code>postfix</code>: Per enviar correus electrònics.</li>
+          </ul>
+        </li>
+        <li>Comandes utilitzades:
+          <pre><code>apt update
+apt install quota mailutils postfix</code></pre>
+        </li>
+      </ul>
+    </li>
+    <li><strong>Configuració del servei de correu</strong>
+      <ul>
+        <li>Es va instal·lar <code>mailutils</code>, que configura un agent de correu (com <code>postfix</code>) per permetre l'enviament d'emails.</li>
+        <li>Durant la instal·lació de <code>postfix</code>, es va seleccionar "Internet Site" com a configuració.</li>
+      </ul>
+    </li>
+    <li><strong>Edició del fitxer de configuració de <code>warnquota</code></strong>
+      <ul>
+        <li>Es va editar el fitxer <code>/etc/warnquota.conf</code> per personalitzar els avisos de correu.</li>
+        <li>Contingut del fitxer ajustat:
+          <pre><code>
+MAIL_CMD = "/usr/sbin/sendmail -t"
+FROM = "Administració &lt;admin@exemple.com&gt;"
+SUBJECT = "Alerta: Has superat la quota!"
+CC_TO = "exemple@correu.com"
+SUPPORT = "exemple@correu.com"
+PHONE = "&lt;opcional: número de telèfon&gt;"
+CHARSET = UTF-8
+          </code></pre>
+        </li>
+      </ul>
+    </li>
+    <li><strong>Prova manual de <code>warnquota</code></strong>
+      <ul>
+        <li>Es va executar <code>warnquota</code> manualment per verificar que els correus s'enviaven correctament:
+          <pre><code>warnquota</code></pre>
+        </li>
+        <li>Es va comprovar que els correus arribaven a l'adreça configurada (<code>exemple@correu.com</code>).</li>
+      </ul>
+    </li>
+    <li><strong>Configuració de l'execució automàtica</strong>
+      <ul>
+        <li>Es va configurar un cron job per executar <code>warnquota</code> diàriament.</li>
+        <li>Contingut del cron job afegit:
+          <pre><code>
+0 0 * * * /usr/sbin/warnquota
+          </code></pre>
+        </li>
+        <li>Aquest cron job es va afegir utilitzant:
+          <pre><code>sudo crontab -e</code></pre>
+        </li>
+      </ul>
+    </li>
+  </ol>
+
+  <h4>Resultat final</h4>
+  <ul>
+    <li><code>warnquota</code> envia correus electrònics als usuaris que superen el límit.</li>
+    <li>Es verifica l'execució automàtica diària al log del sistema:
+      <pre><code>grep warnquota /var/log/syslog</code></pre>
+    </li>
+  </ul>
+  <p>Aquestes configuracions asseguren que les quotes estan monitoritzades i que els usuaris són avisats de manera eficient.</p>
+</div>
+
+<script>
+  function showPopup(popupId, overlayId) {
+    document.getElementById(popupId).style.display = 'block';
+    document.getElementById(overlayId).style.display = 'block';
+  }
+
+  function hidePopup(popupId, overlayId) {
+    document.getElementById(popupId).style.display = 'none';
+    document.getElementById(overlayId).style.display = 'none';
+  }
+</script>
+
+<style>
+  .popup-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .popup-button:hover {
+    background-color: #0056b3;
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2c2c2c;
+    border: 1px solid #444444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    z-index: 1000;
+    width: 80%;
+    max-width: 900px;
+    overflow-y: auto;
+    max-height: 80%;
+    color: #ffffff;
+  }
+
+  .popup .close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888888;
+  }
+
+  .popup .close-btn:hover {
+    color: #ffffff;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+</style>
+
+<p>Després de configurar-ho tot, comprovem si s'envia un correu electrònic forçant l'enviament manualment. Per fer-ho, executa la comanda <code>warnquota</code> i comprova si arriben els correus electrònics.</p>
+<p><img alt="alt text" src="../custom/emailq.png" /></p>
+<p>Si un usuari supera la quota, el sistema li enviarà automàticament un correu electrònic d'avís.</p>
+<p><img alt="alt text" src="../custom/automailuser.png" /></p>
+<h2 id="aplicar-quotes-a-grups"><strong>Aplicar Quotes a Grups</strong></h2>
+<p>Una altra manera molt utilitzada per aplicar quotes és fer-ho a nivell de grups. En aquest cas, podem assignar una quota a un grup i afegir-hi els usuaris. Així, els usuaris dins d'aquest grup heretaran la quota del grup.</p>
+<p><strong>Atenció!</strong> Aquesta configuració només funcionarà si els usuaris no tenen una quota assignada de manera individual. Si l'usuari té una quota pròpia, aquesta prevaldrà sobre la quota del grup, com podem observar a la següent captura.</p>
+<p><img alt="alt text" src="../custom/Comprovaciogrup.png" /></p>
+<p>En aquesta captura, podem veure que l'usuari <strong>vitaliy</strong> està dins del grup <strong>classe</strong>, però quan utilitzem la comanda <code>repquota -g /mnt/dades</code> per verificar les quotes del grup, la quota aplicada a l'usuari <strong>vitaliy</strong> continua sent la seva quota individual, no la del grup.</p>
+<p>Quan verifiquem la quota de l'usuari amb la comanda <code>repquota -u /mnt/dades</code>, veiem que la quota de <strong>vitaliy</strong> preval sobre la quota del grup, ja que la quota personal de l'usuari és visible en lloc de la quota del grup. Això confirma que, quan un usuari té una quota assignada directament, aquesta preval sobre les quotes assignades al grup.</p>
+<hr />
+<p><strong>Creació de l'usuari "Mireia" i el grup "Classe"</strong></p>
+<p>En aquest apartat, crearem un nou usuari anomenat <strong>Mireia</strong> i un grup anomenat <strong>Classe</strong>. Posteriorment, afegirem <strong>Mireia</strong> al grup <strong>Classe</strong> i assignarem la carpeta a aquest grup.</p>
+<p><img alt="alt text" src="../custom/gquota.png" /></p>
+<h3 id="creacio-de-fitxers-i-intent-de-sobrepassar-el-limit-de-quota"><strong>Creació de fitxers i intent de sobrepassar el límit de quota</strong></h3>
+<p>Després de crear l'usuari i assignar-li el grup, crearem alguns fitxers per intentar sobrepassar el límit de quota del grup <strong>Classe</strong>.</p>
+<p><img alt="alt text" src="../custom/excedirq.png" /></p>
+<h3 id="comprovacio-de-lestat-de-la-quota-de-grup"><strong>Comprovació de l'estat de la quota de grup</strong></h3>
+<p>Finalment, comprovem l'estat de les quotes del grup <strong>Classe</strong> utilitzant la comanda:</p>
+<p><code>repquota -g /mnt/dades</code></p>
+<p><img alt="alt text" src="../custom/gclassecap.png" /></p>
+<p><strong>Explicació de la Captura</strong></p>
+<p>Aquesta captura mostra la sortida de la comanda <code>repquota -g /mnt/dades</code> per al grup <strong>classe</strong> en un sistema de fitxers montat a <code>/mnt/dades</code>.</p>
+<ul>
+<li><strong>Grup</strong>: <code>classe</code></li>
+<li><strong>Usat</strong>: El grup ha utilitzat <strong>20480</strong> blocs. Això significa que el grup <strong>classe</strong> ha utilitzat 20MB d'espai a la partició.</li>
+<li><strong>Blando (límit tou)</strong>: El límit tou (soft limit) per al grup és de <strong>10240</strong> blocs (10MB). El grup ha superat aquest límit, però encara està dins del límit dur.</li>
+<li><strong>Duro (límit dur)</strong>: El límit dur (hard limit) per al grup és de <strong>20480</strong> blocs (20MB). El grup està exactament al límit dur, el que significa que ja ha arribat al límit màxim d'espai permès.</li>
+<li><strong>Gracia</strong>: El període de gràcia és de <strong>6 dies</strong>. Això vol dir que el grup té 6 dies per reduir el seu ús d'espai per sota del límit dur abans que es prenguin mesures.</li>
+</ul>
+<p><strong>Notes addicionals:</strong></p>
+<ul>
+<li>El símbol <strong><code>+</code></strong> a la columna <strong>Usat</strong> indica que el grup ha superat el límit tou però no ha arribat al límit dur. </li>
+<li>Els altres usuaris (com <code>root</code> i <code>vitaliy</code>) no tenen cap quota assignada o només s'han mostrant les dades generals sense que s'excedeixin els límits.</li>
+</ul>
+<hr />
+<h4 id="email-automatic-de-superar-quota-de-grup"><strong>Email Automàtic de Superar Quota de Grup</strong></h4>
+<p>Quan un grup o usuari supera el límit de quota, es pot configurar un sistema per enviar un correu electrònic automàticament. Aquest correu s'envia mitjançant un script personalitzat, ja que la funcionalitat de <code>warnquota</code> només funciona amb usuaris i no amb grups.</p>
+<p><img alt="alt text" src="../custom/emailg.png" /></p>
+<!-- Botó per mostrar la configuració del script de quota -->
+<p><button class="popup-button" onclick="showPopup('popupGroupQuota', 'overlayGroupQuota')">Configuració del Script per Alertes de Quota (Fes clic per veure més)</button></p>
+<!-- Overlay i Popup per mostrar la configuració del script -->
+<div class="overlay" id="overlayGroupQuota" onclick="hidePopup('popupGroupQuota', 'overlayGroupQuota')"></div>
+<div class="popup" id="popupGroupQuota">
+  <span class="close-btn" onclick="hidePopup('popupGroupQuota', 'overlayGroupQuota')">×</span>
+  <h3>Script per Enviar Alerta per Correu quan un Grup Supera la Quota</h3>
+  <p>Aquest script està dissenyat per verificar si un grup ha superat el límit de quota assignat i enviar un correu electrònic d'alerta automàticament.</p>
+
+  <h4>Funcionament del Script</h4>
+  <p>Aquest script realitza les següents accions:</p>
+  <ol>
+    <li><strong>Obtenir l'informe de quotes</strong>: Utilitza la comanda <code>repquota -g /mnt/dades</code> per obtenir les quotes del grup.</li>
+    <li><strong>Filtrar el grup específic</strong>: El resultat es filtra per buscar la línia relacionada amb el grup "classe".</li>
+    <li><strong>Comprovar si s'ha superat el límit</strong>: Si el límit de quota s'ha superat (indicat pel símbol <code>+</code>), es genera un correu electrònic d'alerta.</li>
+    <li><strong>Enviar l'alerta per correu</strong>: Si el grup ha superat el límit de quota, es crea i envia un correu electrònic amb l'alerta.</li>
+  </ol>
+
+  <h4>Contingut del script</h4>
+  <pre><code>
+#!/bin/bash
+
+# Obtenim l'informe de quotes del grup
+repquota -g /mnt/dades | grep "classe" > /tmp/group_quota_report.txt
+
+# Verifiquem si s'ha superat el límit tou o dur
+if grep -q "+" /tmp/group_quota_report.txt; then
+    echo "El grup classe ha superat el límit tou o dur de la quota." | mail -s "Alerta: Quota del grup classe superada" exemple@correu.com
+fi
+  </code></pre>
+
+  <h4>Aplicació del Script</h4>
+  <p>Per aplicar aquest script, segueix aquests passos:</p>
+  <ol>
+    <li><strong>Guardar el script:</strong> Guarda aquest script en un fitxer, per exemple <code>group_quota_check.sh</code>.</li>
+    <li><strong>Donar permisos d'execució:</strong> Utilitza la comanda següent per donar permisos d'execució al script:
+      <pre><code>chmod +x group_quota_check.sh</code></pre>
+    </li>
+    <li><strong>Afegir al Cron:</strong> Per executar aquest script automàticament cada dia, afegeix-lo a les tasques programades (cron jobs). Utilitza la comanda:
+      <pre><code>sudo crontab -e</code></pre>
+      I afegeix la línia següent per executar el script cada dia a mitjanit:
+      <pre><code>0 0 * * * /path/to/group_quota_check.sh</code></pre>
+    </li>
+  </ol>
+
+  <h4>Resultat Esperat</h4>
+  <p>Quan el grup "classe" superi el límit de quota, el sistema enviarà automàticament un correu electrònic amb el missatge:</p>
+  <pre><code>El grup classe ha superat el límit tou o dur de la quota.</code></pre>
+  <p>Aquest sistema permet als administradors monitoritzar les quotes dels grups de manera eficient i notificar-los ràpidament en cas d'excedir els límits establerts.</p>
+</div>
+
+<script>
+  function showPopup(popupId, overlayId) {
+    document.getElementById(popupId).style.display = 'block';
+    document.getElementById(overlayId).style.display = 'block';
+  }
+
+  function hidePopup(popupId, overlayId) {
+    document.getElementById(popupId).style.display = 'none';
+    document.getElementById(overlayId).style.display = 'none';
+  }
+</script>
+
+<style>
+  .popup-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .popup-button:hover {
+    background-color: #0056b3;
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2c2c2c;
+    border: 1px solid #444444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    z-index: 1000;
+    width: 80%;
+    max-width: 900px;
+    overflow-y: auto;
+    max-height: 80%;
+    color: #ffffff;
+  }
+
+  .popup .close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888888;
+  }
+
+  .popup .close-btn:hover {
+    color: #ffffff;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+</style>
 
 
 
