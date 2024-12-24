@@ -952,6 +952,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#superar-el-limit-de-quota" class="md-nav__link">
+    <span class="md-ellipsis">
+      Superar el Límit de Quota
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#configuracio-de-warnquota-amb-notificacions-per-correu" class="md-nav__link">
     <span class="md-ellipsis">
       Configuració de warnquota amb notificacions per correu
@@ -1366,7 +1375,7 @@ i posteriorment activar-los amb <code>quotaon /mnt/dades</code>.</p>
 <li><strong><code>3</code></strong>: El nombre de fitxers utilitzats.</li>
 </ul>
 <hr />
-<p><strong>Superar el Límit de Quota</strong></p>
+<h3 id="superar-el-limit-de-quota"><strong>Superar el Límit de Quota</strong></h3>
 <p><img alt="alt text" src="../custom/limitsuperat.png" /></p>
 <p>A la captura es mostra el que passa quan l'usuari <strong>vitaliy</strong> supera el límit de quota assignat:</p>
 <ol>
@@ -1399,6 +1408,10 @@ i posteriorment activar-los amb <code>quotaon /mnt/dades</code>.</p>
    Quan un usuari supera el límit dur (hard limit), el sistema impedeix que pugui escriure més dades al disc fins que redueixi l'ús d'espai per sota del límit dur. Això és el que es veu en la captura: el sistema bloqueja l'escriptura després d'excedir la quota.</p>
 </li>
 </ol>
+<p>Quan descarreguem una foto i intentem guardar-la a <code>/mnt/dades</code>, obtenim el següent resultat:</p>
+<p><img alt="Error al guardar la foto" src="../custom/fallo-foto.png" /></p>
+<p>Aquest procés falla. A més, si intentem moure alguna foto o arxiu dins del directori <code>/mnt/dades/</code>, apareix aquest altre error indicant que hem superat la quota.</p>
+<p><img alt="Error al moure arxiu" src="../custom/fotoerr.png" /></p>
 <h3 id="configuracio-de-warnquota-amb-notificacions-per-correu">Configuració de <code>warnquota</code> amb notificacions per correu</h3>
 <p>Com a administradors, és important saber quan un usuari supera el límit de quota, ja que sovint els usuaris no són conscients d'aquests límits. Una manera senzilla de gestionar-ho és configurar l'enviament de correus electrònics per avisar els usuaris quan hagin superat la seva quota.</p>
 <p>No entrarem en detall, però si estàs interessat en fer-ho, fes clic al botó de baix.</p>
