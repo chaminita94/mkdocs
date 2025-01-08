@@ -1146,51 +1146,6 @@
   });
 </script>
 
-<script>
-  // Ensure the script only runs on the index page
-  if (!sessionStorage.getItem("fireworksShown")) {
-    sessionStorage.setItem("fireworksShown", "true");
-
-    // Add fireworks container
-    const fireworksContainer = document.createElement("div");
-    fireworksContainer.id = "fireworks-container";
-    fireworksContainer.innerHTML = `
-    <div id="fireworks"></div>
-    <div id="message">
-        <img src="https://i.ibb.co/V9sc90b/908656f5-b7a5-4023-a85e-8535dacce74c.webp" alt="Happy New Year" style="width: 100%; max-width: 600px; height: auto; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);">
-    </div>
-
-    `;
-    document.body.appendChild(fireworksContainer);
-
-    // Remove the fireworks after 5 seconds
-    setTimeout(() => {
-      fireworksContainer.remove();
-    }, 5000);
-
-    // Start fireworks animation
-    startFireworks();
-  }
-  function startFireworks() {
-    const colors = ["#FF5733", "#33FF57", "#3357FF", "#FFF033", "#FF33A1"];
-    const container = document.getElementById("fireworks");
-
-    for (let i = 0; i < 40; i++) {
-      const firework = document.createElement("div");
-      firework.className = "firework";
-      firework.style.backgroundColor =
-        colors[Math.floor(Math.random() * colors.length)];
-      firework.style.left = Math.random() * 100 + "%";
-      firework.style.animationDelay = Math.random() * 3 + "s"; // Increased delay for slower starts
-      container.appendChild(firework);
-    }
-
-    setTimeout(() => {
-      container.innerHTML = ""; // Clear the fireworks
-    }, 7000); // Increased timeout to match slower animations
-  }
-</script>
-
 
 
 
@@ -1236,8 +1191,6 @@
         <script src="consent.js"></script>
       
         <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.0.0/dist/index.umd.js"></script>
       
     
   </body>
