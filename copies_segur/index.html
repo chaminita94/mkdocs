@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#tipus-de-copies-de-seguretat" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -833,6 +838,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Còpies de Seguretat i Automatitzacions de Tasques
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -842,6 +858,131 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tipus-de-copies-de-seguretat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipus de Còpies de Seguretat
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipus de Còpies de Seguretat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#completes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Completes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diferencials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incrementals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incrementals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Incrementals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomanacions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recomanacions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copies-de-seguretat-cp-rsync-i-dd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Còpies de Seguretat: CP, rsync i DD
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Còpies de Seguretat: CP, rsync i DD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explicacio-i-taula-comparativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicació i Taula Comparativa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      cp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rsync" class="md-nav__link">
+    <span class="md-ellipsis">
+      rsync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dd" class="md-nav__link">
+    <span class="md-ellipsis">
+      dd
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1002,7 +1143,180 @@
 
   <h1>Còpies de Seguretat i Automatitzacions de Tasques</h1>
 
-<p>lalala</p>
+<h2 id="tipus-de-copies-de-seguretat">Tipus de Còpies de Seguretat</h2>
+<h3 id="completes">Completes</h3>
+<ul>
+<li><strong>Descripció</strong>: </li>
+<li>Una còpia completa conté una còpia de totes les dades seleccionades.</li>
+<li><strong>Avantatges</strong>:</li>
+<li>Es copia i guarda tot.</li>
+<li>És independent d'altres còpies per a la seva restauració.</li>
+<li><strong>Desavantatges</strong>:</li>
+<li>Ocupa molt espai d'emmagatzematge.</li>
+<li>Tarda molt en realitzar-se.</li>
+<li><strong>Nota</strong>: Per recuperar una còpia completa, només es necessita l'última còpia completa.</li>
+</ul>
+<hr />
+<h3 id="diferencials">Diferencials</h3>
+<ul>
+<li><strong>Descripció</strong>:</li>
+<li>Una còpia diferencial només inclou els canvis realitzats des de l'última còpia completa.</li>
+<li><strong>Avantatges</strong>:</li>
+<li>Ocupa menys espai que una còpia completa.</li>
+<li>És més ràpida de crear que una còpia completa.</li>
+<li><strong>Desavantatges</strong>:</li>
+<li>Per recuperar una còpia diferencial, necessites:<ol>
+<li>L'última còpia completa.</li>
+<li>L'última còpia diferencial.</li>
+</ol>
+</li>
+<li><strong>Nota</strong>: Les còpies diferencials acumulen canvis fins que es realitza una nova còpia completa.</li>
+</ul>
+<hr />
+<h3 id="incrementals">Incrementals</h3>
+<ul>
+<li><strong>Descripció</strong>:</li>
+<li>Una còpia incremental només inclou els canvis realitzats des de l'última còpia, ja sigui completa o incremental.</li>
+<li><strong>Avantatges</strong>:</li>
+<li>Ocupa encara menys espai que una còpia diferencial.</li>
+<li>És la més ràpida de crear.</li>
+<li><strong>Desavantatges</strong>:</li>
+<li>Per recuperar dades, necessites:<ol>
+<li>L'última còpia completa.</li>
+<li>Totes les còpies incrementals fins al punt de restauració.</li>
+</ol>
+</li>
+<li><strong>Nota</strong>: Les còpies incrementals són útils per reduir espai i temps, però requereixen més passos per a la recuperació.</li>
+</ul>
+<hr />
+<h4 id="recomanacions">Recomanacions</h4>
+<ul>
+<li>Realitza còpies completes periòdicament (per exemple, setmanalment).</li>
+<li>Completa-les amb còpies diferencials o incrementals diàries per optimitzar l'espai i el temps.</li>
+<li>Assegura't de provar les còpies de seguretat periòdicament per garantir la seva integritat.</li>
+<li>Emmagatzema còpies fora del lloc (off-site) per protegir-les contra desastres locals.</li>
+</ul>
+<hr />
+<h2 id="copies-de-seguretat-cp-rsync-i-dd">Còpies de Seguretat: CP, rsync i DD</h2>
+<h3 id="explicacio-i-taula-comparativa">Explicació i Taula Comparativa</h3>
+<p>Les comandes per a la gestió de còpies de seguretat tenen usos específics segons les necessitats. A continuació, es presenta una explicació i una taula comparativa dels principals comandaments:</p>
+<table>
+<thead>
+<tr>
+<th>Comanda</th>
+<th>Descripció</th>
+<th>Treball Local</th>
+<th>Treball Remot</th>
+<th>Intel·ligència (només modifica canvis)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cp</td>
+<td>Còpia simple, no intel·ligent. Es limita a copiar fitxers o directoris sense optimització.</td>
+<td>Sí</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>rsync</td>
+<td>Permet copiar només les modificacions de fitxers, optimitzant espai i temps. Suporta SSH per a còpies remotes.</td>
+<td>Sí</td>
+<td>Sí</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>Clonació de discos o particions a nivell de blocs. No és específic per a còpies de seguretat de fitxers.</td>
+<td>Sí</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="cp">cp</h3>
+<p>Descripció: La comanda cp és una eina simple per copiar fitxers i directoris.<br />
+Limitació: No és capaç de reconèixer canvis en els fitxers, per tant, sempre copia tot de nou.</p>
+<p>Exemple d'ús:<br />
+cp -r /origen /destinació  </p>
+<p>Paràmetres comuns:<br />
+- -r: Copia recursivament un directori i els seus continguts.<br />
+- -u: Només copia fitxers més nous o que no existeixen al destí.  </p>
+<p>Crearem un directori i un fitxer per a fer aquesta prova.</p>
+<pre><code>touch /home/alumne/Documentos/hola
+</code></pre>
+<pre><code>mkdir /home/alumne/Documentos/adeu
+</code></pre>
+<p><img alt="alt text" src="../custom/cpcopy.png" /></p>
+<p>Posteriorment, utilitzarem la comanda cp per copiar els fitxers i directoris de /Documentos/ al nou directori.</p>
+<pre><code>cp -R /home/alumne/Documentos/* /var/copies/
+</code></pre>
+<blockquote>
+<p>Nota: El símbol asterisc (*) després de /Documentos/ indica que es copiarà tot el que es trobi dins d'aquest directori.</p>
+</blockquote>
+<p><img alt="alt text" src="../custom/cpdos.png" /></p>
+<p>Un punt important és que hem copiat únicament els fitxers i subdirectoris que es trobaven al directori <code>/home/alumne/Documentos</code> en el moment de la còpia:</p>
+<p><img alt="alt text" src="../custom/Esborrarcp.png" /></p>
+<pre><code>cp -R /home/alumne/Documentos/* /var/copies/
+</code></pre>
+<p>Aquesta comanda copia tot el que hi ha al directori <code>/home/alumne/Documentos</code> (fitxers i subdirectoris) al directori <code>/var/copies</code>. </p>
+<p>Un cop feta la còpia, els fitxers copiat a <code>/var/copies</code> són independents. Això significa que si posteriorment esborrem els fitxers o directoris de <code>/home/alumne/Documentos</code>, no afectaran la còpia que hem fet a <code>/var/copies</code>.</p>
+<p>Aquesta operació crea una còpia segura dels fitxers en un altre directori i no es veu afectada pels canvis posteriors al directori original.</p>
+<hr />
+<h3 id="rsync">rsync</h3>
+<p>Descripció: rsync és una eina avançada per a còpies de seguretat que només copia els canvis en els fitxers, reduint l'ús de recursos.<br />
+Avantatges: Permet còpies locals i remotes via SSH. Pot mantenir sincronitzades dues ubicacions.</p>
+<p>Paràmetres comuns:<br />
+- -a: Mode arxiu (conserva permisos, propietaris, etc.).<br />
+- -v: Mostra informació detallada del procés.<br />
+- -z: Comprimeix les dades durant la transferència per optimitzar la velocitat.  </p>
+<hr />
+<p>Exemple d'ús:<br />
+rsync -avz /origen user@host:/destinació  </p>
+<p><img alt="alt text" src="../custom/rsync.png" /></p>
+<pre><code>rsync -av --delete /home/alumne/Documentos/ /var/copies/
+</code></pre>
+<p>Aquesta comanda sincronitza el contingut del directori <code>/home/alumne/Documentos</code> amb <code>/var/copies</code>. L'opció <code>--delete</code> elimina qualsevol fitxer o directori a <code>/var/copies</code> que no estigui present a <code>/home/alumne/Documentos</code>. Això significa que:</p>
+<ul>
+<li>Es copien els nous fitxers (<code>www</code> i <code>uwuw</code>).</li>
+<li>Esborra fitxers o directoris a <code>/var/copies</code> que ja no existeixen a <code>/home/alumne/Documentos</code> (com <code>hola</code> i <code>lost+found</code>).</li>
+</ul>
+<p>Llistem els continguts actuals del directori <code>/var/copies</code>, que ara conté:</p>
+<ul>
+<li><code>tttt</code>: Fitxer prèviament copiat.</li>
+<li><code>www</code>: Nou fitxer copiat.</li>
+<li><code>uwuw</code>: Nou directori copiat.</li>
+</ul>
+<p><strong>Resum</strong></p>
+<p>L'ús de <code>rsync --delete</code> assegura que <code>/var/copies</code> sigui una còpia exacta de <code>/home/alumne/Documentos</code>, eliminant qualsevol fitxer que no existeixi al directori original.</p>
+<hr />
+<h3 id="dd">dd</h3>
+<p>Descripció: dd no és específicament per a còpies de seguretat, sinó per a clonació de discos i particions a nivell de blocs. També es pot utilitzar per sobreescriure blocs o particions abans de formatar.</p>
+<p>Precaucions:<br />
+- dd és una eina potent però perillosa; un mal ús pot provocar la pèrdua de dades.<br />
+- Sempre assegura't d'especificar correctament els dispositius d'origen (if) i destí (of).  </p>
+<p>Exemple d'ús:<br />
+Clonar un disc: dd if=/dev/sdX of=/dev/sdY bs=4M status=progress<br />
+Sobreescriure una partició amb zeros: dd if=/dev/zero of=/dev/sdX bs=1M  </p>
+<p>En aquesta imatge es mostren dues operacions utilitzant les comandes <code>dd</code> i <code>md5sum</code> per copiar i verificar la integritat de les dades entre dues particions:</p>
+<p><img alt="alt text" src="../custom/ddcopy.png" /></p>
+<pre><code>dd if=/dev/sdb1 of=/dev/sdc1 bs=4M status=progress
+</code></pre>
+<p>Aquesta comanda copia el contingut de la partició <code>/dev/sdb1</code> a la partició <code>/dev/sdc1</code>. Els paràmetres utilitzats són:</p>
+<ul>
+<li><code>if=/dev/sdb1</code>: Especifica la partició d'entrada (origen).</li>
+<li><code>of=/dev/sdc1</code>: Especifica la partició de sortida (destí).</li>
+<li><code>bs=4M</code>: Defineix una mida de bloc de 4 MB per a una transferència més eficient.</li>
+<li><code>status=progress</code>: Mostra el progrés de la còpia en temps real.</li>
+</ul>
+<hr />
+<pre><code>md5sum /dev/sdb1 /dev/sdc1
+</code></pre>
+<p>Aquesta comanda calcula el hash MD5 de les particions <code>/dev/sdb1</code> i <code>/dev/sdc1</code> per verificar que les dades copiades són idèntiques.</p>
+<p>Resultat:
+s
+- Els hash generats per totes dues particions són iguals (<code>1290d56dac7b80ca2eccc83bbf1ed605</code>), la qual cosa confirma que la còpia s'ha realitzat correctament i sense errors.</p>
 
 
 
