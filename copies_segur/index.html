@@ -901,44 +901,11 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#completes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Completes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#diferencials" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diferencials
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#incrementals" class="md-nav__link">
-    <span class="md-ellipsis">
-      Incrementals
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Incrementals">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#recomanacions" class="md-nav__link">
     <span class="md-ellipsis">
       Recomanacions
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1274,50 +1241,62 @@
 <p><strong>Què és una còpia de seguretat?</strong></p>
 <p>Una còpia de seguretat és una rèplica dels fitxers i dades importants emmagatzemades en un dispositiu o sistema. S'utilitza per prevenir la pèrdua d'informació en cas d'errors, atacs, o danys en el sistema original. Normalment, es guarda en un lloc separat, com un disc extern, un servidor, o el núvol, per garantir la seva seguretat.</p>
 <h2 id="tipus-de-copies-de-seguretat">Tipus de Còpies de Seguretat</h2>
-<h3 id="completes">Completes</h3>
-<ul>
-<li><strong>Descripció</strong>: </li>
-<li>Una còpia completa conté una còpia de totes les dades seleccionades.</li>
-<li><strong>Avantatges</strong>:</li>
-<li>Es copia i guarda tot.</li>
-<li>És independent d'altres còpies per a la seva restauració.</li>
-<li><strong>Desavantatges</strong>:</li>
-<li>Ocupa molt espai d'emmagatzematge.</li>
-<li>Tarda molt en realitzar-se.</li>
-<li><strong>Nota</strong>: Per recuperar una còpia completa, només es necessita l'última còpia completa.</li>
-</ul>
+<p><strong>Còpies completes</strong></p>
+<table>
+<thead>
+<tr>
+<th>Descripció</th>
+<th>Avantatges</th>
+<th>Desavantatges</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Una còpia de totes les dades seleccionades.</td>
+<td>- Es copia i guarda tot. <br> - Independent d'altres còpies per a la restauració.</td>
+<td>- Ocupa molt espai d'emmagatzematge. <br> - Tarda molt a realitzar-se.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota</strong>: Només es necessita l'última còpia completa per recuperar les dades.</p>
 <hr />
-<h3 id="diferencials">Diferencials</h3>
-<ul>
-<li><strong>Descripció</strong>:</li>
-<li>Una còpia diferencial només inclou els canvis realitzats des de l'última còpia completa.</li>
-<li><strong>Avantatges</strong>:</li>
-<li>Ocupa menys espai que una còpia completa.</li>
-<li>És més ràpida de crear que una còpia completa.</li>
-<li><strong>Desavantatges</strong>:</li>
-<li>Per recuperar una còpia diferencial, necessites:<ol>
-<li>L'última còpia completa.</li>
-<li>L'última còpia diferencial.</li>
-</ol>
-</li>
-<li><strong>Nota</strong>: Les còpies diferencials acumulen canvis fins que es realitza una nova còpia completa.</li>
-</ul>
+<p><strong>Còpies diferencials</strong></p>
+<table>
+<thead>
+<tr>
+<th>Descripció</th>
+<th>Avantatges</th>
+<th>Desavantatges</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inclou els canvis des de l'última còpia completa.</td>
+<td>- Ocupa menys espai que una còpia completa. <br> - Més ràpida de crear que una còpia completa.</td>
+<td>- Necessites l'última còpia completa i l'última còpia diferencial per restaurar les dades.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota</strong>: Acumula canvis fins que es realitza una nova còpia completa.</p>
 <hr />
-<h3 id="incrementals">Incrementals</h3>
-<ul>
-<li><strong>Descripció</strong>:</li>
-<li>Una còpia incremental només inclou els canvis realitzats des de l'última còpia, ja sigui completa o incremental.</li>
-<li><strong>Avantatges</strong>:</li>
-<li>Ocupa encara menys espai que una còpia diferencial.</li>
-<li>És la més ràpida de crear.</li>
-<li><strong>Desavantatges</strong>:</li>
-<li>Per recuperar dades, necessites:<ol>
-<li>L'última còpia completa.</li>
-<li>Totes les còpies incrementals fins al punt de restauració.</li>
-</ol>
-</li>
-<li><strong>Nota</strong>: Les còpies incrementals són útils per reduir espai i temps, però requereixen més passos per a la recuperació.</li>
-</ul>
+<p><strong>Còpies incrementals</strong></p>
+<table>
+<thead>
+<tr>
+<th>Descripció</th>
+<th>Avantatges</th>
+<th>Desavantatges</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inclou els canvis des de l'última còpia (completa o incremental).</td>
+<td>- Ocupa menys espai que una còpia diferencial. <br> - La més ràpida de crear.</td>
+<td>- Necessites l'última còpia completa i totes les còpies incrementals fins al punt de restauració.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota</strong>: Redueix espai i temps, però requereix més passos per a la recuperació.</p>
 <hr />
 <h4 id="recomanacions">Recomanacions</h4>
 <ul>

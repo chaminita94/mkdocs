@@ -943,17 +943,50 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#arxius-dinteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arxius d'interès
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#arxius-dinteres" class="md-nav__link">
+  <a href="#exemple-practic" class="md-nav__link">
     <span class="md-ellipsis">
-      Arxius d'interès
+      Exemple pràctic
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Exemple pràctic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatitzacio-del-proces-amb-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatització del procés amb crontab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-amb-anacron" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració amb Anacron
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1308,7 +1341,7 @@ Aquests sistemes permeten programar l'execució d'scripts i tasques de manera re
 </tbody>
 </table>
 <hr />
-<h2 id="arxius-dinteres">Arxius d'interès</h2>
+<h3 id="arxius-dinteres">Arxius d'interès</h3>
 <p><strong>Cron</strong>:</p>
 <ul>
 <li><code>/etc/crontab</code>: Fitxer principal per a configurar tasques globals.</li>
@@ -1326,6 +1359,89 @@ Aquests sistemes permeten programar l'execució d'scripts i tasques de manera re
 <li><code>/etc/cron.weekly/</code>: Tasques setmanals.</li>
 <li><code>/etc/cron.monthly/</code>: Tasques mensuals.</li>
 </ul>
+<h2 id="exemple-practic">Exemple pràctic</h2>
+<p>Per aquest exemple, crearem dos fitxers dins del directori <code>/home/Imágenes</code> per verificar que l'script funciona correctament.</p>
+<p><img alt="alt text" src="../custom/imagenes.png" /></p>
+<p>Aquest script s'utilitza per crear una còpia de seguretat comprimida del directori d'imatges ubicat a <code>/home/alumne/Imágenes</code>. La còpia es guarda al directori <code>Escritorio</code> amb un nom que inclou una marca de temps per identificar-la.</p>
+<p><img alt="alt text" src="../custom/scriptcopia.png" /></p>
+<p><strong>Explicació de la captura</strong></p>
+<ol>
+<li>
+<p><strong>Inicialització del script</strong><br />
+   L'script està preparat per executar-se amb el shell <code>bash</code>, tal com indica la primera línia (<code>#!/bin/bash</code>).</p>
+</li>
+<li>
+<p><strong>Generació de la marca de temps (<code>TIMESTAMP</code>)</strong><br />
+   Es genera una cadena amb la data i hora actuals en el format <code>YYYYMMDD_HHMMSS</code>. Aquesta marca de temps permet crear noms únics per a cada còpia de seguretat.</p>
+</li>
+<li>
+<p><strong>Creació de la còpia de seguretat</strong><br />
+   S'utilitza una eina per empaquetar i comprimir el directori <code>/home/alumne/Imágenes</code>. 
+   El resultat és un fitxer comprimit (<code>.tar.gz</code>) que es guarda al directori <code>/home/alumne/Escritorio</code> amb un nom que inclou la marca de temps (<code>copia_YYYYMMDD_HHMMSS.tar.gz</code>).</p>
+</li>
+</ol>
+<p><strong>Exemple de resultat</strong></p>
+<p>Si l'script s'executa el <strong>16 de gener de 2025 a les 13:30:45</strong>, el fitxer resultant tindria el següent nom:<br />
+<code>/home/alumne/Escritorio/copia_20250116_133045.tar.gz</code>.</p>
+<p>Assignem permisos d'execució al fitxer <code>copia.sh</code> amb la comanda <code>chmod +x copia.sh</code> i l'executem manualment per verificar el seu funcionament.</p>
+<p><img alt="alt text" src="../custom/chmod%2Bx.png" /></p>
+<h3 id="automatitzacio-del-proces-amb-crontab">Automatització del procés amb <code>crontab</code></h3>
+<p>Per automatitzar l'execució del nostre script <code>copia.sh</code>, utilitzarem el programador de tasques <code>crontab</code>. A continuació, es detallen els passos per configurar-ho:</p>
+<p><strong>Editar el fitxer <code>crontab</code> del sistema</strong></p>
+<p>Obrim el fitxer de configuració del <code>crontab</code> amb permisos d'administrador per afegir la tasca programada:</p>
+<pre><code>sudo nano /etc/crontab
+</code></pre>
+<p><strong>Afegir la línia de programació</strong></p>
+<p>Afegim la següent línia al final del fitxer:<br />
+<strong>05 13 16 1 * /home/alumne/copia.sh</strong>  </p>
+<p><img alt="alt text" src="../custom/cron.png" /></p>
+<p>Aquesta línia indica que l'script <code>copia.sh</code> s'executarà automàticament segons la programació especificada.</p>
+<p><strong>Explicació de la sintaxi</strong></p>
+<p>Els camps de la línia afegida al <code>crontab</code> tenen el següent significat:</p>
+<ul>
+<li><strong>05</strong>: Minut en què s'executarà la tasca (05 minuts).</li>
+<li><strong>13</strong>: Hora del dia (13:00 h).</li>
+<li><strong>16</strong>: Dia del mes (16 de gener en aquest cas).</li>
+<li><strong>1</strong>: Mes de l'any (gener).</li>
+<li><strong>*</strong>: Qualsevol dia de la setmana (de dilluns a diumenge).  </li>
+</ul>
+<p>En el nostre cas, això significa que l'script s'executarà el <strong>16 de gener</strong> de cada any a les <strong>13:05</strong>, independentment del dia de la setmana.</p>
+<p><strong>Guardar i sortir</strong> </p>
+<p>Després d'afegir la línia, guardem els canvis i sortim de l'editor.</p>
+<p>Esperem uns minuts i podem observar que s'ha realitzat la copia dels arxius.</p>
+<p><img alt="alt text" src="../custom/copiaar.png" /></p>
+<h3 id="configuracio-amb-anacron">Configuració amb Anacron</h3>
+<p>A continuació, configurarem el nostre script perquè s'executi automàticament amb <strong>Anacron</strong>. Aquesta eina és ideal per a tasques periòdiques en sistemes que no estan en funcionament constant.</p>
+<p><strong>Moure el script a <code>/etc/cron.daily</code></strong></p>
+<p>Per començar, copiem el nostre script a la carpeta designada per a tasques diàries:</p>
+<ul>
+<li>Accedim al directori <code>/etc/cron.daily/</code>.</li>
+<li>Copiem el fitxer <code>copia.sh</code> des de la seva ubicació original.</li>
+</ul>
+<p><strong>Nota</strong>: El fitxer no pot tenir extensions, així que canviem el nom per eliminar-la.<br />
+Exemple:</p>
+<ul>
+<li>Original: <code>copia.sh</code></li>
+<li>Renombrat: <code>copia</code></li>
+</ul>
+<p><img alt="alt text" src="../custom/mvcopia.png" /></p>
+<p><strong>Assegurar que s'executa avui mateix</strong></p>
+<p>Per comprovar que l'script s'executa correctament, editem el fitxer de registre d'Anacron per a tasques diàries:</p>
+<ul>
+<li>Obrim el fitxer <strong>/var/spool/anacron/cron.daily</strong> i eliminem les dades que hi trobem.</li>
+</ul>
+<p><img alt="alt text" src="../custom/deletean.png" /></p>
+<p><strong>Configuració del temps d'execució</strong></p>
+<p>Per ajustar el temps d'execució de la tasca diària, editem el fitxer de configuració d'Anacron:</p>
+<ul>
+<li>Obrim <strong>/etc/anacrontab</strong> i localitzem la línia corresponent a les tasques diàries.</li>
+<li>Modifiquem el segon valor (temps en minuts) a <strong>1</strong> si volem que la tasca s'executi només un minut després d'iniciar el sistema.  </li>
+</ul>
+<p><img alt="alt text" src="../custom/anacront.png" /></p>
+<p>Per defecte, Anacron espera 5 minuts, però es pot ajustar segons les preferències. Jo he triat 1 minut, perquè "Ain't Nobody Got Time For That!"</p>
+<p>Amb això, Anacron s'encarregarà d'executar l'script diàriament quan l'ordinador estigui en funcionament.</p>
+<p>Reiniciem l'ordinador, esperem un minut i verifiquem que el procés s'ha executat correctament.</p>
+<p><img alt="alt text" src="../custom/auto.png" /></p>
 
 
 
