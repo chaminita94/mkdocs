@@ -12,7 +12,7 @@
         <link rel="prev" href="../particions/">
       
       
-        <link rel="next" href="../quotes_disc/">
+        <link rel="next" href="../anacron/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Còpies de Seguretat i Automatitzacions de Tasques - Virtualització</title>
+        <title>Còpies de Seguretat - Virtualització</title>
       
     
     
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Còpies de Seguretat i Automatitzacions de Tasques
+              Còpies de Seguretat
             
           </span>
         </div>
@@ -281,6 +281,24 @@
           
   
   Sprint 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../ldap/" class="md-tabs__link">
+          
+  
+  Sprint 3
 
         </a>
       </li>
@@ -842,7 +860,7 @@
           
   
   <span class="md-ellipsis">
-    Còpies de Seguretat i Automatitzacions de Tasques
+    Còpies de Seguretat
   </span>
   
 
@@ -853,7 +871,7 @@
         
   
   <span class="md-ellipsis">
-    Còpies de Seguretat i Automatitzacions de Tasques
+    Còpies de Seguretat
   </span>
   
 
@@ -996,6 +1014,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../anacron/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatitzacions de Tasques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../quotes_disc/" class="md-nav__link">
         
   
@@ -1043,7 +1082,7 @@
             
   
   <span class="md-ellipsis">
-    Licència
+    Sprint 3
   </span>
   
 
@@ -1052,6 +1091,95 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ldap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instal·lació DOMINI LDAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestio_domini.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestio del domini
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Licència
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Licència
           </label>
@@ -1141,7 +1269,7 @@
                   
 
 
-  <h1>Còpies de Seguretat i Automatitzacions de Tasques</h1>
+  <h1>Còpies de Seguretat</h1>
 
 <p><strong>Què és una còpia de seguretat?</strong></p>
 <p>Una còpia de seguretat és una rèplica dels fitxers i dades importants emmagatzemades en un dispositiu o sistema. S'utilitza per prevenir la pèrdua d'informació en cas d'errors, atacs, o danys en el sistema original. Normalment, es guarda en un lloc separat, com un disc extern, un servidor, o el núvol, per garantir la seva seguretat.</p>
@@ -1316,9 +1444,10 @@ Sobreescriure una partició amb zeros: dd if=/dev/zero of=/dev/sdX bs=1M  </p>
 <pre><code>md5sum /dev/sdb1 /dev/sdc1
 </code></pre>
 <p>Aquesta comanda calcula el hash MD5 de les particions <code>/dev/sdb1</code> i <code>/dev/sdc1</code> per verificar que les dades copiades són idèntiques.</p>
-<p>Resultat:
-s
-- Els hash generats per totes dues particions són iguals (<code>1290d56dac7b80ca2eccc83bbf1ed605</code>), la qual cosa confirma que la còpia s'ha realitzat correctament i sense errors.</p>
+<p>Resultat:</p>
+<ul>
+<li>Els hash generats per totes dues particions són iguals (<code>1290d56dac7b80ca2eccc83bbf1ed605</code>), la qual cosa confirma que la còpia s'ha realitzat correctament i sense errors.</li>
+</ul>
 
 
 
