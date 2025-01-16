@@ -12,7 +12,7 @@
         <link rel="prev" href="../quotes_disc/">
       
       
-        <link rel="next" href="../licencia/">
+        <link rel="next" href="../gestio_domini/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -72,6 +72,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#que-es-un-domini-ldap" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -961,6 +966,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Instal·lació DOMINI LDAP
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -970,6 +986,122 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-domini-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què és un domini LDAP?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Què és un domini LDAP?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avantatge-respecte-a-active-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avantatge respecte a Active Directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#per-a-que-serveix-un-domini" class="md-nav__link">
+    <span class="md-ellipsis">
+      Per a què serveix un domini?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandes-i-eines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandes i eines
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacio-dun-domini-amb-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació d'un Domini amb LDAP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creació d'un Domini amb LDAP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installacio-de-les-eines-necessaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació de les eines necessàries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-amb-dpkg-reconfigure-slapd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració amb dpkg-reconfigure slapd
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuració amb dpkg-reconfigure slapd">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacio-de-fitxers-ldif" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació de fitxers LDIF
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pujar-els-fitxers-al-servidor-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pujar els fitxers al servidor LDAP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -983,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gestio_domini.md" class="md-nav__link">
+      <a href="../gestio_domini/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1130,7 +1262,183 @@
 
   <h1>Instal·lació DOMINI LDAP</h1>
 
-
+<h2 id="que-es-un-domini-ldap">Què és un domini LDAP?</h2>
+<p>Un domini LDAP és una estructura jeràrquica utilitzada per emmagatzemar i organitzar informació d'usuaris, grups, dispositius i altres objectes dins d'una xarxa. LDAP (Lightweight Directory Access Protocol) permet accedir i gestionar aquesta informació de manera eficient.</p>
+<blockquote>
+<p>Un detall curiós: Active Directory es basa en LDAP. Així que podríem dir que LDAP és el "motor" que fa funcionar AD, mentre aquest s'encarrega de posar-hi la carrosseria pròpia de Windows. </p>
+</blockquote>
+<h3 id="avantatge-respecte-a-active-directory">Avantatge respecte a Active Directory</h3>
+<ul>
+<li><strong>LDAP</strong> és més lleuger i estàndard, ideal per a diferents sistemes operatius.  </li>
+<li><strong>Active Directory</strong> està integrat a Windows i depèn del seu ecosistema, mentre que LDAP és més flexible i adaptable.<br />
+A més, Active Directory requereix adquirir una llicència de <strong>Windows Server</strong>, llicències per als clients, i també pagar per cada ordinador connectat, sense oblidar el cost addicional de determinades eines o programari complementari.</li>
+</ul>
+<h3 id="per-a-que-serveix-un-domini">Per a què serveix un domini?</h3>
+<p>Serveix per centralitzar l'autenticació i l'administració d'usuaris, grups i recursos en una xarxa. Els objectes comuns inclouen:<br />
+- <strong>Unitats Organitzatives (UO):</strong> Carpetes lògiques que organitzen altres objectes com usuaris o grups.<br />
+- <strong>Usuaris i grups:</strong> Per gestionar l'accés i permisos.<br />
+- <strong>Dispositius:</strong> Impressores, servidors, etc.</p>
+<hr />
+<h3 id="comandes-i-eines">Comandes i eines</h3>
+<p><strong>Slapcat</strong><br />
+Utilitzat per exportar dades del directori LDAP. Si no mostra el domini, cal verificar la configuració i el contingut inicial del directori. Pot ser necessari reinicialitzar o afegir dades correctes.</p>
+<p><strong>Fitxers LDIF</strong><br />
+Els fitxers LDIF (LDAP Data Interchange Format) defineixen objectes per al directori.<br />
+- La primera línia d'un fitxer LDIF és la referència DN (Distinguished Name), que identifica de manera única l'objecte al directori.</p>
+<h2 id="creacio-dun-domini-amb-ldap">Creació d'un Domini amb LDAP</h2>
+<p><strong>Nota</strong>: Tot i que realitzarem aquest exemple en un Ubuntu Desktop, és recomanable utilitzar Ubuntu Server, ja que està millor optimitzat per a aquestes tasques.</p>
+<p><strong>1. Configurar una IP estàtica</strong> 
+Assignarem una IP estàtica per evitar problemes futurs, ja que no ens interessa que la IP d'un servidor canviï. Si ho fa, podria ocasionar problemes greus en la xarxa. Aquesta configuració es pot realitzar editant el fitxer corresponent:</p>
+<ul>
+<li>
+<p>Fitxer: <strong><code>/etc/netplan</code></strong></p>
+</li>
+<li>
+<p>Alternativa: Configurar directament al router assignant una IP estàtica al servidor.</p>
+</li>
+</ul>
+<p><img alt="Configuració de xarxa" src="../custom/xarxaa.png" /></p>
+<blockquote>
+<p>NOTA: Si configures el netplan posteriorment has de fer <code>netplan apply</code> per aplicar la configuració.</p>
+</blockquote>
+<hr />
+<p><strong>2. Canviar el nom de la màquina (hostname)</strong><br />
+És essencial definir un nom adequat per al servidor. Això es fa editant el fitxer:  </p>
+<pre><code>sudo nano /etc/hostname
+</code></pre>
+<p><img alt="Configuració del hostname" src="../custom/hostname.png" /></p>
+<hr />
+<p><strong>3. Assignar el nom i la IP al fitxer <code>/etc/hosts</code></strong><br />
+Perquè el sistema reconegui el nom del servidor i domini, hem de configurar el fitxer <strong><code>/etc/hosts</code></strong>. Afegirem una línia amb la IP estàtica del servidor, el seu nom i el domini:</p>
+<pre><code>sudo nano /etc/hosts
+</code></pre>
+<p><strong>Exemple</strong>:<br />
+<code>10.0.2.15 vitaliy-server.vitaliy.com vitaliy-server</code>  </p>
+<p>Això assegura que la màquina pugui identificar-se correctament dins de la xarxa.</p>
+<p><img alt="Configuració del hosts" src="../custom/hosts.png" /></p>
+<h3 id="installacio-de-les-eines-necessaries">Instal·lació de les eines necessàries</h3>
+<p>Amb la configuració prèvia completada, passem a instal·lar els paquets necessaris per treballar amb LDAP: <strong>slapd</strong> i <strong>ldap-utils</strong>.</p>
+<ul>
+<li><strong>slapd</strong>: És el servidor LDAP, que ens permetrà gestionar i emmagatzemar la informació del directori.  </li>
+<li><strong>ldap-utils</strong>: És un conjunt d'eines per interactuar amb el servidor LDAP, com ara afegir, modificar o consultar dades.</li>
+</ul>
+<p><strong>Instal·lació</strong>:</p>
+<pre><code>sudo apt install slapd ldap-utils
+</code></pre>
+<p><img alt="Instal·lació de slapd i ldap-utils" src="../custom/utils1.png" /></p>
+<hr />
+<p><strong>Comprovació inicial amb <code>slapcat</code></strong></p>
+<p>Després d’executar la comanda <strong>slapcat</strong>, veiem que el directori no està completament buit. En aquest cas, conté una configuració mínima inicial, amb el domini <code>dc=nodomain</code>. Això indica que el servidor LDAP està funcionant però encara no s’ha configurat correctament per incloure un domini personalitzat o altres dades específiques.</p>
+<p>Aquest pas és essencial abans de començar a afegir la configuració adequada i els objectes al directori LDAP.</p>
+<p><img alt="Resultat de slapcat" src="../custom/slapthefuckingcat.png" /></p>
+<hr />
+<h3 id="configuracio-amb-dpkg-reconfigure-slapd">Configuració amb <code>dpkg-reconfigure slapd</code></h3>
+<p>Per configurar el servidor LDAP correctament, executem la comanda <strong>dpkg-reconfigure slapd</strong>. Aquesta obre una finestra interactiva amb una sèrie de passos a seguir:</p>
+<ol>
+<li>
+<p><strong>Ometre la configuració?</strong><br />
+   Ens pregunta si volem "omitir la configuració". Seleccionem <strong>NO</strong> per procedir amb la configuració.<br />
+<img alt="Opció NO" src="../custom/No.png" /></p>
+</li>
+<li>
+<p><strong>Introduir el nom del domini</strong><br />
+   Ens sol·licita el nom del domini. Introduïm el nom que hem configurat prèviament al fitxer <code>/etc/hosts</code>.<br />
+<img alt="Nom del domini" src="../custom/domainvit.png" /></p>
+</li>
+<li>
+<p><strong>Nom de l’organització</strong><br />
+   Especifica el nom de l’organització. Aquest serà visible al directori LDAP.<br />
+<img alt="Nom de l’organització" src="../custom/org.png" /></p>
+</li>
+<li>
+<p><strong>Contrasenya d’administrador</strong><br />
+   Introduïm la contrasenya per al compte administrador del servidor LDAP. <strong>És molt important guardar aquesta contrasenya</strong>, ja que serà necessària per gestionar el directori LDAP.<br />
+<img alt="Contrasenya" src="../custom/password.png" /></p>
+</li>
+<li>
+<p><strong>Esborrar la base de dades durant el purge</strong><br />
+   Ens pregunta si volem eliminar la base de dades quan esborrem el paquet <code>slapd</code>. Seleccionem <strong>SI</strong>.<br />
+<img alt="Purge" src="../custom/purge.png" /></p>
+</li>
+<li>
+<p><strong>Moure la base de dades antiga</strong><br />
+   Si es detecta una base de dades antiga, ens pregunta si volem moure-la. Seleccionem <strong>SI</strong> per continuar amb una instal·lació neta.<br />
+<img alt="Moure la base de dades" src="../custom/sladp1.png" /></p>
+</li>
+<li>
+<p><strong>Configuració completada</strong><br />
+   Un cop finalitzats els passos, el servidor LDAP estarà configurat correctament.<br />
+<img alt="Configuració completa" src="../custom/ldapapa.png" /></p>
+</li>
+</ol>
+<hr />
+<p><strong>Verificació final</strong></p>
+<p>Un cop completada la configuració, podem utilitzar la comanda <strong>slapcat</strong> per comprovar que el domini i les dades que hem configurat ja apareixen correctament al directori LDAP.</p>
+<p>Si tot ha anat bé, ara hauríem de veure les nostres dades reflectides.</p>
+<p><img alt="alt text" src="../custom/sslapthefookingcatagain.png" /></p>
+<hr />
+<h4 id="creacio-de-fitxers-ldif"><strong>Creació de fitxers LDIF</strong></h4>
+<p>Els fitxers amb extensió <code>.ldif</code> (LDAP Data Interchange Format) són utilitzats per definir i importar dades al servidor LDAP. Aquests fitxers permeten configurar objectes com unitats organitzatives, usuaris, grups i altres estructures.</p>
+<p><img alt="alt text" src="../custom/ldifuo.png" /></p>
+<p>En aquest exemple, hem creat un fitxer <code>uo.ldif</code> per afegir una <strong>Unitat Organitzativa (OU)</strong> anomenada <code>users</code>. Els elements definits inclouen:<br />
+- <strong>dn (Distinguished Name):</strong> Identifica de manera única l'objecte al directori LDAP.<br />
+- <strong>objectClass:</strong> Defineix el tipus d'objecte (en aquest cas, una unitat organitzativa).<br />
+- <strong>ou:</strong> Nom de la unitat organitzativa (<code>users</code>).</p>
+<p>Aquest fitxer serà utilitzat per carregar la configuració al servidor LDAP mitjançant comandes com <code>ldapadd</code>.</p>
+<hr />
+<p><strong>Creació del fitxer <code>grup.ldif</code></strong></p>
+<p>El fitxer <code>grup.ldif</code> defineix un grup dins del nostre servidor LDAP. Aquest grup serà associat a una <strong>Unitat Organitzativa (OU)</strong> ja existent (en aquest cas, <code>users</code>). Aquí detallem els paràmetres utilitzats:</p>
+<p><img alt="alt text" src="../custom/ldifgr.png" /></p>
+<ul>
+<li><strong>dn (Distinguished Name):</strong> Identifica de manera única el grup (<code>cn=alumnes,ou=users,dc=vitaliy,dc=com</code>).  </li>
+<li><strong>objectClass:</strong> Defineix el tipus d'objecte (en aquest cas, <code>posixGroup</code>, per a grups POSIX).  </li>
+<li><strong>cn:</strong> Nom del grup (<code>alumnes</code>).  </li>
+<li><strong>gidNumber:</strong> Identificador únic del grup (<code>1001</code>).  </li>
+<li><strong>memberUid:</strong> Usuaris membres del grup (en aquest cas, <code>alu1</code>).</li>
+</ul>
+<p>Aquest fitxer es pot importar al servidor LDAP per crear i gestionar grups d’usuaris, facilitant l’organització i la configuració d’accés.</p>
+<hr />
+<p><strong>Creació del fitxer <code>usu.ldif</code></strong></p>
+<p>El fitxer <code>usu.ldif</code> defineix un usuari dins del nostre servidor LDAP. Aquest fitxer bàsic conté els paràmetres essencials per crear un compte d’usuari, però es pot ampliar amb més informació com correu electrònic, número de telèfon, etc.</p>
+<p><img alt="alt text" src="../custom/usersldif.png" /></p>
+<p><strong>Paràmetres utilitzats:</strong></p>
+<ul>
+<li><strong>dn (Distinguished Name):</strong> Identifica de manera única l’usuari (<code>uid=alu1,ou=users,dc=vitaliy,dc=com</code>).</li>
+<li><strong>objectClass:</strong> Defineix les classes que caracteritzen l’usuari, com:</li>
+<li><code>inetOrgPerson</code> i <code>organizationalPerson</code> per a informació personal i organitzativa.</li>
+<li><code>posixAccount</code> i <code>shadowAccount</code> per compatibilitat amb sistemes POSIX i gestió de contrasenyes.</li>
+<li><strong>userPassword:</strong> La contrasenya de l’usuari (<code>alu1</code>). És recomanable que estigui en format encriptat.</li>
+<li><strong>cn:</strong> Nom comú de l’usuari (<code>Primer</code>).</li>
+<li><strong>sn:</strong> Cognom de l’usuari (<code>Alumne1</code>).</li>
+<li><strong>gidNumber:</strong> Grup al qual pertany l’usuari (<code>1001</code>).</li>
+<li><strong>uidNumber:</strong> Identificador únic de l’usuari (<code>1001</code>).</li>
+<li><strong>homeDirectory:</strong> Directori personal de l’usuari (<code>/home/alu1</code>).</li>
+<li><strong>loginShell:</strong> Shell predeterminada de l’usuari (<code>/bin/bash</code>).</li>
+<li><strong>shadowExpire, shadowLastChange, shadowMax, shadowMin, shadowWarning:</strong> Paràmetres relacionats amb la caducitat i avisos de contrasenyes.</li>
+</ul>
+<p>Aquest fitxer es pot utilitzar per crear l’usuari dins de l’organització definida al directori LDAP. És possible afegir més atributs segons les necessitats, com ara correu electrònic, telèfon o ubicació.</p>
+<h4 id="pujar-els-fitxers-al-servidor-ldap">Pujar els fitxers al servidor LDAP</h4>
+<p>Un cop creats els fitxers <code>.ldif</code>, hem de carregar-los al servidor LDAP perquè els objectes (unitats organitzatives, grups i usuaris) es creïn dins del directori.</p>
+<p>Això es fa mitjançant la comanda <strong>ldapadd</strong>, que permet afegir dades al servidor LDAP. La sintaxi és la següent:</p>
+<p><strong>Comanda</strong>:  </p>
+<pre><code>ldapadd -c -x -D &quot;cn=admin,dc=vitaliy,dc=com&quot; -W -f &lt;nom_fitxer&gt;
+</code></pre>
+<p><strong>Explicació dels paràmetres:</strong></p>
+<ul>
+<li><strong>-c:</strong> Continua amb els altres fitxers encara que hi hagi errors en algun.</li>
+<li><strong>-x:</strong> Utilitza autenticació simple.</li>
+<li><strong>-D:</strong> Especifica el Distinguished Name de l'usuari administrador (<code>cn=admin,dc=vitaliy,dc=com</code>).</li>
+<li><strong>-W:</strong> Demana la contrasenya de l'administrador abans d'executar la comanda.</li>
+<li><strong>-f:</strong> Indica el nom del fitxer <code>.ldif</code> que es vol carregar.</li>
+</ul>
+<p><strong>Exemple</strong>
+Per pujar el fitxer <code>uo.ldif</code>, executem:<br />
+<code>ldapadd -c -x -D "cn=admin,dc=vitaliy,dc=com" -W -f uo.ldif</code></p>
+<p><img alt="alt text" src="../custom/addldap.png" /></p>
+<p>Repetim aquesta comanda per als altres fitxers (<code>grup.ldif</code>, <code>usu.ldif</code>) per afegir-los al servidor LDAP.</p>
+<p>Un cop carregats, els objectes definits als fitxers estaran disponibles al servidor LDAP i comprovem amb slapcat.</p>
+<p><img alt="alt text" src="../custom/slapthecatlastfuckingtime.png" />
+<img alt="alt text" src="../custom/iliedslapthekittyagain.png" /></p>
 
 
 
