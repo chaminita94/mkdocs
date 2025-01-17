@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../client_ldap/">
+        <link rel="prev" href="../ldap/">
       
       
-        <link rel="next" href="../licencia/">
+        <link rel="next" href="../gestio_domini/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Gestio del domini - Virtualització</title>
+        <title>Configuració del client LDAP - Virtualització</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#unio-de-clients-al-domini-ldap" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Gestio del domini
+              Configuració del client LDAP
             
           </span>
         </div>
@@ -972,27 +977,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../client_ldap/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Configuració del client LDAP
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1002,8 +986,155 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Configuració del client LDAP
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Configuració del client LDAP
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-dels-paquets-necessaris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació dels Paquets Necessaris
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instal·lació dels Paquets Necessaris">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reobrir-la-finestra-de-configuracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reobrir la Finestra de Configuració
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracio-avancada-per-unir-clients-al-domini-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració Avançada per Unir Clients al Domini LDAP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuració Avançada per Unir Clients al Domini LDAP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-inicial-del-reconfigure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració Inicial del Reconfigure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-addicional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració Addicional
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-etcnsswitchconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificar /etc/nsswitch.conf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afegir-configuracio-a-common-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afegir Configuració a common-session
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-opcional-de-lightdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració Opcional de LightDM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprovacio-de-la-configuracio-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprovació de la Configuració LDAP
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestio_domini/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1012,7 +1143,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1149,9 +1279,118 @@
                   
 
 
-  <h1>Gestio del domini</h1>
-
-<p>Work in Progres.</p>
+<h1 id="unio-de-clients-al-domini-ldap">Unió de Clients al Domini LDAP</h1>
+<p>Aquesta secció se centra en el procés per unir els clients al domini LDAP. Els passos són senzills.</p>
+<h2 id="installacio-dels-paquets-necessaris">Instal·lació dels Paquets Necessaris</h2>
+<p>Primer, assegureu-vos d'actualitzar el sistema abans de procedir amb la instal·lació:</p>
+<p><strong>Actualitzeu la llista de paquets</strong>:</p>
+<ul>
+<li>Executeu un <code>apt update</code> per assegurar-vos que disposeu de la informació més recent dels paquets.</li>
+</ul>
+<p><strong>Instal·leu els paquets necessaris</strong>:</p>
+<ul>
+<li>Instal·leu els següents paquets: <code>libnss-ldap</code>, <code>libpam-ldap</code> i <code>nscd</code>.</li>
+</ul>
+<pre><code>sudo apt install libnss-ldap libpam-ldap nscd
+</code></pre>
+<p>Quan premeu la tecla <strong>ENTER</strong> durant el procés, apareixerà una finestra de configuració. Si tanqueu aquesta finestra accidentalment o voleu reconfigurar el domini, <strong>no us preocupeu</strong>: podeu tornar a obrir-la.</p>
+<h3 id="reobrir-la-finestra-de-configuracio">Reobrir la Finestra de Configuració</h3>
+<p>Per reobrir o reconfigurar la configuració del domini, executeu la comanda següent:</p>
+<ul>
+<li>Utilitzeu <code>dpkg-reconfigure lpda-auth-config</code> per accedir de nou a la finestra de configuració.</li>
+</ul>
+<pre><code>dpkg-reconfigure lpda-auth-config
+</code></pre>
+<h2 id="configuracio-avancada-per-unir-clients-al-domini-ldap">Configuració Avançada per Unir Clients al Domini LDAP</h2>
+<p>A continuació, detallo els passos per completar la configuració del client LDAP, amb explicacions clares i referències visuals per facilitar el procés.</p>
+<hr />
+<h3 id="configuracio-inicial-del-reconfigure">Configuració Inicial del Reconfigure</h3>
+<ol>
+<li>
+<p><strong>Servidor LDAP</strong>:<br />
+   Quan aparegui la primera finestra, assegureu-vos d'introduir l'adreça del servidor en el format següent:<br />
+<code>ldap://ip-of-the-server</code>.<br />
+<strong>Nota</strong>: Si apareix <code>ldapi:///</code>, és incorrecte.<br />
+<img alt="Configuració inicial" src="../custom/clientld.png" /></p>
+</li>
+<li>
+<p><strong>Versió de LDAP</strong>:<br />
+   Seleccioneu la versió 3 del protocol LDAP.<br />
+<img alt="Versió LDAP" src="../custom/ldap3.png" /></p>
+</li>
+<li>
+<p><strong>Fer que el root local sigui administrador de la base de dades</strong>:<br />
+   Seleccioneu <strong>Sí</strong> en aquesta finestra.<br />
+<img alt="Administrador local" src="../custom/yesldap.png" /></p>
+</li>
+<li>
+<p><strong>Requereix autenticació la base de dades LDAP?</strong><br />
+   Trieu <strong>Sí</strong>.<br />
+<img alt="Autenticació requerida" src="../custom/yesadmin.png" /></p>
+</li>
+<li>
+<p><strong>Compte LDAP per al root</strong>:<br />
+   Utilitzeu un usuari "admin" que ja hagueu creat.<br />
+<img alt="Compte root" src="../custom/rootacc.png" /></p>
+</li>
+<li>
+<p><strong>Contrasenya del compte root de LDAP</strong>:<br />
+   Introduïu la contrasenya corresponent al compte d'administrador LDAP.<br />
+<img alt="Contrasenya LDAP" src="../custom/ldapass.png" /></p>
+</li>
+<li>
+<p><strong>Usuari sense privilegis per a la base de dades</strong>:<br />
+   En aquest cas, s'ha afegit un altre "usuari", però en entorns reals caldria usar un altre nom.<br />
+<img alt="Usuari sense privilegis" src="../custom/unpldap.png" /></p>
+</li>
+<li>
+<p><strong>Contrasenya per accedir a la base de dades LDAP</strong>:<br />
+   Introduïu la contrasenya que s'utilitzarà per accedir-hi.<br />
+<img alt="Contrasenya d'accés" src="../custom/pwldap.png" /></p>
+</li>
+<li>
+<p><strong>Hash per defecte</strong>:<br />
+   Deixeu el valor predeterminat com <strong>MD5</strong>.<br />
+<img alt="Hash per defecte" src="../custom/hash.png" /></p>
+</li>
+</ol>
+<hr />
+<h3 id="configuracio-addicional">Configuració Addicional</h3>
+<h3 id="modificar-etcnsswitchconf">Modificar <code>/etc/nsswitch.conf</code></h3>
+<p>Afegiu les línies següents al fitxer per integrar LDAP al sistema. Aquestes línies asseguren que el sistema consulti l’LDAP per a l’autenticació en lloc de buscar la informació localment.</p>
+<p><img alt="Configuració de nsswitch.conf" src="../custom/nss.png" /></p>
+<hr />
+<h3 id="afegir-configuracio-a-common-session">Afegir Configuració a <code>common-session</code></h3>
+<p>Editeu el fitxer amb: <code>sudo nano /etc/pam.d/common-session</code> i afegiu aquesta línia al final:</p>
+<pre><code>sudo nano /etc/pam.d/common-session
+</code></pre>
+<pre><code>session optional pam_mkhomedir.so skel=/etc/skel umask=022
+</code></pre>
+<p>Aquesta línia crea automàticament el directori personal dels usuaris amb un <strong>umask</strong> de 022.<br />
+<img alt="Configuració de common-session" src="../custom/commons.png" /></p>
+<hr />
+<h3 id="configuracio-opcional-de-lightdm">Configuració Opcional de LightDM</h3>
+<p><strong>Pot ser que no sigui necessari</strong>, però si trobeu problemes per iniciar sessió amb un usuari, editeu el fitxer següent:</p>
+<pre><code>sudo nano /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf
+</code></pre>
+<p>Afegiu aquesta línia al final: <code>greeter-show-manual-login=true</code> </p>
+<blockquote>
+<p><strong>Nota</strong>: Amb Ubuntu 24.0, no és necessari. Només afegiu aquesta configuració si no podeu iniciar sessió.  </p>
+</blockquote>
+<p><img alt="Configuració de LightDM" src="../custom/maytbe.png" /></p>
+<hr />
+<h2 id="comprovacio-de-la-configuracio-ldap">Comprovació de la Configuració LDAP</h2>
+<p>Per verificar que el sistema pot autenticar-se correctament amb LDAP, seguirem els passos següents:</p>
+<p><strong>Comprovar l'usuari amb la comanda <code>getent</code></strong>:<br />
+Per assegurar-vos que el sistema consulta correctament l’LDAP, podeu utilitzar la comanda <code>sudo getent passwd</code>. Si apareix l'usuari que heu afegit, per exemple, <code>alu1</code>, vol dir que la configuració és correcta.  </p>
+<p><img alt="Comprovació amb getent" src="../custom/alu1.png" /></p>
+<p><strong>Reiniciar la màquina</strong>:<br />
+Reinicieu la màquina per garantir que tots els serveis estan completament operatius abans d'intentar iniciar sessió.</p>
+<p><strong>Iniciar sessió amb l'usuari LDAP</strong>:<br />
+Proveu d'iniciar sessió utilitzant l'usuari <code>alu1</code> i la seva contrasenya definida a l'LDAP.</p>
+<p><strong>Verificar la sessió</strong>:<br />
+Un cop hàgiu iniciat sessió, podeu comprovar si sou realment l'usuari <code>alu1</code> escrivint <code>whoami</code>. Si el resultat és <code>alu1</code>, vol dir que l’autenticació ha estat un èxit.  </p>
+<p><img alt="Comprovació de sessió" src="../custom/a%C3%B1u1.png" /></p>
 
 
 
