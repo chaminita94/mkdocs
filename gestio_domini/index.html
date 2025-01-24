@@ -20,7 +20,7 @@
     
     
       
-        <title>Gestio del domini - Virtualització</title>
+        <title>Gestio del domini LDAP - Virtualització</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#ldapadd" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Gestio del domini
+              Gestio del domini LDAP
             
           </span>
         </div>
@@ -1003,15 +1008,202 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Gestio del domini LDAP
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Gestio del domini
+    Gestio del domini LDAP
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ldapadd" class="md-nav__link">
+    <span class="md-ellipsis">
+      ldapadd
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ldapadd">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#afegir-un-nou-usuari" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afegir un nou usuari
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ldapsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      ldapsearch
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ldapsearch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprovacio-de-les-dades-al-domini" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprovació de les dades al domini
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprovacio-de-les-unitats-organitzatives-uos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprovació de les Unitats Organitzatives (UOs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprovacio-de-grups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprovació de Grups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#per-fer-una-cerca-mes-especifica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Per fer una cerca més específica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacio-duna-nova-uo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació d'una nova UO
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ldapdelete" class="md-nav__link">
+    <span class="md-ellipsis">
+      ldapdelete
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ldapdelete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esborrar-atributs-dun-usuari-amb-ldapmodify" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esborrar atributs d’un usuari amb ldapmodify
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esborrar-una-entrada-amb-ldapdelete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esborrar una entrada amb ldapdelete
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esborrar-una-entrada-amb-un-fitxer-ldif-i-ldapmodify" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esborrar una entrada amb un fitxer .ldif i ldapmodify
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ldapmodify" class="md-nav__link">
+    <span class="md-ellipsis">
+      ldapmodify
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ldapmodify">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canviar-usuaris-de-grup-amb-ldapmodify" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canviar usuaris de grup amb ldapmodify
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-diversos-parametres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificar diversos paràmetres
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1149,9 +1341,397 @@
                   
 
 
-  <h1>Gestio del domini</h1>
+  <h1>Gestio del domini LDAP</h1>
 
-<p>Work in Progres.</p>
+<p><a href="https://pink-farand-80.tiiny.site/" target="_blank">🔗 Consulta més comandes LDAP aquí</a></p>
+<p>En aquest apartat farem una breu explicació i introducció a les comandes i com podem gestionar el nostre servidor LDAP: add, delete i modify.</p>
+<p>Ja tenim el nostre LDAP configurat com hem fet en l’apartat anterior. Fem un slapcat per comprovar.</p>
+<p><img alt="alt text" src="../custom/slapthefuckingcatagain.png" /></p>
+<p>En el nostre cas, tinc dos fitxers: un per a modificar i l’altre amb totes les dades.</p>
+<p><img alt="alt text" src="../custom/modldap.png" /></p>
+<p>La informació que conté aquest fitxer és tota la relacionada amb els usuaris.</p>
+<p><img alt="alt text" src="../custom/daadesgestio.png" /></p>
+<hr />
+<h2 id="ldapadd">ldapadd</h2>
+<p>La comanda ldapadd serveix per afegir els fitxers al domini LDAP. Podem fer-ho utilitzant l'ordre següent per afegir un fitxer <code>.ldif</code> que contingui les dades necessàries:</p>
+<pre><code>ldapadd -c -x -D &quot;cn=admin,dc=vitaliy,dc=com&quot; -W -f gestiodades.ldif
+</code></pre>
+<p><img alt="alt text" src="../custom/addgest.png" /></p>
+<hr />
+<h3 id="afegir-un-nou-usuari">Afegir un nou usuari</h3>
+<p>Per afegir un nou usuari, creem un fitxer amb extensió <code>.ldif</code> que contingui el següent codi:</p>
+<p><img alt="alt text" src="../custom/adduserldif.png" /></p>
+<p>Un cop preparat, executem la comanda <code>ldapadd</code> per afegir l'usuari al domini.</p>
+<p><strong>Execució de la comanda</strong></p>
+<p>Utilitzem la següent comanda per afegir l’usuari:</p>
+<pre><code>ldapadd -x -D &quot;cn=admin,dc=vitaliy,dc=com&quot; -W -f addnewuser.ldif
+</code></pre>
+<p>Podem veure que l'usuari s'ha afegit correctament:</p>
+<p><img alt="alt text" src="../custom/vity.png" /></p>
+<p><strong>Comprovació</strong></p>
+<p>Finalment, realitzem una verificació amb la comanda <code>ldapsearch</code> per assegurar-nos que l'usuari s'ha creat correctament:</p>
+<pre><code>ldapsearch -xLLL -b &quot;uid=vdomin,ou=People,dc=vitaliy,dc=com&quot;
+</code></pre>
+<p>Resultat de la comprovació:</p>
+<p><img alt="alt text" src="../custom/comprovaciosearch.png" /></p>
+<h2 id="ldapsearch">ldapsearch</h2>
+<p>El comandament <code>ldapsearch</code> és una eina molt útil per consultar informació dins d’un domini LDAP. Amb aquesta eina podem buscar entrades, comprovar atributs, filtrar resultats i molt més. A continuació, veurem algunes de les seves funcionalitats bàsiques.</p>
+<hr />
+<h3 id="comprovacio-de-les-dades-al-domini">Comprovació de les dades al domini</h3>
+<p>Ara que hem afegit el fitxer <code>.ldif</code>, comprovem que totes les dades estan correctament al domini. Això es pot fer amb la comanda <code>ldapsearch</code>:</p>
+<pre><code>ldapsearch -xLLL -b &quot;dc=vitaliy,dc=com&quot; dn | wc -l
+</code></pre>
+<blockquote>
+<p>Nota: Afegim <code>wc -l</code> per fer un recompte de línies, ja que no volem que aparegui tot el text a la sortida.</p>
+</blockquote>
+<p><img alt="alt text" src="../custom/searchdn.png" /></p>
+<hr />
+<h3 id="comprovacio-de-les-unitats-organitzatives-uos">Comprovació de les Unitats Organitzatives (UOs)</h3>
+<p>També podem fer una cerca per trobar totes les Unitats Organitzatives (UOs) del domini utilitzant la comanda següent:</p>
+<pre><code>ldapsearch -xLLL -b &quot;dc=vitaliy,dc=com&quot; objectClass=organizationalUnit
+</code></pre>
+<p><img alt="alt text" src="../custom/organizatunit.png" /></p>
+<h3 id="comprovacio-de-grups">Comprovació de Grups</h3>
+<p>Si volem saber quants grups hi ha dintre de la uo Groups, podem executar aquesta comanda.</p>
+<pre><code>ldapsearch -xLLL -b &quot;dc=vitaliy,dc=com&quot; &quot;(ou=Groups)&quot; dn
+</code></pre>
+<p><img alt="alt text" src="../custom/ougroups.png" /></p>
+<h3 id="per-fer-una-cerca-mes-especifica">Per fer una cerca més específica</h3>
+<p>L’usuari <code>kvaughan</code>, en quants grups el trobem com a <code>uniqueMember</code> i quins són?</p>
+<p>Per fer això, podem executar la següent comanda per llistar els grups on l’usuari <code>kvaughan</code> és membre únic:</p>
+<pre><code>ldapsearch -xLLL -b &quot;dc=vitaliy,dc=com&quot; &quot;(uniqueMember=uid=kvaughan,ou=People,dc=vitaliy,dc=com)&quot; dn
+</code></pre>
+<p>Per comprovar quants grups hi ha en total, podem afegir el <code>wc -l</code> (word count list) per fer el recompte:</p>
+<pre><code>ldapsearch -xLLL -b &quot;dc=vitaliy,dc=com&quot; &quot;(uniqueMember=uid=kvaughan,ou=People,dc=vitaliy,dc=com)&quot; dn | wc -l
+</code></pre>
+<p><img alt="alt text" src="../custom/spec.png" /></p>
+<p><strong>Cerca específica: Usuaris de <code>People</code> amb <code>uid</code> començant per <code>k</code> i part de <code>Human Resources</code></strong></p>
+<p>Cerca usuaris que compleixen aquestes condicions:</p>
+<ul>
+<li><code>uid</code> comença per <code>k</code>.</li>
+<li>Atribut <code>ou=Human Resources</code>.</li>
+</ul>
+<pre><code>ldapsearch -xLLL -b &quot;ou=People,dc=vitaliy,dc=com&quot; &quot;(&amp;(uid=k*)(ou=Human Resources))&quot; dn
+</code></pre>
+<p><img alt="alt text" src="../custom/adas.png" /></p>
+<!-- Botó per mostrar el modal -->
+<p><button class="popup-button" onclick="showPopup('popupLdapSearch', 'overlayLdapSearch')">Mostrar Llista de Comandes LDAPSEARCH</button></p>
+<!-- Overlay i Modal -->
+<div class="overlay" id="overlayLdapSearch" onclick="hidePopup('popupLdapSearch', 'overlayLdapSearch')"></div>
+<div class="popup" id="popupLdapSearch">
+  <span class="close-btn" onclick="hidePopup('popupLdapSearch', 'overlayLdapSearch')">×</span>
+  <h3>Llista de Comandes LDAPSEARCH</h3>
+  <p>A continuació tens un conjunt de comandes LDAPSEARCH per consultar diferents dades del domini. Pots copiar i enganxar-les segons les teves necessitats.</p>
+
+<ol>
+  <li>
+    Buscar un usuari específic amb els seus atributs (DN, nom, cognom i correu electrònic):
+    <pre><code>ldapsearch -xLLL -b "dc=vitaliy,dc=com" uid=usuari dn cn sn mail</code></pre>
+  </li>
+  <li>
+    Buscar tots els grups d’un domini (on l'objectClass és `posixGroup`):
+    <pre><code>ldapsearch -xLLL -b "dc=vitaliy,dc=com" objectClass=posixGroup</code></pre>
+  </li>
+  <li>
+    Buscar usuaris amb un domini de correu concret (exemple: usuaris amb correus @gmail.com):
+    <pre><code>ldapsearch -xLLL -b "dc=vitaliy,dc=com" mail=*gmail.com</code></pre>
+  </li>
+  <li>
+    Buscar usuaris amb un uidNumber específic o en un rang:<br>
+    Usuaris amb un uidNumber igual o superior a 1002:
+    <pre><code>ldapsearch -xLLL -b "dc=vitaliy,dc=com" "uidNumber>=1002"</code></pre>
+    Usuaris amb un uidNumber entre 1010 i 1030 (inclosos):
+    <pre><code>ldapsearch -xLLL -b "dc=vitaliy,dc=com" "(&(uidNumber>=1010)(uidNumber<=1030))"</code></pre>
+  </li>
+  <li>
+    Buscar usuaris que compleixin una condició OR (per exemple, el nom comenci per "M" o tinguin un correu definit):
+    <pre><code>ldapsearch -xLLL -b "dc=vitaliy,dc=com" "(|(cn=M*)(mail=*))"</code></pre>
+  </li>
+  <li>
+    Buscar usuaris que compleixin una condició AND (per exemple, el nom comenci per "M" i tinguin un correu definit):
+    <pre><code>ldapsearch -xLLL -b "dc=vitaliy,dc=com" "(&(cn=M*)(mail=*))"</code></pre>
+  </li>
+  <li>
+    Buscar usuaris amb un atribut específic (exemple: usuaris amb un número de telèfon):
+    <pre><code>ldapsearch -xLLL -b "dc=vitaliy,dc=com" telephoneNumber=*</code></pre>
+  </li>
+  <li>
+    Buscar usuaris dins d'una UO concreta (per exemple, dins de "People"):
+    <pre><code>ldapsearch -xLLL -b "ou=People,dc=vitaliy,dc=com" objectClass=inetOrgPerson</code></pre>
+  </li>
+  <li>
+    Buscar usuaris on el telèfon acabi en un número específic (exemple: telèfons que acaben en 2):
+    <pre><code>ldapsearch -xLLL -b "dc=vitaliy,dc=com" telephoneNumber=*2</code></pre>
+  </li>
+  <li>
+    Buscar grups dins d'una UO específica (per exemple, dins de "Groups"):
+    <pre><code>ldapsearch -xLLL -b "ou=Groups,dc=vitaliy,dc=com" objectClass=posixGroup</code></pre>
+  </li>
+</ol>
+</div>
+
+<style>
+  .popup-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .popup-button:hover {
+    background-color: #0056b3;
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2c2c2c;
+    border: 1px solid #444444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    z-index: 1000;
+    width: 80%;
+    max-width: 900px;
+    overflow-y: auto;
+    max-height: 80%;
+    color: #ffffff;
+  }
+
+  .popup .close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888888;
+  }
+
+  .popup .close-btn:hover {
+    color: #ffffff;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  pre code {
+    background-color: #1e1e1e;
+    color: #cfcfcf;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    display: block;
+    white-space: pre-wrap;
+  }
+</style>
+
+<script>
+  function showPopup(popupId, overlayId) {
+    document.getElementById(popupId).style.display = 'block';
+    document.getElementById(overlayId).style.display = 'block';
+  }
+
+  function hidePopup(popupId, overlayId) {
+    document.getElementById(popupId).style.display = 'none';
+    document.getElementById(overlayId).style.display = 'none';
+  }
+</script>
+
+<hr />
+<h2 id="creacio-duna-nova-uo">Creació d'una nova UO</h2>
+<p>Per crear una nova Unitat Organitzativa (UO) anomenada "asix", necessitem preparar un fitxer <code>.ldif</code> amb la configuració de la nova UO. Un exemple del contingut del fitxer seria el següent:</p>
+<pre><code>dn: ou=asix,dc=vitaliy,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: asix
+</code></pre>
+<p><img alt="alt text" src="../custom/asixldif.png" /></p>
+<p>Després, utilitzarem la comanda <code>ldapadd</code> per afegir la UO al domini:</p>
+<pre><code>ldapadd -x -D &quot;cn=admin,dc=vitaliy,dc=com&quot; -W -f asix.ldif
+</code></pre>
+<p><img alt="alt text" src="../custom/add.png" /></p>
+<p>Un cop completada l’operació, la UO "asix" es crearà dins del domini. Per verificar-ho, podem utilitzar la següent comanda:</p>
+<pre><code>ldapsearch -xLLL -b &quot;dc=vitaliy,dc=com&quot; objectClass=organizationalUnit uo
+</code></pre>
+<p><img alt="alt text" src="../custom/uosearch.png" /></p>
+<p>Amb això, assegurem que la nova UO ha estat afegida correctament.</p>
+<hr />
+<h2 id="ldapdelete">ldapdelete</h2>
+<p>Hi ha dues maneres de fer esborrats en un domini LDAP: utilitzar la comanda <code>ldapdelete</code> o utilitzar un fitxer <code>.ldif</code> amb <code>ldapmodify</code>.</p>
+<h3 id="esborrar-atributs-dun-usuari-amb-ldapmodify">Esborrar atributs d’un usuari amb <code>ldapmodify</code></h3>
+<p>Per esborrar atributs d’un usuari, primer necessitem crear un fitxer <code>.ldif</code> amb les modificacions que volem aplicar. En aquest cas, esborrarem l’atribut <code>roomNumber</code> de l’usuari <code>ejohnson</code>.</p>
+<p><img alt="alt text" src="../custom/modify.png" /></p>
+<p>Després, executem la comanda <code>ldapmodify</code> per aplicar els canvis:</p>
+<p><code>ldapmodify -x -D "cn=admin,dc=vitaliy,dc=com" -W -f modify.ldif</code></p>
+<p><img alt="alt text" src="../custom/mod.png" /></p>
+<p>Finalment, fem un <code>ldapsearch</code> per comprovar que l’atribut <code>roomNumber</code> s’ha esborrat correctament:</p>
+<p><code>ldapsearch -xLLL -b "uid=ejohnson,ou=People,dc=vitaliy,dc=com"</code></p>
+<p><img alt="alt text" src="../custom/roomnum.png" /></p>
+<h3 id="esborrar-una-entrada-amb-ldapdelete">Esborrar una entrada amb <code>ldapdelete</code></h3>
+<p>Podem utilitzar la comanda <code>ldapdelete</code> per eliminar directament una entrada del domini. Per exemple, per esborrar una unitat organitzativa anomenada "prova":</p>
+<p><code>ldapdelete -x -D "cn=admin,dc=vitaliy,dc=com" -W "ou=prova,dc=vitaliy,dc=com"</code></p>
+<h3 id="esborrar-una-entrada-amb-un-fitxer-ldif-i-ldapmodify">Esborrar una entrada amb un fitxer <code>.ldif</code> i <code>ldapmodify</code></h3>
+<p>També podem crear un fitxer <code>.ldif</code> amb les instruccions d'esborrat. Exemple del contingut del fitxer <code>.ldif</code>:</p>
+<pre><code>dn: ou=prova,dc=vitaliy,dc=com 
+changetype: delete
+</code></pre>
+<p>Després, executem la comanda següent per aplicar l'esborrat:</p>
+<p><code>ldapmodify -x -D "cn=admin,dc=vitaliy,dc=com" -W -f dades.ldif</code></p>
+<h2 id="ldapmodify">ldapmodify</h2>
+<p><strong>Modificar dades de l'usuari ejohnson</strong></p>
+<p>Anem a modificar algunes dades de <code>ejohnson</code>, concretament el número de telèfon i el correu electrònic.</p>
+<p><img alt="alt text" src="../custom/telemail.png" /></p>
+<p>Executem la comanda del <code>ldapmodify</code> per aplicar els canvis i, posteriorment, fem un <code>ldapsearch</code> per verificar els canvis cercant únicament pel telèfon i el correu electrònic.</p>
+<p><img alt="alt text" src="../custom/modphone.png" /></p>
+<h3 id="canviar-usuaris-de-grup-amb-ldapmodify">Canviar usuaris de grup amb ldapmodify</h3>
+<p>Anem a canviar 3 usuaris del seu grup principal i els anem a posar dins del grup de <strong>asix</strong>.</p>
+<p><img alt="Canviant usuaris de grup" src="../custom/usra.png" /></p>
+<p>Crearem el fitxer de modificació i posteriorment l'executarem.</p>
+<p><img alt="Fitxer de modificació de grup" src="../custom/groupmodif.png" /></p>
+<!-- Botó per mostrar el modal -->
+<p><button class="popup-button" onclick="showPopup('moveUsersModal', 'overlayMoveUsers')">Mostrar codi per moure usuaris</button></p>
+<!-- Overlay i Modal -->
+<div class="overlay" id="overlayMoveUsers" onclick="hidePopup('moveUsersModal', 'overlayMoveUsers')"></div>
+<div class="popup" id="moveUsersModal">
+  <span class="close-btn" onclick="hidePopup('moveUsersModal', 'overlayMoveUsers')">×</span>
+  <h3>Codi de Exemple</h3>
+  <p>Copia el següent codi i guarda’l en un fitxer `.ldif` per aplicar els canvis:</p>
+  <pre><code>
+dn: uid=ahel,ou=People,dc=vitaliy,dc=com
+changetype: modrdn
+newrdn: uid=ahel
+deleteoldrdn: 1
+newsuperior: ou=asix,dc=vitaliy,dc=com
+
+dn: uid=slee,ou=People,dc=vitaliy,dc=com
+changetype: modrdn
+newrdn: uid=slee
+deleteoldrdn: 1
+newsuperior: ou=asix,dc=vitaliy,dc=com
+
+dn: uid=ahall,ou=People,dc=vitaliy,dc=com
+changetype: modrdn
+newrdn: uid=ahall
+deleteoldrdn: 1
+newsuperior: ou=asix,dc=vitaliy,dc=com
+  </code></pre>
+</div>
+
+<style>
+  .popup-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .popup-button:hover {
+    background-color: #0056b3;
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2c2c2c;
+    border: 1px solid #444444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    z-index: 1000;
+    width: 80%;
+    max-width: 900px;
+    overflow-y: auto;
+    max-height: 80%;
+    color: #ffffff;
+  }
+
+  .popup .close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888888;
+  }
+
+  .popup .close-btn:hover {
+    color: #ffffff;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  pre code {
+    background-color: #1e1e1e;
+    color: #cfcfcf;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    display: block;
+    white-space: pre-wrap;
+  }
+</style>
+
+<script>
+  function showPopup(popupId, overlayId) {
+    document.getElementById(popupId).style.display = 'block';
+    document.getElementById(overlayId).style.display = 'block';
+  }
+
+  function hidePopup(popupId, overlayId) {
+    document.getElementById(popupId).style.display = 'none';
+    document.getElementById(overlayId).style.display = 'none';
+  }
+</script>
+
+<p>Executem la comanda per comprovar si realment s'han canviat d'OU:</p>
+<p><code>ldapsearch -xLLL -b "ou=asix,dc=vitaliy,dc=com"</code></p>
+<p><img alt="alt text" src="../custom/tornasix.png" /></p>
+<h3 id="modificar-diversos-parametres">Modificar diversos paràmetres</h3>
+<p>També podem modificar diversos paràmetres d'un mateix usuari. En aquest cas, realitzarem múltiples accions sobre l'usuari <code>vdomin</code>. Això es pot fer mitjançant dos fitxers <code>.ldif</code> separats o executant dues vegades el fitxer <code>modify.ldif</code> amb informació diferent.</p>
+<p>Les accions que realitzarem són les següents:</p>
+<ul>
+<li><strong>Modificació</strong>: Canviarem el número de telèfon.</li>
+<li><strong>Afegir</strong>: Afegeix un correu electrònic inventat i la ciutat de residència.</li>
+<li><strong>Moure</strong>: Canviarem la UO de <code>People</code> a <code>asix</code>.</li>
+</ul>
+<p><strong>Fitxer per editar les dades</strong></p>
+<p><img alt="alt text" src="../custom/vdmod.png" /></p>
+<p><strong>Resultat de moure l'usuari a la UO <code>asix</code></strong></p>
+<p><img alt="alt text" src="../custom/naweae.png" /></p>
+<p><strong>Execució dels fitxers</strong></p>
+<p>Executem els fitxers <code>.ldif</code> i comprovem que els canvis s'han aplicat correctament:</p>
+<p><img alt="alt text" src="../custom/cmpr.png" /></p>
+<p><img alt="alt text" src="../custom/modarar.png" /></p>
+<p><strong>Verificació final</strong></p>
+<p>Per assegurar-nos que l'usuari s'ha mogut correctament a <code>asix</code> i que els atributs s'han modificat, fem servir la comanda següent:</p>
+<pre><code>ldapsearch -xLLL -b &quot;uid=vdomin,ou=asix,dc=vitaliy,dc=com&quot;
+</code></pre>
+<p><img alt="alt text" src="../custom/cmr.png" /></p>
 
 
 
