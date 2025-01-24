@@ -1099,6 +1099,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ldap-sense-interficie-grafica" class="md-nav__link">
+    <span class="md-ellipsis">
+      LDAP Sense Interfície Gràfica
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1460,6 +1469,19 @@ Per pujar el fitxer <code>uo.ldif</code>, executem:<br />
 <p>Un cop carregats, els objectes definits als fitxers estaran disponibles al servidor LDAP i comprovem amb slapcat.</p>
 <p><img alt="alt text" src="../custom/slapthecatlastfuckingtime.png" />
 <img alt="alt text" src="../custom/iliedslapthekittyagain.png" /></p>
+<h2 id="ldap-sense-interficie-grafica">LDAP Sense Interfície Gràfica</h2>
+<p>Per configurar el servidor LDAP sense interfície gràfica, el procediment és el mateix que l’anterior però amb un petit canvi: quan configures la xarxa, ho has de fer amb netplan.  </p>
+<pre><code>sudo nano /etc/netplan/50-cloud-init.yaml
+</code></pre>
+<p><img alt="alt text" src="../custom/netplana.png" /></p>
+<p>Afegim una IP estàtica i el servidor DNS. En aquest cas, he triat els servidors de Google.  </p>
+<p><img alt="alt text" src="../custom/ipnetplan.png" /></p>
+<p>Després, guardem el fitxer, sortim i apliquem els canvis amb la comanda següent:  </p>
+<pre><code>sudo netplan apply
+</code></pre>
+<p>Finalment, comprovem l’IP.<br />
+<img alt="alt text" src="../custom/ipaapply.png" /></p>
+<p>La resta de la configuració del servidor LDAP és la mateixa.</p>
 
 
 
