@@ -1426,8 +1426,8 @@
 <p>L'usuari <code>Joan</code> no pot accedir al recurs compartit, ja que li hem denegat l'accés en la configuració de Samba.</p>
 <p><img alt="Error en intentar connectar-se com a Joan" src="../custom/joanfail.png" /></p>
 <h3 id="ldap-samba">Ldap + Samba</h3>
-<p>Obrim la configuració del smb.conf i afegim unes línies noves per a que els usuaris puguin autentificarse amb el ldap.</p>
-<p><img alt="alt text" src="../custom/customldapuser.png" /></p>
+<p>Integrar Samba amb LDAP és força complex, ja que cal utilitzar el <code>samba.schema</code> entre molts altres paràmetres. No recomano fer-ho, ja que pot causar molts inconvenients i dificultats en la configuració.</p>
+<p>Una solució que pots considerar per simplificar la integració entre Samba i LDAP és utilitzar una eina com <strong>Samba AD (Active Directory)</strong>, que està més estandarditzada i és menys propensa a errors de configuració. Samba AD proporciona una implementació compatible amb Active Directory que permet gestionar usuaris, grups i permisos a través de LDAP, però amb un conjunt d'eines que faciliten la configuració i l'administració.</p>
 
 
 
