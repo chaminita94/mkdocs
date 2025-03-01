@@ -192,7 +192,7 @@ body::-webkit-scrollbar-track {
 
 /* 🌠 Scrollbar Thumb (Perfectly Tiled Image) */
 body::-webkit-scrollbar-thumb {
-    background-image: url("/custom/catepillar.png"); /* Your image */
+    background-image: url("../custom/catepillar.png"); /* Your image */
     background-position: center top; /* Aligns properly */
     background-repeat: repeat-y; /* Ensures vertical tiling */
     background-size: auto 80px; /* Adjust height to avoid cutting */
