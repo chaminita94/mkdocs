@@ -178,3 +178,26 @@ body>.skiptranslate>iframe.skiptranslate {
     visibility: hidden !important;
 }
   
+
+/* 🌠 Thinner Scrollbar */
+body::-webkit-scrollbar {
+    width: 1.8em; /* Adjusted for a sleeker look */
+}
+
+/* 🌠 Scrollbar Track (background) */
+body::-webkit-scrollbar-track {
+    background: #53350A; /* Brownish track */
+    border-radius: 10px;
+}
+
+/* 🌠 Scrollbar Thumb (Perfectly Tiled Image) */
+body::-webkit-scrollbar-thumb {
+    background-image: url("/custom/catepillar.png"); /* Your image */
+    background-position: center top; /* Aligns properly */
+    background-repeat: repeat-y; /* Ensures vertical tiling */
+    background-size: auto 80px; /* Adjust height to avoid cutting */
+    min-height: 80px; /* Makes sure the scrollbar thumb is never too small */
+    border-radius: 10px;
+}
+
+
