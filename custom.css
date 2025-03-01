@@ -184,11 +184,7 @@ body::-webkit-scrollbar {
     width: 1.8em; /* Adjusted for a sleeker look */
 }
 
-/* 🌠 Scrollbar Track (background) */
-body::-webkit-scrollbar-track {
-    background: #53350A; /* Brownish track */
-    border-radius: 10px;
-}
+
 
 /* 🌠 Scrollbar Thumb (Perfectly Tiled Image) */
 body::-webkit-scrollbar-thumb {
