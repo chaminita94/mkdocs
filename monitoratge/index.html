@@ -1346,6 +1346,75 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#logs-personalitzats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logs personalitzats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grafana-loki-promtail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grafana, Loki, Promtail
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grafana, Loki, Promtail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installacio-de-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació de Grafana
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installar-loki-al-servidor-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lar Loki al servidor Ubuntu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacio-del-daemon-de-loki" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació del daemon de Loki
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-promtail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Promtail
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-de-grafana-loki" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració de Grafana + Loki
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1545,6 +1614,174 @@
 <pre><code>journalctl -xeu postgresql
 </code></pre>
 <p><img alt="alt text" src="../custom/show.png" /></p>
+<h2 id="logs-personalitzats">Logs personalitzats</h2>
+<p>Amb logs personalitzats, podem modificar el comportament i les alertes dels logs del sistema segons les nostres necessitats. Això inclou canviar la configuració per defecte, definir com es gestionen els diferents tipus de logs i fins i tot enviar-los a un servidor centralitzat mitjançant eines com Samba o SCP. Tot i que configurar-ho manualment pot ser complex, una opció moderna és integrar-ho amb Grafana per visualitzar i analitzar la informació de manera centralitzada.</p>
+<p>Per exemple, per modificar la configuració dels logs, pots editar el fitxer de configuració del rsyslog:</p>
+<pre><code>nano /etc/rsyslog.d/50-default.conf
+</code></pre>
+<p>Així pots canviar la destinació dels logs, els filtres o les alertes assignades a cadascun.</p>
+<p><img alt="alt text" src="../custom/per.png" /></p>
+<p>Per simular un error de mail i comprovar on es guarda aquest log, pots executar la comanda:</p>
+<pre><code>logger -i -s -p mail.err prova error
+</code></pre>
+<p>Aquesta comanda envia un missatge d'error amb la prioritat <code>mail.err</code>, i automàticament apareixerà registrat al log corresponent.</p>
+<p><img alt="alt text" src="../custom/alr.png" /></p>
+<p>Observa que el missatge es registra en <code>mail.err</code> i no en <code>mail.log</code>, ja que cada tipus de log està assignat a una destinació específica. Aquesta configuració es pot modificar segons els requisits del sistema.</p>
+<p><img alt="alt text" src="../custom/%C3%B1lasd.png" /></p>
+<p>Si, en canvi, executem la mateixa comanda amb la prioritat <code>mail.alert</code>, el missatge no apareixerà a <code>mail.err</code> sinó que s'enregistrarà a <code>mail.log</code>. Això demostra com es poden redirigir els logs segons el seu nivell d'alerta.</p>
+<p><img alt="alt text" src="../custom/logm.png" /></p>
+<h2 id="grafana-loki-promtail">Grafana, Loki, Promtail</h2>
+<p>Aquest document t'explica les parts més importants d'un sistema de monitoratge centralitzat de logs utilitzant Grafana, Loki i Promtail.<br />
+- <strong>Grafana</strong> és l'eina de visualització que permet crear dashboards interactius per analitzar les dades.<br />
+- <strong>Loki</strong> és el sistema d'agregació de logs, dissenyat per emmagatzemar i indexar els logs de manera eficient.<br />
+- <strong>Promtail</strong> és l'agent que s'executa als clients per recollir els logs (per exemple, des de <code>/var/log</code>) i enviar-los a Loki.</p>
+<hr />
+<h3 id="installacio-de-grafana">Instal·lació de Grafana</h3>
+<p>Per instal·lar Grafana al servidor, es fa el següent procés:</p>
+<pre><code>sudo apt install -y software-properties-common 
+</code></pre>
+<p><img alt="alt text" src="../custom/ins.png" /></p>
+<p>S'afegeix el repositori oficial de Grafana:</p>
+<pre><code>sudo add-apt-repository &quot;deb https://packages.grafana.com/oss/deb stable main&quot;
+</code></pre>
+<p><img alt="alt text" src="../custom/afegir.png" /></p>
+<p>Afegir la clau GPG per verificar la integritat dels paquets:</p>
+<pre><code>wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+</code></pre>
+<p><img alt="alt text" src="../custom/graf.png" /></p>
+<p>Instal·lar Grafana:</p>
+<pre><code>sudo apt install -y grafana
+</code></pre>
+<p><img alt="alt text" src="../custom/grafins.png" /></p>
+<p>Habilitar i iniciar el servei de Grafana:</p>
+<pre><code>sudo systemctl enable grafana-server
+</code></pre>
+<pre><code>sudo systemctl start grafana-server 
+</code></pre>
+<p><img alt="alt text" src="../custom/grapen.png" /></p>
+<p>Per comprovar que Grafana està funcionant, accedeix a la seva interfície web des del navegador amb:<br />
+<code>http://&lt;IP-del-servidor&gt;:3000</code>  </p>
+<p><img alt="alt text" src="../custom/webgraf.png" /></p>
+<hr />
+<h3 id="installar-loki-al-servidor-ubuntu">Instal·lar Loki al servidor Ubuntu</h3>
+<p>Per configurar Loki, que és l'eina d'agregació de logs, s'ha de fer el següent:</p>
+<p>Descarregar l'última versió de Loki:</p>
+<pre><code>wget https://github.com/grafana/loki/releases/latest/download/loki-linux-amd64.zip
+</code></pre>
+<p>Descomprimir l'arxiu descarregat:</p>
+<pre><code>unzip loki-linux-amd64.zip
+</code></pre>
+<p>Moure l'executable al directori <code>/usr/local/bin</code>:</p>
+<pre><code>sudo mv loki-linux-amd64 /usr/local/bin/loki
+</code></pre>
+<p>Assignar permisos d'execució:</p>
+<pre><code>sudo chmod +x /usr/local/bin/loki
+</code></pre>
+<p>Crear el fitxer de configuració en format YAML. Hi ha molts exemples disponibles a Internet o a la pàgina oficial. Per exemple, crea o edita el fitxer:</p>
+<pre><code>nano /etc/loki-config.yaml
+</code></pre>
+<p><img alt="alt text" src="../custom/yam.png" /></p>
+<hr />
+<h3 id="creacio-del-daemon-de-loki">Creació del daemon de Loki</h3>
+<p>Per gestionar Loki com un servei de systemd, es configura un daemon.</p>
+<p>Descarregar i preparar Loki (pas similar al descrit anteriorment):</p>
+<pre><code>wget https://github.com/grafana/loki/releases/latest/download/loki-linux-amd64.zip
+</code></pre>
+<pre><code>unzip loki-linux-amd64.zip
+</code></pre>
+<pre><code>sudo mv loki-linux-amd64 /usr/local/bin/loki
+</code></pre>
+<pre><code>sudo chmod +x /usr/local/bin/loki
+</code></pre>
+<p><img alt="alt text" src="../custom/lok.png" /></p>
+<p>Crear el fitxer de servei per Loki:</p>
+<pre><code>sudo nano /etc/systemd/system/loki.service
+</code></pre>
+<p><img alt="alt text" src="../custom/proces.png" /></p>
+<p>Configura aquest fitxer per definir com s'executarà Loki com a servei. Un cop creat el servei, cal assignar els permisos i crear els directoris necessaris segons la configuració del servei.  </p>
+<p><img alt="alt text" src="../custom/aaar.png" /></p>
+<p>Finalment, per activar el servei de Loki:</p>
+<pre><code>sudo systemctl daemon-reload
+sudo systemctl enable loki
+sudo systemctl start loki
+</code></pre>
+<p>Comprova que Loki s'ha iniciat correctament:</p>
+<p><img alt="alt text" src="../custom/stata.png" /></p>
+<h3 id="client-promtail">Client Promtail</h3>
+<p>Promtail és l'agent que s'executa als clients per recollir els logs (per exemple, des de <code>/var/log</code>) i enviar-los a Loki per a la seva agregació i posterior visualització a Grafana. A continuació, es mostra com instal·lar i configurar Promtail:</p>
+<p>Descarrega l'última versió de Promtail:</p>
+<pre><code>wget https://github.com/grafana/loki/releases/latest/download/promtail-linux-amd64.zip
+</code></pre>
+<p><img alt="alt text" src="../custom/pom.png" /></p>
+<p>Descomprimeix l'arxiu descarregat:</p>
+<pre><code>unzip promtail-linux-amd64.zip
+</code></pre>
+<p>Mou l'executable a <code>/usr/local/bin</code>:</p>
+<pre><code>sudo mv promtail-linux-amd64 /usr/local/bin/promtail
+</code></pre>
+<p>Assigna permisos d'execució:</p>
+<pre><code>sudo chmod +x /usr/local/bin/promtail
+</code></pre>
+<p><img alt="alt text" src="../custom/pom2.png" /></p>
+<p>Edita el fitxer de configuració de Promtail per definir quins logs recollir i on enviar-los (normalment la URL del servidor on s'executa Loki):</p>
+<pre><code>sudo nano /etc/promtail-config.yaml
+</code></pre>
+<p><img alt="alt text" src="../custom/yama.png" /></p>
+<p>Crea el directori necessari per a Promtail (on s'emmagatzemaran dades temporals o altres fitxers de suport):</p>
+<pre><code>sudo mkdir -p /var/lib/promtail
+</code></pre>
+<p><img alt="alt text" src="../custom/mkda.png" /></p>
+<p>Crea el fitxer de servei de systemd per executar Promtail com a servei:</p>
+<pre><code>sudo nano /etc/systemd/system/promtail.service
+</code></pre>
+<p><img alt="alt text" src="../custom/serv.png" /></p>
+<p>Posa el servei en marxa carregant la nova configuració, habilitant i iniciant el servei, i comprovant el seu estat:</p>
+<pre><code>sudo systemctl daemon-reload 
+sudo systemctl enable promtail  
+sudo systemctl start promtail
+sudo systemctl status promtail
+</code></pre>
+<p><img alt="alt text" src="../custom/marxa.png" /></p>
+<p>Finalment, dona els permisos necessaris al directori de Promtail per assegurar que l'usuari <code>nobody</code> tingui accés, cosa que pot ser important per a la seguretat i el correcte funcionament:</p>
+<pre><code>sudo chown -R nobody:nogroup /var/lib/promtail
+</code></pre>
+<pre><code>sudo usermod -a -G adm nobody
+</code></pre>
+<pre><code>sudo systemctl restart promtail
+</code></pre>
+<p><img alt="alt text" src="../custom/perma.png" /></p>
+<h3 id="configuracio-de-grafana-loki">Configuració de Grafana + Loki</h3>
+<p>Un cop Grafana està instal·lat i Loki està recopilant els logs, accedeix a Grafana des del navegador amb la URL:
+<code>http://localhost:3000</code><br />
+(o bé amb la IP del servidor).  </p>
+<p>A l'apartat <strong>Explore</strong> de Grafana pots crear consultes per filtrar i analitzar els logs en temps real. Això et permet cercar esdeveniments específics, com per exemple errors, avisos o intents fallits entre altres.</p>
+<p><img alt="alt text" src="../custom/cusm.png" /></p>
+<p>Executa una query per veure com es carreguen automàticament els logs:</p>
+<p><img alt="alt text" src="../custom/run.png" /></p>
+<p>Pots afegir filtres per cercar paraules clau com <code>"Failed"</code> o altres termes rellevants per detectar incidències:</p>
+<p><img alt="alt text" src="../custom/filtr.png" /></p>
+<p>Per exemple, pots crear una query específica per filtrar els <strong>warnings</strong>:</p>
+<p><img alt="alt text" src="../custom/warn.png" /></p>
+<p>Grafana també permet crear dashboards personalitzats que mostren gràfics amb els logs o alertes importants. Aquests dashboards faciliten la visualització i interpretació de la informació:</p>
+<p><img alt="alt text" src="../custom/dash.png" /></p>
+<p>Un cop afegiu els paràmetres a la query, apareixerà un gràfic que resumeix els logs segons els criteris definits:</p>
+<p><img alt="alt text" src="../custom/loga.png" /></p>
+<p>A més, Grafana té la capacitat de configurar alertes per correu electrònic. Aquesta funcionalitat és molt útil en entorns de producció per notificar-te automàticament quan algun servei, com ara Apache, deixa de respondre o s'atura.<br />
+Per configurar les alertes per email, has de seguir aquests passos:</p>
+<ul>
+<li>Dirigir-te a l'apartat <strong>Alerts</strong> i crea un <strong>Contact Point.</strong></li>
+<li>Abans, cal configurar el fitxer <code>.ini</code> de Grafana per definir les opcions d'enviament de correus.</li>
+</ul>
+<blockquote>
+<p>Pots consultar la documentació oficial per configurar el SMTP <a href="https://grafana.com/docs/grafana/latest/alerting/configure-notifications/manage-contact-points/integrations/configure-email/" target="_blank">aquí</a>.</p>
+</blockquote>
+<p><img alt="alt text" src="../custom/emai.png" /></p>
+<p>Per fer una prova, envia un correu de "prova" i comprova que arriba correctament:</p>
+<p><img alt="alt text" src="../custom/tema.png" /></p>
+<p>Finalment, pots configurar una alerta per, per exemple, notificar-te si el servidor d'Apache no respon durant 1 minut o s'atura. Així, en cas d'incidència, Grafana et notificarà via email.</p>
+<p><img alt="alt text" src="../custom/apstop.png" /></p>
+<p>I el correu d'alerta s'enviarà avisant que el servei s'ha aturat:</p>
+<p><img alt="alt text" src="../custom/stoped.png" /></p>
 
 
 
