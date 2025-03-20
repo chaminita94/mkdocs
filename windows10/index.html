@@ -775,6 +775,66 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#crear-particions-en-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear particions en Windows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crear particions en Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obrir-el-gestor-de-discos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obrir el gestor de discos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redimensionar-una-particio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redimensionar una partició
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-una-nova-particio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear una nova partició
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seleccionar-el-sistema-de-fitxers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seleccionar el sistema de fitxers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finalitzar-el-proces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finalitzar el procés
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1657,6 +1717,38 @@
 <li>Un cop s'ha completat la instal·lació de Windows 10 Pro, el següent pas és seguir les instruccions que apareixen a la pantalla. Això inclou configurar el nom d'usuari i ajustar altres opcions per personalitzar el sistema segons les teves necessitats.</li>
 </ul>
 <p><img alt="alt text" src="../custom/donete.png" /></p>
+<h2 id="crear-particions-en-windows">Crear particions en Windows</h2>
+<p>Per gestionar particions en Windows, utilitzem l'eina <strong>Disk Management</strong>. Aquesta eina ens permet crear, eliminar i modificar particions dels nostres discs.</p>
+<h3 id="obrir-el-gestor-de-discos">Obrir el gestor de discos</h3>
+<p>Obrim el "Disk Management". Per fer-ho, podem buscar "disk" al menú d'inici i seleccionar <strong>"Create and format hard disk partitions"</strong>.</p>
+<p><img alt="Disk Management" src="../custom/discpart.png" /></p>
+<p>Aquesta eina ens mostrarà els discs disponibles al nostre equip, així com la seva estructura de particions.</p>
+<p><img alt="Gestor de discos" src="../custom/diskman.png" /></p>
+<h3 id="redimensionar-una-particio">Redimensionar una partició</h3>
+<p>Per redimensionar una partició, fem <strong>clic dret</strong> sobre el disc que volem modificar i seleccionem <strong>"Shrink Volume"</strong>.</p>
+<p><img alt="Opció de reducció" src="../custom/red.png" /></p>
+<p>S'obrirà una finestra que ens permet indicar la quantitat d'espai que volem reduir de la partició seleccionada.</p>
+<p><img alt="Reduir espai" src="../custom/shrink.png" /></p>
+<p>Després d'aquesta acció, veurem un espai no assignat a l'eina de gestió de discos.</p>
+<p><img alt="Espai no assignat" src="../custom/shrinked.png" /></p>
+<h3 id="crear-una-nova-particio">Crear una nova partició</h3>
+<p>Per aprofitar l'espai no assignat, hem de crear una nova partició. Fem <strong>clic dret</strong> sobre l'espai no assignat i seleccionem <strong>"New Simple Volume"</strong>.</p>
+<p><img alt="Nou volum simple" src="../custom/new.png" /></p>
+<p>Seguidament, es mostrarà un assistent on simplement hem de fer <strong>Next &gt; Next &gt; Finish</strong>.</p>
+<h3 id="seleccionar-el-sistema-de-fitxers">Seleccionar el sistema de fitxers</h3>
+<p>Durant el procés, haurem de seleccionar un sistema de fitxers per a la partició. Els sistemes més comuns són:</p>
+<ul>
+<li><strong>NTFS</strong>: Recomanat per a Windows, suporta fitxers grans i permisos avançats.</li>
+<li><strong>FAT32</strong>: Compatible amb molts dispositius, però limita la mida dels fitxers a 4 GB.</li>
+<li><strong>exFAT</strong>: Millor que FAT32 per a dispositius externs, ja que no té la limitació de 4 GB per fitxer.</li>
+</ul>
+<p><img alt="Opcions de format" src="../custom/next.png" /></p>
+<h3 id="finalitzar-el-proces">Finalitzar el procés</h3>
+<p>Després d'esperar que es completi el formatatge...</p>
+<p><img alt="Formatant partició" src="../custom/waitinga.png" /></p>
+<p>...la nova partició ja estarà disponible per utilitzar.</p>
+<p><img alt="Partició creada" src="../custom/donetea.png" /></p>
+<p>Amb això, hem completat la creació d'una partició en Windows!</p>
 
 
 
