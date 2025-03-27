@@ -1517,31 +1517,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-llicencia-de-servidor" class="md-nav__link">
+  <a href="#cal-dacces-al-servidor" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Llicència de servidor
+      CAL d’accés al servidor
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-llicencia-del-sistema-operatiu-del-dispositiu-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Llicència del sistema operatiu del dispositiu client
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-cal-dacces-al-servidor" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. CAL d’accés al servidor
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. CAL d’accés al servidor">
+    <nav class="md-nav" aria-label="CAL d’accés al servidor">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1564,6 +1546,66 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versions-de-windows-per-a-dispositius-clients" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versions de Windows per a dispositius clients
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Versions de Windows per a dispositius clients">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-1011-home" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows 10/11 Home
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-1011-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows 10/11 Pro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-1011-enterprise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows 10/11 Enterprise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-education" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Education
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compatibilitat-i-recomanacions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Compatibilitat i recomanacions
+    </span>
+  </a>
   
 </li>
         
@@ -1702,11 +1744,11 @@
 </blockquote>
 <hr />
 <h2 id="tipus-de-llicencies">Tipus de llicències</h2>
-<h3 id="1-llicencia-de-servidor">1. Llicència de servidor</h3>
+<p><strong>Llicència de servidor</strong></p>
 <p>Autoritza la instal·lació i ús del sistema operatiu <strong>Windows Server</strong> en un servidor físic o virtual.</p>
-<h3 id="2-llicencia-del-sistema-operatiu-del-dispositiu-client">2. Llicència del sistema operatiu del dispositiu client</h3>
+<p><strong>Llicència del sistema operatiu del dispositiu client</strong></p>
 <p>Cada dispositiu client (ex: un PC amb Windows 10) necessita la seva pròpia llicència del SO per funcionar legalment.</p>
-<h3 id="3-cal-dacces-al-servidor">3. CAL d’accés al servidor</h3>
+<h3 id="cal-dacces-al-servidor">CAL d’accés al servidor</h3>
 <p>Hi ha dues modalitats principals:</p>
 <h4 id="cal-per-usuari-user-cals"><strong>CAL per usuari (User CALs)</strong></h4>
 <p>Una CAL per cada <strong>usuari</strong> que accedeix al servidor, independentment del nombre de dispositius que utilitzi.</p>
@@ -1723,6 +1765,45 @@
 </blockquote>
 <p><img alt="alt text" src="../custom/tipcal.png" /></p>
 <hr />
+<h2 id="versions-de-windows-per-a-dispositius-clients">Versions de Windows per a dispositius clients</h2>
+<p>A l’hora de connectar dispositius clients a un servidor amb Windows Server, és important conèixer les diferències entre les edicions de Windows (Home, Pro, Enterprise...).</p>
+<h3 id="windows-1011-home">Windows 10/11 Home</h3>
+<ul>
+<li>Pensat per a ús domèstic.</li>
+<li>No es pot <strong>unir a un domini</strong> (Active Directory).</li>
+<li><strong>No permet connexions RDP entrants</strong> (no es pot controlar remotament via Escriptori remot).</li>
+<li>No és recomanat per a entorns empresarials ni per connectar a servidors.</li>
+</ul>
+<h3 id="windows-1011-pro">Windows 10/11 Pro</h3>
+<ul>
+<li>Pensat per a <strong>usuaris professionals i empreses petites</strong>.</li>
+<li><strong>Sí pot unir-se a un domini</strong> (Active Directory).</li>
+<li><strong>Permet connexions RDP entrants</strong> (es pot controlar remotament).</li>
+<li>Compatible amb polítiques de grup i eines de gestió empresarial.</li>
+</ul>
+<h3 id="windows-1011-enterprise">Windows 10/11 Enterprise</h3>
+<ul>
+<li>Pensat per a grans empreses.</li>
+<li>Totes les funcionalitats de la versió Pro, i més:</li>
+<li>Més opcions de seguretat (BitLocker, AppLocker…).</li>
+<li>Suport per a VDI (infraestructura d’escriptori virtual).</li>
+<li>Funcions avançades de gestió i desplegament massiu.</li>
+</ul>
+<h3 id="windows-education">Windows Education</h3>
+<ul>
+<li>Similar a Enterprise però pensat per a entorns educatius.</li>
+<li>Inclou funcions avançades amb llicències adaptades a escoles i institucions.</li>
+</ul>
+<hr />
+<h3 id="compatibilitat-i-recomanacions">❗ Compatibilitat i recomanacions</h3>
+<ul>
+<li>Per a entorns professionals on s’utilitzen servidors, es <strong>recomana com a mínim Windows Pro</strong> als dispositius clients.</li>
+<li><strong>Windows Home no pot utilitzar-se per a escenaris corporatius</strong> que requereixin unió a dominis, RDP o gestió centralitzada.</li>
+<li>En molts casos, si es té un dispositiu amb Windows Home, es pot fer una <strong>actualització de llicència a Windows Pro</strong> des del Microsoft Store.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Nota</strong>: Encara que un dispositiu tingui Windows Pro, per accedir legalment al servidor segueix fent falta una <strong>CAL per usuari o dispositiu</strong>.</p>
+</blockquote>
 <h2 id="llicencies-rds-remote-desktop-services">Llicències RDS (Remote Desktop Services)</h2>
 <p>Les CAL RDS són necessàries quan els usuaris es connecten <strong>remotament</strong> al servidor mitjançant <strong>Escriptori remot</strong>, per accedir a aplicacions o recursos allotjats al servidor.</p>
 <blockquote>
