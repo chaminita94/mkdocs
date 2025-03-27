@@ -752,6 +752,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Instal·lació de Windows Server en VirtualBox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip-fixa-al-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      IP Fixa al Servidor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#com-assignar-una-ip-fixa-al-servidor-gui-de-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com assignar una IP fixa al servidor (GUI de Windows)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#per-que-es-important-tenir-una-ip-fixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Per què és important tenir una IP fixa?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1523,6 +1556,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licenciawind/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llicències de Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1655,6 +1709,60 @@
 <li>Un cop s'ha completat la instal·lació de Windows Server, el següent pas és seguir les instruccions que apareixen a la pantalla. Això inclou configurar el nom d'usuari i ajustar altres opcions per personalitzar el sistema segons les teves necessitats.</li>
 </ul>
 <p><img alt="alt text" src="../custom/finished.png" /></p>
+<h3 id="ip-fixa-al-servidor">IP Fixa al Servidor</h3>
+<p>És <strong>important configurar una IP fixa</strong> al servidor per evitar que canviï cada cop que s'encén. Això garanteix que:</p>
+<ul>
+<li>Els <strong>clients i dispositius</strong> de la xarxa sempre puguin trobar el servidor a la mateixa adreça IP.</li>
+<li>Es puguin configurar serveis com <strong>Active Directory, DNS, DHCP, impressió en xarxa o compartició de fitxers</strong> de manera estable i fiable.</li>
+<li>Es pugui fer <strong>administració remota</strong>, redirecció de ports al router o configuració de tallafocs sense problemes.</li>
+</ul>
+<hr />
+<h3 id="com-assignar-una-ip-fixa-al-servidor-gui-de-windows">Com assignar una IP fixa al servidor (GUI de Windows)</h3>
+<ol>
+<li><strong>Obrim la configuració de xarxa</strong></li>
+<li>Aneu a <code>Configuració &gt; Xarxa i Internet &gt; Ethernet</code>.</li>
+<li>Cliqueu a <strong>"Canviar opcions de l'adaptador"</strong>.</li>
+</ol>
+<p><img alt="Ethernet" src="../custom/kekeke.png" /></p>
+<ol>
+<li><strong>Obrim les propietats del nostre adaptador de xarxa</strong></li>
+<li>Feu clic dret sobre l'adaptador <strong>Ethernet</strong> i seleccioneu <strong>"Propietats"</strong>.</li>
+</ol>
+<p><img alt="Propietats" src="../custom/propip.png" /></p>
+<ol>
+<li><strong>Configurem la IP manualment</strong></li>
+<li>Seleccionem <strong>Protocol d'Internet versió 4 (TCP/IPv4)</strong> i cliquem a <strong>"Propietats"</strong>.</li>
+<li>Marquem l'opció <strong>"Utilitzar la següent adreça IP"</strong> i hi introduïm:<ul>
+<li><strong>Adreça IP fixa</strong> (ex: <code>192.168.1.100</code>)</li>
+<li><strong>Màscara de subxarxa</strong> (ex: <code>255.255.255.0</code>)</li>
+<li><strong>Porta d'enllaç predeterminada</strong> (ex: <code>192.168.1.1</code>)</li>
+<li><strong>DNS preferit i alternatiu</strong> (ex: <code>1.1.1.1</code> i <code>8.8.8.8</code>)</li>
+</ul>
+</li>
+</ol>
+<p><img alt="IP manual" src="../custom/ipmanual.png" /></p>
+<ol>
+<li><strong>Comprovem que s'ha aplicat correctament</strong></li>
+<li>
+<p>Obrim la consola CMD i escrivim:</p>
+<p><code>bash
+ ipconfig</code></p>
+</li>
+<li>
+<p>Verifiquem que apareix la IP que hem assignat.</p>
+</li>
+</ol>
+<p><img alt="ipconfig" src="../custom/ipcon.png" /></p>
+<hr />
+<h3 id="per-que-es-important-tenir-una-ip-fixa">Per què és important tenir una IP fixa?</h3>
+<ul>
+<li><strong>Estabilitat de la xarxa</strong>: serveis com DNS, RDP, FTP o compartició de fitxers requereixen que l’adreça IP del servidor sigui constant.</li>
+<li><strong>Evita errors</strong>: si l’IP canvia, els usuaris podrien perdre la connexió al servidor o accedir a un altre dispositiu incorrectament.</li>
+<li><strong>Configuracions avançades</strong>: el redireccionament de ports al router o tallafocs necessita conèixer l’adreça IP exacta.</li>
+</ul>
+<blockquote>
+<p>💡 Si s’utilitza DHCP, es pot reservar una IP per MAC al servidor DHCP, però per servidors és millor una IP <strong>estàtica manual</strong> per seguretat i control.</p>
+</blockquote>
 
 
 
