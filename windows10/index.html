@@ -830,10 +830,43 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#punts-de-restauracio" class="md-nav__link">
     <span class="md-ellipsis">
-      Punts de restauració
+      Punts de Restauració
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Punts de Restauració">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#com-crear-un-punt-de-restauracio-manualment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com crear un punt de restauració manualment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restaurar-el-sistema-a-un-punt-anterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restaurar el sistema a un punt anterior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultat-de-la-restauracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultat de la restauració
     </span>
   </a>
   
@@ -1780,7 +1813,62 @@
 <p>...la nova partició ja estarà disponible per utilitzar.</p>
 <p><img alt="Partició creada" src="../custom/donetea.png" /></p>
 <p>Amb això, hem completat la creació d'una partició en Windows!</p>
-<h3 id="punts-de-restauracio">Punts de restauració</h3>
+<h2 id="punts-de-restauracio">Punts de Restauració</h2>
+<p>Els <strong>punts de restauració</strong> serveixen per <strong>desfer canvis</strong> en el sistema operatiu i <strong>recuperar un estat anterior del sistema</strong> si alguna cosa va malament (errors de configuració, instal·lació de programes problemàtics, etc.).</p>
+<blockquote>
+<p>🔁 És una eina molt útil abans de fer canvis importants en el sistema, com instal·lar drivers o actualitzacions.</p>
+</blockquote>
+<hr />
+<h3 id="com-crear-un-punt-de-restauracio-manualment">Com crear un punt de restauració manualment</h3>
+<p><strong>Cerquem "Create restore point"</strong> al menú d'inici de Windows.</p>
+<p><img alt="Obrir configuració" src="../custom/restorep.png" /></p>
+<p>A la pestanya <strong>System Protection</strong>, seleccionem el disc principal (normalment C:) i fem clic a <strong>Configure</strong>.</p>
+<p><img alt="Protecció del sistema" src="../custom/sysp.png" /></p>
+<p><strong>Activem la protecció del sistema</strong> i definim un percentatge d'espai del disc per a emmagatzemar punts de restauració.</p>
+<p><img alt="Ús de disc" src="../custom/usage.png" /></p>
+<p>Un cop activat, seleccionem el disc i fem clic a <strong>Create</strong> per generar un nou punt de restauració.</p>
+<p><img alt="Crear punt" src="../custom/hehe.png" /></p>
+<p>Assignem un <strong>nom descriptiu</strong> al punt de restauració (per exemple: "Abans d’instal·lar drivers NVIDIA").</p>
+<p><img alt="Assignar nom" src="../custom/assnom.png" /></p>
+<p>Esperem que el sistema acabi de crear el punt de restauració.</p>
+<p><img alt="Creant punt" src="../custom/saving.png" /></p>
+<blockquote>
+<p>Ja tenim un punt de restauració disponible! Si cal, podem restaurar l’estat del sistema a aquest punt des del mateix menú.</p>
+</blockquote>
+<h3 id="restaurar-el-sistema-a-un-punt-anterior">Restaurar el sistema a un punt anterior</h3>
+<p>Després de crear un punt de restauració, podem provar el seu funcionament:</p>
+<ol>
+<li><strong>Descarreguem i instal·lem un programa</strong> qualsevol per fer la prova.</li>
+</ol>
+<p><img alt="Descarregar programa" src="../custom/descar.png" /></p>
+<ol>
+<li>Ara, tornem al menú de restauració: <strong>"Create restore point" &gt; System Restore</strong>.</li>
+</ol>
+<p><img alt="Restaurar sistema" src="../custom/sysr.png" /></p>
+<ol>
+<li>
+<p>Seleccionem el punt de restauració que havíem creat prèviament.</p>
+</li>
+<li>
+<p>Podem fer clic a <strong>"Search for affected programs"</strong> per veure què s'eliminarà o modificarà.</p>
+</li>
+</ol>
+<p><img alt="Escaneig de programes afectats" src="../custom/escana.png" /></p>
+<blockquote>
+<p>ℹ️ El sistema ens mostra els <strong>programes i controladors</strong> que es veuran afectats.<br />
+📂 <strong>Els nostres arxius personals NO es perden</strong>, només es modifiquen <strong>programes i configuracions del sistema</strong>.</p>
+</blockquote>
+<hr />
+<h3 id="resultat-de-la-restauracio">Resultat de la restauració</h3>
+<p>Quan finalitza el procés, el sistema torna a l’estat en què es trobava en el moment del punt de restauració. Això pot eliminar:</p>
+<ul>
+<li>Programes instal·lats després del punt</li>
+<li>Actualitzacions del sistema</li>
+<li>Canvis en el registre de Windows</li>
+</ul>
+<blockquote>
+<p>💡 És una eina molt útil per <strong>desfer errors sense haver de reinstal·lar tot el sistema</strong>.</p>
+</blockquote>
 
 
 
