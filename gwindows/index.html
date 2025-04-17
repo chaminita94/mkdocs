@@ -1733,9 +1733,10 @@
 <p><img alt="alt text" src="../custom/d2.png" /></p>
 <p><img alt="alt text" src="../custom/gg2.png" /></p>
 <p>Script per copiar automàticament el perfil de l’usuari actual a G:\CopiesUsuaris\%USERNAME%:</p>
-<p>@echo off<br />
-mkdir "G:\CopiesUsuaris\%USERNAME%"<br />
-xcopy "C:\Users\%USERNAME%" "G:\CopiesUsuaris\%USERNAME%" /E /H /C /Y</p>
+<pre><code>@echo off  
+mkdir &quot;G:\CopiesUsuaris\%USERNAME%&quot;  
+xcopy &quot;C:\Users\%USERNAME%&quot; &quot;G:\CopiesUsuaris\%USERNAME%&quot; /E /H /C /Y
+</code></pre>
 <blockquote>
 <p><strong>NOTA:</strong> Recorda de posar la lletra correcta del disc. En el meu cas és la G:, però en el teu pot ser una altra diferent segons com tinguis configurada la màquina.</p>
 </blockquote>
