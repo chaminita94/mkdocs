@@ -1738,21 +1738,23 @@
 <h3 id="cmd-vs-powershell">CMD vs PowerShell</h3>
 <p>Windows ofereix dues eines principals de línia de comandes:</p>
 <ul>
-<li>
-<p><strong>CMD (Símbol del sistema):</strong><br />
-  És l’eina clàssica de línia d’ordres de Windows. Tot i que és més senzilla, té funcionalitats limitades i és útil per a tasques bàsiques com xarxa, diagnòstic o gestió de fitxers.</p>
-</li>
-<li>
-<p><strong>PowerShell:</strong><br />
-  És una eina molt més potent i moderna basada en .NET. Permet gestionar serveis, processos, actualitzacions, usuaris, scripts avançats i fins i tot automatitzar tasques d'administració del sistema. S'utilitza àmpliament en entorns professionals i Windows Server.</p>
-</li>
+<li><strong>CMD (Símbol del sistema):</strong> </li>
 </ul>
-<p><strong>Quan fer servir CMD?</strong>
-- Per consultar IP, fer ping, apagar/reiniciar, comprovar connexions bàsiques...
-- En equips antics o en entorns on no hi ha PowerShell.</p>
-<p><strong>Quan fer servir PowerShell?</strong>
-- Per gestionar serveis, executar scripts, utilitzar comandes com <code>winget</code>, <code>Repair-Volume</code>, <code>Get-EventLog</code>...
-- En servidors o automatitzacions avançades.</p>
+<p>És l’eina clàssica de línia d’ordres de Windows. Tot i que és més senzilla, té funcionalitats limitades i és útil per a tasques bàsiques com xarxa, diagnòstic o gestió de fitxers.</p>
+<ul>
+<li><strong>PowerShell:</strong>  </li>
+</ul>
+<p>És una eina molt més potent i moderna basada en .NET. Permet gestionar serveis, processos, actualitzacions, usuaris, scripts avançats i fins i tot automatitzar tasques d'administració del sistema. S'utilitza àmpliament en entorns professionals i Windows Server.</p>
+<p><strong>Quan fer servir CMD?</strong></p>
+<ul>
+<li>Per consultar IP, fer ping, apagar/reiniciar, comprovar connexions bàsiques...</li>
+<li>En equips antics o en entorns on no hi ha PowerShell.</li>
+</ul>
+<p><strong>Quan fer servir PowerShell?</strong></p>
+<ul>
+<li>Per gestionar serveis, executar scripts, utilitzar comandes com <code>winget</code>, <code>Repair-Volume</code>, <code>Get-EventLog</code>...</li>
+<li>En servidors o automatitzacions avançades.</li>
+</ul>
 <hr />
 <h3 id="comandes">Comandes</h3>
 <p><strong>ipconfig</strong><br />
@@ -1830,8 +1832,9 @@ Consulta els registres d’esdeveniments de Windows.<br />
 <h3 id="hyper-v"><strong>Hyper-V</strong></h3>
 <p>Hyper-V és una plataforma de virtualització inclosa en Windows 10/11 Pro, Enterprise i Windows Server.<br />
 Permet crear i gestionar màquines virtuals (VMs) dins del mateix sistema operatiu.</p>
-<p><strong>Activar Hyper-V (PowerShell com a administrador):</strong><br />
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All  </p>
+<p><strong>Activar Hyper-V (PowerShell com a administrador):</strong>  </p>
+<pre><code>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All  
+</code></pre>
 <p><em>Amb aquesta comanda s’activa el rol de Hyper-V, però és necessari reiniciar l’equip després.</em></p>
 <hr />
 <p><strong>Crear una màquina virtual (exemple bàsic):</strong>  </p>
@@ -1839,12 +1842,15 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All  </p>
 </code></pre>
 <p><em>Aquesta comanda crea una màquina virtual anomenada “UbuntuVM” amb 2 GB de RAM, un disc virtual de 40 GB i xarxa assignada.</em></p>
 <hr />
-<p><strong>Iniciar una màquina virtual:</strong><br />
-Start-VM -Name "UbuntuVM"</p>
-<p><strong>Aturar una màquina virtual:</strong><br />
-Stop-VM -Name "UbuntuVM"</p>
-<p><strong>Llistar totes les màquines virtuals:</strong><br />
-Get-VM</p>
+<p><strong>Iniciar una màquina virtual:</strong> </p>
+<pre><code>Start-VM -Name &quot;UbuntuVM&quot;
+</code></pre>
+<p><strong>Aturar una màquina virtual:</strong>  </p>
+<pre><code>Stop-VM -Name &quot;UbuntuVM&quot;
+</code></pre>
+<p><strong>Llistar totes les màquines virtuals:</strong>  </p>
+<pre><code>Get-VM
+</code></pre>
 <hr />
 <p><strong>Per què és important?</strong><br />
 Hyper-V permet provar sistemes operatius, entorns de desenvolupament o serveis de xarxa sense necessitat d’instal·lar-los físicament.<br />
