@@ -1913,15 +1913,16 @@ tasklist | findstr nom_del_process</p>
 <p>Aquest script s’encarregarà d’aturar automàticament els processos que considerem <strong>no essencials o innecessaris</strong>.<br />
 Ja sabem com configurar scripts d’inici de sessió mitjançant les polítiques de grup (gpedit), com hem vist anteriorment.</p>
 <p>A continuació, es mostra un exemple senzill d’script:</p>
-<p>@echo off<br />
-taskkill /IM OneDrive.exe /F<br />
-taskkill /IM msedge.exe /F<br />
-taskkill /IM PhoneExperienceHost.exe /F<br />
-taskkill /IM SearchApp.exe /F<br />
-taskkill /IM RuntimeBroker.exe /F<br />
-taskkill /IM StartMenuExperienceHost.exe /F<br />
-taskkill /IM smartscreen.exe /F<br />
-taskkill /IM SecurityHealthSystray.exe /F  </p>
+<pre><code>@echo off  
+taskkill /IM OneDrive.exe /F  
+taskkill /IM msedge.exe /F  
+taskkill /IM PhoneExperienceHost.exe /F  
+taskkill /IM SearchApp.exe /F  
+taskkill /IM RuntimeBroker.exe /F  
+taskkill /IM StartMenuExperienceHost.exe /F  
+taskkill /IM smartscreen.exe /F  
+taskkill /IM SecurityHealthSystray.exe /F  
+</code></pre>
 <blockquote>
 <p><strong>Pots afegir o eliminar processos del script segons les teves necessitats.</strong><br />
 Tingues en compte que eliminar processos essencials pot provocar inestabilitat.</p>
@@ -1947,7 +1948,8 @@ Tingues en compte que eliminar processos essencials pot provocar inestabilitat.<
 <p><strong>Executar l’script amb privilegis elevats (PowerShell)</strong></p>
 <p>Una solució és fer servir <strong>PowerShell</strong> per obrir el <code>.bat</code> amb permisos elevats.<br />
 Aquí tens un exemple de com fer-ho dins d’un script <code>.ps1</code>:</p>
-<p>Start-Process "C:\ruta\al\teu_script.bat" -Verb RunAs</p>
+<pre><code>Start-Process &quot;C:\ruta\al\teu_script.bat&quot; -Verb RunAs
+</code></pre>
 <blockquote>
 <p>Aquest mètode obre el <code>.bat</code> com a administrador, però pot demanar confirmació d’UAC si està activat.</p>
 </blockquote>
