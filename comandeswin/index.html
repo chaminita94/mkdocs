@@ -1761,37 +1761,45 @@
 Mostra la configuració IP del sistema.<br />
 <code>ipconfig /all</code><br />
 <em>Permet veure la IP, la passarel·la, el DNS i altra informació útil per diagnosticar problemes de xarxa.</em></p>
+<p><img alt="alt text" src="../custom/ipconf.png" /></p>
 <hr />
 <p><strong>ping</strong><br />
 Comprova la connectivitat amb una altra màquina.<br />
 <code>ping google.com</code><br />
 <em>Ajuda a verificar si un host respon i mesura el temps de resposta (latència).</em></p>
+<p><img alt="alt text" src="../custom/pg.png" /></p>
 <hr />
 <p><strong>tracert</strong><br />
 Segueix el camí que fa un paquet fins a arribar a la seva destinació.<br />
 <code>tracert google.com</code><br />
 <em>Permet localitzar on es produeixen talls o retards en la connexió.</em></p>
+<p><img alt="alt text" src="../custom/trac.png" /></p>
 <hr />
 <p><strong>chkdsk</strong><br />
 Comprova i repara errors al disc dur.<br />
 <code>chkdsk C: /f /r</code><br />
 <em>Detecta i corregeix sectors defectuosos i problemes en el sistema de fitxers.</em></p>
+<p><img alt="alt text" src="../custom/chk.png" /></p>
 <hr />
 <p><strong>sfc /scannow</strong><br />
 Analitza i repara fitxers del sistema danyats.<br />
 <em>Repara problemes interns del sistema operatiu causats per fitxers corromputs.</em></p>
+<p><img alt="alt text" src="../custom/sfc.png" /></p>
 <hr />
 <p><strong>DISM /Online /Cleanup-Image /RestoreHealth</strong><br />
 Utilitat avançada per reparar la imatge de Windows.<br />
 <em>Pot solucionar errors que ni <code>sfc</code> pot reparar. Molt útil en entorns professionals.</em></p>
+<p><img alt="alt text" src="../custom/dism.png" /></p>
 <hr />
 <p><strong>netstat -ano</strong><br />
 Mostra connexions de xarxa actives, ports oberts i els seus processos associats.<br />
 <em>Ajuda a detectar connexions sospitoses o identificar serveis que estan escoltant a ports específics.</em></p>
+<p><img alt="alt text" src="../custom/ano.png" /></p>
 <hr />
 <p><strong>tasklist</strong><br />
 Llista tots els processos en execució.<br />
 <em>Permet identificar processos sospitosos o que consumeixen molts recursos.</em></p>
+<p><img alt="alt text" src="../custom/taskl.png" /></p>
 <hr />
 <p><strong>shutdown</strong><br />
 Permet apagar o reiniciar el sistema.<br />
@@ -1803,21 +1811,25 @@ Permet apagar o reiniciar el sistema.<br />
 Llista l'estat de tots els serveis del sistema.<br />
 <code>Get-Service</code><br />
 <em>Permet veure quins serveis estan actius, aturats o tenen problemes.</em></p>
+<p><img alt="alt text" src="../custom/gsc.png" /></p>
 <hr />
 <p><strong>Set-ExecutionPolicy</strong> (PowerShell)<br />
 Canvia la política d’execució de scripts de PowerShell.<br />
 <code>Set-ExecutionPolicy RemoteSigned</code><br />
 <em>Cal activar-ho per permetre l’execució de scripts propis o descarregats.</em></p>
+<p><img alt="alt text" src="../custom/rms.png" /></p>
 <hr />
 <p><strong>winget install</strong> (PowerShell)<br />
 Instal·la aplicacions des del repositori oficial de Microsoft.<br />
 <code>winget install --id=Piriform.CCleaner -e</code><br />
 <em>Facilita la instal·lació de programari des de línia de comandes. Ideal per automatització.</em></p>
+<p><img alt="PowerShell mostrant l'estat de la instal·lació" src="../custom/power.png" /></p>
 <hr />
 <p><strong>winget upgrade --all</strong> (PowerShell)<br />
 Actualitza totes les aplicacions disponibles en el repositori de <code>winget</code>.<br />
 <em>Permet mantenir les aplicacions al dia.<br />
 ⚠️ Només actualitza aplicacions que han estat instal·lades o reconegudes per <code>winget</code>.</em></p>
+<p><img alt="alt text" src="../custom/upd.png" /></p>
 <hr />
 <p><strong>Repair-Volume</strong> (PowerShell)<br />
 Repara volums o particions danyades.<br />
@@ -1828,6 +1840,7 @@ Repara volums o particions danyades.<br />
 Consulta els registres d’esdeveniments de Windows.<br />
 <code>Get-EventLog -LogName System -Newest 20</code><br />
 <em>Essencial per diagnosticar errors del sistema, arrencades fallides o problemes de serveis.</em></p>
+<p><img alt="alt text" src="../custom/log.png" /></p>
 <hr />
 <h3 id="hyper-v"><strong>Hyper-V</strong></h3>
 <p>Hyper-V és una plataforma de virtualització inclosa en Windows 10/11 Pro, Enterprise i Windows Server.<br />
