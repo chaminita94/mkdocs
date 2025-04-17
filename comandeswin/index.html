@@ -803,6 +803,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#hyper-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hyper-V
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1817,6 +1826,30 @@ Repara volums o particions danyades.<br />
 Consulta els registres d’esdeveniments de Windows.<br />
 <code>Get-EventLog -LogName System -Newest 20</code><br />
 <em>Essencial per diagnosticar errors del sistema, arrencades fallides o problemes de serveis.</em></p>
+<hr />
+<h3 id="hyper-v"><strong>Hyper-V</strong></h3>
+<p>Hyper-V és una plataforma de virtualització inclosa en Windows 10/11 Pro, Enterprise i Windows Server.<br />
+Permet crear i gestionar màquines virtuals (VMs) dins del mateix sistema operatiu.</p>
+<p><strong>Activar Hyper-V (PowerShell com a administrador):</strong><br />
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All  </p>
+<p><em>Amb aquesta comanda s’activa el rol de Hyper-V, però és necessari reiniciar l’equip després.</em></p>
+<hr />
+<p><strong>Crear una màquina virtual (exemple bàsic):</strong>  </p>
+<pre><code>New-VM -Name &quot;UbuntuVM&quot; -MemoryStartupBytes 2GB -Generation 2 -NewVHDPath &quot;C:\VMs\UbuntuVM.vhdx&quot; -NewVHDSizeBytes 40GB -SwitchName &quot;Default Switch&quot;
+</code></pre>
+<p><em>Aquesta comanda crea una màquina virtual anomenada “UbuntuVM” amb 2 GB de RAM, un disc virtual de 40 GB i xarxa assignada.</em></p>
+<hr />
+<p><strong>Iniciar una màquina virtual:</strong><br />
+Start-VM -Name "UbuntuVM"</p>
+<p><strong>Aturar una màquina virtual:</strong><br />
+Stop-VM -Name "UbuntuVM"</p>
+<p><strong>Llistar totes les màquines virtuals:</strong><br />
+Get-VM</p>
+<hr />
+<p><strong>Per què és important?</strong><br />
+Hyper-V permet provar sistemes operatius, entorns de desenvolupament o serveis de xarxa sense necessitat d’instal·lar-los físicament.<br />
+És molt útil per a tècnics, estudiants i administradors que volen fer proves reals sense risc.</p>
+<p>⚠️ Hyper-V només està disponible en sistemes de 64 bits amb suport de virtualització activat a la BIOS (Intel VT-x o AMD-V).</p>
 
 
 
