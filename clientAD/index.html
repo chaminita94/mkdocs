@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#unio-dequips-windows-al-domini-active-directory" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1609,6 +1614,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Unió d’equips Windows al domini AD
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1618,6 +1634,32 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unio-dequips-windows-al-domini-active-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unió d’equips Windows al domini Active Directory
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2026,7 +2068,29 @@
 
   <h1>Unió d’equips Windows al domini AD</h1>
 
-
+<h2 id="unio-dequips-windows-al-domini-active-directory">Unió d’equips Windows al domini Active Directory</h2>
+<p>En aquest apartat configurarem un equip client amb Windows i el connectarem al servidor <strong>Active Directory</strong> que hem configurat prèviament.</p>
+<p>El primer que farem és comprovar la configuració de xarxa del client. Si l’equip mostra una IP del tipus <code>169.x.x.x</code>, vol dir que no ha rebut cap IP vàlida i està utilitzant una IP <strong>APIPA</strong>, és a dir, una adreça automàtica per defecte. Això passa perquè encara <strong>no tenim un servidor DHCP actiu</strong>.</p>
+<p><img alt="alt text" src="../custom/apipa.png" /></p>
+<p>Per solucionar-ho, configurarem una <strong>IP estàtica</strong> manualment al client. És molt important que el <strong>servidor DNS apunti a la IP del servidor Active Directory</strong>, ja que aquest també actua com a servidor DNS.</p>
+<p><img alt="alt text" src="../custom/statac.png" /></p>
+<p>Un cop assignada la IP, comprovem la <strong>connectivitat</strong> entre el client i el servidor, i viceversa, utilitzant comandes <code>ping</code>.</p>
+<p><img alt="alt text" src="../custom/pingsa.png" /></p>
+<p>Si la comunicació no funciona, pot ser a causa del <strong>Tallafoc (Firewall)</strong>. Pots optar per <strong>desactivar-lo temporalment</strong> per a aquesta pràctica o bé <strong>habilitar les regles necessàries</strong> per permetre el trànsit entre el servidor i el client.</p>
+<p><img alt="alt text" src="../custom/pings.png" /></p>
+<p>Per iniciar la connexió del client al domini, escrivim <strong>nom</strong> a la barra de cerca de Windows i seleccionem l’opció <strong>Canvia el nom del grup de treball o de l’equip</strong>.</p>
+<p><img alt="alt text" src="../custom/noma.png" /></p>
+<p>A la finestra que s’obre, fem clic a <strong>Canvia...</strong>, a la secció que diu: <em>Per canviar el nom d’aquest equip o el domini al qual pertany</em>.</p>
+<p><img alt="alt text" src="../custom/chang.png" /></p>
+<p>Abans de continuar, recorda el <strong>nom exacte del teu domini</strong>. Abans d’introduir-lo, pots fer una prova de connexió mitjançant <code>ping</code> des del CMD, per exemple: <code>ping vitaliy.asix</code>. Si reps resposta, significa que la resolució DNS i la connexió funcionen correctament.</p>
+<p><img alt="alt text" src="../custom/asixa.png" /></p>
+<p>Introdueix el nom del domini a la finestra i prem <strong>D'acord</strong>.</p>
+<p><img alt="alt text" src="../custom/dda.png" /></p>
+<p>Tot seguit, se’t demanarà introduir un <strong>usuari amb permisos d’administrador del domini</strong>. Introdueix el nom d’usuari i la seva contrasenya. (Recorda que pot variar segons la configuració del teu entorn).</p>
+<p><img alt="alt text" src="../custom/usr.png" /></p>
+<p>Després d’uns instants, si tot és correcte, apareixerà un missatge de <strong>benvinguda al domini</strong>. A continuació, reiniciarem l’equip.</p>
+<p><img alt="alt text" src="../custom/welcome.png" /></p>
+<p>Ara bé, com que encara <strong>no hem creat cap usuari de domini</strong>, de moment no podrem iniciar sessió com a tal. La creació d’usuaris i unitats organitzatives (OUs) es tractarà en un apartat posterior.</p>
 
 
 
