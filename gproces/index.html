@@ -145,45 +145,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
   </nav>
   
@@ -1756,6 +1717,90 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarisAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d'usuaris i grups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enrutament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enrutament i accés remot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d’unitats organitzatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestioAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió de permisos i perfils mòbils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2158,20 +2203,20 @@
 
   <h1>Gestió de processos i serveis de Windows</h1>
 
-<h2 id="llista-de-processos-actius">Llista de processos actius</h2>
+<div><h2 id="llista-de-processos-actius">Llista de processos actius</h2>
 <p>A Windows, tots coneixem el <strong>Gestor de tasques</strong> (<em>Task Manager</em>), des d’on es poden veure els processos en execució i el consum de recursos.</p>
 <p>Però... sabies que també pots veure els processos des de la <strong>línia d’ordres (CMD)</strong>? Sí, per <strong>CMD</strong>!</p>
 <p>Obrim el CMD i escrivim:</p>
 <p>tasklist</p>
 <p>Això ens mostra una llista de tots els processos actius.</p>
-<p><img alt="alt text" src="../custom/cmd1.png" /></p>
+<p><img alt="alt text" src="../custom/cmd1.png"></p>
 <blockquote>
 <p><strong>NOTA:</strong> També podem executar aquesta comanda per guardar la llista en un fitxer de text:</p>
 </blockquote>
 <p>tasklist &gt; C:\Users\%USERNAME%\processos_inici.txt</p>
 <p>Això crea un fitxer <code>.txt</code> dins del perfil de l’usuari actual. El podem obrir per veure què s’està executant.</p>
-<p><img alt="alt text" src="../custom/list.png" /></p>
-<hr />
+<p><img alt="alt text" src="../custom/list.png"></p>
+<hr>
 <h2 id="processos-no-essencials-o-prescindibles-per-a-lusuari">Processos no essencials o prescindibles per a l’usuari</h2>
 <table>
 <thead>
@@ -2224,33 +2269,33 @@
 </tr>
 </tbody>
 </table>
-<hr />
+<hr>
 <h2 id="eliminar-processos-manualment">Eliminar processos manualment</h2>
 <p>Dins del CMD es poden tancar processos no essencials amb la comanda <code>taskkill</code>.</p>
 <h3 id="comandes-per-eliminar-processos">Comandes per eliminar processos:</h3>
-<p>taskkill /IM OneDrive.exe /F<br />
-taskkill /IM msedge.exe /F<br />
-taskkill /IM PhoneExperienceHost.exe /F<br />
-taskkill /IM SearchApp.exe /F<br />
-taskkill /IM RuntimeBroker.exe /F<br />
-taskkill /IM StartMenuExperienceHost.exe /F<br />
-taskkill /IM smartscreen.exe /F<br />
+<p>taskkill /IM OneDrive.exe /F<br>
+taskkill /IM msedge.exe /F<br>
+taskkill /IM PhoneExperienceHost.exe /F<br>
+taskkill /IM SearchApp.exe /F<br>
+taskkill /IM RuntimeBroker.exe /F<br>
+taskkill /IM StartMenuExperienceHost.exe /F<br>
+taskkill /IM smartscreen.exe /F<br>
 taskkill /IM SecurityHealthSystray.exe /F</p>
 <blockquote>
 <p><strong>Nota:</strong> Alguns processos (com <code>msedge.exe</code> o <code>RuntimeBroker.exe</code>) poden tenir múltiples instàncies. Pot caldre executar la comanda diverses vegades o identificar el PID i tancar-lo específicament.</p>
 </blockquote>
-<p><img alt="alt text" src="../custom/killt.png" /></p>
-<hr />
+<p><img alt="alt text" src="../custom/killt.png"></p>
+<hr>
 <h2 id="comprovar-si-han-estat-eliminats">Comprovar si han estat eliminats</h2>
 <p>Executa de nou:</p>
-<p>tasklist<br />
-o bé:<br />
+<p>tasklist<br>
+o bé:<br>
 tasklist | findstr nom_del_process</p>
 <p>Per exemple:</p>
 <p>tasklist | findstr OneDrive.exe</p>
-<p><img alt="alt text" src="../custom/compr.png" /></p>
+<p><img alt="alt text" src="../custom/compr.png"></p>
 <p>Si el procés <strong>ja no apareix</strong>, vol dir que s’ha tancat correctament.</p>
-<hr />
+<hr>
 <h3 id="que-passa-si-mates-un-proces-critic-com-explorerexe">Què passa si mates un procés crític com explorer.exe?</h3>
 <p>El procés <code>explorer.exe</code> és el que gestiona l’escriptori de Windows, la barra de tasques i l’explorador d’arxius. És un <strong>procés essencial</strong> per a la interfície gràfica de l’usuari.</p>
 <p>Si tanquem <code>explorer.exe</code> amb la comanda:</p>
@@ -2260,11 +2305,11 @@ tasklist | findstr nom_del_process</p>
 <li>Desapareix l’escriptori, la barra de tasques i qualsevol finestra de l’Explorador de fitxers.</li>
 <li>Sembla que el sistema “ha penjat”, però realment tot segueix funcionant en segon pla.</li>
 </ul>
-<p><img alt="alt text" src="../custom/res.png" /></p>
+<p><img alt="alt text" src="../custom/res.png"></p>
 <p><strong>Recuperació (prova controlada):</strong>  </p>
 <p>Pots obrir el Gestor de tasques (<code>Ctrl + Shift + Esc</code>) &gt; Fitxer &gt; <strong>Executa una nova tasca</strong> &gt; escriu <code>explorer.exe</code> i fes clic a <strong>D'acord</strong>.</p>
 <p>Això reiniciarà el procés i recuperaràs la interfície gràfica sense necessitat de reiniciar l’ordinador.</p>
-<hr />
+<hr>
 <h3 id="millora-del-rendiment-de-maquines-amb-pocs-recursos">Millora del rendiment de màquines amb pocs recursos</h3>
 <p>La gestió de processos pot suposar una <strong>millora significativa del rendiment</strong> en equips amb pocs recursos (per exemple, màquines virtuals amb poca RAM o CPU limitada).</p>
 <p><strong>Beneficis concrets:</strong></p>
@@ -2277,7 +2322,7 @@ tasklist | findstr nom_del_process</p>
 <p>Aquesta tècnica és especialment recomanada per entorns educatius o empresarials on es reutilitzen equips antics o virtualitzats amb recursos limitats.</p>
 <h2 id="automatitzacio-per-a-eliminar-els-processos">Automatització per a eliminar els processos</h2>
 <p>Per fer aquesta tasca de manera automàtica, podem crear un script <code>.bat</code> que s’executi cada cop que iniciem la sessió de Windows.</p>
-<p>Aquest script s’encarregarà d’aturar automàticament els processos que considerem <strong>no essencials o innecessaris</strong>.<br />
+<p>Aquest script s’encarregarà d’aturar automàticament els processos que considerem <strong>no essencials o innecessaris</strong>.<br>
 Ja sabem com configurar scripts d’inici de sessió mitjançant les polítiques de grup (gpedit), com hem vist anteriorment.</p>
 <p>A continuació, es mostra un exemple senzill d’script:</p>
 <pre><code>@echo off  
@@ -2291,7 +2336,7 @@ taskkill /IM smartscreen.exe /F
 taskkill /IM SecurityHealthSystray.exe /F  
 </code></pre>
 <blockquote>
-<p><strong>Pots afegir o eliminar processos del script segons les teves necessitats.</strong><br />
+<p><strong>Pots afegir o eliminar processos del script segons les teves necessitats.</strong><br>
 Tingues en compte que eliminar processos essencials pot provocar inestabilitat.</p>
 </blockquote>
 <p><strong>Com aplicar aquest script a l'inici de sessió</strong></p>
@@ -2304,18 +2349,18 @@ Tingues en compte que eliminar processos essencials pot provocar inestabilitat.<
 <li>Navega fins al <code>.bat</code> que has creat i selecciona’l.</li>
 <li>Aplica els canvis i tanca.</li>
 </ol>
-<p><img alt="alt text" src="../custom/sc1.png" /></p>
+<p><img alt="alt text" src="../custom/sc1.png"></p>
 <p>Des del pròxim inici de sessió, l’script s’executarà automàticament i <strong>tancarà els processos especificats</strong>, millorant així el rendiment i reduint l’ús de memòria.</p>
 <p>Al iniciar sessió amb l’usuari <code>alumne1</code>, podem comprovar que ja <strong>no hi ha processos com OneDrive.exe</strong> en execució, ja que l’script els ha eliminat correctament durant l’inici de sessió.</p>
-<p><img alt="alt text" src="../custom/eaad.png" /></p>
+<p><img alt="alt text" src="../custom/eaad.png"></p>
 <blockquote>
 <p><strong>NOTA:</strong> És possible que l’script <strong>no s’executi correctament</strong> si alguns dels processos necessiten permisos d’administrador per ser aturats.</p>
 </blockquote>
 <h3 id="solucions-si-lscript-no-funciona-com-esperat">Solucions si l’script no funciona com esperat:</h3>
 <p><strong>Executar l’script amb privilegis elevats (PowerShell)</strong></p>
-<p>Una solució és fer servir <strong>PowerShell</strong> per obrir el <code>.bat</code> amb permisos elevats.<br />
+<p>Una solució és fer servir <strong>PowerShell</strong> per obrir el <code>.bat</code> amb permisos elevats.<br>
 Aquí tens un exemple de com fer-ho dins d’un script <code>.ps1</code>:</p>
-<pre><code>Start-Process &quot;C:\ruta\al\teu_script.bat&quot; -Verb RunAs
+<pre><code>Start-Process "C:\ruta\al\teu_script.bat" -Verb RunAs
 </code></pre>
 <blockquote>
 <p>Aquest mètode obre el <code>.bat</code> com a administrador, però pot demanar confirmació d’UAC si està activat.</p>
@@ -2330,7 +2375,7 @@ Aquí tens un exemple de com fer-ho dins d’un script <code>.ps1</code>:</p>
 <li>A la pestanya <strong>Actions</strong>, selecciona <strong>Start a program</strong> i indica la ruta del <code>.bat</code>.</li>
 <li>Desa la tasca.</li>
 </ol>
-<p>Aquesta opció assegura que l’script <strong>sempre s’executi amb permisos suficients</strong>, sense necessitat d’intervenció de l’usuari.</p>
+<p>Aquesta opció assegura que l’script <strong>sempre s’executi amb permisos suficients</strong>, sense necessitat d’intervenció de l’usuari.</p></div>
 
 
 

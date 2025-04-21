@@ -145,45 +145,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
   </nav>
   
@@ -1775,6 +1736,90 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarisAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d'usuaris i grups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enrutament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enrutament i accés remot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d’unitats organitzatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestioAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió de permisos i perfils mòbils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2175,67 +2220,67 @@
                   
 
 
-<h1 id="comandes-per-a-la-gestio-de-paquets-en-sistemes-debianubuntu">Comandes per a la gestió de paquets en sistemes Debian/Ubuntu</h1>
+<div><h1 id="comandes-per-a-la-gestio-de-paquets-en-sistemes-debianubuntu">Comandes per a la gestió de paquets en sistemes Debian/Ubuntu</h1>
 <h2 id="apt-get-o-apt">apt-get o apt</h2>
 <p><code>apt</code> és un front-end per a <code>dpkg</code> amb millores respecte a <code>apt-get</code>, facilitant la gestió de paquets i el manteniment del sistema.</p>
 <h3 id="comandes-basiques-dapt">Comandes Bàsiques d'<code>apt</code></h3>
 <ul>
 <li>
-<p><strong><code>apt update</code></strong><br />
-  Actualitza la llista de tots els paquets mirant el fitxer <code>/etc/apt/sources.list</code>.<br />
+<p><strong><code>apt update</code></strong><br>
+  Actualitza la llista de tots els paquets mirant el fitxer <code>/etc/apt/sources.list</code>.<br>
   Exemple: Després d'executar <code>sudo apt update</code>, hauries de veure un missatge que indica que la llista de paquets s'ha actualitzat correctament, amb informació sobre paquets que s'han actualitzat.</p>
 </li>
 <li>
-<p><strong><code>apt upgrade</code></strong><br />
-  Actualitza el sistema instal·lant noves versions de paquets existents, però <strong>no instal·la nous paquets</strong>.<br />
+<p><strong><code>apt upgrade</code></strong><br>
+  Actualitza el sistema instal·lant noves versions de paquets existents, però <strong>no instal·la nous paquets</strong>.<br>
   Exemple: Si executeu <code>sudo apt upgrade</code>, es mostrarà una llista de paquets que seran actualitzats, amb la quantitat d'espai que ocuparan.</p>
 </li>
 <li>
-<p><strong><code>apt dist-upgrade</code></strong><br />
-  Igual que l'anterior, però també instal·la nous paquets si cal, i pot eliminar paquets si és necessari per resoldre dependències.<br />
+<p><strong><code>apt dist-upgrade</code></strong><br>
+  Igual que l'anterior, però també instal·la nous paquets si cal, i pot eliminar paquets si és necessari per resoldre dependències.<br>
   Exemple: <code>sudo apt dist-upgrade</code> és útil quan s'actualitzen les versions del nucli o altres components importants del sistema.</p>
 </li>
 <li>
-<p><strong><code>apt install paquet</code></strong><br />
-  Instal·la un paquet específic.<br />
+<p><strong><code>apt install paquet</code></strong><br>
+  Instal·la un paquet específic.<br>
   Exemple: <code>sudo apt install vim</code> instal·larà l'editor de text Vim.</p>
 </li>
 <li>
-<p><strong><code>apt remove paquet</code></strong><br />
-  Elimina un paquet instal·lat, però manté els fitxers de configuració.<br />
+<p><strong><code>apt remove paquet</code></strong><br>
+  Elimina un paquet instal·lat, però manté els fitxers de configuració.<br>
   Exemple: <code>sudo apt remove vim</code> eliminarà Vim, però els fitxers de configuració es mantindran.</p>
 </li>
 <li>
-<p><strong><code>apt purge paquet</code></strong><br />
-  Elimina un paquet juntament amb els seus fitxers de configuració.<br />
+<p><strong><code>apt purge paquet</code></strong><br>
+  Elimina un paquet juntament amb els seus fitxers de configuració.<br>
   Exemple: <code>sudo apt purge vim</code> eliminarà Vim i tots els fitxers associats.</p>
 </li>
 <li>
-<p><code>apt autoremove</code><br />
+<p><code>apt autoremove</code><br>
   Esborra els paquets que ja no són necessaris ni utilitzats pel sistema.</p>
 </li>
 <li>
-<p><code>apt clean</code><br />
+<p><code>apt clean</code><br>
   Esborra els paquets descarregats que es troben en la memòria cau (<code>cache</code>).</p>
 </li>
 <li>
-<p><code>apt-cache depends paquet</code><br />
+<p><code>apt-cache depends paquet</code><br>
   Mostra les dependències d'un paquet determinat.</p>
 </li>
 <li>
-<p><code>apt-rdepends paquet</code><br />
+<p><code>apt-rdepends paquet</code><br>
   Mostra les dependències de les dependències d'un paquet (en forma recursiva).</p>
 </li>
 <li>
-<p><code>apt -f install</code><br />
+<p><code>apt -f install</code><br>
   Corregeix instal·lacions a mitges i repara paquets trencats.</p>
 </li>
 <li>
-<p><code>apt-cache policy paquet</code><br />
+<p><code>apt-cache policy paquet</code><br>
   Mostra les versions disponibles d'un paquet i el seu estat, incloent-hi informació sobre el "pinning".</p>
 </li>
 <li>
-<p>Fitxers de configuració:<br />
+<p>Fitxers de configuració:<br>
   Es pot configurar la política de "pinning" a través del fitxer <code>/etc/apt/preferences.d/</code>.</p>
 </li>
 </ul>
@@ -2243,19 +2288,19 @@
 <p><code>aptitude</code> és una altra eina per gestionar paquets que inclou una interfície gràfica i és més sofisticada per gestionar dependències.</p>
 <ul>
 <li>
-<p><code>aptitude remove paquet</code><br />
+<p><code>aptitude remove paquet</code><br>
   Elimina un paquet instal·lat, igual que <code>apt remove</code>.</p>
 </li>
 <li>
-<p><code>aptitude purge paquet</code><br />
+<p><code>aptitude purge paquet</code><br>
   Elimina un paquet i els seus fitxers de configuració, igual que <code>apt purge</code>.</p>
 </li>
 <li>
-<p><code>aptitude install paquet</code><br />
+<p><code>aptitude install paquet</code><br>
   Instal·la un paquet específic.</p>
 </li>
 <li>
-<p><code>aptitude show paquet</code><br />
+<p><code>aptitude show paquet</code><br>
   Mostra informació detallada sobre un paquet, i si no està instal·lat, ho indica.</p>
 </li>
 </ul>
@@ -2263,27 +2308,27 @@
 <p><code>dpkg</code> és l'eina bàsica per a la gestió de paquets en sistemes Debian, però és més baixa a nivell que <code>apt</code> o <code>aptitude</code>.</p>
 <ul>
 <li>
-<p><code>dpkg -r paquet</code><br />
+<p><code>dpkg -r paquet</code><br>
   Elimina un paquet instal·lat, però conserva els fitxers de configuració.</p>
 </li>
 <li>
-<p><code>dpkg -P paquet</code><br />
+<p><code>dpkg -P paquet</code><br>
   Elimina un paquet i també els seus fitxers de configuració.</p>
 </li>
 <li>
-<p><code>dpkg -i arxiu.deb</code><br />
+<p><code>dpkg -i arxiu.deb</code><br>
   Instal·la un paquet des d'un fitxer <code>.deb</code> local.</p>
 </li>
 <li>
-<p><code>dpkg -s paquet</code><br />
+<p><code>dpkg -s paquet</code><br>
   Mostra informació sobre un paquet instal·lat, incloent-hi la seva prioritat (e.g., <code>required</code>, <code>important</code>, <code>standard</code>, etc.).</p>
 </li>
 <li>
-<p><code>dpkg-reconfigure</code><br />
+<p><code>dpkg-reconfigure</code><br>
   Reconfigura un paquet ja instal·lat.</p>
 </li>
 <li>
-<p><code>dpkg --get-selections | grep paquet</code><br />
+<p><code>dpkg --get-selections | grep paquet</code><br>
   Mostra l'estat d'un paquet; no el mostra si no està instal·lat.</p>
 </li>
 </ul>
@@ -2291,19 +2336,19 @@
 <p>Els repositoris són col·leccions de paquets on el sistema obté el programari. Aquests es configuren en el fitxer <code>/etc/apt/sources.list</code>.</p>
 <ul>
 <li>
-<p><strong>main</strong><br />
+<p><strong>main</strong><br>
   Programari suportat oficialment per la distribució.</p>
 </li>
 <li>
-<p><strong>restricted</strong><br />
+<p><strong>restricted</strong><br>
   Programari suportat però amb llicències no completament lliures.</p>
 </li>
 <li>
-<p><strong>universe</strong><br />
+<p><strong>universe</strong><br>
   Programari suportat per la comunitat.</p>
 </li>
 <li>
-<p><strong>multiverse</strong><br />
+<p><strong>multiverse</strong><br>
   Programari no lliure, però disponible en els repositoris.</p>
 </li>
 </ul>
@@ -2334,7 +2379,7 @@
 <h2 id="afegir-el-repositori-de-google">Afegir el repositori de Google</h2>
 <p>Abans d'instal·lar Google Chrome, necessitaràs afegir el repositori de Google a les fonts d'APT. Això es pot fer amb:</p>
 <p><strong>Afegir el repositori:</strong>  </p>
-<pre><code>echo &quot;deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main&quot; | sudo tee /etc/apt/sources.list.d/google-chrome.list
+<pre><code>echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
 </code></pre>
 <p><strong>Actualitzar la llista de paquets</strong></p>
 <p>Un cop afegit el repositori, és necessari actualitzar la llista de paquets. Això es pot fer amb:</p>
@@ -2357,80 +2402,80 @@
 <p>Un cop dins de la carpeta, es poden executar les següents comandes per compilar el programa:</p>
 <ul>
 <li>
-<p><strong>Configuració del programa</strong><br />
-<code>./configure</code><br />
+<p><strong>Configuració del programa</strong><br>
+<code>./configure</code><br>
   Prepara el sistema per a la compilació del programa, verificant requisits i generant fitxers de configuració.</p>
 </li>
 <li>
-<p><strong>Compilar el programa</strong><br />
-<code>make</code><br />
+<p><strong>Compilar el programa</strong><br>
+<code>make</code><br>
   Inicia el procés de compilació del codi font, generant executables o binaris.</p>
 </li>
 <li>
-<p><strong>Instal·lar el programa</strong><br />
-<code>make install</code><br />
+<p><strong>Instal·lar el programa</strong><br>
+<code>make install</code><br>
   Instal·la el programa al sistema, copiant els fitxers necessaris als directoris apropiats.</p>
 </li>
 <li>
-<p><strong>Desinstal·lar el programa</strong><br />
-<code>make uninstall</code><br />
+<p><strong>Desinstal·lar el programa</strong><br>
+<code>make uninstall</code><br>
   Desinstal·la el programa, eliminant els fitxers instal·lats anteriorment.</p>
 </li>
 </ul>
 <h2 id="comandes-per-a-descomprimir-arxiusa">Comandes per a descomprimir arxiusa</h2>
 <ul>
 <li>
-<p><strong>Arxiu <code>.tar</code></strong><br />
-<code>tar xvf archivo.tar</code><br />
+<p><strong>Arxiu <code>.tar</code></strong><br>
+<code>tar xvf archivo.tar</code><br>
   Descomprimeix un arxiu amb extensió <code>.tar</code>. <code>x</code> indica que volem extreure, <code>v</code> mostra els noms dels arxius extrets, i <code>f</code> especifica el fitxer.</p>
 </li>
 <li>
-<p><strong>Arxiu <code>.gz</code></strong><br />
-<code>gunzip archivo.gz</code><br />
-  O bé <code>gzip -d archivo.gz</code><br />
+<p><strong>Arxiu <code>.gz</code></strong><br>
+<code>gunzip archivo.gz</code><br>
+  O bé <code>gzip -d archivo.gz</code><br>
   Descomprimeix un arxiu <code>.gz</code>. <code>gunzip</code> és la manera específica de fer-ho, mentre que <code>gzip -d</code> és una forma general per descomprimir.</p>
 </li>
 <li>
-<p><strong>Arxiu <code>.tgz</code> o <code>.tar.gz</code></strong><br />
-<code>tar xvzf archivo.tar.gz</code><br />
+<p><strong>Arxiu <code>.tgz</code> o <code>.tar.gz</code></strong><br>
+<code>tar xvzf archivo.tar.gz</code><br>
   Descomprimeix arxius amb format <code>.tar.gz</code> o <code>.tgz</code>. <code>z</code> indica que el fitxer està comprimit amb gzip.</p>
 </li>
 <li>
-<p><strong>Arxiu <code>.bz2</code></strong><br />
-<code>bunzip2 archivo.bz2</code><br />
-  O bé <code>bzip2 -d archivo.bz2</code><br />
+<p><strong>Arxiu <code>.bz2</code></strong><br>
+<code>bunzip2 archivo.bz2</code><br>
+  O bé <code>bzip2 -d archivo.bz2</code><br>
   Descomprimeix arxius <code>.bz2</code>. <code>bunzip2</code> és un mètode més directe, mentre que <code>bzip2 -d</code> és una forma general.</p>
 </li>
 <li>
-<p><strong>Arxiu <code>.tar.bz2</code></strong><br />
-<code>tar xvjf archivo.tar.bz2</code><br />
+<p><strong>Arxiu <code>.tar.bz2</code></strong><br>
+<code>tar xvjf archivo.tar.bz2</code><br>
   Descomprimeix arxius amb extensió <code>.tar.bz2</code>. <code>j</code> indica que s'utilitza el mètode de compressió bzip2.</p>
 </li>
 <li>
-<p><strong>Arxiu <code>.zip</code></strong><br />
-<code>unzip archivo.zip</code><br />
+<p><strong>Arxiu <code>.zip</code></strong><br>
+<code>unzip archivo.zip</code><br>
   Descomprimeix fitxers en format <code>.zip</code>.</p>
 </li>
 <li>
-<p><strong>Arxiu <code>.rar</code></strong><br />
-<code>rar -x archivo.rar</code><br />
+<p><strong>Arxiu <code>.rar</code></strong><br>
+<code>rar -x archivo.rar</code><br>
   Descomprimeix arxius <code>.rar</code>. <code>-x</code> indica que volem extreure els fitxers.</p>
 </li>
 </ul>
 <h2 id="entrar-a-la-carpeta">Entrar a la Carpeta</h2>
 <p>Un cop descomprimits els fitxers, és necessari accedir a la carpeta creada. Això es pot fer amb:</p>
-<p><strong>Accedir a la carpeta:</strong> <code>cd nom_de_la_carpeta</code><br />
+<p><strong>Accedir a la carpeta:</strong> <code>cd nom_de_la_carpeta</code><br>
 Exemple: <code>cd projecte</code></p>
-<p><strong>Sortir de la carpeta:</strong> <code>cd ..</code><br />
-Torna al directori pare.<br />
+<p><strong>Sortir de la carpeta:</strong> <code>cd ..</code><br>
+Torna al directori pare.<br>
 Exemple: Si estàs a <code>projecte</code>, <code>cd ..</code> et portarà al directori anterior.</p>
-<p><strong>Tornar al directori anterior:</strong> <code>cd --</code><br />
+<p><strong>Tornar al directori anterior:</strong> <code>cd --</code><br>
 Exemple: Si has canviat de <code>~/documents</code> a <code>~/documents/projecte</code>, <code>cd --</code> et portarà de nou a <code>~/documents</code>.</p>
 <p><strong>Notes:</strong>
 - <code>cd</code> és sensible a majúscules i minúscules.
 - Utilitza <code>cd ..</code> per navegar cap enrere en l'estructura de carpetes.
 - <code>cd --</code> és útil per alternar entre dues carpetes sense recordar la ruta completa.</p>
-<p>Les comandes <code>cd nom_de_la_carpeta</code>, <code>cd ..</code> i <code>cd --</code> són essencials per navegar pel sistema de fitxers i accedir a les carpetes descompresses.</p>
+<p>Les comandes <code>cd nom_de_la_carpeta</code>, <code>cd ..</code> i <code>cd --</code> són essencials per navegar pel sistema de fitxers i accedir a les carpetes descompresses.</p></div>
 
 
 

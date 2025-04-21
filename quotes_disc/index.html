@@ -145,45 +145,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
   </nav>
   
@@ -1786,6 +1747,90 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarisAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d'usuaris i grups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enrutament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enrutament i accés remot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d’unitats organitzatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestioAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió de permisos i perfils mòbils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2188,7 +2233,7 @@
 
   <h1>Quotes per a usuaris i grups</h1>
 
-<h2 id="que-son-les-quotes-de-disc"><strong>Què són les QUOTES de disc?</strong></h2>
+<div><h2 id="que-son-les-quotes-de-disc"><strong>Què són les QUOTES de disc?</strong></h2>
 <p>Les quotes de disc són una eina essencial per limitar i gestionar l'espai d'emmagatzematge utilitzat per usuaris i grups en un sistema Linux. Aquestes permeten prevenir l'ús excessiu d'espai de disc, assegurant que cap usuari o grup monopolitzi els recursos del sistema.</p>
 <p>En aquest apartat aprendrem:</p>
 <ul>
@@ -2213,10 +2258,10 @@
 <blockquote>
 <p><strong>Atenció!</strong> Molt de compte amb el fitxer <code>fstab</code>. Si introdueixes alguna configuració incorrecta, el sistema pot no arrencar i hauràs de reparar-lo manualment.</p>
 </blockquote>
-<p><img alt="alt text" src="../custom/fstabquota.png" /></p>
+<p><img alt="alt text" src="../custom/fstabquota.png"></p>
 <p>Afegim les opcions <code>defaults,usrquota,grpquota</code>. Això habilitarà les quotes tant per a grups com per a usuaris.</p>
 <p>Després de configurar-ho, reiniciem el sistema perquè el muntatge s'apliqui correctament.</p>
-<hr />
+<hr>
 <h4 id="activar-quotes-en-un-directori">Activar Quotes en un Directori</h4>
 <p>Un cop el sistema estigui en marxa, comprovem si els fitxers de quota existeixen executant:</p>
 <ul>
@@ -2224,18 +2269,18 @@
 <li><code>quotaon /mnt/dades</code>  </li>
 </ul>
 <p>Aquests passos verificaran i activaran les quotes.</p>
-<p><img alt="alt text" src="../custom/qtcheck.png" /></p>
+<p><img alt="alt text" src="../custom/qtcheck.png"></p>
 <blockquote>
 <p><strong>Nota!</strong> Si no veus els fitxers <code>aquota.group</code> i <code>aquota.user</code>, pots forçar-ne la creació amb:
-<code>quotacheck -cugm /mnt/dades</code><br />
+<code>quotacheck -cugm /mnt/dades</code><br>
 i posteriorment activar-los amb <code>quotaon /mnt/dades</code>.</p>
 </blockquote>
-<hr />
+<hr>
 <h4 id="aplicar-quotes-a-un-usuari"><strong>Aplicar quotes a un usuari</strong></h4>
 <p>Per assignar quotes als usuaris, existeixen dues maneres. Una d'elles és utilitzant <strong><code>edquota -u + nom</code></strong>, que permet editar manualment les quotes assignades a un usuari.</p>
-<pre><code>edquota -u &quot;exemple&quot;
+<pre><code>edquota -u "exemple"
 </code></pre>
-<p><img alt="alt text" src="../custom/edq.png" /></p>
+<p><img alt="alt text" src="../custom/edq.png"></p>
 <ul>
 <li><strong>Blando o Soft</strong>: Indica el límit tou, que l'usuari pot excedir durant el període de gràcia.  </li>
 <li><strong>Duro o Hard</strong>: Representa el límit màxim que no es pot excedir.</li>
@@ -2247,7 +2292,7 @@ i posteriorment activar-los amb <code>quotaon /mnt/dades</code>.</p>
 <p>Aquesta comanda fa el mateix que l'edició manual amb <strong><code>edquota</code></strong>, però no cal entrar dins del fitxer ni modificar-lo manualment.</p>
 <h5 id="exemple"><strong>Exemple</strong></h5>
 <p>En aquesta secció, expliquem com assignar quotes als usuaris amb exemples pràctics.</p>
-<p><img alt="alt text" src="../custom/carpetes.png" /></p>
+<p><img alt="alt text" src="../custom/carpetes.png"></p>
 <blockquote>
 <p><strong>Nota: Si l'usuari no pot escriure executa <code>chmod 777 /mnt/dades</code>.</strong></p>
 </blockquote>
@@ -2369,9 +2414,9 @@ i posteriorment activar-los amb <code>quotaon /mnt/dades</code>.</p>
   }
 </style>
 
-<hr />
+<hr>
 <p><strong>Intentem sobrepassar el límit per veure què pot passar</strong></p>
-<p><img alt="alt text" src="../custom/limit.png" /></p>
+<p><img alt="alt text" src="../custom/limit.png"></p>
 <p>La comanda <code>dd</code> s'utilitza per copiar i convertir fitxers de manera controlada. En aquest cas, s'utilitza per crear fitxers de prova amb dades generades aleatòriament a partir de <code>/dev/zero</code>.</p>
 <p><strong>Comanda:</strong></p>
 <p><code>dd if=/dev/zero of=test bs=1K count=800</code></p>
@@ -2382,10 +2427,10 @@ i posteriorment activar-los amb <code>quotaon /mnt/dades</code>.</p>
 <li><strong><code>count=800</code></strong>: Es copien 800 blocs de 1KB, resultant en un fitxer de 800KB.</li>
 </ul>
 <p>L'execució de la comanda crea un fitxer <code>test</code> de 819200 bytes (800KB) i mostra la velocitat de còpia (en aquest cas, <strong>585 MB/s</strong> en la primera execució i <strong>713 MB/s</strong> en la segona).</p>
-<hr />
+<hr>
 <p><strong>Comprovació de la quota d'usuari</strong></p>
 <p>A la captura es mostra la comanda <code>quota -u vitaliy</code> per comprovar l'estat de la quota d'un usuari específic, en aquest cas, l'usuari <strong>vitaliy</strong>.</p>
-<p><img alt="alt text" src="../custom/vitq.png" /></p>
+<p><img alt="alt text" src="../custom/vitq.png"></p>
 <p><strong>Comanda:</strong></p>
 <p><code>quota -u vitaliy</code></p>
 <p>Aquesta comanda mostra la informació de les quotes de disc per a l'usuari <code>vitaliy</code>.</p>
@@ -2398,13 +2443,13 @@ i posteriorment activar-los amb <code>quotaon /mnt/dades</code>.</p>
 <li><strong><code>7 días</code></strong>: El període de gràcia de 7 dies per superar el límit tou.</li>
 <li><strong><code>3</code></strong>: El nombre de fitxers utilitzats.</li>
 </ul>
-<hr />
+<hr>
 <h3 id="superar-el-limit-de-quota"><strong>Superar el Límit de Quota</strong></h3>
-<p><img alt="alt text" src="../custom/limitsuperat.png" /></p>
+<p><img alt="alt text" src="../custom/limitsuperat.png"></p>
 <p>A la captura es mostra el que passa quan l'usuari <strong>vitaliy</strong> supera el límit de quota assignat:</p>
 <ol>
 <li>
-<p><strong>Comanda <code>dd</code> per crear fitxers</strong>:<br />
+<p><strong>Comanda <code>dd</code> per crear fitxers</strong>:<br>
    L'usuari intenta crear fitxers amb la comanda <code>dd</code>, però es genera un error perquè s'ha superat la quota de disc. Els missatges d'error són els següents:</p>
 </li>
 <li>
@@ -2415,7 +2460,7 @@ i posteriorment activar-los amb <code>quotaon /mnt/dades</code>.</p>
 <p>Això indica que quan l'usuari intenta escriure més dades en els fitxers, el sistema bloqueja l'operació perquè s'ha arribat al límit de quota.</p>
 <ol>
 <li>
-<p><strong>Comprovació de la quota amb <code>quota</code></strong>:<br />
+<p><strong>Comprovació de la quota amb <code>quota</code></strong>:<br>
    Quan l'usuari comprova l'estat de la seva quota amb la comanda <code>quota -u vitaliy</code>, es pot veure que ha superat el límit de quota assignat:</p>
 </li>
 <li>
@@ -2428,14 +2473,14 @@ i posteriorment activar-los amb <code>quotaon /mnt/dades</code>.</p>
 </ul>
 </li>
 <li>
-<p><strong>Comportament al superar el límit</strong>:<br />
+<p><strong>Comportament al superar el límit</strong>:<br>
    Quan un usuari supera el límit dur (hard limit), el sistema impedeix que pugui escriure més dades al disc fins que redueixi l'ús d'espai per sota del límit dur. Això és el que es veu en la captura: el sistema bloqueja l'escriptura després d'excedir la quota.</p>
 </li>
 </ol>
 <p>Quan descarreguem una foto i intentem guardar-la a <code>/mnt/dades</code>, obtenim el següent resultat:</p>
-<p><img alt="Error al guardar la foto" src="../custom/fallo-foto.png" /></p>
+<p><img alt="Error al guardar la foto" src="../custom/fallo-foto.png"></p>
 <p>Aquest procés falla. A més, si intentem moure alguna foto o arxiu dins del directori <code>/mnt/dades/</code>, apareix aquest altre error indicant que hem superat la quota.</p>
-<p><img alt="Error al moure arxiu" src="../custom/fotoerr.png" /></p>
+<p><img alt="Error al moure arxiu" src="../custom/fotoerr.png"></p>
 <h3 id="configuracio-de-warnquota-amb-notificacions-per-correu">Configuració de <code>warnquota</code> amb notificacions per correu</h3>
 <p>Com a administradors, és important saber quan un usuari supera el límit de quota, ja que sovint els usuaris no són conscients d'aquests límits. Una manera senzilla de gestionar-ho és configurar l'enviament de correus electrònics per avisar els usuaris quan hagin superat la seva quota.</p>
 <p>No entrarem en detall, però si estàs interessat en fer-ho, fes clic al botó de baix.</p>
@@ -2589,37 +2634,37 @@ CHARSET = UTF-8
 </style>
 
 <p>Després de configurar-ho tot, comprovem si s'envia un correu electrònic forçant l'enviament manualment. Per fer-ho, executa la comanda <code>warnquota</code> i comprova si arriben els correus electrònics.</p>
-<p><img alt="alt text" src="../custom/emailq.png" /></p>
+<p><img alt="alt text" src="../custom/emailq.png"></p>
 <p>Si un usuari supera la quota, el sistema li enviarà automàticament un correu electrònic d'avís.</p>
-<p><img alt="alt text" src="../custom/automailuser.png" /></p>
+<p><img alt="alt text" src="../custom/automailuser.png"></p>
 <h2 id="aplicar-quotes-a-grups"><strong>Aplicar Quotes a Grups</strong></h2>
 <p>Una altra manera molt utilitzada per aplicar quotes és fer-ho a nivell de grups. En aquest cas, podem assignar una quota a un grup i afegir-hi els usuaris. Així, els usuaris dins d'aquest grup heretaran la quota del grup.</p>
 <p>Afegim l'usuari Vitaliy al grup de <code>classe</code> i apliquem la quota.</p>
 <pre><code>setquota -g classe 5120 10240 0 0 /mnt/dades
 </code></pre>
-<p><img alt="alt text" src="../custom/classeg.png" /></p>
+<p><img alt="alt text" src="../custom/classeg.png"></p>
 <ul>
 <li><strong>Atenció!</strong> Aquesta configuració només funcionarà si els usuaris no tenen una quota assignada de manera individual. Si l'usuari té una quota pròpia, aquesta prevaldrà sobre la quota del grup, com podem observar a la següent captura.</li>
 </ul>
-<p><img alt="alt text" src="../custom/Comprovaciogrup.png" /></p>
+<p><img alt="alt text" src="../custom/Comprovaciogrup.png"></p>
 <p>En aquesta captura, podem veure que l'usuari <strong>vitaliy</strong> està dins del grup <strong>classe</strong>, però quan utilitzem la comanda <code>repquota -g /mnt/dades</code> per verificar les quotes del grup, la quota aplicada a l'usuari <strong>vitaliy</strong> continua sent la seva quota individual, no la del grup.</p>
 <p>Quan verifiquem la quota de l'usuari amb la comanda <code>repquota -u /mnt/dades</code>, veiem que la quota de <strong>vitaliy</strong> preval sobre la quota del grup, ja que la quota personal de l'usuari és visible en lloc de la quota del grup. Això confirma que, quan un usuari té una quota assignada directament, aquesta preval sobre les quotes assignades al grup.</p>
-<hr />
+<hr>
 <p><strong>Creació de l'usuari "Mireia" i el grup "Classe"</strong></p>
 <p>En aquest apartat, crearem un nou usuari anomenat <strong>Mireia</strong>. Posteriorment, afegirem <strong>Mireia</strong> al grup <strong>Classe</strong> i assignarem la carpeta <code>/mnt/dades</code> a aquest grup.</p>
-<p><img alt="alt text" src="../custom/mirgroupquopta.png" /></p>
+<p><img alt="alt text" src="../custom/mirgroupquopta.png"></p>
 <p>No és estrictament necessari que el grup propietari de <code>/mnt/dades</code> sigui "Classe", però és recomanable per assegurar que els membres del grup tinguin els permisos adequats per accedir i escriure a la carpeta.</p>
 <p>Per assignar el grup propietari, utilitzarem la comanda següent:</p>
 <pre><code class="language-bash">chown :classe /mnt/dades
 </code></pre>
-<hr />
+<hr>
 <h3 id="creacio-de-fitxers-i-intent-de-sobrepassar-el-limit-de-quota"><strong>Creació de fitxers i intent de sobrepassar el límit de quota</strong></h3>
 <p>Després de crear l'usuari i assignar-li el grup, crearem alguns fitxers per intentar sobrepassar el límit de quota del grup <strong>Classe</strong>.</p>
-<p><img alt="alt text" src="../custom/excedirq.png" /></p>
+<p><img alt="alt text" src="../custom/excedirq.png"></p>
 <h3 id="comprovacio-de-lestat-de-la-quota-de-grup"><strong>Comprovació de l'estat de la quota de grup</strong></h3>
 <p>Finalment, comprovem l'estat de les quotes del grup <strong>Classe</strong> utilitzant la comanda:</p>
 <p><code>repquota -g /mnt/dades</code></p>
-<p><img alt="alt text" src="../custom/gclassecap.png" /></p>
+<p><img alt="alt text" src="../custom/gclassecap.png"></p>
 <p><strong>Explicació de la Captura</strong></p>
 <p>Aquesta captura mostra la sortida de la comanda <code>repquota -g /mnt/dades</code> per al grup <strong>classe</strong> en un sistema de fitxers montat a <code>/mnt/dades</code>.</p>
 <ul>
@@ -2634,10 +2679,10 @@ CHARSET = UTF-8
 <li>El símbol <strong><code>+</code></strong> a la columna <strong>Usat</strong> indica que el grup ha superat el límit tou però no ha arribat al límit dur. </li>
 <li>Els altres usuaris (com <code>root</code> i <code>vitaliy</code>) no tenen cap quota assignada o només s'han mostrant les dades generals sense que s'excedeixin els límits.</li>
 </ul>
-<hr />
+<hr>
 <h4 id="email-automatic-de-superar-quota-de-grup"><strong>Email Automàtic de Superar Quota de Grup</strong></h4>
 <p>Quan un grup o usuari supera el límit de quota, es pot configurar un sistema per enviar un correu electrònic automàticament. Aquest correu s'envia mitjançant un script personalitzat, ja que la funcionalitat de <code>warnquota</code> només funciona amb usuaris i no amb grups.</p>
-<p><img alt="alt text" src="../custom/emailg.png" /></p>
+<p><img alt="alt text" src="../custom/emailg.png"></p>
 <!-- Botó per mostrar la configuració del script de quota -->
 <p><button class="popup-button" onclick="showPopup('popupGroupQuota', 'overlayGroupQuota')">Configuració del Script per Alertes de Quota (Fes clic per veure més)</button></p>
 <!-- Overlay i Popup per mostrar la configuració del script -->
@@ -2661,7 +2706,7 @@ CHARSET = UTF-8
 #!/bin/bash
 
 # Obtenim l'informe de quotes del grup
-repquota -g /mnt/dades | grep "classe" > /tmp/group_quota_report.txt
+repquota -g /mnt/dades | grep "classe" &gt; /tmp/group_quota_report.txt
 
 # Verifiquem si s'ha superat el límit tou o dur
 if grep -q "+" /tmp/group_quota_report.txt; then
@@ -2756,7 +2801,7 @@ fi
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
   }
-</style>
+</style></div>
 
 
 

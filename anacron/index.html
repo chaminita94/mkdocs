@@ -145,45 +145,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
   </nav>
   
@@ -1736,6 +1697,90 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarisAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d'usuaris i grups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enrutament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enrutament i accés remot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d’unitats organitzatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestioAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió de permisos i perfils mòbils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2136,11 +2181,11 @@
                   
 
 
-<h1 id="automatitzacio-amb-scripts-cron-i-anacron">Automatització amb Scripts, Cron i Anacron</h1>
+<div><h1 id="automatitzacio-amb-scripts-cron-i-anacron">Automatització amb Scripts, Cron i Anacron</h1>
 <h2 id="automatitzacio-amb-scripts-i-cron-i-anacron">Automatització amb Scripts i Cron i Anacron</h2>
 <p>En aquest apartat es descriuen dos processos importants per automatitzar tasques en sistemes operatius basats en Linux: <strong>Cron</strong> i <strong>Anacron</strong>. 
 Aquests sistemes permeten programar l'execució d'scripts i tasques de manera recurrent, tot i que presenten algunes diferències que es detallen a continuació.</p>
-<hr />
+<hr>
 <h2 id="crontab-vs-anacron">Crontab vs Anacron</h2>
 <p><strong>Cron</strong> i <strong>Anacron</strong> són eines que s'utilitzen per a l'automatització de tasques, i mentre que antigament funcionaven de manera separada, avui dia treballen conjuntament en molts sistemes operatius moderns, com Ubuntu.</p>
 <p><strong>Quan utilitzar Cron o Anacron?</strong></p>
@@ -2171,7 +2216,7 @@ Aquests sistemes permeten programar l'execució d'scripts i tasques de manera re
 </tr>
 </tbody>
 </table>
-<hr />
+<hr>
 <p><strong>Funcionament teòric</strong></p>
 <p><strong>Cron</strong>: </p>
 <ul>
@@ -2188,7 +2233,7 @@ Aquests sistemes permeten programar l'execució d'scripts i tasques de manera re
 </ul>
 </li>
 </ul>
-<hr />
+<hr>
 <h3 id="taula-comparativa-cron-vs-anacron">Taula comparativa: Cron vs Anacron</h3>
 <table>
 <thead>
@@ -2236,7 +2281,7 @@ Aquests sistemes permeten programar l'execució d'scripts i tasques de manera re
 </tr>
 </tbody>
 </table>
-<hr />
+<hr>
 <h3 id="arxius-dinteres">Arxius d'interès</h3>
 <p><strong>Cron</strong>:</p>
 <ul>
@@ -2257,30 +2302,30 @@ Aquests sistemes permeten programar l'execució d'scripts i tasques de manera re
 </ul>
 <h2 id="exemple-practic">Exemple pràctic</h2>
 <p>Per aquest exemple, crearem dos fitxers dins del directori <code>/home/Imágenes</code> per verificar que l'script funciona correctament.</p>
-<p><img alt="alt text" src="../custom/imagenes.png" /></p>
+<p><img alt="alt text" src="../custom/imagenes.png"></p>
 <p>Aquest script s'utilitza per crear una còpia de seguretat comprimida del directori d'imatges ubicat a <code>/home/alumne/Imágenes</code>. La còpia es guarda al directori <code>Escritorio</code> amb un nom que inclou una marca de temps per identificar-la.</p>
-<p><img alt="alt text" src="../custom/scriptcopia.png" /></p>
+<p><img alt="alt text" src="../custom/scriptcopia.png"></p>
 <p><strong>Explicació de la captura</strong></p>
 <ol>
 <li>
-<p><strong>Inicialització del script</strong><br />
+<p><strong>Inicialització del script</strong><br>
    L'script està preparat per executar-se amb el shell <code>bash</code>, tal com indica la primera línia (<code>#!/bin/bash</code>).</p>
 </li>
 <li>
-<p><strong>Generació de la marca de temps (<code>TIMESTAMP</code>)</strong><br />
+<p><strong>Generació de la marca de temps (<code>TIMESTAMP</code>)</strong><br>
    Es genera una cadena amb la data i hora actuals en el format <code>YYYYMMDD_HHMMSS</code>. Aquesta marca de temps permet crear noms únics per a cada còpia de seguretat.</p>
 </li>
 <li>
-<p><strong>Creació de la còpia de seguretat</strong><br />
+<p><strong>Creació de la còpia de seguretat</strong><br>
    S'utilitza una eina per empaquetar i comprimir el directori <code>/home/alumne/Imágenes</code>. 
    El resultat és un fitxer comprimit (<code>.tar.gz</code>) que es guarda al directori <code>/home/alumne/Escritorio</code> amb un nom que inclou la marca de temps (<code>copia_YYYYMMDD_HHMMSS.tar.gz</code>).</p>
 </li>
 </ol>
 <p><strong>Exemple de resultat</strong></p>
-<p>Si l'script s'executa el <strong>16 de gener de 2025 a les 13:30:45</strong>, el fitxer resultant tindria el següent nom:<br />
+<p>Si l'script s'executa el <strong>16 de gener de 2025 a les 13:30:45</strong>, el fitxer resultant tindria el següent nom:<br>
 <code>/home/alumne/Escritorio/copia_20250116_133045.tar.gz</code>.</p>
 <p>Assignem permisos d'execució al fitxer <code>copia.sh</code> amb la comanda <code>chmod +x copia.sh</code> i l'executem manualment per verificar el seu funcionament.</p>
-<p><img alt="alt text" src="../custom/chmod%2Bx.png" /></p>
+<p><img alt="alt text" src="../custom/chmod%2Bx.png"></p>
 <h3 id="automatitzacio-del-proces-amb-crontab">Automatització del procés amb <code>crontab</code></h3>
 <p>Per automatitzar l'execució del nostre script <code>copia.sh</code>, utilitzarem el programador de tasques <code>crontab</code>. A continuació, es detallen els passos per configurar-ho:</p>
 <p><strong>Editar el fitxer <code>crontab</code> del sistema</strong></p>
@@ -2288,9 +2333,9 @@ Aquests sistemes permeten programar l'execució d'scripts i tasques de manera re
 <pre><code>sudo nano /etc/crontab
 </code></pre>
 <p><strong>Afegir la línia de programació</strong></p>
-<p>Afegim la següent línia al final del fitxer:<br />
+<p>Afegim la següent línia al final del fitxer:<br>
 <strong>05 13 16 1 * /home/alumne/copia.sh</strong>  </p>
-<p><img alt="alt text" src="../custom/cron.png" /></p>
+<p><img alt="alt text" src="../custom/cron.png"></p>
 <p>Aquesta línia indica que l'script <code>copia.sh</code> s'executarà automàticament segons la programació especificada.</p>
 <p><strong>Explicació de la sintaxi</strong></p>
 <p>Els camps de la línia afegida al <code>crontab</code> tenen el següent significat:</p>
@@ -2305,7 +2350,7 @@ Aquests sistemes permeten programar l'execució d'scripts i tasques de manera re
 <p><strong>Guardar i sortir</strong> </p>
 <p>Després d'afegir la línia, guardem els canvis i sortim de l'editor.</p>
 <p>Esperem uns minuts i podem observar que s'ha realitzat la copia dels arxius.</p>
-<p><img alt="alt text" src="../custom/copiaar.png" /></p>
+<p><img alt="alt text" src="../custom/copiaar.png"></p>
 <h3 id="configuracio-amb-anacron">Configuració amb Anacron</h3>
 <p>A continuació, configurarem el nostre script perquè s'executi automàticament amb <strong>Anacron</strong>. Aquesta eina és ideal per a tasques periòdiques en sistemes que no estan en funcionament constant.</p>
 <p><strong>Moure el script a <code>/etc/cron.daily</code></strong></p>
@@ -2314,30 +2359,30 @@ Aquests sistemes permeten programar l'execució d'scripts i tasques de manera re
 <li>Accedim al directori <code>/etc/cron.daily/</code>.</li>
 <li>Copiem el fitxer <code>copia.sh</code> des de la seva ubicació original.</li>
 </ul>
-<p><strong>Nota</strong>: El fitxer no pot tenir extensions, així que canviem el nom per eliminar-la.<br />
+<p><strong>Nota</strong>: El fitxer no pot tenir extensions, així que canviem el nom per eliminar-la.<br>
 Exemple:</p>
 <ul>
 <li>Original: <code>copia.sh</code></li>
 <li>Renombrat: <code>copia</code></li>
 </ul>
-<p><img alt="alt text" src="../custom/mvcopia.png" /></p>
+<p><img alt="alt text" src="../custom/mvcopia.png"></p>
 <p><strong>Assegurar que s'executa avui mateix</strong></p>
 <p>Per comprovar que l'script s'executa correctament, editem el fitxer de registre d'Anacron per a tasques diàries:</p>
 <ul>
 <li>Obrim el fitxer <strong>/var/spool/anacron/cron.daily</strong> i eliminem les dades que hi trobem.</li>
 </ul>
-<p><img alt="alt text" src="../custom/deletean.png" /></p>
+<p><img alt="alt text" src="../custom/deletean.png"></p>
 <p><strong>Configuració del temps d'execució</strong></p>
 <p>Per ajustar el temps d'execució de la tasca diària, editem el fitxer de configuració d'Anacron:</p>
 <ul>
 <li>Obrim <strong>/etc/anacrontab</strong> i localitzem la línia corresponent a les tasques diàries.</li>
 <li>Modifiquem el segon valor (temps en minuts) a <strong>1</strong> si volem que la tasca s'executi només un minut després d'iniciar el sistema.  </li>
 </ul>
-<p><img alt="alt text" src="../custom/anacront.png" /></p>
+<p><img alt="alt text" src="../custom/anacront.png"></p>
 <p>Per defecte, Anacron espera 5 minuts, però es pot ajustar segons les preferències. Jo he triat 1 minut, perquè "Ain't Nobody Got Time For That!"</p>
 <p>Amb això, Anacron s'encarregarà d'executar l'script diàriament quan l'ordinador estigui en funcionament.</p>
 <p>Reiniciem l'ordinador, esperem un minut i verifiquem que el procés s'ha executat correctament.</p>
-<p><img alt="alt text" src="../custom/auto.png" /></p>
+<p><img alt="alt text" src="../custom/auto.png"></p></div>
 
 
 

@@ -145,45 +145,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
   </nav>
   
@@ -1717,6 +1678,90 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarisAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d'usuaris i grups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enrutament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enrutament i accés remot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d’unitats organitzatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestioAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió de permisos i perfils mòbils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2119,17 +2164,17 @@
 
   <h1>Fitxers importants</h1>
 
-<h2 id="introduccio-als-fitxers-de-configuracio">Introducció als fitxers de configuració</h2>
+<div><h2 id="introduccio-als-fitxers-de-configuracio">Introducció als fitxers de configuració</h2>
 <p>Els fitxers que explicarem a continuació es poden visualitzar mitjançant la comanda <code>cat /etc/passwd</code>. A més, es poden editar, però no es recomana fer-ho d'aquesta manera.</p>
 <pre><code>sudo nano /etc/passwd
 </code></pre>
 <h2 id="terminal-nativa">Terminal nativa</h2>
 <p>El primer pas explica com accedir a la terminal nativa (TTY) utilitzant la combinació de tecles <code>Control + Alt + F3</code>. Això és útil en situacions on l'entorn gràfic no respon o necessites treballar des d'una consola directa.</p>
-<p><img alt="Terminal nativa" src="../custom/tty.png" /></p>
+<p><img alt="Terminal nativa" src="../custom/tty.png"></p>
 <p>Per tornar enrere pots fer-ho amb <code>Control + Alt + F1</code>.</p>
 <h3 id="larxiu-etcpasswd">L'arxiu <code>/etc/passwd</code></h3>
 <p>Aquest fitxer conté la informació bàsica sobre tots els usuaris del sistema, incloent-hi els noms d'usuari i els seus identificadors. Editar aquest fitxer pot ser necessari per gestionar usuaris o solucionar problemes de configuració.</p>
-<p><img alt="Arxiu passwd" src="../custom/passwd.png" /></p>
+<p><img alt="Arxiu passwd" src="../custom/passwd.png"></p>
 <p><strong>Desglossament de <code>/etc/passwd</code></strong></p>
 <ul>
 <li><strong><code>alumnat</code></strong>: Nom d'usuari, amb el qual l'usuari inicia sessió.</li>
@@ -2143,7 +2188,7 @@
 <p>Aquesta línia conté informació essencial sobre l'usuari <code>alumnat</code> i el seu entorn al sistema Linux.</p>
 <h3 id="larxiu-etcgroup">L'arxiu <code>/etc/group</code></h3>
 <p>Aquest arxiu gestiona els grups d'usuaris al sistema. És útil per gestionar permisos i recursos compartits entre diversos usuaris.</p>
-<p><img alt="Arxiu group" src="../custom/group.png" /></p>
+<p><img alt="Arxiu group" src="../custom/group.png"></p>
 <p><strong>Desglossament de <code>/etc/group</code></strong></p>
 <ul>
 <li><strong><code>alumnat</code></strong>: Nom del grup. En aquest cas, indica el grup associat a l'usuari <code>alumnat</code>.</li>
@@ -2153,61 +2198,61 @@
 <p>Aquesta línia conté informació bàsica sobre el grup <code>alumnat</code>, que pot incloure altres usuaris i determinar permisos d'accés.</p>
 <h3 id="larxiu-etcshadow">L'arxiu <code>/etc/shadow</code></h3>
 <p>Aquí és on es guarden les contrasenyes encriptades dels usuaris. El símbol <code>!</code> indica que la contrasenya està bloquejada, mentre que <code>$</code> significa que la contrasenya està encriptada amb un algoritme fort com SHA-512. És crucial no manipular malament aquest fitxer per evitar problemes d'accés.</p>
-<p><img alt="Arxiu shadow" src="../custom/shadow.png" /></p>
+<p><img alt="Arxiu shadow" src="../custom/shadow.png"></p>
 <p><strong>Desglossament de <code>/etc/shadow</code></strong></p>
 <ul>
 <li>
-<p><strong>Nom d'usuari</strong>: <code>alumnat</code><br />
+<p><strong>Nom d'usuari</strong>: <code>alumnat</code><br>
   Nom del compte d'usuari al sistema.</p>
 </li>
 <li>
-<p><strong>Hash de contrasenya</strong>:<br />
-<code>$y$j9T$jKK1.vU6gMnulFm9HjYTY/$D1QlW2QSkS7ZLm.p4wYUP9Dq0li8720JcFN8QvrC.ID</code><br />
+<p><strong>Hash de contrasenya</strong>:<br>
+<code>$y$j9T$jKK1.vU6gMnulFm9HjYTY/$D1QlW2QSkS7ZLm.p4wYUP9Dq0li8720JcFN8QvrC.ID</code><br>
   És el valor generat a partir de la contrasenya de l'usuari, utilitzant un algorisme de hashing.</p>
 </li>
 <li>
-<p><strong>ID d'usuari</strong>: <code>19992</code><br />
+<p><strong>ID d'usuari</strong>: <code>19992</code><br>
   Identificador únic de l'usuari dins del sistema.</p>
 </li>
 <li>
-<p><strong>ID de grup</strong>: <code>0</code><br />
+<p><strong>ID de grup</strong>: <code>0</code><br>
   Indica que l'usuari pertany al grup <code>root</code>, que té permisos d'administrador.</p>
 </li>
 <li>
-<p><strong>Expiració de contrasenya</strong>: <code>99999</code><br />
+<p><strong>Expiració de contrasenya</strong>: <code>99999</code><br>
   Indica que la contrasenya no té una data d'expiració definida.</p>
 </li>
 <li>
-<p><strong>Advertència</strong>: <code>7</code><br />
+<p><strong>Advertència</strong>: <code>7</code><br>
   Significa que s'advertirà a l'usuari 7 dies abans de que la contrasenya expiri (tot i que no s'aplica en aquest cas).</p>
 </li>
 <li>
-<p><strong>Altres camps</strong>:<br />
+<p><strong>Altres camps</strong>:<br>
   Els camps finals són buits, que podrien contenir informació addicional com l'últim canvi de contrasenya.</p>
 </li>
 </ul>
 <h3 id="larxiu-etcgshadow">L'arxiu <code>/etc/gshadow</code></h3>
 <p>L'arxiu <code>gshadow</code> conté informació sobre contrasenyes específiques de grups. És menys comú d'editar però important quan cal gestionar l'accés a grups amb permisos específics.</p>
-<p><img alt="Arxiu gshadow" src="../custom/gshadow.png" /></p>
+<p><img alt="Arxiu gshadow" src="../custom/gshadow.png"></p>
 <p><strong>Desglossament de <code>/etc/gshadow</code></strong></p>
 <ul>
 <li>
-<p><strong>Nom del grup</strong>: <code>alumnat</code><br />
+<p><strong>Nom del grup</strong>: <code>alumnat</code><br>
   Representa un grup d'usuaris dins del sistema, potencialment destinat a estudiants o usuaris relacionats amb el món acadèmic.</p>
 </li>
 <li>
-<p><strong>Contrasenya</strong>: <code>!</code><br />
+<p><strong>Contrasenya</strong>: <code>!</code><br>
   El símbol <code>!</code> indica que no hi ha contrasenya associada amb aquest grup, per tant, no es requereix autenticació per accedir a les seves funcionalitats.</p>
 </li>
 <li>
-<p><strong>Membres del grup</strong>: (buit)<br />
+<p><strong>Membres del grup</strong>: (buit)<br>
   No hi ha membres assignats al grup "alumnat", cosa que significa que actualment no s'ha creat cap connexió amb usuaris.</p>
 </li>
 <li>
-<p><strong>Administradors del grup</strong>: (buit)<br />
+<p><strong>Administradors del grup</strong>: (buit)<br>
   No s'han especificat administradors per gestionar aquest grup, indicant que no hi ha un control assignat sobre la seva administració.</p>
 </li>
-</ul>
+</ul></div>
 
 
 

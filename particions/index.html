@@ -145,45 +145,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
   </nav>
   
@@ -1816,6 +1777,90 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarisAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d'usuaris i grups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enrutament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enrutament i accés remot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d’unitats organitzatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestioAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió de permisos i perfils mòbils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2218,12 +2263,12 @@
 
   <h1>Gestió de particions i compartició de recursos</h1>
 
-<h2 id="creacio-i-muntatge-de-particions">Creació i muntatge de particions</h2>
+<div><h2 id="creacio-i-muntatge-de-particions">Creació i muntatge de particions</h2>
 <p>En aquest apartat aprendrem a crear particions tant en format <strong>ext4</strong> com <strong>NTFS</strong>. També veurem com muntar particions de manera <strong>temporal</strong> i <strong>definitiva</strong>.</p>
 <p>A més, explicarem com utilitzar <strong>FSTAB</strong> per configurar el muntatge automàtic de particions. Finalment, compartirem aquestes particions utilitzant <strong>Samba</strong> i <strong>nautilus-share</strong>.</p>
 <h3 id="creacio-de-la-particio-i-formateig"><strong>Creació de la partició i formateig</strong></h3>
 <p>Primer de tot, comprovem el nom de la nostra partició amb la comanda <strong><code>fdisk -l</code></strong>.</p>
-<p><img alt="Creació de particions" src="../disk.png" /></p>
+<p><img alt="Creació de particions" src="../disk.png"></p>
 <blockquote>
 <p><strong>Nota:</strong> En el nostre cas, el disc és <code>/dev/sdb</code> (el teu pot ser diferent).</p>
 </blockquote>
@@ -2236,11 +2281,11 @@
 <li>Defineix la mida de la partició introduint el sector inicial i la meitat del disc, per exemple <strong>2000000 bytes</strong>.</li>
 <li>Escriu <strong><code>w</code></strong> per guardar els canvis i sortir del programa.</li>
 </ol>
-<p><img alt="Creació de partició" src="../particio.png" /></p>
+<p><img alt="Creació de partició" src="../particio.png"></p>
 <p><strong>Comprovació de la partició</strong></p>
 <p>Un cop creada la partició, comprovem si s'ha creat correctament.</p>
-<p><img alt="Comprovació de partició" src="../comprovadisk.png" /></p>
-<hr />
+<p><img alt="Comprovació de partició" src="../comprovadisk.png"></p>
+<hr>
 <h3 id="formateig-de-particions-ext4"><strong>Formateig de particions EXT4</strong></h3>
 <p>Amb la partició creada, procedirem a formatar-la en format <strong>ext4</strong>.</p>
 <p>Utilitzarem la següent comanda:</p>
@@ -2249,7 +2294,7 @@
 <ul>
 <li>L'opció <strong><code>-b 2048</code></strong> especifica la mida del bloc que assignem manualment.</li>
 </ul>
-<p><img alt="Format ext4" src="../ext4.png" /></p>
+<p><img alt="Format ext4" src="../ext4.png"></p>
 <!-- Button for Extra Options -->
 <p><button class="popup-button" onclick="showPopup('popup-ext4', 'overlay-ext4')">Opcions extres per mkfs.ext4</button></p>
 <!-- Overlay and Popup for Extra Options -->
@@ -2263,7 +2308,7 @@
   <h4>Opcions comunes:</h4>
   <ul>
     <li><strong><code>-L &lt;etiqueta&gt;</code></strong>: Assigna una etiqueta a la partició (per exemple, "EXT4_PARTITION").</li>
-    <pre><code>mkfs.ext4 -L EXT4_PARTITION /dev/sdb1</code></pre>
+    </ul><pre><code>mkfs.ext4 -L EXT4_PARTITION /dev/sdb1</code></pre>
 
     <li><strong><code>-m &lt;percentatge&gt;</code></strong>: Estableix l'espai reservat per a l'usuari root (per defecte és el 5%). Utilitza un percentatge més petit per estalviar espai en particions grans.</li>
     <pre><code>mkfs.ext4 -m 1 /dev/sdb1</code></pre>
@@ -2276,7 +2321,7 @@
 
     <li><strong><code>-T &lt;ús&gt;</code></strong>: Optimitza per a casos d'ús específics (per exemple, small, largefile, largefile4).</li>
     <pre><code>mkfs.ext4 -T largefile /dev/sdb1</code></pre>
-  </ul>
+  
 </div>
 
 <h4 id="comprovacio-de-la-mida-del-bloc">Comprovació de la mida del bloc</h4>
@@ -2284,7 +2329,7 @@
 <pre><code>sudo tune2fs -l /dev/sdb1 | grep Block
 </code></pre>
 <p>Aquest és el resultat obtingut:</p>
-<p><img alt="alt text" src="../block.png" /></p>
+<p><img alt="alt text" src="../block.png"></p>
 <ul>
 <li><strong>Block count</strong>: Indica el nombre total de blocs que té la partició, en aquest cas, <strong>499488 blocs</strong>.</li>
 <li><strong>Block size</strong>: Mostra la mida del bloc assignada, que és <strong>2048 bytes</strong> (2 KB).</li>
@@ -2294,26 +2339,26 @@
 <p>La mida total del sistema de fitxers es pot calcular així:</p>
 <ol>
 <li>
-<p>Multipliquem el <strong>Block count</strong> pel <strong>Block size</strong>:<br />
+<p>Multipliquem el <strong>Block count</strong> pel <strong>Block size</strong>:<br>
 <code>499488 blocs * 2048 bytes = 1022035968 bytes</code></p>
 </li>
 <li>
-<p>Convertim el resultat a megabytes:<br />
+<p>Convertim el resultat a megabytes:<br>
 <code>1022035968 bytes ÷ 1024 ÷ 1024 = 974 MB</code></p>
 </li>
 </ol>
 <p>Així, la mida aproximada de la partició és <strong>974 MB</strong>.</p>
-<hr />
+<hr>
 <h3 id="formateig-de-particions-ntfs"><strong>Formateig de particions NTFS</strong></h3>
 <p>Hem creat una segona partició, <strong>/dev/sdb2</strong>, de 1GB al mateix disc. Aquesta partició es destinarà al format <strong>NTFS</strong>.</p>
-<p><img alt="Creació de partició" src="../custom/NTFS.png" /></p>
+<p><img alt="Creació de partició" src="../custom/NTFS.png"></p>
 <p>Un cop creades les particions, les hem formatat segons els sistemes de fitxers desitjats:</p>
 <ul>
 <li><strong>/dev/sdb1</strong>: Formatada amb <strong>ext4</strong>, un sistema de fitxers ideal per a sistemes Linux.</li>
 <li><strong>/dev/sdb2</strong>: Formatada amb <strong>NTFS</strong>, un sistema de fitxers compatible amb Windows.</li>
 </ul>
 <p>Hem aprofitat per formatar <strong>/dev/sdb1</strong> amb <strong>ext4</strong> durant el mateix procés.</p>
-<p><img alt="Formatació de particions" src="../custom/ntfsext.png" /></p>
+<p><img alt="Formatació de particions" src="../custom/ntfsext.png"></p>
 <!-- Button for NTFS Extra Options -->
 <p><button class="popup-button" onclick="showPopup('popup-ntfs', 'overlay-ntfs')">Opcions extres per mkfs.ntfs</button></p>
 <!-- Overlay and Popup for NTFS Extra Options -->
@@ -2327,7 +2372,7 @@
   <h4>Opcions comunes:</h4>
   <ul>
     <li><strong><code>-L &lt;etiqueta&gt;</code></strong>: Assigna una etiqueta a la partició (per exemple, "NTFS_PARTITION").</li>
-    <pre><code>mkfs.ntfs -L NTFS_PARTITION /dev/sdb2</code></pre>
+    </ul><pre><code>mkfs.ntfs -L NTFS_PARTITION /dev/sdb2</code></pre>
 
     <li><strong><code>-c &lt;mida-del-clúster&gt;</code></strong>: Especifica la mida del clúster (per exemple, 512, 1024, 2048, 4096 bytes, etc.).</li>
     <pre><code>mkfs.ntfs -c 4096 /dev/sdb2</code></pre>
@@ -2340,26 +2385,26 @@
 
     <li><strong><code>-f</code></strong>: Activa el mode ràpid, formatant la partició sense comprovar si hi ha blocs dolents.</li>
     <pre><code>mkfs.ntfs -f /dev/sdb2</code></pre>
-  </ul>
+  
 </div>
 
-<hr />
+<hr>
 <h3 id="verificacio">Verificació</h3>
 <p>Un cop formatades, podem verificar el tipus de sistema de fitxers i el muntatge de les particions utilitzant:</p>
 <pre><code>lsblk -f
 </code></pre>
-<p><img alt="alt text" src="../custom/lalala.png" /></p>
+<p><img alt="alt text" src="../custom/lalala.png"></p>
 <h3 id="muntatge-temporal-de-la-carpeta-a-la-particio"><strong>Muntatge temporal de la carpeta a la partició</strong></h3>
 <p>Després, crearem una carpeta i un arxiu dins d'aquesta carpeta.</p>
-<p><img alt="alt text" src="../carpetaparticio.png" /></p>
+<p><img alt="alt text" src="../carpetaparticio.png"></p>
 <p>Executem la comanda següent:</p>
 <pre><code>sudo mount -t ext4 /dev/sdb1 /var/partition1/
 </code></pre>
 <p>Aquesta acció muntarà la carpeta dins de <code>/dev/sdb1</code>. </p>
 <p>Per a l'usuari no és visible, però d'aquesta manera ens assegurem que les dades no es perdin si succeeix algun problema amb el disc principal.</p>
-<p><img alt="alt text" src="../mount.png" /></p>
+<p><img alt="alt text" src="../mount.png"></p>
 <p><strong>Exemple:</strong> Els arxius es guarden a la partició que hem muntat, però els arxius que prèviament hem creat a <code>/partition1/</code> no s'han esborrat. En realitat, aquests arxius queden "ocults", ja que la carpeta <code>/partition1/</code> està muntada sobre la partició <strong><code>/dev/sdb1</code></strong>. Quan desmuntem la partició, els arxius locals tornen a ser visibles.</p>
-<p><img alt="alt text" src="../explicaciomuntatge.png" /></p>
+<p><img alt="alt text" src="../explicaciomuntatge.png"></p>
 <p><strong>Explicació de la captura</strong></p>
 <ol>
 <li>
@@ -2382,13 +2427,13 @@
 <p>Nota: Tornem a muntar la carpeta amb la comanda anterior.</p>
 </blockquote>
 <p>Comprovem que la partició existeix utilitzant la comanda <code>df -T</code>.</p>
-<p><img alt="alt text" src="../DFT.png" /></p>
+<p><img alt="alt text" src="../DFT.png"></p>
 <p>S'observa que la partició està present. Després, reiniciem la màquina per assegurar-nos que tot funciona correctament.</p>
 <p>En fer la comprovació després del reinici, observem que la partició ja no està muntada. Això es deu al fet que la carpeta estava muntada de forma <strong>temporal</strong> i no de manera <strong>permanent</strong>.</p>
-<p><img alt="alt text" src="../borrada.png" /></p>
+<p><img alt="alt text" src="../borrada.png"></p>
 <h3 id="muntatge-permanent-de-la-carpeta-a-la-particio"><strong>Muntatge Permanent de la carpeta a la partició</strong></h3>
 <p>Per fer que el muntatge sigui permanent, cal editar el fitxer <strong><code>/etc/fstab</code></strong> afegint els paràmetres necessaris.</p>
-<p><img alt="alt text" src="../fstab.png" /></p>
+<p><img alt="alt text" src="../fstab.png"></p>
 <blockquote>
 <p><strong>IMPORTANT!</strong> Tingues molta cura amb les modificacions en aquest fitxer, ja que un error pot fer que el sistema no arranqui. Si això succeeix, hauràs d'utilitzar un <strong>Live Boot</strong> per reparar el fitxer <strong>FSTAB</strong>.</p>
 </blockquote>
@@ -2509,10 +2554,10 @@
   }
 </style>
 
-<hr />
+<hr>
 <p>Després de reiniciar el sistema, utilitzem la comanda <code>df -T</code> per verificar l'estat de la partició. </p>
 <p>Podem observar que la partició es munta automàticament en iniciar la sessió gràcies a la configuració del fitxer <strong><code>/etc/fstab</code></strong>.</p>
-<p><img alt="alt text" src="../df-t.png" /></p>
+<p><img alt="alt text" src="../df-t.png"></p>
 <h3 id="comparticio-de-fitxers-en-xarxa"><strong>Compartició de Fitxers en Xarxa</strong></h3>
 <p>Hi ha diverses maneres de compartir fitxers en xarxa, però en aquest exemple utilitzarem <strong>Nautilus-share</strong> i <strong>Samba</strong>.</p>
 <p><strong>Què significa compartir arxius en xarxa?</strong></p>
@@ -2520,36 +2565,36 @@
 <p>Amb aquest procés, es poden configurar permisos perquè només usuaris específics tinguin accés, garantint la seguretat i el control sobre els fitxers.</p>
 <h4 id="nautilus-share">Nautilus-Share</h4>
 <p>Hem creat una carpeta anomenada <strong>partition1</strong> dins del directori <strong>/var/</strong>, i ara la compartirem a través de la xarxa utilitzant <strong>Nautilus</strong>.</p>
-<p><img alt="Compartició amb Nautilus" src="../nautilus1.png" /></p>
+<p><img alt="Compartició amb Nautilus" src="../nautilus1.png"></p>
 <p>Primer de tot, cal instal·lar <strong>Nautilus-share</strong> amb la següent comanda:</p>
 <pre><code>sudo apt install nautilus-share
 </code></pre>
 <p>Un cop creada la carpeta <strong>partition1</strong>, és necessari ajustar els permisos i el propietari per facilitar l'accés a altres usuaris.</p>
 <ol>
 <li>
-<p><strong>Permisos 777</strong>:<br />
+<p><strong>Permisos 777</strong>:<br>
    Els permisos <strong>777</strong> atorguen màxima flexibilitat, ja que permeten a qualsevol usuari llegir, escriure i executar els fitxers dins de la carpeta. Aquesta configuració és útil quan es vol garantir accés total, però s'ha d'usar amb precaució, especialment en entorns on la seguretat és prioritària.</p>
 </li>
 <li>
-<p><strong>Propietari nobody:nogroup</strong>:<br />
+<p><strong>Propietari nobody:nogroup</strong>:<br>
    Assignar <strong>nobody:nogroup</strong> com a propietari de la carpeta fa que no estigui associada a cap usuari o grup específic. Això significa que qualsevol persona que accedeixi a la xarxa podrà interactuar amb els fitxers dins de la carpeta.</p>
 </li>
 </ol>
 <blockquote>
 <p><strong>Nota:</strong> Aquesta configuració és adequada per a entorns on la seguretat no és una preocupació principal. En sistemes més restringits, és recomanable ajustar els permisos i propietaris segons les necessitats específiques de seguretat.</p>
 </blockquote>
-<p><img alt="alt text" src="../modown.png" /></p>
-<p><strong>Obrir Nautilus amb permisos d'administrador</strong>:<br />
+<p><img alt="alt text" src="../modown.png"></p>
+<p><strong>Obrir Nautilus amb permisos d'administrador</strong>:<br>
 Obrim un terminal i escrivim <code>sudo nautilus</code>. Esperem que s'obri l'explorador de fitxers.</p>
-<p><strong>Localitzar la carpeta</strong>:<br />
+<p><strong>Localitzar la carpeta</strong>:<br>
 Ens dirigim al directori <strong>/var/</strong> i localitzem la carpeta <strong>partition1</strong> que hem creat prèviament.</p>
-<p><img alt="alt text" src="../nautilus2.png" /></p>
-<p><strong>Opció de compartir</strong>:<br />
+<p><img alt="alt text" src="../nautilus2.png"></p>
+<p><strong>Opció de compartir</strong>:<br>
 Fem clic dret a la carpeta <strong>que volem compartir</strong> i seleccionem l'opció <strong>Sharing Options</strong>.</p>
-<p><img alt="alt text" src="../comp.png" /></p>
-<p><strong>Configuració de la compartició</strong>:<br />
+<p><img alt="alt text" src="../comp.png"></p>
+<p><strong>Configuració de la compartició</strong>:<br>
 Apareixerà una finestra per configurar la compartició de la carpeta. Habilitem les opcions que desitgem (com "Compartir aquesta carpeta") i fem clic a <strong>Modify Share</strong>.</p>
-<p><img alt="alt text" src="../opcions.png" /></p>
+<p><img alt="alt text" src="../opcions.png"></p>
 <p><strong>Accés des d'un altre dispositiu</strong>:  </p>
 <ul>
 <li>
@@ -2562,14 +2607,14 @@ Apareixerà una finestra per configurar la compartició de la carpeta. Habilitem
 <p>Per exemple, en aquest cas: <code>smb://192.168.1.18/</code>.</p>
 </li>
 </ul>
-<p><img alt="alt text" src="../worksnautilus.png" /></p>
+<p><img alt="alt text" src="../worksnautilus.png"></p>
 <p>En fer doble clic a la carpeta <strong>partition1</strong>, se'ns demanaran credencials d'accés. Si disposem de credencials, les podem utilitzar, però com que hem configurat l'accés com a <strong>"Guest"</strong>, podem seleccionar l'opció <strong>Anonymous</strong>.</p>
-<p><img alt="alt text" src="../anon.png" /></p>
+<p><img alt="alt text" src="../anon.png"></p>
 <p>Un cop connectats, ja podem crear, visualitzar i esborrar arxius i carpetes dins de <strong>partition1</strong>.</p>
-<p><img alt="alt text" src="../done.png" /></p>
+<p><img alt="alt text" src="../done.png"></p>
 <p>Si ens dirigim a la màquina des d'on hem compartit el fitxer, podem comprovar si s'ha creat la nova carpeta.</p>
 <p>En efecte, la carpeta s'ha creat amb el nom del propietari <strong>"nobody:nogroup"</strong>, tal com hem configurat prèviament.</p>
-<p><img alt="alt text" src="../carpeta.png" /></p>
+<p><img alt="alt text" src="../carpeta.png"></p>
 <h4 id="samba">Samba</h4>
 <h5 id="que-es-samba"><strong>¿Què és Samba?</strong></h5>
 <p><strong>Samba</strong> és una implementació de programari lliure del protocol SMB/CIFS (Server Message Block/Common Internet File System) que permet la compartició de fitxers, carpetes i impressores entre ordinadors que utilitzen diferents sistemes operatius, com Linux, Windows i macOS. </p>
@@ -2597,16 +2642,16 @@ Apareixerà una finestra per configurar la compartició de la carpeta. Habilitem
 <blockquote>
 <p>En configuracions simples, Samba no requereix l'ús de Kerberos per compartir fitxers entre Linux i Windows. No obstant això, en entorns empresarials o quan es necessita integració amb Active Directory, Kerberos es fa necessari per gestionar l'autenticació segura. Això permet un accés centralitzat i segur als recursos compartits en xarxes complexes.</p>
 </blockquote>
-<hr />
+<hr>
 <h5 id="instalacio-i-configuracio-del-samba">Instalació i Configuració del <strong>Samba</strong>.</h5>
 <p>Executem la comanda <code>sudo apt install samba</code>.</p>
 <pre><code>sudo apt install samba
 </code></pre>
-<p><img alt="Instal·lació de Samba" src="../custom/sambainstall.png" /></p>
+<p><img alt="Instal·lació de Samba" src="../custom/sambainstall.png"></p>
 <p>Posteriorment configurem el arxiu del smb.conf i afegir les linies que tenim a continuació.</p>
 <pre><code>sudo nano /etc/samba/smb.conf
 </code></pre>
-<p><img alt="alt text" src="../custom/smbconf.png" /></p>
+<p><img alt="alt text" src="../custom/smbconf.png"></p>
 <!-- Button for the Samba configuration popup -->
 <p><button class="popup-button" onclick="showPopup('sambaConfigPopup', 'sambaOverlay')">Explicació de la configuració de Samba (Fes clic)</button></p>
 <!-- Overlay and popup for the Samba configuration -->
@@ -2658,11 +2703,11 @@ Apareixerà una finestra per configurar la compartició de la carpeta. Habilitem
 <p>Primer, crearem el directori <strong>/var/partition1/</strong> i configurarem els permisos i el propietari per garantir que sigui accessible a tots els usuaris.</p>
 <ol>
 <li>
-<p><strong>Creació de la carpeta</strong>:<br />
+<p><strong>Creació de la carpeta</strong>:<br>
    El directori <strong>partition1/</strong> es crearà dins del directori <strong>/var/</strong>.</p>
 </li>
 <li>
-<p><strong>Permisos 777</strong>:<br />
+<p><strong>Permisos 777</strong>:<br>
    Assignarem permisos <strong>777</strong> al directori per permetre que qualsevol usuari pugui llegir, escriure i executar fitxers dins d'aquest.  </p>
 </li>
 <li><strong>Lectura (r)</strong>: Permet veure el contingut dels fitxers.</li>
@@ -2671,19 +2716,19 @@ Apareixerà una finestra per configurar la compartició de la carpeta. Habilitem
 <p><strong>Execució (x)</strong>: Permet accedir a directoris i executar fitxers.</p>
 </li>
 <li>
-<p><strong>Propietari nobody:nogroup</strong>:<br />
+<p><strong>Propietari nobody:nogroup</strong>:<br>
    Canviarem el propietari del directori a <strong>nobody:nogroup</strong> perquè no estigui associat a cap usuari o grup específic. Això garanteix que qualsevol persona pugui accedir als recursos compartits sense restriccions.</p>
 </li>
 </ol>
-<p><img alt="alt text" src="../custom/chmod77.png" /></p>
+<p><img alt="alt text" src="../custom/chmod77.png"></p>
 <p>Per aquest exemple, crearem un usuari anomenat <strong>diego</strong>.</p>
 <blockquote>
-<p><strong>Nota:</strong> Si necessites més informació sobre com es creen usuaris, visita l'apartat de creació d'usuaris a la següent ruta:<br />
+<p><strong>Nota:</strong> Si necessites més informació sobre com es creen usuaris, visita l'apartat de creació d'usuaris a la següent ruta:<br>
 <a href="https://chaminita94.github.io/mkdocs/gestio_usuaris/#afegir-un-nou-usuari" target="_blank" rel="noopener noreferrer">Gestió d'usuaris: Afegir un nou usuari</a></p>
 </blockquote>
 <p><strong>Afegir l'usuari a Samba amb <code>smbpasswd</code></strong></p>
 <p>La comanda <strong><code>smbpasswd -a diego</code></strong> s'utilitza per afegir l'usuari <strong><code>diego</code></strong> al sistema de gestió d'usuaris de Samba. Aquesta comanda permet que l'usuari pugui accedir als recursos compartits configurats a través de Samba.</p>
-<p><img alt="Assignar contrasenya SMB" src="../smbpass.png" /></p>
+<p><img alt="Assignar contrasenya SMB" src="../smbpass.png"></p>
 <p><strong>Pas a pas del procés</strong>:</p>
 <p><strong>Assignació d'una contrasenya SMB</strong>:</p>
 <ul>
@@ -2698,46 +2743,46 @@ Apareixerà una finestra per configurar la compartició de la carpeta. Habilitem
 <blockquote>
 <p><strong>Nota:</strong> Aquest procés no afecta els permisos ni les contrasenyes del sistema Linux de l'usuari, ja que la base de dades d'usuaris de Samba és independent.</p>
 </blockquote>
-<p><strong>Reiniciar el servei de Samba</strong>:<br />
+<p><strong>Reiniciar el servei de Samba</strong>:<br>
 Després de configurar el fitxer <code>smb.conf</code>, cal reiniciar els serveis de Samba perquè els canvis es facin efectius.  </p>
 <ul>
 <li><strong><code>systemctl restart smbd</code></strong>: Reinicia el servei que gestiona la compartició de fitxers i autenticació d’usuaris.  </li>
 <li><strong><code>systemctl restart nmbd</code></strong>: Reinicia el servei que gestiona el servei de noms i la descoberta de recursos en la xarxa.</li>
 </ul>
-<p><img alt="Reinici del servei" src="../custom/restar.png" /></p>
-<p><strong>Connexió des d'un altre ordinador</strong>:<br />
-En un altre dispositiu de la mateixa xarxa, obrim el gestor de fitxers i introduïm l'adreça IP del servidor Samba al camp de cerca, seguint aquest format:<br />
+<p><img alt="Reinici del servei" src="../custom/restar.png"></p>
+<p><strong>Connexió des d'un altre ordinador</strong>:<br>
+En un altre dispositiu de la mateixa xarxa, obrim el gestor de fitxers i introduïm l'adreça IP del servidor Samba al camp de cerca, seguint aquest format:<br>
 <code>smb://&lt;IP_del_ordinador&gt;</code></p>
 <blockquote>
 <p><strong>Consell:</strong> Si no saps quina és la IP del servidor, pots consultar-la executant la comanda <strong>ip -a</strong> al servidor Samba.</p>
 </blockquote>
-<p><img alt="Connexió al recurs compartit" src="../custom/smbshare.png" /></p>
-<p><strong>Introduir les credencials</strong>:<br />
+<p><img alt="Connexió al recurs compartit" src="../custom/smbshare.png"></p>
+<p><strong>Introduir les credencials</strong>:<br>
 Quan es demanin credencials, introduïm el nom d'usuari i la contrasenya que hem configurat prèviament per Samba. En aquest exemple, introduïm les credencials de l'usuari <strong>Diego</strong>.</p>
-<p><img alt="Introduir credencials" src="../custom/diegoshare.png" /></p>
-<p><strong>Provar la connexió</strong>:<br />
+<p><img alt="Introduir credencials" src="../custom/diegoshare.png"></p>
+<p><strong>Provar la connexió</strong>:<br>
 Un cop connectats, intentem crear un fitxer o carpeta dins del recurs compartit per assegurar-nos que tenim els permisos necessaris.</p>
-<p><img alt="Creació de fitxer" src="../custom/diegoshared.png" /></p>
-<p><strong>Comprovació al servidor</strong>:<br />
+<p><img alt="Creació de fitxer" src="../custom/diegoshared.png"></p>
+<p><strong>Comprovació al servidor</strong>:<br>
 Tornem al servidor i comprovem que el fitxer o carpeta que hem creat està correctament desat al directori <strong>/var/particio1/</strong>.</p>
-<p><img alt="Comprovació del fitxer creat" src="../custom/diegocrea.png" /></p>
-<p><strong>Verificació del propietari</strong>:<br />
+<p><img alt="Comprovació del fitxer creat" src="../custom/diegocrea.png"></p>
+<p><strong>Verificació del propietari</strong>:<br>
 En efecte, el fitxer creat té com a propietari l'usuari <strong>Diego</strong>, tal com s'ha configurat en el fitxer <code>smb.conf</code>.</p>
-<hr />
+<hr>
 <h4 id="compartir-un-directori-formatat-amb-ntfs-mitjancant-samba">Compartir un directori formatat amb NTFS mitjançant Samba</h4>
 <p>També és possible compartir un directori formatat amb <strong>NTFS</strong> utilitzant <strong>Samba</strong>. A continuació, es detallen els passos principals:</p>
-<hr />
+<hr>
 <p><strong>Crear i muntar el directori</strong></p>
 <p>S'ha creat un directori anomenat <strong>Windows</strong> al camí <strong>/var/Windows</strong>. A continuació, s'ha configurat l'arxiu <strong>/etc/fstab</strong> per tal de muntar automàticament la partició <strong>/dev/sdb2</strong> al directori <strong>/var/Windows</strong> durant l'arrencada del sistema.</p>
 <p>En l'arxiu <strong>fstab</strong>, s'ha afegit la configuració adequada per a la partició NTFS, assegurant que aquesta es muntarà correctament sempre que el sistema s'iniciï.</p>
-<p><img alt="Configuració de fstab" src="../custom/fswindows.png" /></p>
-<hr />
+<p><img alt="Configuració de fstab" src="../custom/fswindows.png"></p>
+<hr>
 <p><strong>Configurar Samba per compartir el directori</strong></p>
 <p>Per compartir el directori <strong>Windows</strong> mitjançant <strong>Samba</strong>, s'ha editat l'arxiu <strong>/etc/samba/smb.conf</strong> per afegir una configuració específica. Aquesta configuració permet que el directori sigui visible a la xarxa, navegable i amb permisos adequats per als usuaris.</p>
 <p>Els paràmetres inclouen opcions com la visibilitat de la carpeta a la xarxa, els permisos d'escriptura i l'accés per a convidats.</p>
-<p><img alt="Configuració de Samba" src="../custom/smb.png" /></p>
+<p><img alt="Configuració de Samba" src="../custom/smb.png"></p>
 <p>Un cop realitzada aquesta configuració, s'han reiniciat els serveis de Samba perquè els canvis s'apliquin correctament.</p>
-<hr />
+<hr>
 <p><strong>Resum del procés</strong></p>
 <ul>
 <li>S'ha creat la partició <strong>/dev/sdb2</strong>.</li>
@@ -2745,17 +2790,17 @@ En efecte, el fitxer creat té com a propietari l'usuari <strong>Diego</strong>,
 <li>S'ha muntat la carpeta <strong>/var/Windows</strong> a la partició <strong>/dev/sdb2</strong>.</li>
 <li>S'ha configurat Samba per compartir aquesta carpeta, permetent l'accés des d'altres dispositius de la xarxa.</li>
 </ul>
-<p><img alt="Compartició de Windows amb Samba" src="../custom/WindowsSh.png" /></p>
+<p><img alt="Compartició de Windows amb Samba" src="../custom/WindowsSh.png"></p>
 <p>Amb aquests passos, el directori <strong>Windows</strong> és accessible a la xarxa mitjançant Samba, amb permisos adequats per als usuaris.</p>
 <p>Un cop configurat Samba i compartit el directori <strong>Windows</strong>, comprovem que és possible crear arxius des d'un ordinador Windows.</p>
-<hr />
+<hr>
 <p><strong>Creació d'arxius des de Windows</strong></p>
 <p>Des de l'ordinador Windows, accedim al recurs compartit i creem un fitxer per comprovar que tenim permisos d'escriptura adequats.</p>
-<p><img alt="Creació d'arxius a Windows" src="../custom/WindwosH.png" /></p>
+<p><img alt="Creació d'arxius a Windows" src="../custom/WindwosH.png"></p>
 <p><strong>Verificació des de Linux</strong></p>
 <p>Tornem a la màquina Linux i comprovem que el fitxer creat des de Windows apareix correctament al directori <strong>/var/Windows</strong>.</p>
-<p><img alt="Verificació del fitxer a Linux" src="../custom/linxuw.png" /></p>
-<hr />
+<p><img alt="Verificació del fitxer a Linux" src="../custom/linxuw.png"></p>
+<hr></div>
 
 
 

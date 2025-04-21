@@ -145,45 +145,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
   </nav>
   
@@ -1690,6 +1651,90 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarisAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d'usuaris i grups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enrutament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enrutament i accés remot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d’unitats organitzatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestioAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió de permisos i perfils mòbils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2092,17 +2137,17 @@
 
   <h1>Còpia i automatització en Windows</h1>
 
-<h2 id="script">Script</h2>
+<div><h2 id="script">Script</h2>
 <p>En aquest apartat parlarem de com dur a terme còpies de seguretat en Windows i automatitzar-les.</p>
 <p>Primer que res, afegim un nou disc a la nostra màquina virtual.</p>
-<p><img alt="alt text" src="../custom/g1.png" /></p>
+<p><img alt="alt text" src="../custom/g1.png"></p>
 <p>Formatem el disc amb format <strong>NTFS</strong> i creem un directori dins del volum que s'ha creat per guardar-hi les còpies de seguretat.</p>
-<p><img alt="alt text" src="../custom/d2.png" /></p>
-<p><img alt="alt text" src="../custom/gg2.png" /></p>
+<p><img alt="alt text" src="../custom/d2.png"></p>
+<p><img alt="alt text" src="../custom/gg2.png"></p>
 <p>Script per copiar automàticament el perfil de l’usuari actual a G:\CopiesUsuaris\%USERNAME%:</p>
 <pre><code>@echo off  
-mkdir &quot;G:\CopiesUsuaris\%USERNAME%&quot;  
-xcopy &quot;C:\Users\%USERNAME%&quot; &quot;G:\CopiesUsuaris\%USERNAME%&quot; /E /H /C /Y
+mkdir "G:\CopiesUsuaris\%USERNAME%"  
+xcopy "C:\Users\%USERNAME%" "G:\CopiesUsuaris\%USERNAME%" /E /H /C /Y
 </code></pre>
 <blockquote>
 <p><strong>NOTA:</strong> Recorda de posar la lletra correcta del disc. En el meu cas és la G:, però en el teu pot ser una altra diferent segons com tinguis configurada la màquina.</p>
@@ -2114,20 +2159,20 @@ xcopy &quot;C:\Users\%USERNAME%&quot; &quot;G:\CopiesUsuaris\%USERNAME%&quot; /E
 <li>/C : Continua copiant encara que hi hagi errors  </li>
 <li>/Y : No demana confirmació per sobreescriure fitxers</li>
 </ul>
-<p><strong>Resultat esperat:</strong><br />
+<p><strong>Resultat esperat:</strong><br>
 Per a l’usuari alumne1, es crea la carpeta G:\CopiesUsuaris\alumne1\ amb tot el seu perfil copiat.</p>
-<hr />
+<hr>
 <h3 id="automatitzacio-del-script">Automatització del script</h3>
 <p>Per automatitzar el script, cal editar les polítiques de Windows. Cerquem "gpedit" a la barra de cerca i accedim a l’editor de polítiques.</p>
-<p><img alt="alt text" src="../custom/gp.png" /></p>
-<p>Ens dirigim a:<br />
+<p><img alt="alt text" src="../custom/gp.png"></p>
+<p>Ens dirigim a:<br>
 <strong>Configuració de l'usuari → Configuració de Windows → Scripts (Inici / Tancament de sessió) → Inici de sessió</strong></p>
 <ul>
 <li>Fes doble clic a <strong>Inici de sessió</strong></li>
 <li>Fes clic a <strong>Afegir...</strong></li>
 <li>Clica <strong>Navega...</strong> i selecciona el fitxer <code>.bat</code> que vas crear.</li>
 </ul>
-<p><img alt="alt text" src="../custom/sc.png" /></p>
+<p><img alt="alt text" src="../custom/sc.png"></p>
 <p>Després, pots executar:</p>
 <p>gpupdate /force</p>
 <p>Aquesta comanda s'ha d'executar a la <strong>línia d’ordres (CMD)</strong> amb permisos d’administrador. Per fer-ho:</p>
@@ -2141,12 +2186,12 @@ Per a l’usuari alumne1, es crea la carpeta G:\CopiesUsuaris\alumne1\ amb tot e
 <li>L’opció <strong><code>/force</code></strong> força la re-aplicació de <strong>totes</strong> les polítiques, tant les que han canviat com les que no.</li>
 </ul>
 <p><strong>Per què és útil?</strong></p>
-<p>Després de configurar un script d’inici de sessió mitjançant l’Editor de polítiques de grup (gpedit), aquestes polítiques no s’apliquen immediatament.<br />
+<p>Després de configurar un script d’inici de sessió mitjançant l’Editor de polítiques de grup (gpedit), aquestes polítiques no s’apliquen immediatament.<br>
 Amb <code>gpupdate /force</code>, forcem que el sistema les apliqui de seguida, evitant haver d’esperar un reinici o una nova sessió.</p>
 <p>Això és molt útil per comprovar ràpidament si la configuració funciona, especialment en entorns de prova o pràctiques com aquesta.</p>
 <p>Quan entris amb l’usuari "alumne1", es crearà automàticament la carpeta i es farà la còpia de seguretat en segon pla.</p>
-<p><img alt="alt text" src="../custom/bga.png" /></p>
-<p><img alt="alt text" src="../custom/bg12.png" /></p>
+<p><img alt="alt text" src="../custom/bga.png"></p>
+<p><img alt="alt text" src="../custom/bg12.png"></p></div>
 
 
 

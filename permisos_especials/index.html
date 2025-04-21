@@ -145,45 +145,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
   </nav>
   
@@ -1744,6 +1705,90 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarisAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d'usuaris i grups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enrutament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enrutament i accés remot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d’unitats organitzatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestioAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió de permisos i perfils mòbils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2146,7 +2191,7 @@
 
   <h1>Permisos especials i ACL</h1>
 
-<h2 id="permisos-normals-uog">Permisos Normals UOG</h2>
+<div><h2 id="permisos-normals-uog">Permisos Normals UOG</h2>
 <p>Els permisos "normals" en Linux es gestionen amb les comandes <code>chown</code>, <code>chgrp</code> i <code>chmod</code>. Aquesta taula mostra les comandes principals i el que fan</p>
 <table>
 <thead>
@@ -2242,12 +2287,12 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Explicació:</strong><br />
+<p><strong>Explicació:</strong><br>
 Sense cap canvi en la configuració predeterminada de la <code>umask</code>, tots els fitxers creats per l'usuari root obtindran permisos <strong>644</strong> (666 - 022), i tots els directoris obtindran permisos <strong>755</strong> (777 - 022).</p>
-<hr />
+<hr>
 <h3 id="com-funciona-la-umask"><strong>Com funciona la <code>umask</code>?</strong></h3>
 <p>La <code>umask</code> no funciona per resta aritmètica, sinó <em>bit a bit</em>, apagant (desactivant) els permisos corresponents. Cada bit del valor predeterminat interacciona amb el bit equivalent de la <code>umask</code>. </p>
-<hr />
+<hr>
 <h3 id="exemple-de-calcul-per-a-fitxers">Exemple de càlcul per a fitxers</h3>
 <p>Per calcular els permisos per a fitxers, seguim aquests passos:</p>
 <table>
@@ -2284,7 +2329,7 @@ Sense cap canvi en la configuració predeterminada de la <code>umask</code>, tot
 <p>Els permisos resultants són <strong>644</strong>:
 - <strong>Propietari:</strong> pot llegir i escriure.
 - <strong>Grup i altres:</strong> només poden llegir.</p>
-<hr />
+<hr>
 <h3 id="exemple-de-calcul-per-a-directoris">Exemple de càlcul per a directoris</h3>
 <p>Per calcular els permisos per a directoris, seguim aquests passos:</p>
 <table>
@@ -2321,12 +2366,12 @@ Sense cap canvi en la configuració predeterminada de la <code>umask</code>, tot
 <p>Els permisos resultants són <strong>755</strong>:
 - <strong>Propietari:</strong> pot llegir, escriure i executar.
 - <strong>Grup i altres:</strong> només poden llegir i executar.</p>
-<hr />
+<hr>
 <h3 id="explicacio-visual-del-proces">Explicació Visual del Procés</h3>
 <ol>
-<li><strong>NOR (Negació):</strong> S'inverteixen els bits de l'Umask.<br />
+<li><strong>NOR (Negació):</strong> S'inverteixen els bits de l'Umask.<br>
    Exemple: <code>~000 010 010</code> → <code>111 101 101</code>.</li>
-<li><strong>AND (Intersecció):</strong> Es combinen els permisos predeterminats amb el resultat de la NOR.<br />
+<li><strong>AND (Intersecció):</strong> Es combinen els permisos predeterminats amb el resultat de la NOR.<br>
    Exemple: <code>110 110 110</code> AND <code>111 101 101</code> → <code>110 100 100</code>.</li>
 </ol>
 <table>
@@ -2353,7 +2398,7 @@ Sense cap canvi en la configuració predeterminada de la <code>umask</code>, tot
 </tr>
 </tbody>
 </table>
-<hr />
+<hr>
 <h3 id="permisos-especials">Permisos Especials</h3>
 <p>Els permisos especials com <code>sticky</code>, <code>suid</code> i <code>sgid</code> permeten funcionalitats addicionals en fitxers o carpetes. La taula següent explica cadascun d'ells:</p>
 <table>
@@ -2382,7 +2427,7 @@ Sense cap canvi en la configuració predeterminada de la <code>umask</code>, tot
 </tr>
 </tbody>
 </table>
-<hr />
+<hr>
 <h3 id="acls-access-control-lists">ACLs (Access Control Lists)</h3>
 <p>Les ACLs permeten definir permisos més granulars que els permisos "normals". Aquestes comandes permeten gestionar-les:</p>
 <table>
@@ -2406,7 +2451,7 @@ Sense cap canvi en la configuració predeterminada de la <code>umask</code>, tot
 <td>Esborra les ACLs del fitxer/carpeta.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 
 
 

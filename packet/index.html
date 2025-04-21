@@ -145,45 +145,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
   </nav>
   
@@ -1697,6 +1658,90 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarisAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d'usuaris i grups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enrutament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enrutament i accés remot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d’unitats organitzatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestioAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió de permisos i perfils mòbils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2097,7 +2142,7 @@
                   
 
 
-<h1 id="fixacio-de-paquets-amb-apt-a-ubuntu">Fixació de Paquets amb APT a Ubuntu</h1>
+<div><h1 id="fixacio-de-paquets-amb-apt-a-ubuntu">Fixació de Paquets amb APT a Ubuntu</h1>
 <h2 id="introduccio-a-la-fixacio-de-paquets-amb-apt">Introducció a la Fixació de Paquets amb APT</h2>
 <p>La fixació de paquets (o <em>APT pinning</em>) és una funcionalitat d'APT, el sistema de gestió de paquets en distribucions basades en Debian com Ubuntu, que permet definir quina versió d'un paquet específic s'ha d'instal·lar, independentment de les actualitzacions disponibles en altres repositoris o versions del sistema operatiu. 
 Aquesta tècnica és útil quan volem assegurar-nos que un programa específic utilitzi una versió concreta.</p>
@@ -2109,7 +2154,7 @@ Aquesta tècnica és útil quan volem assegurar-nos que un programa específic u
 <p>En aquest exemple, s'ha utilitzat la comanda <code>apt-cache policy smplayer</code> per consultar les versions disponibles del paquet <code>smplayer</code>:</p>
 <pre><code>sudo apt-cache policy smplayer
 </code></pre>
-<p><img alt="apt-cache policy output" src="../policy.png" /></p>
+<p><img alt="apt-cache policy output" src="../policy.png"></p>
 <p>L'output ens mostra:</p>
 <ul>
 <li><strong>Installed</strong>: <code>(none)</code> — No hi ha cap versió instal·lada de <code>smplayer</code> actualment.</li>
@@ -2135,7 +2180,7 @@ Pin-Priority: 500
 <p>En aquest cas, s'ha afegit el PPA <code>ppa:rvm/smplayer</code>, que conté paquets per a SMPlayer. Per completar la instal·lació, primer s’ha d'actualitzar la llista de paquets disponibles amb els paquets nous d'aquest PPA, i després instal·lar SMPlayer i altres paquets opcionals relacionats, com ara <code>smtube</code>, <code>smplayer-themes</code>, i <code>smplayer-skins</code>.</p>
 <pre><code>sudo add-apt-repository ppa:rvm/smplayer
 </code></pre>
-<p><img alt="PPA output" src="../repo.png" /></p>
+<p><img alt="PPA output" src="../repo.png"></p>
 <p><strong>Què fa cada pas?</strong></p>
 <ul>
 <li><strong>Afegir el PPA</strong>: Afegeix un nou repositori al sistema que conté les versions específiques del programari, en aquest cas, SMPlayer.</li>
@@ -2153,7 +2198,7 @@ Pin-Priority: 500
 <pre><code>sudo apt install smplayer
 </code></pre>
 <p>Aquest procés garanteix que la versió de SMPlayer s’instal·li d’acord amb les preferències configurades, incloent-hi qualsevol prioritat que hàgim definit en la configuració de fixació de paquets.</p>
-<p><img alt="Captura de la instal·lació de SMPlayer" src="../fotoplayer.png" /></p>
+<p><img alt="Captura de la instal·lació de SMPlayer" src="../fotoplayer.png"></p></div>
 
 
 

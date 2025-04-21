@@ -145,45 +145,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
   </nav>
   
@@ -1606,6 +1567,90 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarisAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d'usuaris i grups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enrutament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enrutament i accés remot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d’unitats organitzatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestioAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió de permisos i perfils mòbils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2142,51 +2187,51 @@
 
   <h1>Configuració de RAID 5</h1>
 
-<h2 id="raid-5">RAID 5</h2>
+<div><h2 id="raid-5">RAID 5</h2>
 <p>RAID 5 combina la distribució de dades amb la paritat, de manera que la informació de paritat es reparteix entre tots els discos. Això permet recuperar les dades en cas de fallada d'un disc. En aquesta configuració s'utilitzen quatre discos, on la paritat actua com una protecció addicional.</p>
 <h3 id="afegir-els-discos">Afegir els Discos</h3>
-<p>El primer pas és assegurar-se que els quatre discos estiguin correctament connectats al sistema. Podeu verificar-ho visualment i amb eines de gestió del sistema.<br />
-<img alt="Discos connectats" src="../custom/disck.png" /></p>
+<p>El primer pas és assegurar-se que els quatre discos estiguin correctament connectats al sistema. Podeu verificar-ho visualment i amb eines de gestió del sistema.<br>
+<img alt="Discos connectats" src="../custom/disck.png"></p>
 <p><strong>Comprovació amb lsblk</strong></p>
-<p>Un cop connectats, comproveu que el sistema reconeix tots els discos executant la comanda <code>lsblk</code>. Aquesta ordre mostrarà una llista dels dispositius d'emmagatzematge disponibles.<br />
-<img alt="lsblk" src="../custom/lsblk.png" /></p>
+<p>Un cop connectats, comproveu que el sistema reconeix tots els discos executant la comanda <code>lsblk</code>. Aquesta ordre mostrarà una llista dels dispositius d'emmagatzematge disponibles.<br>
+<img alt="lsblk" src="../custom/lsblk.png"></p>
 <p><strong>Creació de Particions</strong></p>
-<p>Cal crear particions a cada disc indicant el tipus adequat. Quan feu les particions, assegureu-vos d'especificar l'opció "t" per definir el tipus de partició i "fd" per indicar que són particions de Linux RAID autodetectable. Si necessiteu més informació sobre com fer-ho, podeu consultar <a href="https://chaminita94.github.io/mkdocs/particions/" target="_blank">aquest enllaç</a>.<br />
-<img alt="Creació de particions" src="../custom/asdasd.png" /></p>
+<p>Cal crear particions a cada disc indicant el tipus adequat. Quan feu les particions, assegureu-vos d'especificar l'opció "t" per definir el tipus de partició i "fd" per indicar que són particions de Linux RAID autodetectable. Si necessiteu més informació sobre com fer-ho, podeu consultar <a href="https://chaminita94.github.io/mkdocs/particions/" target="_blank">aquest enllaç</a>.<br>
+<img alt="Creació de particions" src="../custom/asdasd.png"></p>
 <h3 id="creacio-del-raid-5">Creació del RAID 5</h3>
-<p>Per crear el RAID 5, s'executa la comanda següent:<br />
-<code>sudo mdadm --create /dev/md0 --level=5 --raid-devices=4 /dev/sdb1 /dev/sdc1 /dev/sdd1 /dev/sde1</code><br />
-Aquesta instrucció agrupa les particions dels quatre discos en un únic dispositiu RAID, anomenat <code>/dev/md0</code>.<br />
-<img alt="Creació del RAID 5" src="../custom/raid5.png" /></p>
+<p>Per crear el RAID 5, s'executa la comanda següent:<br>
+<code>sudo mdadm --create /dev/md0 --level=5 --raid-devices=4 /dev/sdb1 /dev/sdc1 /dev/sdd1 /dev/sde1</code><br>
+Aquesta instrucció agrupa les particions dels quatre discos en un únic dispositiu RAID, anomenat <code>/dev/md0</code>.<br>
+<img alt="Creació del RAID 5" src="../custom/raid5.png"></p>
 <p><strong>Verificació del RAID</strong></p>
-<p>Després de crear el RAID, és important comprovar-ne l'estat. Executeu la comanda <code>sudo mdadm --detail /dev/md0</code> per confirmar que s'ha creat correctament i que està operatiu.<br />
-<img alt="Verificació del RAID" src="../custom/raid5.png" /></p>
+<p>Després de crear el RAID, és important comprovar-ne l'estat. Executeu la comanda <code>sudo mdadm --detail /dev/md0</code> per confirmar que s'ha creat correctament i que està operatiu.<br>
+<img alt="Verificació del RAID" src="../custom/raid5.png"></p>
 <p><strong>Formatació del RAID</strong></p>
-<p>Un cop creat el dispositiu RAID, cal formatgeu-lo amb el sistema d'arxius que preferiu, per exemple, ext4. Aquesta operació prepara el RAID per a l'emmagatzematge de dades.<br />
-<img alt="Formatació" src="../custom/raidformat.png" /></p>
+<p>Un cop creat el dispositiu RAID, cal formatgeu-lo amb el sistema d'arxius que preferiu, per exemple, ext4. Aquesta operació prepara el RAID per a l'emmagatzematge de dades.<br>
+<img alt="Formatació" src="../custom/raidformat.png"></p>
 <p><strong>Muntatge Temporal</strong></p>
-<p>A continuació, creeu un directori de muntatge, com per exemple <code>/mnt/raid5</code>, i munteu-hi el dispositiu RAID de manera temporal per provar-ne el funcionament.<br />
-<img alt="Muntatge temporal" src="../custom/mounttemp.png" /></p>
+<p>A continuació, creeu un directori de muntatge, com per exemple <code>/mnt/raid5</code>, i munteu-hi el dispositiu RAID de manera temporal per provar-ne el funcionament.<br>
+<img alt="Muntatge temporal" src="../custom/mounttemp.png"></p>
 <h3 id="actualitzacio-de-la-configuracio-de-mdadm">Actualització de la Configuració de mdadm</h3>
-<p>Per desar la configuració actual del RAID, escanegeu-la i deseu-la al fitxer de configuració executant:<br />
-<code>mdadm --detail --scan &gt; /etc/mdadm/mdadm.conf</code><br />
-Aquesta acció permet que el sistema detecti automàticament el RAID en futurs arrencades.<br />
-<img alt="Còpia de configuració" src="../custom/copydisc.png" /></p>
+<p>Per desar la configuració actual del RAID, escanegeu-la i deseu-la al fitxer de configuració executant:<br>
+<code>mdadm --detail --scan &gt; /etc/mdadm/mdadm.conf</code><br>
+Aquesta acció permet que el sistema detecti automàticament el RAID en futurs arrencades.<br>
+<img alt="Còpia de configuració" src="../custom/copydisc.png"></p>
 <p><strong>Revisió del Fitxer de Configuració</strong></p>
-<p>Obriu el fitxer <code>/etc/mdadm/mdadm.conf</code> amb l'editor de text que preferiu per confirmar que la configuració s'ha desat correctament. Si cal, realitzeu els ajustos addicionals corresponents.<br />
-<img alt="Configuració guardada" src="../custom/mdaconf.png" /></p>
+<p>Obriu el fitxer <code>/etc/mdadm/mdadm.conf</code> amb l'editor de text que preferiu per confirmar que la configuració s'ha desat correctament. Si cal, realitzeu els ajustos addicionals corresponents.<br>
+<img alt="Configuració guardada" src="../custom/mdaconf.png"></p>
 <h3 id="configuracio-del-muntatge-automatic-fstab">Configuració del Muntatge Automàtic FSTAB</h3>
-<p>Per assegurar que el dispositiu RAID es munte automàticament en arrencar el sistema, afegiu la línia corresponent al fitxer <code>/etc/fstab</code>. D'aquesta manera, no caldrà muntar-lo manualment en cada reinici.<br />
-<img alt="Configuració del fstab" src="../custom/fstabraid5.png" /></p>
+<p>Per assegurar que el dispositiu RAID es munte automàticament en arrencar el sistema, afegiu la línia corresponent al fitxer <code>/etc/fstab</code>. D'aquesta manera, no caldrà muntar-lo manualment en cada reinici.<br>
+<img alt="Configuració del fstab" src="../custom/fstabraid5.png"></p>
 <h3 id="actualitzacio-del-sistema-darrencada">Actualització del Sistema d'Arrencada</h3>
-<p>Finalment, executeu la comanda <code>update-initramfs -u -k all</code> per actualitzar la configuració d'arrencada del sistema. Aquesta actualització garanteix que el nou dispositiu RAID s'inclogui en el procés d'arrencada, permetent que es munte correctament en futurs reinicis.<br />
-<img alt="Actualització d'arrencada" src="../custom/updatem.png" /></p>
+<p>Finalment, executeu la comanda <code>update-initramfs -u -k all</code> per actualitzar la configuració d'arrencada del sistema. Aquesta actualització garanteix que el nou dispositiu RAID s'inclogui en el procés d'arrencada, permetent que es munte correctament en futurs reinicis.<br>
+<img alt="Actualització d'arrencada" src="../custom/updatem.png"></p>
 <h2 id="proves-del-raid5">Proves del RAID5</h2>
 <p>En aquest apartat es crearan fitxers dins del directori muntat del RAID 5 per comprovar la integritat de les dades. Posteriorment, es simularà la fallada d'un dels discos (disk número 3) per verificar que la redundància implementada protegeix la informació.</p>
-<p>Per començar, es creen fitxers de prova al directori del RAID.<br />
-<img alt="Creació de fitxers de prova" src="../custom/mktouch.png" /></p>
-<p>A continuació, es simula la fallada eliminant el disc número 3 del conjunt RAID.<br />
-<img alt="Eliminació del disc 3" src="../custom/disk3.png" /></p>
+<p>Per començar, es creen fitxers de prova al directori del RAID.<br>
+<img alt="Creació de fitxers de prova" src="../custom/mktouch.png"></p>
+<p>A continuació, es simula la fallada eliminant el disc número 3 del conjunt RAID.<br>
+<img alt="Eliminació del disc 3" src="../custom/disk3.png"></p>
 <p>Un cop realitzada aquesta simulació, es reinicia el sistema per comprovar si la informació continua disponible o si s'ha perdut. Cal tenir en compte que, en aquest cas, el sistema sol trigar més en arrancar perquè intenta detectar i reconstruir el RAID amb la manca d'un disc.</p>
 <h3 id="recuperacio-del-raid5">Recuperació del RAID5</h3>
 <p>En reiniciar el sistema, hem detectat un "SUSTO!" ja que el RAID es troba inactiu i sembla que les dades han desaparegut. No et preocupis: això només vol dir que el RAID està aturat, no que les dades s'hagin perdut.</p>
@@ -2200,14 +2245,14 @@ Aquesta acció permet que el sistema detecti automàticament el RAID en futurs a
 <pre><code>update-initramfs -u -k all  
 </code></pre>
 <p>Un cop s'executin aquests passos, el RAID tornarà a estar actiu i el dispositiu es muntarà correctament, assegurant que tot torni a funcionar gràcies a la redundància del RAID 5.</p>
-<p><img alt="RAID reactivat" src="../custom/raid5again.png" /></p>
+<p><img alt="RAID reactivat" src="../custom/raid5again.png"></p>
 <h3 id="tornem-a-afegir-un-disc-nou-per-a-restaurar-la-configuracio-de-4-discs">Tornem a afegir un disc nou per a restaurar la configuració de 4 discs</h3>
-<p>Ja ens ha arribat el nou disc i el hem connectat al PC.<br />
-<img alt="Nou disc connectat" src="../custom/newdisc.png" /></p>
-<p>Abans d'afegir-lo al RAID, és necessari preparar el disc. Utilitzeu l'eina fdisk per crear la partició corresponent i configurar-la per a Linux RAID autodetectable. Un cop preparat, podeu afegir el disc al RAID amb mdadm i verificar la seva incorporació.<br />
-<img alt="Preparació i format del disc" src="../custom/foramtd.png" /></p>
-<p>Finalment, comproveu que les dades segueixen assegurades i que el RAID funciona correctament amb la nova configuració.<br />
-<img alt="Verificació de dades" src="../custom/dadechecc.png" /></p>
+<p>Ja ens ha arribat el nou disc i el hem connectat al PC.<br>
+<img alt="Nou disc connectat" src="../custom/newdisc.png"></p>
+<p>Abans d'afegir-lo al RAID, és necessari preparar el disc. Utilitzeu l'eina fdisk per crear la partició corresponent i configurar-la per a Linux RAID autodetectable. Un cop preparat, podeu afegir el disc al RAID amb mdadm i verificar la seva incorporació.<br>
+<img alt="Preparació i format del disc" src="../custom/foramtd.png"></p>
+<p>Finalment, comproveu que les dades segueixen assegurades i que el RAID funciona correctament amb la nova configuració.<br>
+<img alt="Verificació de dades" src="../custom/dadechecc.png"></p></div>
 
 
 

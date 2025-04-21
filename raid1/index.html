@@ -145,45 +145,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
   </nav>
   
@@ -1606,6 +1567,90 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarisAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d'usuaris i grups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enrutament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enrutament i accés remot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d’unitats organitzatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestioAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió de permisos i perfils mòbils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2094,88 +2139,88 @@
 
   <h1>Configuració de RAID 1</h1>
 
-<p>Aquest document descriu el procés per configurar un RAID 1 utilitzant dos discs d'1GB. RAID 1 duplica les dades entre els discs, oferint redundància i protecció en cas de fallada d'algun d'ells.</p>
+<div><p>Aquest document descriu el procés per configurar un RAID 1 utilitzant dos discs d'1GB. RAID 1 duplica les dades entre els discs, oferint redundància i protecció en cas de fallada d'algun d'ells.</p>
 <h2 id="preparacio-dels-discs">Preparació dels Discs</h2>
-<p><strong>Neteja dels discs:</strong><br />
+<p><strong>Neteja dels discs:</strong><br>
 Assegureu-vos que els discs estan nets o que les dades que contenen es poden esborrar.</p>
-<p><strong>Creació de particions:</strong><br />
+<p><strong>Creació de particions:</strong><br>
 Quan creeu les particions, recordeu d'especificar l'opció "t" per definir el tipus de partició i "fd" per indicar que és de tipus Linux RAID autodetectable.  </p>
-<p><img alt="Format de disc" src="../custom/disckformat.png" /></p>
-<p><strong>Instal·lació de l'eina de gestió:</strong><br />
+<p><img alt="Format de disc" src="../custom/disckformat.png"></p>
+<p><strong>Instal·lació de l'eina de gestió:</strong><br>
 Instal·leu <code>mdadm</code> (l'eina que us permetrà configurar el RAID).   </p>
 <pre><code>sudo apt install mdadm 
 </code></pre>
-<p><img alt="Instal·lació de mdadm" src="../custom/mddadm.png" /></p>
-<p><strong>Creació del directori de muntatge:</strong><br />
-Creeu un directori on muntareu el RAID (per exemple, <code>/mnt/raid1</code>) i, temporalment, configureu permisos 777 per facilitar la prova.<br />
-<img alt="Creació del directori de muntatge" src="../custom/dirraid.png" /></p>
-<hr />
+<p><img alt="Instal·lació de mdadm" src="../custom/mddadm.png"></p>
+<p><strong>Creació del directori de muntatge:</strong><br>
+Creeu un directori on muntareu el RAID (per exemple, <code>/mnt/raid1</code>) i, temporalment, configureu permisos 777 per facilitar la prova.<br>
+<img alt="Creació del directori de muntatge" src="../custom/dirraid.png"></p>
+<hr>
 <h2 id="creacio-del-dispositiu-raid-1">Creació del Dispositiu RAID 1</h2>
-<p><strong>Creació del RAID:</strong><br />
+<p><strong>Creació del RAID:</strong><br>
 Utilitzeu <code>mdadm</code> per crear un dispositiu RAID 1 que agrupi les particions dels dos discs (per exemple, <code>/dev/sda1</code> i <code>/dev/sdb1</code>) en un dispositiu com <code>/dev/md0</code>.  </p>
 <pre><code>sudo mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sda1 /dev/sdb1
 </code></pre>
-<p><img alt="Creació del RAID 1" src="../custom/raid1.png" /></p>
-<p><strong>Verificació de l'estat del RAID:</strong><br />
-  Comproveu que el RAID s'està creant correctament. Podeu veure l'estat amb la comanda que mostra informació detallada (per exemple, consultat a <code>/proc/mdstat</code> o amb "mdadm --detail /dev/md0").<br />
-<img alt="Verificació del RAID" src="../custom/mdam.png" /></p>
-<p><strong>Generació i actualització de la configuració de mdadm:</strong><br />
+<p><img alt="Creació del RAID 1" src="../custom/raid1.png"></p>
+<p><strong>Verificació de l'estat del RAID:</strong><br>
+  Comproveu que el RAID s'està creant correctament. Podeu veure l'estat amb la comanda que mostra informació detallada (per exemple, consultat a <code>/proc/mdstat</code> o amb "mdadm --detail /dev/md0").<br>
+<img alt="Verificació del RAID" src="../custom/mdam.png"></p>
+<p><strong>Generació i actualització de la configuració de mdadm:</strong><br>
   Executeu la comanda per escanejar la configuració actual del RAID i guardar-la al fitxer de configuració (per exemple, "mdadm --detail --scan &gt; /etc/mdadm/mdadm.conf").  </p>
 <blockquote>
-<p><strong>Nota:</strong> Aquesta comanda és important perquè registra la configuració actual del RAID al fitxer de configuració, assegurant que el sistema pugui detectar i muntar el RAID automàticament en futurs arrencades.<br />
-<img alt="Guardar configuració" src="../custom/comad..png" /></p>
+<p><strong>Nota:</strong> Aquesta comanda és important perquè registra la configuració actual del RAID al fitxer de configuració, assegurant que el sistema pugui detectar i muntar el RAID automàticament en futurs arrencades.<br>
+<img alt="Guardar configuració" src="../custom/comad..png"></p>
 </blockquote>
-<p><strong>Verificació i edició del fitxer de configuració:</strong><br />
-  Obriu el fitxer <code>/etc/mdadm/mdadm.conf</code> amb un editor (per exemple, "nano /etc/mdadm/mdadm.conf") per confirmar que la configuració s'ha desat correctament i, si cal, afegiu una nova línia o ajustos addicionals.<br />
-<img alt="Edició del fitxer mdadm.conf" src="../custom/mdamad.png" /></p>
-<hr />
+<p><strong>Verificació i edició del fitxer de configuració:</strong><br>
+  Obriu el fitxer <code>/etc/mdadm/mdadm.conf</code> amb un editor (per exemple, "nano /etc/mdadm/mdadm.conf") per confirmar que la configuració s'ha desat correctament i, si cal, afegiu una nova línia o ajustos addicionals.<br>
+<img alt="Edició del fitxer mdadm.conf" src="../custom/mdamad.png"></p>
+<hr>
 <h2 id="formatacio-i-muntatge-del-dispositiu-raid">Formatació i Muntatge del Dispositiu RAID</h2>
-<p><strong>Formatació:</strong><br />
-  Un cop creat i sincronitzat el dispositiu RAID (<code>/dev/md0</code>), formatgeu-lo amb el sistema d'arxius que preferiu (per exemple, ext4).<br />
-<img alt="Formatació del RAID" src="../custom/formaterex.png" /></p>
-<p><strong>Configuració de muntatge automàtic:</strong><br />
-  Afegiu una entrada al fitxer <code>/etc/fstab</code> perquè el dispositiu RAID es munte automàticament en arrencar el sistema.<br />
-<img alt="Configuració del fstab" src="../custom/mountauto.png" /></p>
-<p><strong>Muntatge i actualització del sistema:</strong><br />
+<p><strong>Formatació:</strong><br>
+  Un cop creat i sincronitzat el dispositiu RAID (<code>/dev/md0</code>), formatgeu-lo amb el sistema d'arxius que preferiu (per exemple, ext4).<br>
+<img alt="Formatació del RAID" src="../custom/formaterex.png"></p>
+<p><strong>Configuració de muntatge automàtic:</strong><br>
+  Afegiu una entrada al fitxer <code>/etc/fstab</code> perquè el dispositiu RAID es munte automàticament en arrencar el sistema.<br>
+<img alt="Configuració del fstab" src="../custom/mountauto.png"></p>
+<p><strong>Muntatge i actualització del sistema:</strong><br>
 Executeu les ordres necessàries per muntar el dispositiu RAID, reiniciar el daemon corresponent i actualitzar la configuració d'arrencada del sistema amb una comanda com "update-initramfs -u -k all".  </p>
 <p><strong>Explicació:</strong> </p>
 <blockquote>
 <p>Aquesta actualització (update-initramfs) assegura que el nou dispositiu RAID estigui inclòs en la configuració d'arrencada del sistema, permetent que es munte correctament en futurs reinicis.  </p>
 </blockquote>
-<p><img alt="Muntatge i actualització" src="../custom/resa.png" /></p>
-<hr />
+<p><img alt="Muntatge i actualització" src="../custom/resa.png"></p>
+<hr>
 <h2 id="comprovacio-del-funcionament">Comprovació del funcionament</h2>
 <p>En aquest apartat comprovarem que el RAID creat funciona correctament.</p>
 <ul>
 <li>Comencem creant un fitxer "prova.txt" per fer una prova bàsica.</li>
 </ul>
-<p><img alt="Prova" src="../custom/prova.png" /></p>
+<p><img alt="Prova" src="../custom/prova.png"></p>
 <ul>
 <li>A continuació, desconnectem un disc del RAID amb la comanda <code>mdadm /dev/md0 -f /dev/sdb1</code>.</li>
 </ul>
 <pre><code>mdadm /dev/md0 -f /dev/sdb1
 </code></pre>
-<p><img alt="Desconnexió del disc" src="../custom/testa.png" /></p>
+<p><img alt="Desconnexió del disc" src="../custom/testa.png"></p>
 <ul>
 <li>Verifiquem l'estat del RAID amb <code>mdadm --detail /dev/md0</code>. La sortida mostra que el disc <code>/dev/sdb1</code> es troba en estat "faulty".</li>
 </ul>
-<p><img alt="Comprovació de l'estat" src="../custom/comprovacion.png" /></p>
+<p><img alt="Comprovació de l'estat" src="../custom/comprovacion.png"></p>
 <ul>
 <li>Procedim a treure el disc defectuós amb <code>mdadm /dev/md0 --remove /dev/sdb1</code> i verifiquem la configuració amb la mateixa comanda.</li>
 </ul>
 <pre><code>mdadm /dev/md0 --remove /dev/sdb1
 </code></pre>
-<p><img alt="Eliminació del disc" src="../custom/removemd.png" /></p>
+<p><img alt="Eliminació del disc" src="../custom/removemd.png"></p>
 <ul>
 <li>Per confirmar què ha passat amb les nostres dades, fem un <code>ls</code> al directori del RAID (per exemple, <code>/raid1/</code>). Comprovem que les dades no s'han esborrat, gràcies al RAID 1 que replica tot.</li>
 </ul>
-<p><img alt="Verificació de dades" src="../custom/checka.png" /></p>
+<p><img alt="Verificació de dades" src="../custom/checka.png"></p>
 <ul>
 <li>Finalment, reinserim el disc amb <code>mdadm /dev/md0 -a /dev/sdb1</code> i podem observar que el sistema inicia el procés de "rebuiling". En uns instants, el disc tornarà a estar disponible per a l'ús.</li>
 </ul>
 <pre><code>mdadm /dev/md0 -a /dev/sdb1
 </code></pre>
-<p><img alt="Reinserció del disc" src="../custom/addagain.png" /></p>
+<p><img alt="Reinserció del disc" src="../custom/addagain.png"></p>
 <h2 id="eliminar-el-raid">Eliminar el RAID</h2>
 <p>Per desfer o esborrar el RAID, seguiu aquests passos:</p>
 <ul>
@@ -2199,16 +2244,16 @@ Executeu les ordres necessàries per muntar el dispositiu RAID, reiniciar el dae
 <pre><code>mdadm --remove /dev/md0
 </code></pre>
 <ul>
-<li><strong>Eliminar el directori de muntatge:</strong><br />
+<li><strong>Eliminar el directori de muntatge:</strong><br>
   rm -r /raid1</li>
 </ul>
 <p>Comproveu que el RAID s'ha eliminat correctament amb:  </p>
 <pre><code>mdadm --detail /dev/md0
 </code></pre>
 <p>A continuació, esborreu la configuració actual del RAID del fitxer <code>/etc/mdadm/mdadm.conf</code> deixant-lo buit.</p>
-<p><img alt="Configuració esborrada" src="../custom/mda.png" /></p>
+<p><img alt="Configuració esborrada" src="../custom/mda.png"></p>
 <p>Finalment, elimineu o comenteu la línia que heu afegit al fitxer <code>/etc/fstab</code>.</p>
-<p><img alt="Esborrat del fstab" src="../custom/last.png" /></p>
+<p><img alt="Esborrat del fstab" src="../custom/last.png"></p></div>
 
 
 

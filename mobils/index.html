@@ -145,45 +145,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
   </nav>
   
@@ -1747,6 +1708,90 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarisAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d'usuaris i grups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enrutament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enrutament i accés remot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d’unitats organitzatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestioAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió de permisos i perfils mòbils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2149,7 +2194,7 @@
 
   <h1>Perfils mòbils i Compartició de Recursos</h1>
 
-<h2 id="samba-vs-nfs"><strong>Samba vs. NFS</strong></h2>
+<div><h2 id="samba-vs-nfs"><strong>Samba vs. NFS</strong></h2>
 <p>En aquest apartat explorarem la compartició de recursos mitjançant NFS i Samba, així com la creació i configuració d'usuaris amb perfils mòbils. Es destacaran les diferències principals entre ambdós sistemes i es descriurà l'autenticació a nivell de host, a més de la configuració bàsica tant del servidor com del client per assegurar una integració eficient.</p>
 <table>
 <thead>
@@ -2187,24 +2232,24 @@
 </tr>
 </tbody>
 </table>
-<hr />
+<hr>
 <h3 id="installacio-del-servei-nfs-en-linux">Instal·lació del servei NFS en Linux</h3>
 <p>En aquest apartat instal·larem el servei NFS en el nostre servidor, que ja té el LDAP configurat. Primer actualitzarem la llista de paquets executant "apt update".</p>
 <p>A continuació, instal·lem el servidor NFS amb la comanda.</p>
 <pre><code>sudo apt install nfs-kernel-server
 </code></pre>
-<p><img alt="alt text" src="../custom/nfsserver.png" /></p>
+<p><img alt="alt text" src="../custom/nfsserver.png"></p>
 <p>Per comprovar que el servei s'està executant correctament, utilitzem.</p>
 <pre><code>sudo systemctl status nfs-server
 </code></pre>
-<p><img alt="alt text" src="../custom/systemnctls.png" /></p>
+<p><img alt="alt text" src="../custom/systemnctls.png"></p>
 <p>Amb això, hem configurat la part del servidor per ara.</p>
-<hr />
+<hr>
 <h4 id="compartir-un-directori">Compartir un Directori</h4>
 <p>Per compartir un directori, primer el creem:</p>
-<p><img alt="alt text" src="../custom/compa.png" /></p>
+<p><img alt="alt text" src="../custom/compa.png"></p>
 <p>Posteriorment, assignem els permisos corresponents i configurem el propietari a "nobody:nogroup" per assegurar que tothom tingui accés:</p>
-<p><img alt="alt text" src="../custom/perm.png" /></p>
+<p><img alt="alt text" src="../custom/perm.png"></p>
 <p><strong>Seguidament hem de fer que aquesta carpeta sempre estigui muntada</strong></p>
 <p>Per aconseguir-ho, utilitzarem el fitxer <code>/etc/exports</code> per afegir-hi la configuració corresponent. Obrim el fitxer amb:</p>
 <pre><code>nano /etc/exports
@@ -2212,46 +2257,46 @@
 <p>I afegim la següent línia:</p>
 <pre><code>/compartida *(rw,sync,no_subtree_check)
 </code></pre>
-<p><img alt="alt text" src="../custom/exports.png" /></p>
+<p><img alt="alt text" src="../custom/exports.png"></p>
 <p>Després, reiniciem el servei NFS per aplicar els canvis. Cal fer-ho cada vegada que modifiquem la configuració:</p>
 <pre><code>sudo systemctl restart nfs-kernel-server
 </code></pre>
-<p><img alt="alt text" src="../custom/restarrtnfs.png" /></p>
+<p><img alt="alt text" src="../custom/restarrtnfs.png"></p>
 <p><strong>Creem un fitxer dins del directori compartit</strong></p>
 <p>Ara creem un fitxer dins del directori que hem compartit per verificar que la configuració és correcta.</p>
-<p><img alt="alt text" src="../custom/fitxer.png" /></p>
+<p><img alt="alt text" src="../custom/fitxer.png"></p>
 <p>I a continuació, procedim amb la configuració del client Windows per accedir al compartit.</p>
-<hr />
+<hr>
 <h3 id="client-windows">Client Windows</h3>
 <p>Per defecte, Windows no té activat el servei NFS. Per això, hem d'activar-lo.</p>
 <p>Ens dirigim al <strong>Panell de control</strong> i seleccionem <strong>"Programas i características"</strong>.</p>
-<p><img alt="alt text" src="../custom/ctpanel.png" /></p>
+<p><img alt="alt text" src="../custom/ctpanel.png"></p>
 <p>A continuació, triem l'opció <strong>"Turn Windows features on or off"</strong>.</p>
-<p><img alt="alt text" src="../custom/offon.png" /></p>
+<p><img alt="alt text" src="../custom/offon.png"></p>
 <p>Cerquem NFS i obrim el desplegable. Farem clic a les tres opcions disponibles per activar el servei.</p>
-<p><img alt="alt text" src="../custom/clientwindo.png" /></p>
+<p><img alt="alt text" src="../custom/clientwindo.png"></p>
 <p>Un cop activat, configurem el client per accedir al recurs compartit. Per aconseguir-ho, obrirem l'Explorador de Fitxers i accedirem a "Aquest PC" &gt; "Mapejar una unitat de xarxa".</p>
-<p><img alt="alt text" src="../custom/mapnetwork.png" /></p>
+<p><img alt="alt text" src="../custom/mapnetwork.png"></p>
 <p>Ara, introduïm la ruta al recurs compartit, afegint la IP del servidor i la carpeta compartida.</p>
-<p><img alt="alt text" src="../cppa.png" /></p>
+<p><img alt="alt text" src="../cppa.png"></p>
 <p>Acceptem i ja podem observar que s'ha compartit amb èxit.</p>
-<p><img alt="alt text" src="../custom/acceptar.png" /></p>
+<p><img alt="alt text" src="../custom/acceptar.png"></p>
 <p>Ara podem provar de crear un directori o fins i tot editar el fitxer que hem creat al servidor.</p>
-<p><img alt="alt text" src="../custom/edit.png" /></p>
+<p><img alt="alt text" src="../custom/edit.png"></p>
 <p><strong>Comprovem dins del nostre servidor</strong></p>
 <p>Utilitzem la comanda <code>ls -l</code> per comprovar si s'han creat els fitxers o directoris des del client Windows. Podrem observar que els fitxers apareixen amb un usuari/grup representat només per números. Això es deu al fet que, en entorns NFS, les identitats d'usuari i grup es basen en identificadors numèrics (UID i GID). Si aquests identificadors no es corresponen amb entrades definides al sistema (o a LDAP), es mostraran simplement com a números.</p>
-<p><img alt="alt text" src="../custom/check.png" /></p>
-<hr />
+<p><img alt="alt text" src="../custom/check.png"></p>
+<hr>
 <h3 id="client-linux">Client Linux</h3>
 <p>En aquesta secció es mostra el procés per muntar un directori compartit via NFS en un client Linux.</p>
 <p><strong>Instal·lació del client NFS</strong></p>
 <p>Primer cal instal·lar els paquets necessaris per poder muntar sistemes de fitxers NFS al client:</p>
 <pre><code>apt install nfs-common rpcbind
 </code></pre>
-<p><img alt="alt text" src="../custom/linuxcl.png" /></p>
+<p><img alt="alt text" src="../custom/linuxcl.png"></p>
 <p><strong>Creació del punt de muntatge i muntatge del directori compartit</strong></p>
 <p>Un cop instal·lats els paquets necessaris, procedim a crear el directori on es muntarà el recurs compartit.</p>
-<p><img alt="alt text" src="../custom/share.png" /></p>
+<p><img alt="alt text" src="../custom/share.png"></p>
 <ol>
 <li>Es navega fins al directori <code>/mnt/</code>.</li>
 <li>Es crea un directori anomenat <code>nfs</code> amb "mkdir nfs", que servirà com a punt de muntatge.</li>
@@ -2262,23 +2307,23 @@
 <pre><code>mount 10.0.2.15:/compartida /mnt/nfs/
 </code></pre>
 <p>Amb aquests passos, el client Linux tindrà accés als fitxers compartits pel servidor NFS.</p>
-<hr />
+<hr>
 <p>Per verificar que el muntatge s'ha realitzat correctament, podem utilitzar la comanda:</p>
 <pre><code>df -h
 </code></pre>
 <p>Aquesta ens mostrarà els sistemes de fitxers muntats, incloent-hi el nostre recurs NFS.</p>
-<p><img alt="alt text" src="../custom/dh-f.png" /></p>
+<p><img alt="alt text" src="../custom/dh-f.png"></p>
 <p>Un cop confirmat que el directori està muntat, podem accedir-hi i comprovar que conté els fitxers creats tant des del servidor com des del client Windows.</p>
-<p><img alt="alt text" src="../custom/test.png" /></p>
+<p><img alt="alt text" src="../custom/test.png"></p>
 <p>Si creem un nou directori des d'aquest client Linux, observem que apareix amb el propietari <code>nobody:nogroup</code>. Això es deu al fet que aquest client no té una correspondència d'usuaris amb el servidor NFS, i per tant, s'assignen aquests valors per defecte.</p>
-<p><img alt="alt text" src="../custom/dir.png" /></p>
+<p><img alt="alt text" src="../custom/dir.png"></p>
 <p>Aquesta situació es produeix perquè NFS gestiona els permisos mitjançant els <strong>UID (User ID) i GID (Group ID)</strong>. Si el client Linux crea un fitxer amb un UID/GID que no existeix al servidor, aquest no el pot reconèixer i l’assigna automàticament com <code>nobody:nogroup</code>.</p>
 <p>Aquest comportament també es deu a <strong>"root squash"</strong>, una configuració predeterminada en <code>/etc/exports</code> que evita que <code>root</code> del client tingui privilegis en el servidor. Això pot afectar altres usuaris si no hi ha coincidència d'UIDs entre client i servidor.</p>
 <h2 id="perfils-mobils">Perfils Mòbils</h2>
 <p>Crearem un directori anomenat <strong>"perfils"</strong>, que serà utilitzat per emmagatzemar els perfils mòbils dels usuaris. Aquest directori tindrà com a propietari <code>nobody:nogroup</code>.</p>
-<p><img alt="alt text" src="../custom/mobils.png" /></p>
+<p><img alt="alt text" src="../custom/mobils.png"></p>
 <p>Assignem permisos <strong>777</strong> (lectura, escriptura i execució per a tots els usuaris). Tot i que això facilita les proves, <strong><em>no és recomanable en un entorn de producció</em></strong>, ja que podria suposar un risc de seguretat.</p>
-<p><img alt="alt text" src="../custom/moda.png" /></p>
+<p><img alt="alt text" src="../custom/moda.png"></p>
 <p><strong>Configuració en <code>/etc/exports</code></strong></p>
 <p>Perquè aquest directori pugui ser compartit a través de NFS, afegim la següent línia al fitxer <code>/etc/exports</code>:</p>
 <pre><code>/perfils *(rw,sync,no_root_squash,no_subtree_check)
@@ -2290,28 +2335,28 @@
 <li><strong>no_root_squash</strong> → Permet que <code>root</code> dels clients mantingui els seus privilegis en el servidor. Per defecte, NFS converteix <code>root</code> en <code>nobody:nogroup</code>, però amb aquesta opció s’evita aquest comportament.</li>
 <li><strong>no_subtree_check</strong> → Desactiva la verificació de subarbres, millorant el rendiment i evitant problemes d’accés quan es comparteixen directoris sencers.</li>
 </ul>
-<p><img alt="alt text" src="../custom/squash.png" /></p>
+<p><img alt="alt text" src="../custom/squash.png"></p>
 <p>Finalment, reiniciem el servei NFS per aplicar els canvis:</p>
 <pre><code>sudo systemctl restart nfs-kernel-server
 </code></pre>
-<p><img alt="alt text" src="../custom/reinciea.png" /></p>
+<p><img alt="alt text" src="../custom/reinciea.png"></p>
 <h3 id="configuracio-de-perfils-mobils-amb-ldap">Configuració de Perfils Mòbils amb LDAP</h3>
 <p>Primerament hem de crear un usuari, he creat un arxiu .ldif i he afegit els següents paràmetres.</p>
-<p><img alt="alt text" src="../custom/newuser.png" /></p>
+<p><img alt="alt text" src="../custom/newuser.png"></p>
 <p>Després l'afegim amb ldapadd i ho comprovem amb un search.</p>
-<p><img alt="alt text" src="../custom/ldap1.png" /></p>
+<p><img alt="alt text" src="../custom/ldap1.png"></p>
 <h3 id="configuracio-del-client">Configuració del Client</h3>
 <p>Primer, crearem el directori on es muntarà el perfil mòbil i assignarem els permisos adequats.</p>
-<p><img alt="alt text" src="../custom/clientmob.png" /></p>
+<p><img alt="alt text" src="../custom/clientmob.png"></p>
 <p>A continuació, configurarem el fitxer <code>/etc/fstab</code>. <strong>MOLT DE COMPTE!</strong> Qualsevol error en aquest fitxer pot provocar un mal funcionament del sistema o fins i tot impedir que arrenqui.</p>
-<p><img alt="alt text" src="../custom/fstaba.png" /></p>
+<p><img alt="alt text" src="../custom/fstaba.png"></p>
 <p>Un cop editat, podem executar la comanda "mount -a" per muntar totes les unitats definides a <code>/etc/fstab</code> i verificar que el muntatge s'ha fet correctament.</p>
-<p><img alt="alt text" src="../custom/testing.png" /></p>
+<p><img alt="alt text" src="../custom/testing.png"></p>
 <p>Quan intentem iniciar sessió amb l'usuari "domin", el sistema crea automàticament el seu directori de perfil dins de "/perfil".</p>
-<p><img alt="alt text" src="../custom/loging.png" /></p>
+<p><img alt="alt text" src="../custom/loging.png"></p>
 <p>Finalment, obrim un terminal i comprovem que l'usuari està correctament identificat amb les comandes "whoami" i "id".</p>
-<p><img alt="alt text" src="../custom/comprovacio.png" /></p>
-<p>Amb això, ja tenim el perfil mòbil configurat correctament.</p>
+<p><img alt="alt text" src="../custom/comprovacio.png"></p>
+<p>Amb això, ja tenim el perfil mòbil configurat correctament.</p></div>
 
 
 

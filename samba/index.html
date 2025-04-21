@@ -145,45 +145,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
   </nav>
   
@@ -1774,6 +1735,90 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarisAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d'usuaris i grups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enrutament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enrutament i accés remot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació d’unitats organitzatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestioAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió de permisos i perfils mòbils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2176,7 +2221,7 @@
 
   <h1>Compartir recursos amb SAMBA</h1>
 
-<h2 id="installacio-i-configuracio-de-samba">Instal·lació i configuració de Samba</h2>
+<div><h2 id="installacio-i-configuracio-de-samba">Instal·lació i configuració de Samba</h2>
 <p>Samba és un servei similar a NFS que permet la compartició de carpetes, però també permet compartir altres recursos, com impressores.</p>
 <p><strong>Diferències principals amb NFS</strong></p>
 <p>Una de les diferències més importants respecte a NFS és que l'autenticació en Samba es realitza a nivell d'usuari, mentre que en NFS es fa a nivell de host. Això permet un control més detallat sobre qui pot accedir als recursos compartits.</p>
@@ -2189,14 +2234,14 @@
 <p>Comencem la instal·lació del servei Samba al nostre servidor amb la següent comanda:</p>
 <pre><code>sudo apt install samba
 </code></pre>
-<p><img alt="Instal·lació de Samba" src="../custom/sambainstalla.png" /></p>
+<p><img alt="Instal·lació de Samba" src="../custom/sambainstalla.png"></p>
 <p>A continuació, crearem la carpeta que volem compartir i li assignarem els permisos corresponents. El propietari i el grup han de ser <code>nobody:nogroup</code>. Pel que fa als permisos, aquests dependran del criteri de cada entorn. En aquesta pràctica, assignarem permisos 777 per facilitar la configuració.</p>
-<p><img alt="Creació de la carpeta compartida" src="../custom/creaciocrp.png" /></p>
+<p><img alt="Creació de la carpeta compartida" src="../custom/creaciocrp.png"></p>
 <p>Un cop fet això, comprovem que els permisos s'han aplicat correctament.</p>
-<p><img alt="Comprovació de permisos" src="../custom/compro.png" /></p>
+<p><img alt="Comprovació de permisos" src="../custom/compro.png"></p>
 <h3 id="configuracio-de-smbconf">Configuració de <code>smb.conf</code></h3>
 <p>Per compartir el directori creat, hem de modificar l'arxiu de configuració de Samba, situat a <code>/etc/samba/smb.conf</code>, afegint una configuració bàsica.</p>
-<p><img alt="Configuració bàsica de Samba" src="../custom/confgbasica.png" /></p>
+<p><img alt="Configuració bàsica de Samba" src="../custom/confgbasica.png"></p>
 <p>En aquesta configuració, hem especificat el path del directori compartit, l'opció <code>guest ok</code>, i l'opció <code>browsable</code>, que es pot configurar a "yes" o "no" segons les necessitats. A més, hem definit la màscara del directori (<code>directory mask</code>) i la màscara dels fitxers creats (<code>create mask</code>).</p>
 <p>Pel que fa als permisos destacats:</p>
 <ul>
@@ -2204,19 +2249,19 @@
 <li>L'opció <code>write list</code> concedeix permís d'escriptura únicament a <code>jesus</code>.</li>
 <li>L'usuari <code>joan</code> no tindrà accés ni podrà connectar-se al recurs compartit.</li>
 </ul>
-<hr />
+<hr>
 <p><strong>Reinici del servei i comprovació</strong></p>
 <p>Un cop configurat <code>smb.conf</code>, reiniciem el servei per aplicar els canvis i comprovem que funciona correctament.</p>
-<p><img alt="Reinici del servei Samba" src="../custom/smbreinic.png" /></p>
+<p><img alt="Reinici del servei Samba" src="../custom/smbreinic.png"></p>
 <h4 id="creacio-dusuaris-i-grups">Creació d'usuaris i grups</h4>
 <p>Per gestionar l'accés als recursos compartits, creem els usuaris i els assignem als grups corresponents.</p>
-<p><img alt="Creació d'usuaris i grups" src="../custom/creemusuaris.png" /></p>
+<p><img alt="Creació d'usuaris i grups" src="../custom/creemusuaris.png"></p>
 <p>Un cop creats, comprovem que els usuaris s'han afegit correctament al grup corresponent.</p>
-<p><img alt="Comprovació d'usuaris i grups" src="../custom/comprovaciotail.png" /></p>
+<p><img alt="Comprovació d'usuaris i grups" src="../custom/comprovaciotail.png"></p>
 <h4 id="canvi-de-contrasenya-per-a-usuaris-samba">Canvi de contrasenya per a usuaris Samba</h4>
 <p>Perquè els usuaris puguin accedir al directori compartit, cal assignar-los una contrasenya específica per a Samba. Això es fa amb la comanda següent:</p>
 <p><code>smbpasswd -a "nom_usuari"</code></p>
-<p><img alt="Assignació de contrasenya per a Samba" src="../passsamba.png" /></p>
+<p><img alt="Assignació de contrasenya per a Samba" src="../passsamba.png"></p>
 <blockquote>
 <ul>
 <li>Aquesta contrasenya és independent de la contrasenya del sistema i és necessària per autenticar-se en els recursos compartits de Samba.</li>
@@ -2225,42 +2270,42 @@
 <h2 id="installacio-i-configuracio-del-client">Instal·lació i configuració del client</h2>
 <h3 id="installacio-del-client-samba">Instal·lació del client Samba</h3>
 <p>Primerament, hem d'instal·lar el servei <code>smbclient</code> al nostre client.</p>
-<p><img alt="Instal·lació del client Samba" src="../custom/clientsmb.png" /></p>
+<p><img alt="Instal·lació del client Samba" src="../custom/clientsmb.png"></p>
 <p>Un cop instal·lat, obrim el cercador de fitxers i ens dirigim a <strong>"Altres ubicacions"</strong>. Afegim la IP del nostre servidor Samba i el directori compartit. Per exemple:</p>
 <p><code>smb://10.0.2.15/asixa/</code></p>
-<p><img alt="Accés al servidor Samba" src="../custom/asix.png" /></p>
+<p><img alt="Accés al servidor Samba" src="../custom/asix.png"></p>
 <h3 id="connexio-com-a-usuari-anonim">Connexió com a usuari anònim</h3>
 <p>Com que hem afegit el paràmetre <code>guest</code>, ens podem connectar com a usuari anònim.</p>
-<p><img alt="Connexió com a usuari anònim" src="../custom/anonsmb.png" /></p>
+<p><img alt="Connexió com a usuari anònim" src="../custom/anonsmb.png"></p>
 <p>Aquesta connexió ens permet veure els fitxers existents, però no ens permet obrir-los ni crear nous fitxers o directoris.</p>
-<p><img alt="alt text" src="../custom/compartida.png" /></p>
+<p><img alt="alt text" src="../custom/compartida.png"></p>
 <p>Si intentem crear un fitxer, obtenim un error.</p>
-<p><img alt="Error en intentar crear un fitxer" src="../custom/failanon.png" /></p>
+<p><img alt="Error en intentar crear un fitxer" src="../custom/failanon.png"></p>
 <p>Tampoc podem llegir el fitxer <code>hola</code>, que ja estava creat prèviament.</p>
-<p><img alt="Error en intentar llegir un fitxer" src="../custom/read.png" /></p>
+<p><img alt="Error en intentar llegir un fitxer" src="../custom/read.png"></p>
 <h3 id="connexio-amb-usuaris-amb-permisos-especifics">Connexió amb usuaris amb permisos específics</h3>
 <p><strong>Usuari Jesus</strong></p>
 <p>Intentem accedir amb l'usuari <code>Jesus</code> i la contrasenya assignada en el pas previ.</p>
-<p><img alt="Connexió de l'usuari Jesus" src="../custom/jesus.png" /></p>
+<p><img alt="Connexió de l'usuari Jesus" src="../custom/jesus.png"></p>
 <p>Aquest usuari pot llegir i també crear fitxers i directoris.</p>
-<p><img alt="Creació de fitxers per part de Jesus" src="../jesuscrear.png" /></p>
+<p><img alt="Creació de fitxers per part de Jesus" src="../jesuscrear.png"></p>
 <p>També podem llegir els fitxers.</p>
-<p><img alt="alt text" src="../custom/jesusread.png" /></p>
-<hr />
+<p><img alt="alt text" src="../custom/jesusread.png"></p>
+<hr>
 <p><strong>Usuari Diego</strong></p>
 <p>També podem accedir amb l'usuari <code>Diego</code>, però aquest només té permisos de lectura i no pot crear nous fitxers.</p>
-<p><img alt="Connexió de l'usuari Diego" src="../custom/diego.png" /></p>
+<p><img alt="Connexió de l'usuari Diego" src="../custom/diego.png"></p>
 <p>Si intentem crear un directori, obtenim un error.</p>
-<p><img alt="Error en intentar crear un fitxer amb Diego" src="../custom/diegollegir.png" /></p>
+<p><img alt="Error en intentar crear un fitxer amb Diego" src="../custom/diegollegir.png"></p>
 <p>Però en canvi si podem llegir.</p>
-<p><img alt="alt text" src="../custom/diegoread.png" /></p>
-<hr />
+<p><img alt="alt text" src="../custom/diegoread.png"></p>
+<hr>
 <p><strong>Usuari Joan</strong></p>
 <p>L'usuari <code>Joan</code> no pot accedir al recurs compartit, ja que li hem denegat l'accés en la configuració de Samba.</p>
-<p><img alt="Error en intentar connectar-se com a Joan" src="../custom/joanfail.png" /></p>
+<p><img alt="Error en intentar connectar-se com a Joan" src="../custom/joanfail.png"></p>
 <h3 id="ldap-samba">Ldap + Samba</h3>
 <p>Integrar Samba amb LDAP és força complex, ja que cal utilitzar el <code>samba.schema</code> entre molts altres paràmetres. No recomano fer-ho, ja que pot causar molts inconvenients i dificultats en la configuració.</p>
-<p>Una solució que pots considerar per simplificar la integració entre Samba i LDAP és utilitzar una eina com <strong>Samba AD (Active Directory)</strong>, que està més estandarditzada i és menys propensa a errors de configuració. Samba AD proporciona una implementació compatible amb Active Directory que permet gestionar usuaris, grups i permisos a través de LDAP, però amb un conjunt d'eines que faciliten la configuració i l'administració.</p>
+<p>Una solució que pots considerar per simplificar la integració entre Samba i LDAP és utilitzar una eina com <strong>Samba AD (Active Directory)</strong>, que està més estandarditzada i és menys propensa a errors de configuració. Samba AD proporciona una implementació compatible amb Active Directory que permet gestionar usuaris, grups i permisos a través de LDAP, però amb un conjunt d'eines que faciliten la configuració i l'administració.</p></div>
 
 
 
