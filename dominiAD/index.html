@@ -12,7 +12,7 @@
         <link rel="prev" href="../ldapgui/">
       
       
-        <link rel="next" href="../raid/">
+        <link rel="next" href="../clientAD/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Instal·lació Domini AD - Virtualització</title>
+        <title>Instal·lació d’un domini AD - Virtualització</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installacio-de-domini-active-directori" class="md-skip">
+        <a href="#installacio-i-configuracio-dun-domini-amb-active-directory" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Instal·lació Domini AD
+              Instal·lació d’un domini AD
             
           </span>
         </div>
@@ -1592,12 +1592,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    Instal·lació Domini AD
+    Instal·lació d’un domini AD
   </span>
   
 
@@ -1608,7 +1610,7 @@
         
   
   <span class="md-ellipsis">
-    Instal·lació Domini AD
+    Instal·lació d’un domini AD
   </span>
   
 
@@ -1620,6 +1622,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1628,11 +1632,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installacio-de-domini-active-directori" class="md-nav__link">
+  <a href="#installacio-del-domini-active-directory" class="md-nav__link">
     <span class="md-ellipsis">
-      Instal·lació de Domini Active Directori
+      Instal·lació del domini Active Directory
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Instal·lació del domini Active Directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacio-del-domini" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació del domini
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afegir-un-nou-bosc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afegir un nou bosc
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1640,6 +1668,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clientAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unió d’equips Windows al domini AD
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2045,19 +2094,60 @@
                   
 
 
-  <h1>Instal·lació Domini AD</h1>
-
-<p>Explicar en mes profunditat.
-En aquest apartat parlarem sobre el Active Directori de Windows i com facilita la gestio de la infraestructura de les emepreses.</p>
-<h2 id="installacio-de-domini-active-directori">Instal·lació de Domini Active Directori</h2>
-<p>Primer que res ens hem d'asegurrar que tenim dos interficies de xarxa connectades al servidor una NAT i l'altra Xarxa interna ho simlem amb al virtualbox.</p>
+<h1 id="installacio-i-configuracio-dun-domini-amb-active-directory">Instal·lació i configuració d’un domini amb Active Directory</h1>
+<p>En aquest apartat explicarem amb més profunditat què és <strong>Active Directory (AD)</strong> i com pot facilitar la gestió centralitzada de la infraestructura informàtica dins d’una empresa.<br />
+AD és un servei de directori desenvolupat per Microsoft que permet administrar usuaris, equips, permisos i altres recursos dins d’un entorn de xarxa corporatiu.</p>
+<h2 id="installacio-del-domini-active-directory">Instal·lació del domini Active Directory</h2>
+<p>El primer pas és assegurar-nos que el servidor disposa de <strong>dues interfícies de xarxa</strong>: una configurada en mode NAT i una altra en <strong>Xarxa interna</strong> (simulat amb VirtualBox).</p>
 <p><img alt="alt text" src="../custom/s1.png" /></p>
-<p>Iniciem la màquina i ens dirigim a les opcions d'adaptador de xarxa i com podem veure no hi ha res assignat, hem de configurar una IP estatica manual.</p>
+<p>Un cop iniciem la màquina virtual, accedim a les opcions d'adaptadors de xarxa i comprovem que no hi ha cap IP assignada. Hem de configurar una <strong>adreça IP estàtica</strong> de manera manual.</p>
 <p><img alt="alt text" src="../custom/s2.png" /></p>
-<p>Ens dirigim  a les opcions d'adaptador i obrirem ipv4, assignarem la IP estatia amb les dns.</p>
+<p>Accedim a les propietats de l’adaptador i obrim la configuració d’<strong>IPv4</strong> per assignar la IP manualment, incloent la passarel·la i els servidors DNS.</p>
 <p><img alt="alt text" src="../custom/s3.png" /></p>
-<p>Comprovació per cmd de que s'ha aplicat.</p>
+<p>Després, comprovem mitjançant <strong>CMD</strong> que la configuració s’ha aplicat correctament.</p>
 <p><img alt="alt text" src="../custom/s4.png" /></p>
+<h3 id="creacio-del-domini">Creació del domini</h3>
+<p>Per començar la instal·lació del domini, obrim el <strong>Administrador del servidor</strong>.</p>
+<p><img alt="alt text" src="../custom/s5.png" /></p>
+<p>Ens dirigim a l'opció <strong>Administrar</strong> i seleccionem <strong>Afegir rols i característiques</strong>.</p>
+<p><img alt="alt text" src="../custom/s12.png" /></p>
+<p>Apareixerà un assistent que ens guiarà en la configuració del servidor i la instal·lació del domini.</p>
+<p><img alt="alt text" src="../custom/s123.png" /></p>
+<p>En aquesta pantalla deixem les opcions per defecte. Si necessites accés remot, pots afegir també el servei de <strong>Remote Desktop</strong>.</p>
+<p><img alt="alt text" src="../custom/s11.png" /></p>
+<p>Podem tenir diversos servidors llistats. Seleccionem el servidor on volem instal·lar el domini.</p>
+<p><img alt="alt text" src="../custom/ips.png" /></p>
+<p>En aquesta següent pantalla és <strong>molt important</strong> seleccionar les funcionalitats següents:</p>
+<ul>
+<li><strong>Active Directory Domain Services</strong></li>
+<li><strong>DNS Server</strong>  </li>
+</ul>
+<p>També pots seleccionar <strong>DHCP Server</strong> si vols configurar IPs automàtiques a la xarxa.</p>
+<p><img alt="alt text" src="../custom/acda.png" /></p>
+<p>És important assegurar-se que l’opció <strong>Administració de directives de grup (GPO)</strong> estigui activada. Normalment ho està per defecte.</p>
+<p><img alt="alt text" src="../custom/fga.png" /></p>
+<p>Pots saltar les pantalles següents fins arribar a la de <strong>confirmació</strong>. Revisa que tot sigui correcte i fes clic a <strong>Instal·lar</strong>.</p>
+<p><img alt="alt text" src="../custom/adq.png" /></p>
+<p>Quan la instal·lació acabi, fes clic a <strong>Promoure aquest servidor a controlador de domini</strong>.</p>
+<p><img alt="alt text" src="../custom/waitinad.png" /></p>
+<h3 id="afegir-un-nou-bosc">Afegir un nou bosc</h3>
+<p>Un <strong>bosc (forest)</strong> és la unitat més alta dins d’un entorn AD. Pot contenir diversos dominis.<br />
+En aquest cas, seleccionem <strong>Afegir un bosc nou</strong> i definim el nom del nostre domini (ex: <code>empresa.local</code>).</p>
+<p><img alt="alt text" src="../custom/bosc.png" /></p>
+<p>A continuació, el sistema ens demanarà una <strong>contrasenya d’administrador del domini</strong>. Assegura’t de recordar-la bé.</p>
+<p><img alt="alt text" src="../custom/pas.png" /></p>
+<p>A la pantalla de configuració del <strong>DNS</strong>, pot aparèixer un avís. És normal, simplement prem <strong>Següent</strong>.</p>
+<p><img alt="alt text" src="../custom/warni.png" /></p>
+<p>Després, cal definir el <strong>nom NetBIOS</strong> del domini. Pots posar-hi un nom curt que identifiqui el teu entorn.</p>
+<p><img alt="alt text" src="../custom/ntb.png" /></p>
+<p>A la pantalla de revisió final, es mostrarà un <strong>script de configuració automàtica</strong>. Pots guardar-lo si vols automatitzar aquest procés en el futur.</p>
+<p><img alt="alt text" src="../custom/scr.png" /></p>
+<p>Ara només queda esperar que es facin les comprovacions. Quan tot estigui preparat, prem <strong>Instal·lar</strong>. El servidor es <strong>reiniciarà automàticament</strong> en acabar.</p>
+<p><img alt="alt text" src="../custom/installar.png" /></p>
+<p>Un cop reiniciat el sistema, inicia sessió amb l’usuari i la contrasenya definits. Per defecte, l’usuari és <strong>Administrador</strong>.</p>
+<p><img alt="alt text" src="../custom/adm.png" /></p>
+<p>Per comprovar que la màquina forma part del domini, obrim <strong>CMD</strong>. Podem veure que estem connectats com a usuari de domini (<code>vitaliyad\admin</code>), la qual cosa confirma que tot funciona correctament.</p>
+<p><img alt="alt text" src="../custom/dom.png" /></p>
 
 
 
