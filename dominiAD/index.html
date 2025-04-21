@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../mobils/">
+        <link rel="prev" href="../ldapgui/">
       
       
-        <link rel="next" href="../ldapgui/">
+        <link rel="next" href="../raid/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Compartir recursos amb SAMBA - Virtualització</title>
+        <title>Instal·lació Domini AD - Virtualització</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installacio-i-configuracio-de-samba" class="md-skip">
+        <a href="#installacio-de-domini-active-directori" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Compartir recursos amb SAMBA
+              Instal·lació Domini AD
             
           </span>
         </div>
@@ -1361,8 +1361,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1377,11 +1375,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="">
@@ -1395,7 +1393,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -1490,28 +1488,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Compartir recursos amb SAMBA
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../samba/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1520,141 +1500,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installacio-i-configuracio-de-samba" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instal·lació i configuració de Samba
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installacio-i-proves" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instal·lació i proves
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Instal·lació i proves">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#servidor-samba" class="md-nav__link">
-    <span class="md-ellipsis">
-      Servidor Samba
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuracio-de-smbconf" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuració de smb.conf
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuració de smb.conf">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#creacio-dusuaris-i-grups" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creació d'usuaris i grups
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#canvi-de-contrasenya-per-a-usuaris-samba" class="md-nav__link">
-    <span class="md-ellipsis">
-      Canvi de contrasenya per a usuaris Samba
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installacio-i-configuracio-del-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instal·lació i configuració del client
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Instal·lació i configuració del client">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installacio-del-client-samba" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instal·lació del client Samba
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#connexio-com-a-usuari-anonim" class="md-nav__link">
-    <span class="md-ellipsis">
-      Connexió com a usuari anònim
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#connexio-amb-usuaris-amb-permisos-especifics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Connexió amb usuaris amb permisos específics
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ldap-samba" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ldap + Samba
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1693,6 +1538,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1707,11 +1554,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
@@ -1725,7 +1572,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             Windows
@@ -1736,10 +1583,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../dominiAD/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Instal·lació Domini AD
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1748,6 +1613,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-de-domini-active-directori" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació de Domini Active Directori
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2153,93 +2045,19 @@
                   
 
 
-  <h1>Compartir recursos amb SAMBA</h1>
+  <h1>Instal·lació Domini AD</h1>
 
-<h2 id="installacio-i-configuracio-de-samba">Instal·lació i configuració de Samba</h2>
-<p>Samba és un servei similar a NFS que permet la compartició de carpetes, però també permet compartir altres recursos, com impressores.</p>
-<p><strong>Diferències principals amb NFS</strong></p>
-<p>Una de les diferències més importants respecte a NFS és que l'autenticació en Samba es realitza a nivell d'usuari, mentre que en NFS es fa a nivell de host. Això permet un control més detallat sobre qui pot accedir als recursos compartits.</p>
-<p><strong>Integració amb LDAP</strong></p>
-<p>Per utilitzar Samba no és necessari tenir un servidor LDAP, però existeix la possibilitat d'integrar-lo amb LDAP per gestionar els usuaris de manera centralitzada.</p>
-<p><strong>Compatibilitat</strong></p>
-<p>Samba ofereix compatibilitat tant amb sistemes Ubuntu com amb Windows, facilitant la interoperabilitat entre diferents plataformes.</p>
-<h2 id="installacio-i-proves">Instal·lació i proves</h2>
-<h3 id="servidor-samba">Servidor Samba</h3>
-<p>Comencem la instal·lació del servei Samba al nostre servidor amb la següent comanda:</p>
-<pre><code>sudo apt install samba
-</code></pre>
-<p><img alt="Instal·lació de Samba" src="../custom/sambainstalla.png" /></p>
-<p>A continuació, crearem la carpeta que volem compartir i li assignarem els permisos corresponents. El propietari i el grup han de ser <code>nobody:nogroup</code>. Pel que fa als permisos, aquests dependran del criteri de cada entorn. En aquesta pràctica, assignarem permisos 777 per facilitar la configuració.</p>
-<p><img alt="Creació de la carpeta compartida" src="../custom/creaciocrp.png" /></p>
-<p>Un cop fet això, comprovem que els permisos s'han aplicat correctament.</p>
-<p><img alt="Comprovació de permisos" src="../custom/compro.png" /></p>
-<h3 id="configuracio-de-smbconf">Configuració de <code>smb.conf</code></h3>
-<p>Per compartir el directori creat, hem de modificar l'arxiu de configuració de Samba, situat a <code>/etc/samba/smb.conf</code>, afegint una configuració bàsica.</p>
-<p><img alt="Configuració bàsica de Samba" src="../custom/confgbasica.png" /></p>
-<p>En aquesta configuració, hem especificat el path del directori compartit, l'opció <code>guest ok</code>, i l'opció <code>browsable</code>, que es pot configurar a "yes" o "no" segons les necessitats. A més, hem definit la màscara del directori (<code>directory mask</code>) i la màscara dels fitxers creats (<code>create mask</code>).</p>
-<p>Pel que fa als permisos destacats:</p>
-<ul>
-<li>L'opció <code>read list</code> permet accés de només lectura exclusivament a l'usuari <code>jesus</code> i al grup <code>professors</code> (identificat amb l'arrova <code>@</code>).</li>
-<li>L'opció <code>write list</code> concedeix permís d'escriptura únicament a <code>jesus</code>.</li>
-<li>L'usuari <code>joan</code> no tindrà accés ni podrà connectar-se al recurs compartit.</li>
-</ul>
-<hr />
-<p><strong>Reinici del servei i comprovació</strong></p>
-<p>Un cop configurat <code>smb.conf</code>, reiniciem el servei per aplicar els canvis i comprovem que funciona correctament.</p>
-<p><img alt="Reinici del servei Samba" src="../custom/smbreinic.png" /></p>
-<h4 id="creacio-dusuaris-i-grups">Creació d'usuaris i grups</h4>
-<p>Per gestionar l'accés als recursos compartits, creem els usuaris i els assignem als grups corresponents.</p>
-<p><img alt="Creació d'usuaris i grups" src="../custom/creemusuaris.png" /></p>
-<p>Un cop creats, comprovem que els usuaris s'han afegit correctament al grup corresponent.</p>
-<p><img alt="Comprovació d'usuaris i grups" src="../custom/comprovaciotail.png" /></p>
-<h4 id="canvi-de-contrasenya-per-a-usuaris-samba">Canvi de contrasenya per a usuaris Samba</h4>
-<p>Perquè els usuaris puguin accedir al directori compartit, cal assignar-los una contrasenya específica per a Samba. Això es fa amb la comanda següent:</p>
-<p><code>smbpasswd -a "nom_usuari"</code></p>
-<p><img alt="Assignació de contrasenya per a Samba" src="../passsamba.png" /></p>
-<blockquote>
-<ul>
-<li>Aquesta contrasenya és independent de la contrasenya del sistema i és necessària per autenticar-se en els recursos compartits de Samba.</li>
-</ul>
-</blockquote>
-<h2 id="installacio-i-configuracio-del-client">Instal·lació i configuració del client</h2>
-<h3 id="installacio-del-client-samba">Instal·lació del client Samba</h3>
-<p>Primerament, hem d'instal·lar el servei <code>smbclient</code> al nostre client.</p>
-<p><img alt="Instal·lació del client Samba" src="../custom/clientsmb.png" /></p>
-<p>Un cop instal·lat, obrim el cercador de fitxers i ens dirigim a <strong>"Altres ubicacions"</strong>. Afegim la IP del nostre servidor Samba i el directori compartit. Per exemple:</p>
-<p><code>smb://10.0.2.15/asixa/</code></p>
-<p><img alt="Accés al servidor Samba" src="../custom/asix.png" /></p>
-<h3 id="connexio-com-a-usuari-anonim">Connexió com a usuari anònim</h3>
-<p>Com que hem afegit el paràmetre <code>guest</code>, ens podem connectar com a usuari anònim.</p>
-<p><img alt="Connexió com a usuari anònim" src="../custom/anonsmb.png" /></p>
-<p>Aquesta connexió ens permet veure els fitxers existents, però no ens permet obrir-los ni crear nous fitxers o directoris.</p>
-<p><img alt="alt text" src="../custom/compartida.png" /></p>
-<p>Si intentem crear un fitxer, obtenim un error.</p>
-<p><img alt="Error en intentar crear un fitxer" src="../custom/failanon.png" /></p>
-<p>Tampoc podem llegir el fitxer <code>hola</code>, que ja estava creat prèviament.</p>
-<p><img alt="Error en intentar llegir un fitxer" src="../custom/read.png" /></p>
-<h3 id="connexio-amb-usuaris-amb-permisos-especifics">Connexió amb usuaris amb permisos específics</h3>
-<p><strong>Usuari Jesus</strong></p>
-<p>Intentem accedir amb l'usuari <code>Jesus</code> i la contrasenya assignada en el pas previ.</p>
-<p><img alt="Connexió de l'usuari Jesus" src="../custom/jesus.png" /></p>
-<p>Aquest usuari pot llegir i també crear fitxers i directoris.</p>
-<p><img alt="Creació de fitxers per part de Jesus" src="../jesuscrear.png" /></p>
-<p>També podem llegir els fitxers.</p>
-<p><img alt="alt text" src="../custom/jesusread.png" /></p>
-<hr />
-<p><strong>Usuari Diego</strong></p>
-<p>També podem accedir amb l'usuari <code>Diego</code>, però aquest només té permisos de lectura i no pot crear nous fitxers.</p>
-<p><img alt="Connexió de l'usuari Diego" src="../custom/diego.png" /></p>
-<p>Si intentem crear un directori, obtenim un error.</p>
-<p><img alt="Error en intentar crear un fitxer amb Diego" src="../custom/diegollegir.png" /></p>
-<p>Però en canvi si podem llegir.</p>
-<p><img alt="alt text" src="../custom/diegoread.png" /></p>
-<hr />
-<p><strong>Usuari Joan</strong></p>
-<p>L'usuari <code>Joan</code> no pot accedir al recurs compartit, ja que li hem denegat l'accés en la configuració de Samba.</p>
-<p><img alt="Error en intentar connectar-se com a Joan" src="../custom/joanfail.png" /></p>
-<h3 id="ldap-samba">Ldap + Samba</h3>
-<p>Integrar Samba amb LDAP és força complex, ja que cal utilitzar el <code>samba.schema</code> entre molts altres paràmetres. No recomano fer-ho, ja que pot causar molts inconvenients i dificultats en la configuració.</p>
-<p>Una solució que pots considerar per simplificar la integració entre Samba i LDAP és utilitzar una eina com <strong>Samba AD (Active Directory)</strong>, que està més estandarditzada i és menys propensa a errors de configuració. Samba AD proporciona una implementació compatible amb Active Directory que permet gestionar usuaris, grups i permisos a través de LDAP, però amb un conjunt d'eines que faciliten la configuració i l'administració.</p>
+<p>Explicar en mes profunditat.
+En aquest apartat parlarem sobre el Active Directori de Windows i com facilita la gestio de la infraestructura de les emepreses.</p>
+<h2 id="installacio-de-domini-active-directori">Instal·lació de Domini Active Directori</h2>
+<p>Primer que res ens hem d'asegurrar que tenim dos interficies de xarxa connectades al servidor una NAT i l'altra Xarxa interna ho simlem amb al virtualbox.</p>
+<p><img alt="alt text" src="../custom/s1.png" /></p>
+<p>Iniciem la màquina i ens dirigim a les opcions d'adaptador de xarxa i com podem veure no hi ha res assignat, hem de configurar una IP estatica manual.</p>
+<p><img alt="alt text" src="../custom/s2.png" /></p>
+<p>Ens dirigim  a les opcions d'adaptador i obrirem ipv4, assignarem la IP estatia amb les dns.</p>
+<p><img alt="alt text" src="../custom/s3.png" /></p>
+<p>Comprovació per cmd de que s'ha aplicat.</p>
+<p><img alt="alt text" src="../custom/s4.png" /></p>
 
 
 
