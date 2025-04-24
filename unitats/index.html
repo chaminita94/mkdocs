@@ -1768,6 +1768,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#restringir-lacces-a-usuaris-fora-del-domini" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restringir l'accés a usuaris fora del domini
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Restringir l'accés a usuaris fora del domini">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-via-gpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració via GPO
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuració via GPO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-passa-si-un-usuari-local-intenta-accedir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què passa si un usuari local intenta accedir?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recomanacio-extra-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recomanació extra (opcional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1810,6 +1858,27 @@
   
   <span class="md-ellipsis">
     Perfils mòbils obligatoris
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestioAD2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestió de permisos i recursos compartits
   </span>
   
 
@@ -2360,6 +2429,8 @@ Selecciona <strong>Habilitada</strong>.</p>
 <p>A la part inferior, pots marcar també l'opció per <strong>desactivar l'execució de scripts de CMD</strong> (com ara fitxers <code>.bat</code> o <code>.cmd</code>) si vols més control.</p>
 <p>També pots activar la política <strong>"Impedir l'accés a l'Editor del Registre"</strong> si vols evitar modificacions manuals del sistema.</p>
 <p><img alt="alt text" src="../custom/disabelcmd.png"></p>
+<p>Ho comprovem.</p>
+<p><img alt="alt text" src="../custom/compara.png"></p>
 <h3 id="modificacio-de-la-politica-de-contrasenyes-al-domini">Modificació de la política de contrasenyes al domini</h3>
 <p>Les polítiques de contrasenya es gestionen a través de les <strong>Directives de grup (GPO)</strong> i, per defecte, s’apliquen a nivell de domini mitjançant la política predeterminada.</p>
 <p>Per accedir a la configuració, obrim l’eina <strong>"Administració de polítiques de grup"</strong> (<code>gpmc.msc</code>).</p>
@@ -2453,7 +2524,40 @@ Selecciona <strong>Habilitada</strong>.</p>
 És visual i fàcil de mantenir: qualsevol administrador pot veure i modificar la configuració des de la consola.<br>
 Evita errors comuns dels scripts: com errors de ruta o problemes de permisos.<br>
 S’aplica automàticament i de manera transparent per a l’usuari.</p>
-<p>Utilitzar les Preferències de GPO per muntar unitats de xarxa és, avui dia, la millor pràctica recomanada per entorns Windows amb Active Directory.</p></div>
+<p>Utilitzar les Preferències de GPO per muntar unitats de xarxa és, avui dia, la millor pràctica recomanada per entorns Windows amb Active Directory.</p>
+<h2 id="restringir-lacces-a-usuaris-fora-del-domini">Restringir l'accés a usuaris fora del domini</h2>
+<p>Per garantir que només els usuaris del domini puguin iniciar sessió en els equips del domini, pots utilitzar una Política de Grup (GPO) per controlar qui pot iniciar sessió localment.</p>
+<p>Aquesta mesura de seguretat és molt útil per evitar l'accés amb comptes locals o no autoritzats, i és especialment recomanable en entorns corporatius o educatius on es vol un control total de l'accés.</p>
+<h3 id="configuracio-via-gpo">Configuració via GPO</h3>
+<p>Obre la consola gpmc.msc al servidor de domini i edita o crea una GPO vinculada a la Unitat Organitzativa (OU) on hi ha els ordinadors afectats.</p>
+<p>Ves a:</p>
+<ul>
+<li><strong>Configuració de l’equip → Configuració de Windows → Configuració de seguretat → Polítiques locals → Assignació de drets d'usuari → Permetre l'inici de sessió local</strong></li>
+</ul>
+<p>Defineix la configuració i afegeix només aquest grup:</p>
+<ul>
+<li>DOMINI\Usuarios del dominio</li>
+</ul>
+<p>Exemple:  </p>
+<ul>
+<li><strong>VitaliyAD\Usuarios del dominio</strong></li>
+</ul>
+<p>Això assegura que només els usuaris autenticats del domini poden iniciar sessió als equips.</p>
+<p><img alt="alt text" src="../custom/allowed.png"></p>
+<h4 id="que-passa-si-un-usuari-local-intenta-accedir">Què passa si un usuari local intenta accedir?</h4>
+<p>Quan un usuari local o extern intenta iniciar sessió, rebrà un missatge d'error informant que no té permisos per iniciar sessió localment.</p>
+<p>Això evita intents d'accés no autoritzats amb comptes com .\usuari, .\Administrador, o altres usuaris que no formen part del domini.</p>
+<p><img alt="alt text" src="../custom/erorac.png"></p>
+<h4 id="recomanacio-extra-opcional">Recomanació extra (opcional)</h4>
+<p>Per reforçar encara més la seguretat, pots configurar també la política:</p>
+<p>Denegar l’inici de sessió local</p>
+<p>I afegir-hi els grups:</p>
+<ul>
+<li>BUILTIN\Users</li>
+<li>BUILTIN\Guests</li>
+</ul>
+<p>Això afegeix una capa de protecció extra per evitar que usuaris locals intentin accedir.</p>
+<p>Amb aquesta configuració, t’assegures que només els usuaris del domini poden accedir als equips gestionats, i redueixes els riscos de seguretat associats a l'ús de comptes locals.</p></div>
 
 
 
