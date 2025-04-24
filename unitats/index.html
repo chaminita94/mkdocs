@@ -1699,6 +1699,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#modificacio-de-la-politica-de-contrasenyes-al-domini" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificació de la política de contrasenyes al domini
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2244,7 +2253,30 @@
 <p><img alt="alt text" src="../custom/uoa.png"></p>
 <p>Dins d’aquestes UO, també podem crear <strong>usuaris i grups</strong>. Per exemple, podem crear dos grups: un anomenat <strong>Permissiva</strong> i un altre <strong>Restrictiva</strong>.  </p>
 <p>A continuació, creem dos usuaris i assignem cada un al seu grup corresponent. D’aquesta manera, podrem <strong>aplicar polítiques diferents</strong> segons el grup al qual pertanyin, donant més o menys permisos segons convingui.</p>
-<p><img alt="alt text" src="../custom/permaas.png"></p></div>
+<p><img alt="alt text" src="../custom/permaas.png"></p>
+<h2 id="modificacio-de-la-politica-de-contrasenyes-al-domini">Modificació de la política de contrasenyes al domini</h2>
+<p>Les polítiques de contrasenya es gestionen a través de les <strong>Directives de grup (GPO)</strong> i, per defecte, s’apliquen a nivell de domini mitjançant la política predeterminada.</p>
+<p>Per accedir a la configuració, obrim l’eina <strong>"Administració de polítiques de grup"</strong> (<code>gpmc.msc</code>).</p>
+<p><img alt="alt text" src="../custom/pol.png"></p>
+<p>A la part esquerra de la consola, despleguem el nostre domini i localitzem la política anomenada <code>Default Domain Policy</code>. També hi podrem veure qualsevol GPO personalitzada que hàgim creat prèviament, com per exemple per a UO com <em>Administratius</em> o <em>Comptabilitat</em>.</p>
+<p>A partir d’aquí, podem optar per editar la política predeterminada o bé crear una de nova i aplicar-la sobre una UO específica.</p>
+<p><img alt="alt text" src="../custom/customd.png"></p>
+<p>Fem clic dret sobre la política que volem editar i seleccionem l’opció <strong>Edita</strong> per obrir l’editor de polítiques de grup.</p>
+<p>Dins l’editor, accedim a:</p>
+<p><code>Configuració de l’equip &gt; Configuració de Windows &gt; Configuració de seguretat &gt; Polítiques de compte &gt; Política de contrasenya</code></p>
+<p>En aquesta secció es poden modificar els valors relacionats amb la seguretat de les contrasenyes. Les opcions més habituals són:</p>
+<ul>
+<li>Longitud mínima de la contrasenya</li>
+<li>Requeriment de complexitat (majúscules, minúscules, números i símbols)</li>
+<li>Caducitat de la contrasenya (nombre de dies abans que caduqui)</li>
+<li>Temps mínim abans de poder canviar-la novament</li>
+<li>Nombre de contrasenyes guardades a l’historial (per evitar reutilització)</li>
+</ul>
+<p><img alt="alt text" src="../custom/pasgpo.png"></p>
+<p>Un cop modificades les opcions segons les necessitats, tanquem l’editor i deixem que la política s’apliqui automàticament. També podem forçar-ne l'aplicació immediata amb:</p>
+<pre><code>gpupdate /force
+</code></pre>
+<p>Aquestes polítiques s'aplicaran a tots els usuaris que depenguin d'aquesta GPO, i es pot comprovar el seu efecte en intentar establir o modificar una contrasenya.</p></div>
 
 
 
