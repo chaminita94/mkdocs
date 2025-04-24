@@ -12,7 +12,7 @@
         <link rel="prev" href="../unitats/">
       
       
-        <link rel="next" href="../raid/">
+        <link rel="next" href="../mobilsAD/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Gestió de permisos i perfils mòbils - Virtualització</title>
+        <title>Perfils mòbils - Virtualització</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#que-son-els-perfils-mobils-i-quina-diferencia-hi-ha-amb-un-perfil-normal" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Gestió de permisos i perfils mòbils
+              Perfils mòbils
             
           </span>
         </div>
@@ -1672,16 +1677,125 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Perfils mòbils
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Gestió de permisos i perfils mòbils
+    Perfils mòbils
   </span>
   
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-son-els-perfils-mobils-i-quina-diferencia-hi-ha-amb-un-perfil-normal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què són els perfils mòbils i quina diferència hi ha amb un perfil normal?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Què són els perfils mòbils i quina diferència hi ha amb un perfil normal?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-grup-i-assignar-un-usuari" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear un grup i assignar un usuari
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-la-carpeta-de-perfils-mobils" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear la carpeta de perfils mòbils
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compartir-la-carpeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compartir la carpeta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-la-ruta-del-perfil-mobil" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurar la ruta del perfil mòbil
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprovacio-de-sincronitzacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprovació de sincronització
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobilsAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Perfils mòbils obligatoris
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2183,9 +2297,45 @@
                   
 
 
-  <h1>Gestió de permisos i perfils mòbils</h1>
+  <h1>Perfils mòbils</h1>
 
-<p>WIP</p>
+<div><h2 id="que-son-els-perfils-mobils-i-quina-diferencia-hi-ha-amb-un-perfil-normal">Què són els perfils mòbils i quina diferència hi ha amb un perfil normal?</h2>
+<p>Els perfils mòbils permeten que la configuració de l’escriptori, els documents i altres dades d’un usuari es desin en un servidor central. Així, quan aquest usuari inicia sessió en un altre ordinador dins del domini, tot el seu entorn es carrega tal com l’havia deixat.</p>
+<p>En canvi, un perfil normal (també conegut com a perfil local) només es desa en l’ordinador concret on l’usuari ha iniciat sessió. Si aquest usuari inicia sessió en un altre equip, no tindrà la mateixa configuració ni els seus fitxers personals.</p>
+<p>Hi ha diverses maneres de crear perfils mòbils. En aquesta pràctica ensenyaré una.</p>
+<hr>
+<h3 id="crear-un-grup-i-assignar-un-usuari">Crear un grup i assignar un usuari</h3>
+<p>Primerament, crearem un grup anomenat <code>mobils</code> i assignarem un dels usuaris (per exemple, l’usuari Vitaliy) a aquest grup.</p>
+<p><img alt="alt text" src="../custom/crearnw.png"></p>
+<p>Comprovem que l’usuari està dins del grup:</p>
+<p><img alt="alt text" src="../custom/vitya.png"></p>
+<hr>
+<h3 id="crear-la-carpeta-de-perfils-mobils">Crear la carpeta de perfils mòbils</h3>
+<p>Creem una carpeta que es diu <code>mobils</code> (o un altre nom que vulguis assignar) dins de la unitat C: o una altra que tinguis disponible.</p>
+<p><img alt="alt text" src="../custom/moi.png"></p>
+<p>Ara hem de canviar els permisos d’aquesta carpeta i posar el grup <code>mobils</code> com a propietari amb permís total.</p>
+<p><img alt="alt text" src="../custom/own.png"></p>
+<hr>
+<h3 id="compartir-la-carpeta">Compartir la carpeta</h3>
+<p>Després compartim aquesta carpeta i seleccionem el grup <code>mobils</code>.</p>
+<p><img alt="alt text" src="../custom/shared.png"></p>
+<hr>
+<h3 id="configurar-la-ruta-del-perfil-mobil">Configurar la ruta del perfil mòbil</h3>
+<p>Posteriorment hem de canviar la "ruta" del perfil de l’usuari. A "Usuarios y equipos", fem clic dret sobre l’usuari Vitaliy, i a l’apartat "Perfil" afegim el path de la carpeta que hem compartit.</p>
+<p><img alt="alt text" src="../custom/rutauser.png"></p>
+<p>Quan ens loguegem amb l’usuari, dins de la carpeta <code>mobils</code> apareix el seu nom, per exemple <code>domin.V6</code>. Què és el <code>.V6</code>?</p>
+<ul>
+<li>Quan et logueges amb un usuari de domini i aquest té un perfil mòbil (roaming profile), Windows crea una carpeta per guardar la seva configuració i dades personals (Escriptori Documents, configuració d’aplicacions, etc.).</li>
+</ul>
+<p><img alt="alt text" src="../custom/v6.png"></p>
+<hr>
+<h3 id="comprovacio-de-sincronitzacio">Comprovació de sincronització</h3>
+<p>Ara ve un pas delicat: hem d’afegir temporalment l’usuari "Vitaliy" com a administrador <strong>dins del servidor</strong>.</p>
+<p><img alt="alt text" src="../custom/adnm.png"></p>
+<p>Ens loguegem amb aquest usuari <strong>dins del servidor</strong>, no dins del client, i creem una carpeta/arxiu al "Desktop".</p>
+<p><img alt="alt text" src="../custom/tta.png"></p>
+<p>Finalment, accedim amb aquest usuari <strong>des del client</strong> i comprovem que la carpeta creada dins del servidor també apareix dins del PC client.</p>
+<p><img alt="alt text" src="../custom/testac.png"></p></div>
 
 
 
