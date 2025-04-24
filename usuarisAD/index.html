@@ -1664,6 +1664,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Creació de grups bàsics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restriccio-dhores-i-dies-per-a-un-usuari" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restricció d’hores i dies per a un usuari
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afegir-un-usuari-com-a-administrador-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afegir un usuari com a administrador local
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1707,7 +1731,7 @@
         
   
   <span class="md-ellipsis">
-    Creació d’unitats organitzatives
+    Creació i Administració d’unitats organitzatives
   </span>
   
 
@@ -2281,7 +2305,33 @@ Per a aquesta pràctica ho desmarquem per evitar problemes d’oblit de contrase
 <p><img alt="alt text" src="../custom/dml.png"></p>
 <p>Un cop creat, si fem <strong>doble clic sobre el grup</strong>, s’obrirà la finestra de propietats. Des d’allà, podem accedir a la pestanya <strong>Membres</strong> i afegir-hi usuaris existents del domini.<br>
 Per exemple, podem afegir-hi l’usuari que hem creat anteriorment.</p>
-<p><img alt="alt text" src="../custom/addas.png"></p></div>
+<p><img alt="alt text" src="../custom/addas.png"></p>
+<h3 id="restriccio-dhores-i-dies-per-a-un-usuari">Restricció d’hores i dies per a un usuari</h3>
+<p>Per limitar l’accés d’un usuari a determinats dies i franges horàries, podem configurar les <strong>hores d’inici de sessió</strong> des de l’entorn d’Active Directory. Aquesta funcionalitat permet definir quan pot o no pot accedir un usuari al domini.</p>
+<p>Per fer-ho, obrim <strong>Usuaris i equips del domini</strong>, fem clic dret sobre l’usuari que volem configurar i seleccionem <strong>Propietats</strong>.</p>
+<p><img alt="alt text" src="../custom/prop.png"></p>
+<p>A la finestra de propietats, accedim a la pestanya <strong>Compte</strong> i fem clic al botó <strong>Hores d’inici de sessió</strong>.</p>
+<p><img alt="alt text" src="../custom/ra.png"></p>
+<p>Es mostrarà una graella on cada quadrat representa una hora d’un dia. Els quadrats en blau indiquen que l’accés està permès; els en blanc indiquen que està denegat.</p>
+<p>En aquest exemple, l’usuari pot iniciar sessió <strong>de dilluns a dissabte</strong> (excepte dijous i diumenge), entre les <strong>8:00 i les 16:00 hores</strong>.</p>
+<p><img alt="alt text" src="../custom/user.png"></p>
+<p>Si provem d’iniciar sessió amb aquest usuari fora de l’horari permès (per exemple, <strong>dijous a les 14:18</strong>), apareixerà un missatge indicant que <strong>no es pot iniciar sessió en aquest moment</strong>.</p>
+<p><img alt="alt text" src="../custom/bloc.png"></p>
+<p>Quan un usuari ja està connectat i arriba el final del seu horari permès, <strong>no se’l desconnecta automàticament</strong>, però no podrà iniciar sessió de nou fins que torni a estar dins del seu horari autoritzat. Si es vol forçar el tancament de sessió fora d’horari, cal configurar-ho manualment mitjançant polítiques addicionals o scripts programats.</p>
+<h3 id="afegir-un-usuari-com-a-administrador-local">Afegir un usuari com a administrador local</h3>
+<p>Hi ha diverses maneres de fer que un usuari del domini sigui <strong>administrador local</strong> d’un equip. A continuació es mostren dues formes habituals de fer-ho: una gràfica i una per línia de comandes.</p>
+<p>Una de les formes més completes és fer-ho <strong>remotament des del servidor</strong>, mitjançant la consola d’administració d’equips. Per obrir-la, es pot prémer <code>Win + R</code>, escriure <code>compmgmt.msc</code> i prémer Enter.</p>
+<p>Un cop oberta l’eina, fem clic dret sobre <strong>Administració d’equips (local)</strong> i seleccionem <strong>Connecta’t a un altre equip...</strong>. Introduïm el <strong>nom de l’equip</strong> al qual volem connectar-nos (per exemple: <code>NOM-PC</code> o el nom dins del domini).</p>
+<p><img alt="alt text" src="../custom/2025-04-24_14-39.png"></p>
+<p>Quan es connecti correctament, veurem que podem gestionar aquest equip com si estiguéssim localment. Anem a:</p>
+<p><strong>Eines del sistema → Usuaris i grups locals → Grups</strong></p>
+<p>Busquem el grup <strong>Administradors</strong>, hi fem doble clic i cliquem el botó <strong>Afegeix...</strong>. Des d’aquí, podem afegir qualsevol usuari del domini que volem que tingui permisos d’administrador local.</p>
+<p><img alt="alt text" src="../custom/admlocal.png"></p>
+<p>Una altra manera, molt més ràpida i eficaç, és fer-ho per <strong>CMD localment o via RDP</strong>, utilitzant la comanda següent amb una sessió d’administrador:</p>
+<pre><code>net localgroup Administradors "DOMINI\nomusuari" /add
+</code></pre>
+<p>Aquesta comanda afegeix el compte de domini especificat dins del grup d’administradors locals de l’equip. És una forma ideal per a administradors que prefereixen scripts o gestió ràpida.</p>
+<p><img alt="alt text" src="../custom/cmdea.png"></p></div>
 
 
 

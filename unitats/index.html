@@ -20,7 +20,7 @@
     
     
       
-        <title>Creació d’unitats organitzatives - Virtualització</title>
+        <title>Creació i Administració d’unitats organitzatives - Virtualització</title>
       
     
     
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Creació d’unitats organitzatives
+              Creació i Administració d’unitats organitzatives
             
           </span>
         </div>
@@ -1660,7 +1660,7 @@
           
   
   <span class="md-ellipsis">
-    Creació d’unitats organitzatives
+    Creació i Administració d’unitats organitzatives
   </span>
   
 
@@ -1671,7 +1671,7 @@
         
   
   <span class="md-ellipsis">
-    Creació d’unitats organitzatives
+    Creació i Administració d’unitats organitzatives
   </span>
   
 
@@ -1700,14 +1700,41 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configuracio-de-gpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració de GPOs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuració de GPOs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-una-gpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què és una GPO?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desactivar-lacces-a-la-linia-de-comandaments-cmd-mitjancant-gpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desactivar l'accés a la línia de comandaments (CMD) mitjançant GPO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#modificacio-de-la-politica-de-contrasenyes-al-domini" class="md-nav__link">
     <span class="md-ellipsis">
       Modificació de la política de contrasenyes al domini
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Modificació de la política de contrasenyes al domini">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#prova-de-contrasenya" class="md-nav__link">
@@ -1718,26 +1745,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#compartir-una-carpeta-o-unitat-de-xarxa-via-gpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compartir una carpeta o unitat de xarxa via GPO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpo-vs-script-bat" class="md-nav__link">
+    <span class="md-ellipsis">
+      GPO vs Script .bat
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restriccio-dhores-i-dies-per-a-un-usuari" class="md-nav__link">
-    <span class="md-ellipsis">
-      Restricció d’hores i dies per a un usuari
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#afegir-un-usuari-com-a-administrador-local" class="md-nav__link">
-    <span class="md-ellipsis">
-      Afegir un usuari com a administrador local
-    </span>
-  </a>
   
 </li>
       
@@ -2288,7 +2315,7 @@
                   
 
 
-  <h1>Creació d’unitats organitzatives</h1>
+  <h1>Creació i Administració d’unitats organitzatives</h1>
 
 <div><h2 id="unitats-organitzatives-uo-a-active-directory">Unitats organitzatives (UO) a Active Directory</h2>
 <p>Les unitats organitzatives, o <strong>UO</strong>, són contenidors lògics dins d’un domini d’Active Directory que serveixen per <strong>organitzar i agrupar objectes</strong> com usuaris, grups, equips o altres UO. A diferència de la carpeta "Users", les UO permeten una administració més avançada i personalitzada dels recursos.</p>
@@ -2308,7 +2335,32 @@
 <p>Dins d’aquestes UO, també podem crear <strong>usuaris i grups</strong>. Per exemple, podem crear dos grups: un anomenat <strong>Permissiva</strong> i un altre <strong>Restrictiva</strong>.  </p>
 <p>A continuació, creem dos usuaris i assignem cada un al seu grup corresponent. D’aquesta manera, podrem <strong>aplicar polítiques diferents</strong> segons el grup al qual pertanyin, donant més o menys permisos segons convingui.</p>
 <p><img alt="alt text" src="../custom/permaas.png"></p>
-<h2 id="modificacio-de-la-politica-de-contrasenyes-al-domini">Modificació de la política de contrasenyes al domini</h2>
+<h2 id="configuracio-de-gpos">Configuració de GPOs</h2>
+<h3 id="que-es-una-gpo">Què és una GPO?</h3>
+<p>Una <strong>GPO</strong> (Group Policy Object) és una eina que permet aplicar configuracions específiques a usuaris i equips dins d’un domini de Windows. Amb les GPOs, els administradors poden controlar múltiples aspectes del sistema, com la configuració del sistema operatiu, l’accés a funcionalitats, restriccions de seguretat, scripts d’inici de sessió, i molt més.</p>
+<p>Són essencials per mantenir una gestió centralitzada i coherent dels equips en entorns d’empresa o xarxes educatives.</p>
+<hr>
+<h3 id="desactivar-lacces-a-la-linia-de-comandaments-cmd-mitjancant-gpo">Desactivar l'accés a la línia de comandaments (CMD) mitjançant GPO</h3>
+<p>Una de les mesures de seguretat més habituals és evitar que els usuaris <strong>no administradors</strong> puguin accedir a la CMD (símbol del sistema) o a l'editor del registre. Això es pot aconseguir fàcilment amb una GPO.</p>
+<hr>
+<p><strong>Obrir la consola de GPO:</strong> </p>
+<p>Des del <strong>controlador de domini</strong>, obre la consola <code>gpmc.msc</code> (Consola de Gestió de Polítiques de Grup).</p>
+<p><img alt="alt text" src="../custom/pol.png"></p>
+<p><strong>Crear o editar una GPO:</strong>  </p>
+<p>Vincula la GPO a una <strong>Unitat Organitzativa (OU)</strong> concreta (per exemple, on hi ha els usuaris).<br>
+Fes clic dret sobre la OU o el domini i selecciona:<br>
+<code>Crear una GPO en aquest domini i vincular-la aquí</code> → assigna-li un nom, com ara <code>Desactivar CMD</code>.</p>
+<p><strong>Editar la GPO:</strong>  </p>
+<p>Fes clic dret sobre la nova GPO i selecciona <code>Editar</code>.</p>
+<p><strong>Navega fins la ruta següent:</strong></p>
+<p>Configuració de l'usuari → Polítiques → Plantilles administratives → Sistema</p>
+<p><strong>Activa la directiva "Impedir l'accés al símbol del sistema":</strong></p>
+<p>Busca la política <strong>"Impedir l'accés al símbol del sistema"</strong> i fes doble clic per editar-la.<br>
+Selecciona <strong>Habilitada</strong>.</p>
+<p>A la part inferior, pots marcar també l'opció per <strong>desactivar l'execució de scripts de CMD</strong> (com ara fitxers <code>.bat</code> o <code>.cmd</code>) si vols més control.</p>
+<p>També pots activar la política <strong>"Impedir l'accés a l'Editor del Registre"</strong> si vols evitar modificacions manuals del sistema.</p>
+<p><img alt="alt text" src="../custom/disabelcmd.png"></p>
+<h3 id="modificacio-de-la-politica-de-contrasenyes-al-domini">Modificació de la política de contrasenyes al domini</h3>
 <p>Les polítiques de contrasenya es gestionen a través de les <strong>Directives de grup (GPO)</strong> i, per defecte, s’apliquen a nivell de domini mitjançant la política predeterminada.</p>
 <p>Per accedir a la configuració, obrim l’eina <strong>"Administració de polítiques de grup"</strong> (<code>gpmc.msc</code>).</p>
 <p><img alt="alt text" src="../custom/pol.png"></p>
@@ -2340,32 +2392,68 @@
 <p><img alt="alt text" src="../custom/2025-04-24_14-02_1.png"></p>
 <p>En canvi, si la contrasenya compleix tots els criteris configurats, es mostrarà un missatge confirmant que s’ha canviat correctament.</p>
 <p><img alt="alt text" src="../custom/pwa.png"></p>
-<h2 id="restriccio-dhores-i-dies-per-a-un-usuari">Restricció d’hores i dies per a un usuari</h2>
-<p>Per limitar l’accés d’un usuari a determinats dies i franges horàries, podem configurar les <strong>hores d’inici de sessió</strong> des de l’entorn d’Active Directory. Aquesta funcionalitat permet definir quan pot o no pot accedir un usuari al domini.</p>
-<p>Per fer-ho, obrim <strong>Usuaris i equips del domini</strong>, fem clic dret sobre l’usuari que volem configurar i seleccionem <strong>Propietats</strong>.</p>
-<p><img alt="alt text" src="../custom/prop.png"></p>
-<p>A la finestra de propietats, accedim a la pestanya <strong>Compte</strong> i fem clic al botó <strong>Hores d’inici de sessió</strong>.</p>
-<p><img alt="alt text" src="../custom/ra.png"></p>
-<p>Es mostrarà una graella on cada quadrat representa una hora d’un dia. Els quadrats en blau indiquen que l’accés està permès; els en blanc indiquen que està denegat.</p>
-<p>En aquest exemple, l’usuari pot iniciar sessió <strong>de dilluns a dissabte</strong> (excepte dijous i diumenge), entre les <strong>8:00 i les 16:00 hores</strong>.</p>
-<p><img alt="alt text" src="../custom/user.png"></p>
-<p>Si provem d’iniciar sessió amb aquest usuari fora de l’horari permès (per exemple, <strong>dijous a les 14:18</strong>), apareixerà un missatge indicant que <strong>no es pot iniciar sessió en aquest moment</strong>.</p>
-<p><img alt="alt text" src="../custom/bloc.png"></p>
-<p>Quan un usuari ja està connectat i arriba el final del seu horari permès, <strong>no se’l desconnecta automàticament</strong>, però no podrà iniciar sessió de nou fins que torni a estar dins del seu horari autoritzat. Si es vol forçar el tancament de sessió fora d’horari, cal configurar-ho manualment mitjançant polítiques addicionals o scripts programats.</p>
-<h2 id="afegir-un-usuari-com-a-administrador-local">Afegir un usuari com a administrador local</h2>
-<p>Hi ha diverses maneres de fer que un usuari del domini sigui <strong>administrador local</strong> d’un equip. A continuació es mostren dues formes habituals de fer-ho: una gràfica i una per línia de comandes.</p>
-<p>Una de les formes més completes és fer-ho <strong>remotament des del servidor</strong>, mitjançant la consola d’administració d’equips. Per obrir-la, es pot prémer <code>Win + R</code>, escriure <code>compmgmt.msc</code> i prémer Enter.</p>
-<p>Un cop oberta l’eina, fem clic dret sobre <strong>Administració d’equips (local)</strong> i seleccionem <strong>Connecta’t a un altre equip...</strong>. Introduïm el <strong>nom de l’equip</strong> al qual volem connectar-nos (per exemple: <code>NOM-PC</code> o el nom dins del domini).</p>
-<p><img alt="alt text" src="../custom/2025-04-24_14-39.png"></p>
-<p>Quan es connecti correctament, veurem que podem gestionar aquest equip com si estiguéssim localment. Anem a:</p>
-<p><strong>Eines del sistema → Usuaris i grups locals → Grups</strong></p>
-<p>Busquem el grup <strong>Administradors</strong>, hi fem doble clic i cliquem el botó <strong>Afegeix...</strong>. Des d’aquí, podem afegir qualsevol usuari del domini que volem que tingui permisos d’administrador local.</p>
-<p><img alt="alt text" src="../custom/admlocal.png"></p>
-<p>Una altra manera, molt més ràpida i eficaç, és fer-ho per <strong>CMD localment o via RDP</strong>, utilitzant la comanda següent amb una sessió d’administrador:</p>
-<pre><code>net localgroup Administradors "DOMINI\nomusuari" /add
-</code></pre>
-<p>Aquesta comanda afegeix el compte de domini especificat dins del grup d’administradors locals de l’equip. És una forma ideal per a administradors que prefereixen scripts o gestió ràpida.</p>
-<p><img alt="alt text" src="../custom/cmdea.png"></p></div>
+<h3 id="compartir-una-carpeta-o-unitat-de-xarxa-via-gpo">Compartir una carpeta o unitat de xarxa via GPO</h3>
+<p>Per compartir una carpeta o una unitat de xarxa amb els usuaris del domini de forma automàtica, es pot fer de manera eficient mitjançant una GPO (Group Policy Object), sense necessitat d’utilitzar scripts.</p>
+<p><strong>Compartir la carpeta</strong></p>
+<p>Primer de tot, cal crear el directori (per exemple: <code>C:\Share</code>) i compartir-lo per xarxa. Fes clic dret sobre la carpeta, entra a Propietats, ves a la pestanya Compartir i selecciona Compartir. Dona permisos als usuaris o grups corresponents, com ara <code>Domini\Usuaris</code>.</p>
+<p><strong>Muntar la unitat compartida amb GPO</strong></p>
+<p>Des del controlador de domini, obre la consola de gestió de polítiques de grup (<code>gpmc.msc</code>), crea o edita una GPO existent i navega fins a:</p>
+<p>Configuració de l'usuari → Preferències → Configuració de Windows → Unitat de xarxa</p>
+<ul>
+<li>Fes clic dret i selecciona Nou → Unitat  </li>
+<li>Acció: Crear  </li>
+<li>Ubicació: <code>\\VITALIY\Share</code>  </li>
+<li>Lletra de la unitat: Z:  </li>
+</ul>
+<p>Marca l’opció Reconnectar si vols que es mantingui després de reiniciar</p>
+<p><img alt="alt text" src="../custom/2025-04-24_16-51.png"></p>
+<p>Si ho hem fet correctament, la unitat apareixerà amb una icona de carpeta i un triangle verd, indicant que s'ha aplicat correctament la política:</p>
+<p><img alt="alt text" src="../custom/2025-04-24_16-51_1.png"></p>
+<p>Ara només cal iniciar sessió amb un usuari en un equip unit al domini, i veurem que la unitat es munta automàticament:</p>
+<p><img alt="alt text" src="../custom/2025-04-24_16-53.png"></p>
+<h3 id="gpo-vs-script-bat">GPO vs Script <code>.bat</code></h3>
+<table>
+<thead>
+<tr>
+<th>Aspecte</th>
+<th>GPO (Preferències)</th>
+<th>Script <code>.bat</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aplicació Automàtica</td>
+<td>✅ Sí, controlat per domini</td>
+<td>⚠️ Sí, però depèn de l’usuari/script</td>
+</tr>
+<tr>
+<td>Gestió Centralitzada</td>
+<td>✅ Totalment centralitzada</td>
+<td>⚠️ Manual o semi-centralitzada</td>
+</tr>
+<tr>
+<td>Manteniment</td>
+<td>✅ Fàcil d’actualitzar</td>
+<td>❌ Pot ser més difícil d’escanejar</td>
+</tr>
+<tr>
+<td>Control d’errors</td>
+<td>✅ Visual i gestionable</td>
+<td>❌ Cap feedback visual, només consola</td>
+</tr>
+<tr>
+<td>Reconnectar després de reinici</td>
+<td>✅ Opció integrada</td>
+<td>❌ Cal afegir <code>/persistent:yes</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Per què és millor utilitzar GPO?</strong></p>
+<p>És més segur i net: no depens de fitxers externs <code>.bat</code>.<br>
+És visual i fàcil de mantenir: qualsevol administrador pot veure i modificar la configuració des de la consola.<br>
+Evita errors comuns dels scripts: com errors de ruta o problemes de permisos.<br>
+S’aplica automàticament i de manera transparent per a l’usuari.</p>
+<p>Utilitzar les Preferències de GPO per muntar unitats de xarxa és, avui dia, la millor pràctica recomanada per entorns Windows amb Active Directory.</p></div>
 
 
 
