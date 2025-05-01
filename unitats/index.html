@@ -20,7 +20,7 @@
     
     
       
-        <title>Creació i Administració d’unitats organitzatives - Virtualització</title>
+        <title>Unitats organitzatives i GPOs - Virtualització</title>
       
     
     
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Creació i Administració d’unitats organitzatives
+              Unitats organitzatives i GPOs
             
           </span>
         </div>
@@ -1660,7 +1660,7 @@
           
   
   <span class="md-ellipsis">
-    Creació i Administració d’unitats organitzatives
+    Unitats organitzatives i GPOs
   </span>
   
 
@@ -1671,7 +1671,7 @@
         
   
   <span class="md-ellipsis">
-    Creació i Administració d’unitats organitzatives
+    Unitats organitzatives i GPOs
   </span>
   
 
@@ -1813,6 +1813,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpo-per-controlar-lacces-a-periferics-usb-cd-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      GPO per controlar l’accés a perifèrics USB, CD, etc.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-de-programes-via-gpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació de programes via GPO
+    </span>
+  </a>
   
 </li>
       
@@ -2384,7 +2402,7 @@
                   
 
 
-  <h1>Creació i Administració d’unitats organitzatives</h1>
+  <h1>Unitats organitzatives i GPOs</h1>
 
 <div><h2 id="unitats-organitzatives-uo-a-active-directory">Unitats organitzatives (UO) a Active Directory</h2>
 <p>Les unitats organitzatives, o <strong>UO</strong>, són contenidors lògics dins d’un domini d’Active Directory que serveixen per <strong>organitzar i agrupar objectes</strong> com usuaris, grups, equips o altres UO. A diferència de la carpeta "Users", les UO permeten una administració més avançada i personalitzada dels recursos.</p>
@@ -2557,7 +2575,57 @@ S’aplica automàticament i de manera transparent per a l’usuari.</p>
 <li>BUILTIN\Guests</li>
 </ul>
 <p>Això afegeix una capa de protecció extra per evitar que usuaris locals intentin accedir.</p>
-<p>Amb aquesta configuració, t’assegures que només els usuaris del domini poden accedir als equips gestionats, i redueixes els riscos de seguretat associats a l'ús de comptes locals.</p></div>
+<p>Amb aquesta configuració, t’assegures que només els usuaris del domini poden accedir als equips gestionats, i redueixes els riscos de seguretat associats a l'ús de comptes locals.</p>
+<h2 id="gpo-per-controlar-lacces-a-periferics-usb-cd-etc">GPO per controlar l’accés a perifèrics USB, CD, etc.</h2>
+<p>Una de les pràctiques més habituals en entorns empresarials és restringir l’ús de dispositius externs com memòries USB, discos durs, CDs o DVDs per motius de seguretat i prevenció de filtració de dades.</p>
+<p>Per aplicar aquesta mesura, crearem una GPO específica vinculada a una unitat organitzativa (OU) o directament al domini, segons convingui.</p>
+<p><strong>Creació de la GPO</strong></p>
+<p>Obrim la consola de Gestió de Polítiques de Grup (<code>gpmc.msc</code>) al controlador de domini.</p>
+<p>Fem clic dret sobre el nom del domini o la UO on volem aplicar la política i seleccionem:</p>
+<blockquote>
+<p>"Crear una GPO en aquest domini i vincular-la aquí..."</p>
+</blockquote>
+<p>Assignem un nom significatiu a la política, com per exemple <code>ControlUSB</code>.</p>
+<p><img alt="Creació de la GPO" src="../custom/domain.png"></p>
+<p>A continuació, introduïm el nom de la nova GPO:</p>
+<p><img alt="Nom de la política" src="../custom/nomp.png"></p>
+<p><strong>Configuració de la política</strong></p>
+<p>Un cop creada, fem clic dret sobre la nova GPO i seleccionem <strong>Editar</strong>. Dins de l’editor, naveguem a la següent ruta:</p>
+<p><code>Configuració de l’equip → Polítiques → Plantilles administratives → Sistema → Accés a l’emmagatzematge extraïble</code></p>
+<p>Aquí podem configurar opcions com:</p>
+<ul>
+<li>Desactivar l'accés a totes les unitats de memòria extraïble</li>
+<li>Desactivar l’escriptura a dispositius USB</li>
+<li>Bloquejar la lectura de CD/DVD</li>
+<li>Permetre només lectura</li>
+</ul>
+<p>Aquestes opcions permeten personalitzar el nivell de restricció segons les necessitats de l’organització.</p>
+<p><img alt="Opcions de control USB" src="../custom/usb.png"></p>
+<p><strong>Recomanació</strong></p>
+<p>En entorns empresarials o educatius, és molt recomanable habilitar aquestes polítiques per garantir la seguretat dels equips, evitar la còpia no autoritzada de dades i reduir el risc d’infeccions per malware provinents de dispositius externs.</p>
+<h2 id="installacio-de-programes-via-gpo">Instal·lació de programes via GPO</h2>
+<p><strong>Instal·lació de Google Chrome mitjançant GPO</strong></p>
+<p>Primer de tot, cal descarregar el paquet d’instal·lació de Google Chrome amb extensió <strong>.msi</strong> (molt important que no sigui .exe).</p>
+<p><img alt="Descarrega del .msi" src="../custom/msi.png"></p>
+<p>Aquest arxiu s’ha de col·locar dins d’una <strong>carpeta compartida</strong> accessible per a <strong>tots els equips del domini</strong>. Assegura’t que els permisos de la carpeta permeten <strong>lectura per als equips o usuaris del domini</strong>.</p>
+<p><img alt="Carpeta compartida amb el .msi" src="../custom/sssa.png"></p>
+<p><strong>Creació de la GPO</strong></p>
+<p>Crea una nova GPO (per exemple, amb el nom "Instal·lar Chrome") i vincula-la a la <strong>Unitat Organitzativa (UO)</strong> on es troben els equips als quals vols instal·lar el programa.</p>
+<p>Edita la GPO i navega a:</p>
+<p><code>Configuració de l’equip → Polítiques → Configuració del programari → Instal·lació de programari</code></p>
+<p><img alt="Ruta GPO Instal·lació de programari" src="../custom/jaja.png"></p>
+<p>Afegeix un <strong>nou paquet</strong> i introdueix la <strong>ruta completa UNC</strong> on tens el fitxer <code>.msi</code>, per exemple:</p>
+<p><code>\\VITALIY\Share\googlechromestandaloneenterprise64.msi</code></p>
+<p><img alt="Assignació del paquet" src="../custom/IMKP.png"></p>
+<p><strong>NOTA:</strong> És molt important que la ruta comenci per <code>\\NOM_DEL_SERVIDOR\...</code> i <strong>no</strong> utilitzis rutes locals com <code>C:\...</code>, ja que els equips del domini no tindran accés a rutes locals del servidor.</p>
+<hr>
+<p><strong>Requisits importants</strong></p>
+<ul>
+<li>L’equip ha d’estar <strong>unit al domini</strong>.</li>
+<li>El fitxer <code>.msi</code> ha d’estar en una <strong>ubicació compartida</strong> i accessible des de la xarxa (amb permisos mínims de lectura).</li>
+<li>Aquesta instal·lació s’aplica <strong>a nivell d’equip</strong>, no d’usuari.</li>
+<li>La instal·lació es farà automàticament <strong>durant l’arrencada del sistema</strong>, abans de la pantalla d’inici de sessió.</li>
+</ul></div>
 
 
 
