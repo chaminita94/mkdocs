@@ -1834,6 +1834,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#assignacio-de-gpos-per-a-grups-o-usuaris-especifics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assignació de GPOs per a grups o usuaris específics
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2625,7 +2634,36 @@ S’aplica automàticament i de manera transparent per a l’usuari.</p>
 <li>El fitxer <code>.msi</code> ha d’estar en una <strong>ubicació compartida</strong> i accessible des de la xarxa (amb permisos mínims de lectura).</li>
 <li>Aquesta instal·lació s’aplica <strong>a nivell d’equip</strong>, no d’usuari.</li>
 <li>La instal·lació es farà automàticament <strong>durant l’arrencada del sistema</strong>, abans de la pantalla d’inici de sessió.</li>
-</ul></div>
+</ul>
+<h2 id="assignacio-de-gpos-per-a-grups-o-usuaris-especifics">Assignació de GPOs per a grups o usuaris específics</h2>
+<p>També és possible assignar polítiques de grup (GPO) a usuaris concrets o a grups específics. En el nostre cas, disposem de dos grups: un de tipus <em>restrictiu</em> i un altre de tipus <em>permisiu</em>. Per tant, podem aplicar diferents polítiques a cadascun d’aquests grups segons les seves necessitats.</p>
+<p>En aquest exemple, crearem dues GPOs:</p>
+<ul>
+<li>Una per al grup <strong>Permisiu</strong></li>
+<li>Una altra per al grup <strong>Restrictiu</strong></li>
+</ul>
+<p><img alt="Assignació de GPOs" src="../custom/permrest.png"></p>
+<p><strong>Configuració del fons d’escriptori</strong></p>
+<p>Fem clic dret sobre la GPO corresponent (en aquest cas, la del grup <strong>Restrictiu</strong>), i després seguim la ruta següent:</p>
+<p><code>User Configuration -&gt; Administrative Templates -&gt; Desktop -&gt; Desktop</code></p>
+<p>Allí seleccionem l'opció per configurar el fons d’escriptori (<em>wallpaper</em>). Cal introduir la ruta on es troba la imatge del fons.</p>
+<blockquote>
+<p><strong>Important</strong>: La imatge ha d'estar ubicada en un directori compartit per xarxa. Si els usuaris no tenen accés a aquest directori, no podran carregar la imatge del fons d’escriptori correctament.</p>
+</blockquote>
+<p><img alt="Configuració del wallpaper" src="../custom/wallp.png"></p>
+<p><strong>Assignació de la GPO al grup adequat</strong></p>
+<p>Finalment, associem la GPO únicament al grup <strong>Restrictiu</strong>, assegurant-nos que només els membres d’aquest grup rebin aquesta configuració.</p>
+<p><img alt="Assignació de la GPO al grup" src="../custom/asa.png"></p>
+<p>També es poden assignar a usuaris en comptes de grups.</p>
+<p><img alt="alt text" src="../image-6.png"></p>
+<p><strong>Resultats</strong>
+A continuació, es mostra un vídeo de com ha quedat aplicada la política. Com es pot observar:</p>
+<ul>
+<li>L’usuari <strong>Jorge</strong>, que forma part del grup <strong>Restrictiu</strong>, veu aplicat el fons d’escriptori definit.</li>
+<li>En canvi, l’usuari <strong>Vitaliy</strong>, que no pertany a aquest grup, no rep aquesta configuració i manté el seu escriptori per defecte.</li>
+</ul>
+<p>D’aquesta manera, podem personalitzar l’experiència d’usuari mitjançant GPOs específiques per a cada grup, millorant el control i la gestió dels entorns de treball.</p>
+<iframe src="https://drive.google.com/file/d/1PLjqROUhg9RjCa31cDIwK2HLsWWWLfVO/preview" width="640" height="480" allow="autoplay"></iframe></div>
 
 
 
